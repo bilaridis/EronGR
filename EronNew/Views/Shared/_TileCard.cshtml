@@ -1,7 +1,5 @@
 ﻿@model EronNew.Models.BasicInformationBase
 @inject EronNew.Resources.GlobalCultureService SharedLocalizer
-@using EronNew.Helpers
-@using EronNew.Resources
 
 <div class="col-sm-12 col-md-4 mb-3">
     <div class="card promoting-card m-2">
@@ -28,7 +26,7 @@
                 @(Model.PriceTotal.HasValue ? Model.PriceTotal.Value.ToString("C") : 0) - @(Model.Square.HasValue ? Model.Square.Value.ToString("F") : 0) <b>m<sup>2</sup></b> - @Model.ConstructionYear <i class="fas fa-home"></i>
             </span>
             <a type="button" href="#!" data-postid="@Model.Id" class="details-heart @(Model.WishList == true ? " details-unwish" : "details-wish" ) btn-sm ml-auto pb-0 justify-content-end">
-                <i class="@(Model.WishList == true ? " fas" : "far" ) fa-heart fa-1x pink-text"></i>
+                <i class="@(Model.WishList == true ? "fas" : "far" ) fa-heart fa-1x pink-text"></i>
             </a>
         </div>
     </div>

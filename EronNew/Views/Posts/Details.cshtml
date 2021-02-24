@@ -23,21 +23,16 @@
 }
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/el_GR/sdk.js#xfbml=1&version=v9.0&appId=715417039083770&autoLogAppEvents=1" nonce="DQCWc9c0"></script>
-<nav class="navbar navbar-expand-md mb-0 pt-0 pb-0 rounded">
+<nav class="navbar navbar-expand-md mt-2 mb-0 pt-0 pb-0 rounded">
     <ul class="navbar-nav mr-auto">
         <li>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb d-inline-flex pl-0 pt-0">
-                    <li class="breadcrumb-item d-flex align-items-center">
-                        <a class="navbar-brand d-none d-md-block" href="#!">
-                            <img src="https://www.eron.gr/images/onlyLogo.png" height="40" width="40" />
-                        </a>
-                    </li>
-                    <li class="breadcrumb-item d-flex align-items-center"><a class="white-text" href="#!">@SharedLocalizer.GetLocalized(Model.Post.SaleCategory)</a></li>
+                    <li class="breadcrumb-item d-flex align-items-center"><a class="white-text" href="#!" data-i18n="@Model.Post.SaleCategory"> </a></li>
                     <li class="breadcrumb-item d-flex align-items-center active">@Model.Post.TitleOfPost</li>
-                    <li class="breadcrumb-item d-flex align-items-center active">@SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.Desc)</li>
-                    <li class="breadcrumb-item d-flex align-items-center active">@SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.SubDescEnglish)</li>
-                    <li class="breadcrumb-item d-flex align-items-center active">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdCode)) - @Model.Post.id</li>
+                    <li class="breadcrumb-item d-flex align-items-center active" data-i18n="@Model.Post.SubTypeInformation.Desc"> </li>
+                    <li class="breadcrumb-item d-flex align-items-center active" data-i18n="@Model.Post.SubTypeInformation.SubDescEnglish"> </li>
+                    <li class="breadcrumb-item d-flex align-items-center active"><span data-i18n="Ad Code"></span> - @Model.Post.id</li>
                 </ol>
             </nav>
         </li>
@@ -51,7 +46,6 @@
                             <i class="fas fa-language fa-1x"></i>
                         </button>
                         <div id="AdvLanguages" class="dropdown-menu dropdown-menu-lg-right">
-
                         </div>
                     </div>
                 </li>
