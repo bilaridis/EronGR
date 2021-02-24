@@ -286,7 +286,7 @@
     }
     function createTemplate(product) {
         return `
-<div class="col-sm-12 col-md-4 mb-3">
+<div class="col-sm-12 col-md-3 mb-3">
     <div class="card promoting-card m-2">
         <a href="/Posts/Details/${product.Id}">
             <div class="d-flex flex-row m-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">

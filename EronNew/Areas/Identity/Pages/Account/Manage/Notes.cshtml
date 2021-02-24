@@ -30,9 +30,9 @@
                                         <strong>#@item.PostId </strong>
                                         <p class="last-message text-muted"> - @item.Post.SubAreas.AreaName</p>
                                     </div>
-                                    <div class="chat-footer d-flex align-self-end ">
-                                        <span class="badge badge-dark float-right">@item.CreatedAt</span>
-                                    </div>
+                                    <span class="form-check-label px-2 rounded mdb-color white-text d-flex align-self-end nowrap">
+                                        @item.CreatedAt.Value.ToString("dd/MM/yyyy") <i class="fas fa-clock ml-1 mt-1"></i>
+                                    </span>
                                 </a>
                             </li>
                         }

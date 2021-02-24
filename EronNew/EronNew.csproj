@@ -9,6 +9,7 @@
     <AssemblyName>EronNew</AssemblyName>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
 	<CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+	<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
 
   <ItemGroup>

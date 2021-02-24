@@ -75,7 +75,7 @@
     }
     function createTemplate(product) {
         return `
-<div class="col-sm-12 col-md-4 mb-3">
+<div class="col-sm-12 col-md-3 mb-3">
     <div class="card promoting-card m-2">
         <a href="/Posts/Details/${product.Id}">
             <div class="d-flex flex-row m-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
@@ -100,7 +100,7 @@
                 ${formatMoney(product.PriceTotal, 2, ',', '.') || ""}  <b>€</b> - ${formatMoney(product.Square, 0, ',', '.') || ""}  <b>m<sup>2</sup></b> - ${product.ConstructionYear || ""} <i class="fas fa-home"></i>
             </span>
             <a type="button" href="#!" data-postid="${product.Id}" class="details-heart ${product.WishList == true ? "details-unwish" : "details-wish"} btn-sm ml-auto pb-0 justify-content-end">
-                <i class="${product.WishList == true ? "fas" : "far"} fa-heart fa-2x pink-text"></i>
+                <i class="${product.WishList == true ? "fas" : "far"} fa-heart fa-1x pink-text"></i>
             </a>
         </div>
     </div>

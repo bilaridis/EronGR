@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EronNew.Data;
 using EronNew.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,12 +18,15 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
         private readonly ExtendedUserManager<ExtendedIdentityUser> _userManager;
         private readonly SignInManager<ExtendedIdentityUser> _signInManager;
         private IDomainModel _model { get; set; }
+        private readonly IWebHostEnvironment _host;
 
         public EditMyCardModel(
             ExtendedUserManager<ExtendedIdentityUser> userManager,
             SignInManager<ExtendedIdentityUser> signInManager,
-            IDomainModel model)
+            IDomainModel model,
+            IWebHostEnvironment host)
         {
+            _host = host;
             _model = model;
             _userManager = userManager;
             _signInManager = signInManager;
@@ -36,23 +40,6 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
         [BindProperty]
         public AspNetUserProfile Input { get; set; }
 
-        //public class AspNetUserProfile
-        //{
-        //    public long Id { get; set; }
-        //    public string AspNetUserId { get; set; }
-        //    public string PhotoImage { get; set; }
-        //    public string Title { get; set; }
-        //    public string SubTitle { get; set; }
-        //    public string Info { get; set; }
-        //    public string InfoText { get; set; }
-        //    public string Facebook { get; set; }
-        //    public string Twitter { get; set; }
-        //    public string LinkedIn { get; set; }
-        //    public string EmailAccount { get; set; }
-        //    public bool? Premium { get; set; }
-        //    public bool? Active { get; set; }
-        //    public int? Template { get; set; }
-        //}
 
         private async Task LoadAsync(ExtendedIdentityUser user)
         {
@@ -68,6 +55,7 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
             else
             {
                 Input = dbModel;
+                //Input.SetDescription();
             }
             
         }
@@ -104,7 +92,16 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
 
             if (Input.Image != null)
             {
-                string uploads = Path.Combine("\\\\Bilaridis2020\\", "uploads\\" + user.Id + "\\");
+                var uploadPath = "\\\\Bilaridis2020\\BetaSite\\";
+                if (_host.EnvironmentName == "Production")
+                {
+                    uploadPath = "\\\\Bilaridis2020\\ProdSite\\";
+                }
+                else if (_host.ContentRootPath == "E:\\Repos\\EronNew\\EronNew")
+                {
+                    uploadPath = "\\\\Bilaridis2020\\BetaSite\\";
+                }
+                string uploads = Path.Combine(uploadPath, "uploads\\" + user.Id + "\\");
                 string filePath = Path.Combine(uploads, Input.Image.FileName);
                 bool exists = Directory.Exists(uploads);
 

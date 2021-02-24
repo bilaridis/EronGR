@@ -389,7 +389,7 @@ namespace EronNew.Models
             }
             else if (_host.ContentRootPath == "E:\\Repos\\EronNew\\EronNew")
             {
-                uploadPath = "\\\\Bilaridis2020\\LocalSite\\";
+                uploadPath = "\\\\Bilaridis2020\\BetaSite\\";
             }
             _model.DeleteImageOfPost(uploadPath, id);
             return Json(new ReturnImageObject() { success = true });
@@ -423,7 +423,7 @@ namespace EronNew.Models
                 }
                 else if (_host.ContentRootPath == "E:\\Repos\\EronNew\\EronNew")
                 {
-                    uploadPath = "\\\\Bilaridis2020\\LocalSite\\";
+                    uploadPath = "\\\\Bilaridis2020\\BetaSite\\";
                 }
                 var userInformation = User.Claims.FirstOrDefault(x => x.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier").Value;
                 string uploads = Path.Combine(uploadPath, userInformation + "/" + id.Value.ToString() + "/");

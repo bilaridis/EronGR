@@ -6,6 +6,9 @@
 @{
     ViewData["Title"] = "Edit My Card";
     ViewData["ActivePage"] = ManageNavPages.EditMyCard;
+
+    EronNew.Models.AspNetUserProfile viewModel = Model.Input.Clone();
+    viewModel.SetDescription();
 }
 <partial name="_StatusMessage" model="Model.StatusMessage" />
 <div class="row jumbotron cloudy-knoxville-gradient lighten-4">
@@ -32,55 +35,55 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.TitleName))</span>
                         </div>
-                        <input asp-for="Input.Title" type="text" class="form-control">
+                        <input asp-for="Input.Title" type="text" class="form-control" placeholder="Text with Large Size and Bold">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-default">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Subtitle))</span>
                         </div>
-                        <input asp-for="Input.SubTitle" type="text" class="form-control">
+                        <input asp-for="Input.SubTitle" type="text" class="form-control" placeholder="Text with Large Size">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.InfoCard))</span>
                         </div>
-                        <input asp-for="Input.Info" type="text" class="form-control">
+                        <input asp-for="Input.Info" type="text" class="form-control" placeholder="Text with normal Size">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon">Facebook</span>
                         </div>
-                        <input asp-for="Input.Facebook" type="text" class="form-control">
+                        <input asp-for="Input.Facebook" type="text" class="form-control" placeholder="{your ID from Facebook}">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon">Twitter</span>
                         </div>
-                        <input asp-for="Input.Twitter" type="text" class="form-control">
+                        <input asp-for="Input.Twitter" type="text" class="form-control" placeholder="{your ID from Twitter}">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon">LinkedIn</span>
                         </div>
-                        <input asp-for="Input.LinkedIn" type="text" class="form-control">
+                        <input asp-for="Input.LinkedIn" type="text" class="form-control" placeholder="{your ID from LinkedIn}">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WebSite))</span>
                         </div>
-                        <input asp-for="Input.ContactWebSite" type="text" class="form-control">
+                        <input asp-for="Input.ContactWebSite" type="text" class="form-control" placeholder="https://www.test.gr">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Mobile))</span>
                         </div>
-                        <input asp-for="Input.ContactPhone" type="text" class="form-control">
+                        <input asp-for="Input.ContactPhone" type="text" class="form-control" placeholder="691 2345 6789">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</span>
                         </div>
-                        <input asp-for="Input.ContactEmail" type="text" class="form-control">
+                        <input asp-for="Input.ContactEmail" type="text" class="form-control" placeholder="youremail@domain.gr">
                     </div>
                     <div class="md-form amber-textarea active-amber-textarea mt-5 mx-3">
                         <textarea asp-for="Input.InfoText" id="form19" class="md-textarea form-control" rows="7"></textarea>
@@ -101,28 +104,28 @@
 
         <div class="card card-cascade narrower">
             <div class="view view-cascade gradient-card-header gradient">
-                <h6 class="font-weight-500 mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</h6>
+                <h6 class="font-weight-500 mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Preview)) - @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</h6>
             </div>
             <div class="card-body">
                 <section class="card profile-card mb-4 text-center">
                     <div class="avatar z-depth-1-half">
-                        <img src="https://www.eron.gr/@Model.Input.PhotoImage" class="img-fluid">
+                        <img src="https://www.eron.gr/@viewModel.PhotoImage" class="img-fluid">
                     </div>
                     <!-- Card content -->
                     <div class="card-body">
                         <!-- Title -->
-                        <h4 class="card-title"><strong>@Model.Input.Title</strong></h4>
-                        <h5>@Model.Input.SubTitle</h5>
-                        <p class="dark-grey-text">@Model.Input.Info</p>
+                        <h4 class="card-title"><strong>@viewModel.Title</strong></h4>
+                        <h5>@viewModel.SubTitle</h5>
+                        <p class="dark-grey-text">@viewModel.Info</p>
 
                         <!-- Social -->
-                        <a type="button" href="https://www.facebook.com/@Model.Input.Facebook" class="btn-floating btn-small"><i class="fab fa-facebook-f grey-text"></i></a>
-                        <a type="button" href="https://twitter.com/@Model.Input.Twitter" class="btn-floating btn-small"><i class="fab fa-twitter grey-text"></i></a>
-                        <a type="button" href="https://www.linkedin.com/in/@Model.Input.LinkedIn" class="btn-floating btn-small"><i class="fab fa-linkedin-in grey-text"></i></a>
+                        <a type="button" href="https://www.facebook.com/@viewModel.Facebook" class="btn-floating btn-small"><i class="fab fa-facebook-f grey-text"></i></a>
+                        <a type="button" href="https://twitter.com/@viewModel.Twitter" class="btn-floating btn-small"><i class="fab fa-twitter grey-text"></i></a>
+                        <a type="button" href="https://www.linkedin.com/in/@viewModel.LinkedIn" class="btn-floating btn-small"><i class="fab fa-linkedin-in grey-text"></i></a>
 
                         <!-- Text -->
                         <p style="white-space: pre-line" class="card-text mt-3">
-                            @(Model.Input.InfoText)
+                            @(viewModel.InfoText)
                         </p>
 
                         <button type="button" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#modalContact">
@@ -223,29 +226,29 @@
                                 <h3 class="font-weight-bold my-4 pb-2">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactInfo))</h3>
                                 <ul class="text-lg-left list-unstyled ml-4">
                                     <li>
-                                        <p><i class="fas fa-globe-europe pr-2"></i><a href="@Model.Input.ContactWebSite">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WebSite))</a></p>
+                                        <p><i class="fas fa-globe-europe pr-2"></i><a href="@viewModel.ContactWebSite">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WebSite))</a></p>
                                     </li>
                                     <li>
-                                        <p><i class="fas fa-phone pr-2"></i>@Model.Input.ContactPhone</p>
+                                        <p><i class="fas fa-phone pr-2"></i>@viewModel.ContactPhone</p>
                                     </li>
                                     <li>
-                                        <p><i class="fas fa-envelope pr-2"></i>@Model.Input.ContactEmail</p>
+                                        <p><i class="fas fa-envelope pr-2"></i>@viewModel.ContactEmail</p>
                                     </li>
                                 </ul>
                                 <hr class="hr-light my-4">
                                 <ul class="list-inline text-center list-unstyled">
                                     <li class="list-inline-item">
-                                        <a class="p-2 fa-lg tw-ic" href="https://www.facebook.com/@Model.Input.Facebook">
+                                        <a class="p-2 fa-lg tw-ic" href="https://www.facebook.com/@viewModel.Facebook">
                                             <i class="fab fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a class="p-2 fa-lg li-ic" href="https://twitter.com/@Model.Input.Twitter">
+                                        <a class="p-2 fa-lg li-ic" href="https://twitter.com/@viewModel.Twitter">
                                             <i class="fab fa-twitter"> </i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a class="p-2 fa-lg ins-ic" href="https://www.linkedin.com/in/@Model.Input.LinkedIn">
+                                        <a class="p-2 fa-lg ins-ic" href="https://www.linkedin.com/in/@viewModel.LinkedIn">
                                             <i class="fab fa-linkedin-in"> </i>
                                         </a>
                                     </li>
