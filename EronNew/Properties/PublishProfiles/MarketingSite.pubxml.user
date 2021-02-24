@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\WebFolder\EronSite</_PublishTargetUrl>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=Bilaridis2020\SqlExpress%3bDatabase=IronKey%3bTrusted_Connection=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

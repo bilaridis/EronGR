@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.ribbon-wrapper-red {
+    width: 85px;
+    height: 88px;
+    overflow: hidden;
+    position: absolute;
+    top: 4px;
+    right: 19px;
+}
+
+.ribbon-wrapper-green {
+    width: 85px;
+    height: 88px;
+    overflow: hidden;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+}
+
+.ribbon-red {
+    font: bold 15px Sans-Serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -6px;
+    top: 15px;
+    width: 120px;
+    background: rgb(33,37,55);
+    background: linear-gradient(23deg, rgba(33,37,55,0.98) 0%, rgba(63,89,139,1) 55%, rgba(224,250,255,1) 99%);
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green {
+    font: bold 15px Sans-Serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -29px;
+    top: 15px;
+    width: 120px;
+    background: rgb(251,236,63);
+    background: linear-gradient(137deg, rgba(251,236,63,1) 0%, rgba(188,139,37,1) 20%, rgba(98,0,0,1) 78%);
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-red:before,
+.ribbon-red:after {
+    content: "";
+    border-top: 3px solid rgb(20,16,85);
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    bottom: -3px;
+}
+
+.ribbon-green:after,
+.ribbon-green:after {
+    content: "";
+    border-top: 3px solid rgb(251,236,63);
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    bottom: -3px;
+}
+
+.ribbon-red:before {
+    left: 0;
+}
+
+.ribbon-green:before {
+    right: 0;
+}
+
+.ribbon-red:after {
+    right: 0;
+}
+
+.ribbon-green:after {
+    left: 0;
+}

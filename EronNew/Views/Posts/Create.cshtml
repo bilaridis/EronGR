@@ -1,0 +1,154 @@
+﻿@using EronNew.Helpers
+@using EronNew.Resources
+@model EronNew.Models.PostViewModel
+@inject GlobalCultureService SharedLocalizer
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout-fluid.cshtml";
+}
+<form asp-action="Create" class="needs-validation mt-3 container" id="main" required>
+    <div class="row">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div style="display:none;">
+            <div class="hide">
+                <input type="hidden" asp-for="Post.Active" class="form-control" value="false" />
+                <input type="hidden" asp-for="Post.StateOfPost" class="form-control" value="1" />
+                <input type="hidden" asp-for="Post.OwnerId" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="parentForm" class="col-sm-12">
+            <div id="initial-submit" class="card card-cascade narrower">
+                <div class="view view-cascade gradient-card-header blue-gradient">
+                    <h6 class="font-weight-500 mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MandatoryInformation))</h6>
+                </div>
+                <div class="card-body card-body-cascade">
+                    <div class="row">
+                        <div class="md-form form-group col-lg-6 col-md-12">
+                            <label for="inp_Category">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdType))
+                            </label>
+                            <select id="inp_Category" aria-label="Κατηγορία" class="mdb-select mdb-select-required" asp-for="Post.SaleCategory" required>
+                                <option></option>
+                                <option value="Sale">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Sale))</option>
+                                <option value="Rent">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rent))</option>
+                                <option value="Demand">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Demand))</option>
+                            </select>
+                            <div class="messages w-100"></div>
+                        </div>
+                        <div class="md-form form-group input-group col-lg-6 col-md-12 mb-3">
+                            <input type="text" class="form-control" asp-for="Post.PriceTotal" aria-label="Αξία">
+                            <label class="form-check-label ml-3" for="Post_PriceTotal">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PropertyPrice))
+                            </label>
+                            <div class="input-group-append">
+                                <span class="input-group-text md-addon">.00</span>
+                            </div>
+                            <div class="input-group-append">
+                                <span class="input-group-text md-addon">€</span>
+                            </div>
+                            <div class="messages w-100"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="md-form form-group col-lg-6 col-md-12">
+                            <label for="selectType">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PropertyCategory))
+                            </label>
+                            <select id="selectType" class="mdb-select mdb-select-required category1" asp-for="Post.TypeId" required>
+                                <option></option>
+                                <option value="Residential">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Residential))</option>
+                                <option value="Commercial">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Commercial))</option>
+                                <option value="Land"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Land))</option>
+                                <option value="Other Properties">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.OtherProperties))</option>
+                            </select>
+                            <div class="messages w-100"></div>
+                        </div>
+                        <div class="md-form form-group col-lg-6 col-md-12">
+                            <label for="selectSubType">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PropertyType))
+                            </label>
+                            <select class="mdb-select mdb-select-required" asp-for="Post.SubTypeId" id="selectSubType" required>
+                            </select>
+                            <div class="messages w-100"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col md-form form-group">
+                            <label for="selectParentArea">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion))
+                            </label>
+                            <select id="selectParentArea" asp-items="@ViewBag.Areas" name="Post.Area" class="mdb-select mdb-select-required" required>
+                                <option></option>
+                            </select>
+                            <div class="messages w-100"></div>
+                        </div>
+                        <div class="col md-form form-group">
+                            <label for="selectArea">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))
+                            </label>
+                            <select id="selectArea" name="Post.SubAreaId" class="mdb-select mdb-select-required" required>
+                            </select>
+                            <div class="messages w-100"></div>
+                        </div>
+                    </div>
+                    <!--Third row-->
+                    <div class="row">
+
+                        <!--First column-->
+                        <div class="col-md-6">
+                            <div class="md-form form-group">
+                                <input type="text" id="Address" asp-for="Post.Address" class="form-control" >
+                                <label for="Address" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Address))</label>
+                                <div class="messages w-100"></div>
+                            </div>
+                        </div>
+
+                        <!--Second column-->
+                        <div class="col-md-2">
+                            <div class="md-form form-group">
+                                <input type="text" id="numOfAddress" asp-for="Post.NumOfAddress" class="form-control">
+                                <label for="numOfAddress" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.number))</label>
+                                <div class="messages w-100"></div>
+                            </div>
+                        </div>
+
+                        <!--Third column-->
+                        <div class="col-md-4">
+                            <div class="md-form form-group">
+                                <input type="text" id="PostalCode" asp-for="Post.PostalCode" class="form-control" >
+                                <label for="form61" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PostalCode))</label>
+                                <div class="messages w-100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--/.Third row-->
+                </div>
+                <!-- Card content -->
+                <div class="card-footer">
+                    <button class="btn btn-success btn-block">
+                        @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CreateDraftAd))
+                    </button>
+                </div>
+            </div>
+            <!-- initial-submit Card -->
+        </div>
+    </div>
+</form>
+
+
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="~/js/site.posts.create.js"></script>
+    }
+    else
+    {
+        <script src="~/js/site.posts.create.min.js"></script>
+    }
+}

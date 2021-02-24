@@ -1,0 +1,694 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using EronNew.Helpers
+@using EronNew.Resources
+@namespace EronNew.Models
+@model EronNew.Models.PostViewModel
+
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@inject SignInManager<ExtendedIdentityUser> SignInManager
+@inject UserManager<ExtendedIdentityUser> UserManager
+@{
+    ViewData["Title"] = "Details";
+    var userOb = await UserManager.GetUserAsync(User);
+    var user = userOb?.Id;
+}
+@section metatags
+{
+    <meta property="fb:app_id" content="407388710507530" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eron.gr - @Model.Post.TitleOfPost" />
+    <meta property="og:url" content="https://www.eron.gr/Posts/Details/@Model.Post.id" />
+    <meta property="og:image" content="https://www.eron.gr/@Model.Post.Images.First().UrlImage/Images/@Model.Post.Images.First().ImageName" />
+    <meta property="og:description" content="@Model.Post.SaleCategory: @SharedLocalizer.GetLocalized(Model.Post.SaleCategory) - @(Model.Post.PriceTotal.HasValue ? Model.Post.PriceTotal.Value.ToString("C") : 0) - @Html.Raw(Model.Post.Square) m2 - @SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.Desc) - @SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.SubDesc) - @Model.Post.TitleOfPost" />
+}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/el_GR/sdk.js#xfbml=1&version=v9.0&appId=715417039083770&autoLogAppEvents=1" nonce="DQCWc9c0"></script>
+<nav class="navbar navbar-expand-md mb-0 pt-0 pb-0 rounded">
+    <ul class="navbar-nav mr-auto">
+        <li>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb d-inline-flex pl-0 pt-0">
+                    <li class="breadcrumb-item d-flex align-items-center">
+                        <a class="navbar-brand d-none d-md-block" href="#!">
+                            <img src="https://www.eron.gr/images/onlyLogo.png" height="40" width="40" />
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item d-flex align-items-center"><a class="white-text" href="#!">@SharedLocalizer.GetLocalized(Model.Post.SaleCategory)</a></li>
+                    <li class="breadcrumb-item d-flex align-items-center active">@Model.Post.TitleOfPost</li>
+                    <li class="breadcrumb-item d-flex align-items-center active">@SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.Desc)</li>
+                    <li class="breadcrumb-item d-flex align-items-center active">@SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.SubDescEnglish)</li>
+                    <li class="breadcrumb-item d-flex align-items-center active">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdCode)) - @Model.Post.id</li>
+                </ol>
+            </nav>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <li>
+            <ul class="switch-locale" style="list-style:none;">
+                <li clas="nav-item dropdown">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm dropdown-toggle px-3 stylish-color " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-language fa-1x"></i>
+                        </button>
+                        <div id="AdvLanguages" class="dropdown-menu dropdown-menu-lg-right">
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="row mt-3">
+    <!-- Section: Main panel -->
+    <section class="mb-3 mt-1 col-12 p-0 p-sm-2">
+        <!-- Card -->
+        <div class="card card-cascade wider">
+            <div class="view view-cascade overlay gradient">
+                <div class="col-md-12">
+
+                    <div id="mdb-lightbox-ui"></div>
+                    <div class="mdb-lightbox no-margin">
+                        @foreach (PostsImages image in Model.Post.Images)
+                        {
+                            <figure class="col-sm-3 col-6">
+                                <a class="black-text" href="~/@(image.UrlImage)Images/@image.ImageName" data-size="@(image.Width)x@(image.Height)">
+                                    <img alt="picture" src="~/@(image.UrlImage)Thumbnails/@image.ImageName" class="img-fluid">
+                                </a>
+                            </figure>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="card-body card-body-cascade pb-0 pt-1">
+                <div class="row p-0 m-1 justify-content-between">
+                    <nav class="navbar navbar-expand-md z-depth-0 m-0 white grey-text col-12 pl-2 pr-2 rounded">
+                        <div class="mr-auto">
+                            <nav aria-label="breadcrumb grey-text">
+                                <ol class="breadcrumb d-inline-flex pl-0 pt-0 font-smaller">
+                                    <li class="breadcrumb-item breadcrumb-nav light-blue-text"><strong>@Html.Raw(Model.Post.Square) m<sup>2</sup></strong></li>
+                                    <li class="breadcrumb-item breadcrumb-nav grey-text"><i class="fas fa-bed pt-1 pr-1"></i> @Html.Raw(Model.Post.Bedroom.HasValue ? Model.Post.Bedroom.Value.ToString() : "0")</li>
+                                    <li class="breadcrumb-item breadcrumb-nav grey-text"><i class="fas fa-bath pt-1 pr-1"></i> @Html.Raw(Model.Post.Bathroom.HasValue ? Model.Post.Bathroom.Value.ToString() : "0")</li>
+                                    <li class="breadcrumb-item breadcrumb-nav grey-text"><i class="fas fa-home pt-1 pr-1"></i> @Html.Raw(Model.Post.ConstructionYear)</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        @if (Model.Post.Premium && Model.Post.Preview360 != null && Model.Post.Preview360.Contains("matterport.com"))
+                        {
+                            <button type="button" class="btn btn-primary m-1 p-2 text-smaller" data-toggle="modal" data-target="#centralModalPreview360">
+                                @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Preview360))
+                            </button>
+                        }
+                    </nav>
+                </div>
+                <div class="row m-md-2 m-sm-0 justify-content-between">
+                    <div class="col-md-8 col-lg-6 text-smaller p-0">
+                        <div class="card-body row">
+                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="Price"></div>
+                            <div class="text-left col-8 p-1 mb-1">
+                                <a href="#" class="indigo-text">
+                                    @if (Model.Post.PriceTotal.HasValue && Model.Post.PriceTotal.Value > 99)
+                                    {
+                                        @Html.Raw(Model.Post.PriceTotal.Value.ToString("C"))
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-default rounded" data-i18n="Ask for the Price">
+                                            @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.AskforthePrice))
+                                        </span>
+                                    }
+                                </a>
+                            </div>
+                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="Year of Renovation"></div>
+                            <div class="text-left col-8 p-1 mb-1">@Html.Raw(Model.Post.RenovationYear) </div>
+                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="floor"></div>
+                            <div class="text-left col-8 p-1 mb-1">
+                                @(Model.Post.Floor == 0 ? " Ισόγειο" : Model.Post.Floor.ToString()) @if (Model.Post.Floor > 0)
+                                {<sup>ος</sup>}
+                            </div>
+                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="Home Energy Rate"></div>
+                            <div class="text-left col-8 p-1 mb-1">
+                                <div class="btn-group btn-group-toggle col-lg energyEfficiency p-0" data-toggle="buttons">
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "A+" ? " btn-outline-info" :"")" style="background-color: #036703">
+                                        <input type="radio" class="form-check-input disabled " value="A+" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Α+
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "A" ? " btn-outline-info" :"")" style="background-color: #048004">
+                                        <input type="radio" class="form-check-input disabled " value="A" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Α&nbsp;
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Β+" ? " btn-outline-info" :"")" style="background-color: #009c02">
+                                        <input type="radio" class="form-check-input disabled " value="Β+" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Β+
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Β" ? " btn-outline-info" :"")" style="background-color: #99cd00">
+                                        <input type="radio" class="form-check-input disabled " value="Β" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Β&nbsp;
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Γ" ? " btn-outline-info" :"")" style="background-color: #fdcc03">
+                                        <input type="radio" class="form-check-input disabled " value="Γ" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Γ&nbsp;
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Δ" ? " btn-outline-info" :"")" style="background-color: #fe6601">
+                                        <input type="radio" class="form-check-input disabled " value="Δ" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Δ&nbsp;
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Ε" ? " btn-outline-info" :"")" style="background-color: #f90203">
+                                        <input type="radio" class="form-check-input disabled " value="Ε" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Ε&nbsp;
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Ζ" ? " btn-outline-info" :"")" style="background-color: #a03000">
+                                        <input type="radio" class="form-check-input disabled " value="Ζ" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Ζ&nbsp;
+                                    </label>
+                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Η" ? " btn-outline-info" :"")" style="background-color: #7e0100">
+                                        <input type="radio" class="form-check-input disabled " value="Η" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
+                                        Η&nbsp;
+                                    </label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center justify-content-lg-end p-0">
+                        <div id="ContactInfo">
+                            <button id="getContactInfo" data-postid="@Model.Post.id" type="button" class="btn btn-info w-100" data-i18n="Contact Info"></button>
+                        </div>
+                    </div>
+                    <div class="col-12 text-smaller p-0 d-none">
+                        <div class="text-left col-12 p-1 mb-1 grey-text flex-row">
+                            @if (Model.ExtraInformation.Investment)
+                            {
+                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Investment))
+                                </div>
+                            }
+                            @if (Model.ExtraInformation.Offer)
+                            {
+                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Offer))
+                                </div>
+                            }
+                            @if (Model.ExtraInformation.NewConstruction)
+                            {
+                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.NewConstruction))
+                                </div>
+                            }
+                            @if (Model.ExtraInformation.BrokerFee)
+                            {
+                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i> @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="chip chip-sm pink darken-3 white-text px-2 z-depth-1">
+                                    <i class="fas fa-times-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-md-flex flex-sm-row justify-content-md-between">
+                    <div class="d-flex align-items-start">
+                        <div class="p-2 wish-container">
+                            @if (Model.Post.WishLists.Any(x => x.AspNetUserId == user && x.Active == true))
+                            {
+                                <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-unwish card-link" data-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
+                                    <i class="fas fa-heart fa-1x pink-text"></i>
+                                </a>
+                            }
+                            else
+                            {
+                                <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-wish card-link" data-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
+                                    <i class="far fa-heart fa-1x pink-text"></i>
+                                </a>
+                            }
+                        </div>
+
+                        <div class="p-2 note-container">
+                            <a class="card-link" data-toggle="modal" data-target="#centralModalNotes" data-userid="@Model.CardProfile.AspNetUserId" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyNotes))">
+                                <i class="fas fa-pencil-alt fa-1x prefix grey-text"></i>
+                            </a>
+                        </div>
+                        <div class="p-2">
+                            <a class="card-link" id="printClick">
+                                <i class="fas fa-print fa-1x prefix grey-text" data-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Print))"></i>
+                            </a>
+                        </div>
+                        <div class="p-2 view-container">
+                            <a class="card-link" data-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.views))">
+                                <i class="fas fa-eye fa-1x prefix grey-text"></i> <label class=" text-smaller grey-text"> @Model.CounterOfView <label data-i18n="views"></label> </label>  |
+                            </a>
+                        </div>
+
+                        <div class="p-2">
+                            <a class="card-link fb-xfbml-parse-ignore"
+                               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FPosts%2FDetails%2F@(Model.Post.id)"
+                               target="popup"
+                               onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FPosts%2FDetails%2F@(Model.Post.id)','popup','width=400,height=500'); return false;"
+                               data-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Share))">
+                                <i class="fab fa-facebook-square blue-text darken-4"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="p-2">
+                        <a href="~/Card/Index/@Model.Post.OwnerId" class="card-link pr-1">@Html.Raw(Model.CardProfile.Title) <i class="fas fa-external-link-alt fa-1x"></i></a>
+                        @if (Model.Post.Reserved)
+                        {
+                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge badge-warning" data-i18n="Locked"></span></small>
+                        }
+                        else if (Model.Post.Deleted)
+                        {
+                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge badge-danger" data-i18n="Inactive"></span></small>
+                        }
+                        else if (Model.Post.Sold)
+                        {
+                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge badge-secondary" data-i18n="Completed"></span></small>
+                        }
+                        else
+                        {
+                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge badge-primary" data-i18n="Active"></span></small>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: Main panel -->
+
+</div>
+<div class="row mt-3 d-flex justify-content-center wow fadeIn" data-wow-delay="0.2s">
+    <div class="card card-cascade z-depth-0 col-12">
+        <div class="view view-cascade gradient py-2 mx-4 mb-3 d-flex justify-content-center">
+            <a class="white-text mx-3" data-i18n="Property Features"></a>
+        </div>
+        <!-- Section: Table -->
+        <section>
+            <form>
+                <div class="row px-4 disabled m-0">
+                    <div class="col-lg input-group">
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.HouseKeepingMoney" type="checkbox" id="cb10">
+                            <label class="form-check-label" for="cb10" data-i18n="Housekeeping"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="Post.PetAllowed" type="checkbox" id="cb3">
+                            <label class="form-check-label" for="cb3" data-i18n="Pets"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="Post.Furniture" type="checkbox" id="cb2">
+                            <label class="form-check-label" for="cb2" data-i18n="Furniture"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="Post.ParkingArea" type="checkbox" id="cb1">
+                            <label class="form-check-label" for="cb1" data-i18n="Parking Area"></label>
+                        </fieldset>
+
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Garden" type="checkbox" id="cb05">
+                            <label class="form-check-label" for="cb05" data-i18n="Garden"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Bbq" type="checkbox" id="cb01">
+                            <label class="form-check-label" for="cb01" data-i18n="BBQ"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Swimmingpool" type="checkbox" id="cb013">
+                            <label class="form-check-label" for="cb013" data-i18n="Pool"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.SemiOutdoor" type="checkbox" id="cb09">
+                            <label class="form-check-label" for="cb09" data-i18n="Semi-outdoors"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.SecureDoor" type="checkbox" id="cb13">
+                            <label class="form-check-label" for="cb13" data-i18n="Safety door"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Elevator" type="checkbox" id="cb02">
+                            <label class="form-check-label" for="cb02" data-i18n="Elevator"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.FTTH" type="checkbox" id="cb08">
+                            <label class="form-check-label" for="cb08" data-i18n="Internet Fiber"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="Post.View" type="checkbox" id="cb4">
+                            <label class="form-check-label" for="cb4" data-i18n="View"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Heating" type="checkbox" id="cb07">
+                            <label class="form-check-label" for="cb07" data-i18n="Heating System"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Fireplace" type="checkbox" id="cb04">
+                            <label class="form-check-label" for="cb04" data-i18n="Fireplace"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Gym" type="checkbox" id="cb06">
+                            <label class="form-check-label" for="cb06" data-i18n="Gym"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.RoofFloor" type="checkbox" id="cb109">
+                            <label class="form-check-label" for="cb109" data-i18n="Penthouse"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.HomeAlarm" type="checkbox" id="cb14">
+                            <label class="form-check-label" for="cb14" data-i18n="Security Alarm"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.AluminumFrames" type="checkbox" id="cb12">
+                            <label class="form-check-label" for="cb12" data-i18n="Safety Frames"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Livingroom" type="checkbox" id="cb5">
+                            <label class="form-check-label" for="cb5" data-i18n="Living room"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Wc" type="checkbox" id="cb012">
+                            <label class="form-check-label" for="cb012" data-i18n="WC"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Master" type="checkbox" id="cb6">
+                            <label class="form-check-label" for="cb6" data-i18n="Master"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Hall" type="checkbox" id="cb7">
+                            <label class="form-check-label" for="cb7" data-i18n="Hall"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.Maidroom" type="checkbox" id="cb011">
+                            <label class="form-check-label" for="cb011" data-i18n="CloakRoom"></label>
+                        </fieldset>
+                        <fieldset class="form-check mb-2 pl-1 pr-1 col-6 col-sm-4 col-lg-3">
+                            <input class="form-check-input" asp-for="ExtraInformation.AirCondition" type="checkbox" id="cb03">
+                            <label class="form-check-label" for="cb03" data-i18n="Air Condition"></label>
+                        </fieldset>
+                    </div>
+                    <hr class="my-0">
+                </div>
+            </form>
+        </section>
+        <!--Section: Table-->
+    </div>
+</div>
+
+<div class="mt-3 row d-flex align-items-center justify-content-center wow fadeIn" data-wow-delay="0.2s">
+    <div id="MapBox" class="col-10 z-depth-1-half pl-0 pr-0" style="height:300px;">
+
+    </div>
+</div>
+@if (Model.RelatedPosts.Count > 0)
+{
+    <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 mt-3" data-ride="carousel">
+
+        <!--Controls-->
+        <div class="controls-top">
+            <a class="btn-floating" href="#carousel-example-multi" data-slide="prev">
+                <i class="fas fa-chevron-left gradient"></i>
+            </a>
+            <a class="btn-floating" href="#carousel-example-multi" data-slide="next">
+                <i class="fas fa-chevron-right gradient"></i>
+            </a>
+        </div>
+        <!--/.Controls-->
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            @for (int i = 0; i < Model.RelatedPosts.Count; i++)
+            {
+                <li data-target="#carousel-example-multi" data-slide-to="@i.ToString()" class="@(i == 0 ? "active" : "" )"></li>
+            }
+
+        </ol>
+        <!--/.Indicators-->
+
+        <div class="carousel-inner v-2" role="listbox">
+            <div class="carousel-item active">
+                <partial name="_TileCard" model="Model.RelatedPosts.First()" />
+            </div>
+            @foreach (BasicInformationBase item in Model.RelatedPosts.Skip(1))
+            {
+                <div class="carousel-item">
+                    <partial name="_TileCard" model="item" />
+                </div>
+            }
+        </div>
+    </div>
+}
+<script>
+    var postTile = "@Html.Raw(@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactPhone)))";
+    var PostObject = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Post.ContactPhone ?? "", Newtonsoft.Json.Formatting.None, new Newtonsoft.Json.JsonSerializerSettings(){ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore}));
+    var postModel = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Post, Newtonsoft.Json.Formatting.None, new Newtonsoft.Json.JsonSerializerSettings(){ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore}));
+</script>
+<!--Modal: modalContact-->
+<div class="modal fade top" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalContact"
+     aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-lg modal-top" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div id="modalHeader" class="modal-header">
+                <p class="heading"><i class="fas fa-envelope pr-2 mr-1"></i><h4 class="font-weight-bold white-text mt-4" data-i18n="Write To Us"></h4>:</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+            <!--Header-->
+            <!--Body-->
+            <div class="modal-body">
+                <!-- Form with header -->
+                <div class="card contact-section dark-grey-text">
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-lg-7">
+                            <form id="main" class="p-0 m-0 col-12" action="ContactUs/@Model.Post.OwnerId" method="post">
+                                <input type="hidden" name="postId" value="@Model.Post.id" />
+                                <div class="card-body form">
+
+                                    <!-- Header -->
+                                    <!-- Grid row -->
+                                    <div class="row">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="form-contact-name" class="form-control" name="contactEmail.name">
+                                                <label for="form-contact-name" class="" data-i18n="Name"></label>
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="form-contact-email" class="form-control" name="contactEmail.email">
+                                                <label for="form-contact-email" data-i18n="Email"></label>
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <!-- Grid row -->
+                                    <!-- Grid row -->
+                                    <div class="row">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="form-contact-phone" class="form-control" name="contactEmail.phone">
+                                                <label for="form-contact-phone" data-i18n="Mobile"</label>
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <!-- Grid row -->
+                                    <!-- Grid row -->
+                                    <div class="row mt-3">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <textarea id="form-contact-message" name="contactEmail.message" class="form-control md-textarea" rows="6" required></textarea>
+                                                <label for="form-contact-message" data-i18n="How can we help you"></label>
+                                                <button type="submit" class="btn-floating btn-md blue-gradient border-0">
+                                                    <i class="far fa-paper-plane"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <!-- Grid row -->
+
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-lg-5    ">
+
+                            <div class="card-body contact text-center h-100 white-text">
+
+                                <h5 class="font-weight-bold my-4 pb-2" data-i18n="Contact Info"></h5>
+                                <ul class="text-lg-left list-unstyled ml-4">
+                                    <li>
+                                        <p><i class="fas fa-globe-europe pr-2"></i><a href="@Model.CardProfile.ContactWebSite" data-i18n="WebSite"></a></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-phone pr-2"></i>@Model.CardProfile.ContactPhone</p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-envelope pr-2"></i>@Model.CardProfile.ContactEmail</p>
+                                    </li>
+                                </ul>
+                                <hr class="hr-light my-4">
+                                <ul class="list-inline text-center list-unstyled">
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg tw-ic" target="_blank" href="https://www.facebook.com/@Model.CardProfile.Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg li-ic" target="_blank" href="https://twitter.com/@Model.CardProfile.Twitter">
+                                            <i class="fab fa-twitter"> </i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg ins-ic" target="_blank" href="https://www.linkedin.com/in/@Model.CardProfile.LinkedIn">
+                                            <i class="fab fa-linkedin-in"> </i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Form with header -->
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</div>
+<!--Modal: modalContact-->
+<partial name="_modalPreview360" model="@Model.Post" />
+<partial name="_modalNotes" model="@Model.Post" />
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@section Scripts{
+    <script>
+            var localeLang = '@Model.Post.Areas.Culture';
+    </script>
+    <script src="~/src/CLDRPluralRuleParser.js"></script>
+    <script src="~/src/jquery.i18n.js"></script>
+    <script src="~/src/jquery.i18n.emitter.js"></script>
+    <script src="~/src/jquery.i18n.emitter.bidi.js"></script>
+    <script src="~/src/jquery.i18n.fallbacks.js"></script>
+    <script src="~/src/jquery.i18n.language.js"></script>
+    <script src="~/src/jquery.i18n.messagestore.js"></script>
+    <script src="~/src/jquery.i18n.parser.js"></script>
+    @if (Model.Post.Premium)
+    {
+        <script src="~/src/languages/premium.js"></script>
+        <script>
+            $(function () {
+                var uri = `/i18n/@(Model.Post.Areas.Culture).json`;
+                var activeLang = decodeURIComponent(getCookie(".AspNetCore.Culture")).split('|')[0].split('=')[1];
+                $.i18n().locale = activeLang;
+                $.i18n().load({
+                    '@Model.Post.Areas.Culture': uri,
+                    'en-US': '/i18n/en-US.json',
+                    'es': '/i18n/es.json',
+                    'fr': '/i18n/fr.json',
+                    'tr': '/i18n/tr.json',
+                    'de': '/i18n/de.json'
+                }).done(function () {
+                    $('.switch-locale').on('click', 'a', function (e) {
+                        e.preventDefault();
+                        $.i18n().locale = $(this).data('locale');
+                        console.log("Locale language: " + $.i18n().locale);
+                        $(`[data-i18n]`).each(function (index, elem) {
+                            //console.log($(elem).data('i18n') + " - " + $.i18n($(elem).data('i18n')));
+                            $(elem).html($.i18n($(elem).data('i18n')));
+                        });
+                    });
+                    $(`[data-i18n]`).each(function (index, elem) {
+                        $(elem).html($.i18n($(elem).data('i18n')));
+                    });
+                });
+
+                for (var i in $.i18n.languages) {
+                    if (i != 'default') {
+                        $('#AdvLanguages').append(`<a href="#" class="dropdown-item colorful-card" data-locale="${i}">${$.i18n.languages[i].displayName}</a>`);
+                    }
+                }
+            });
+        </script>
+    }
+    else
+    {
+        <script src="~/src/languages/en-US.js"></script>
+        <script src="~/src/languages/@(Model.Post.Areas.Culture).js"></script>
+        <script>
+            $(function () {
+                var uri = `/i18n/${localeLang}.json`;
+                var activeLang = decodeURIComponent(getCookie(".AspNetCore.Culture")).split('|')[0].split('=')[1];
+                $.i18n().locale = activeLang;
+                $.i18n().load({
+                    '@Model.Post.Areas.Culture': uri,
+                    'en-US': '/i18n/en-US.json'
+                }).done(function () {
+                    $('.switch-locale').on('click', 'a', function (e) {
+                        e.preventDefault();
+                        $.i18n().locale = $(this).data('locale');
+                        console.log("Locale language: " + $.i18n().locale);
+                        $(`[data-i18n]`).each(function (index, elem) {
+                            //console.log($(elem).data('i18n') + " - " + $.i18n($(elem).data('i18n')));
+                            $(elem).html($.i18n($(elem).data('i18n')));
+                        });
+                    });
+                    $(`[data-i18n]`).each(function (index, elem) {
+                        $(elem).html($.i18n($(elem).data('i18n')));
+                    });
+                });
+
+                for (var i in $.i18n.languages) {
+                    if (i != 'default') {
+                        $('#AdvLanguages').append(`<a href="#" class="dropdown-item colorful-card" data-locale="${i}">${$.i18n.languages[i].displayName}</a>`);
+                    }
+                }
+            });
+        </script>
+    }
+
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+        <script src="~/js/print.min.js"></script>
+        <script src="~/js/site.posts.details.js"></script>
+    }
+    else
+    {
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+        <script src="~/js/print.min.js"></script>
+        <script src="~/js/site.posts.details.min.js"></script>
+    }
+
+}

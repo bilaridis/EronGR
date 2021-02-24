@@ -1,0 +1,160 @@
+﻿@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@{
+    ViewData["Title"] = "Submit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <!-- Core build with no theme, formatting, non-essential modules -->
+    <link href="//cdn.quilljs.com/1.2.3/quill.core.css" rel="stylesheet">
+    <style>
+        .ql-editor strong {
+            font-weight: bold;
+        }
+    </style>
+    <!-- Theme included stylesheets -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+}
+
+<div class="row mt-5">
+    <!-- Section: Create Page -->
+    <section class="my-5">
+       @* <form id="main" asp-controller="Blog" asp-action="Create" method="post" enctype="multipart/form-data">*@
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-lg-8">
+
+                    <!-- First card -->
+                    <div class="card mb-4 post-title-panel">
+                        <div class="card-body">
+                            <div class="md-form mt-1 mb-0">
+                                <input type="text" id="form1" class="form-control" name="blogTitle">
+                                <label class="form-check-label" for="form1">Post title</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- First card -->
+                    <!-- Second card -->
+                    <div class="card mb-4">
+                        <!-- Create the toolbar container -->
+                        <div id="toolbar" class="col-12">
+                        </div>
+                        <div id="editor-container" class="ql-container col-12">
+
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <!-- Third Card -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="md-form mb-0 mt-2">
+                                <textarea type="text" id="form7" class="md-textarea form-control" rows="3"></textarea>
+                                <label class="form-check-label" for="form7">Custom CSS Code</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third Card -->
+
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-lg-4">
+
+                    <!-- Card -->
+                    <div class="card card-cascade narrower mb-5">
+
+                        <!-- Card image -->
+                        <div class="view view-cascade gradient-card-header blue-gradient">
+                            <h4 class="font-weight-500 mb-0">Publish</h4>
+                        </div>
+                        <!-- Card image -->
+                        <!-- Card content -->
+                        <div class="card-body card-body-cascade">
+
+                            <p><i class="fas fa-flag mr-1" aria-hidden="true"></i> Status: <strong>Draft</strong></p>
+                            <p><i class="far fa-eye mr-1" aria-hidden="true"></i> Visibility <strong>Public</strong></p>
+                            <p><i class="fas fa-archive mr-1 mr-1" aria-hidden="true"></i> Revisions: <strong>2</strong></p>
+                            <p><i class="far fa-calendar-alt mr-1" aria-hidden="true"></i> Publish: <strong>Immediately</strong></p>
+                            <div class="text-right">
+                                <button class="btn btn-flat waves-effect">Discard</button>
+                                <button class="btn btn-primary btn-publish">Publish</button>
+                            </div>
+
+                        </div>
+                        <!-- Card content -->
+
+                    </div>
+                    <!-- Card -->
+                    <!-- Card -->
+                    <div class="card card-cascade narrower">
+
+                        <!-- Card image -->
+                        <div class="view view-cascade gradient-card-header blue-gradient">
+                            <h4 class="font-weight-500 mb-0">Categories</h4>
+                        </div>
+                        <!-- Card image -->
+                        <!-- Card content -->
+                        <div class="card-body card-body-cascade">
+                            <fieldset class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="color-1" name="category1">
+                                <label class="form-check-label" for="color-1">Material Design</label>
+                            </fieldset>
+                            <fieldset class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="color-2" name="category2">
+                                <label class="form-check-label" for="color-2">Tutorials</label>
+                            </fieldset>
+                            <fieldset class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="color-3" name="category3">
+                                <label class="form-check-label" for="color-3">Marketing Automation</label>
+                            </fieldset>
+                            <fieldset class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="color-4" name="category4">
+                                <label class="form-check-label" for="color-4">Design Resources</label>
+                            </fieldset>
+                            <fieldset class="form-check">
+                                <input class="form-check-input" type="checkbox" id="color-5" name="category5">
+                                <label class="form-check-label" for="color-5">Random Stories</label>
+                            </fieldset>
+                        </div>
+                        <!-- Card content -->
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+       @* </form>*@
+    </section>
+    <!-- Section: Create Page -->
+
+
+</div>
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="//cdn.quilljs.com/1.2.3/quill.core.js"></script>
+
+        <!-- Main Quill library -->
+        <script src="//cdn.quilljs.com/1.2.3/quill.js"></script>
+        <script src="//cdn.quilljs.com/1.2.3/quill.min.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="~/js/site.blog.create.js"></script>
+
+    }
+    else
+    {
+        <script src="~/js/addons-pro/wysiwyg.min.js"></script>
+        <script src="~/js/site.blog.create.min.js"></script>
+    }
+}

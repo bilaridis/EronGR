@@ -1,0 +1,65 @@
+﻿@model EronNew.Models.ContactEmail
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+<div class="container z-depth-1 my-5 px-0 mt-5">
+    <!--Section: Content-->
+    <section class="p-5 my-md-5 text-center blue-gradient">
+
+        <!-- Section heading -->
+        <h3 class="text-center font-weight-bold text-white mt-5 mb-3">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Contactus))</h3>
+        <!-- Section description -->
+
+        <form class="mb-5 mx-md-5" action="ContactUs" method="post">
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+
+                    <!-- Name -->
+                    <input type="text" id="name" class="form-control" placeholder="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Name))" asp-for="name" required>
+
+                </div>
+                <div class="col-md-4 mb-4">
+
+                    <!-- Email -->
+                    <input type="email" id="email" class="form-control" placeholder="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))" asp-for="email" required>
+
+                </div>
+                <div class="col-md-4 mb-4">
+
+                    <!-- Phone -->
+                    <input type="number" id="phone" class="form-control" placeholder="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Mobile)) (@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.optional)))" asp-for="phone">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 mb-4">
+
+                    <!-- Subject -->
+                    <input type="text" id="subject" class="form-control" placeholder="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Subject))" asp-for="subject" required>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="form-group mb-4">
+                        <textarea class="form-control rounded" id="message" rows="3" placeholder="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Howcanwehelpyou))?" asp-for="message" required></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-elegant">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Sendyourmessage))</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>

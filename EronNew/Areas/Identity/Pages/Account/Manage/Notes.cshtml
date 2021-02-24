@@ -1,0 +1,69 @@
+﻿@page
+@model NotesModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@{
+    ViewData["Title"] = "Edit My Card";
+    ViewData["ActivePage"] = ManageNavPages.Notes;
+}
+<partial name="_StatusMessage" model="Model.StatusMessage" />
+<div class="card chat-room">
+    <div class="card-body">
+        <!-- Grid row -->
+        <div class="row px-lg-2 px-2">
+            <!-- Grid column -->
+            <div class="col-md-6 col-xl-4 px-0">
+                <h6 class="font-weight-bold mb-3 text-center text-lg-left dark-grey-text">Notes List</h6>
+                <div class="white z-depth-1 px-2 pt-3 pb-0 members-panel-1 scrollbar-sm-4 scrollbar-navy-blue-skin-slim overflow-scroll">
+                    <ul class="list-unstyled friend-list">
+                        @foreach (var item in Model.Input)
+                        {
+                            <li id="noteGroup_@item.Id" class="active grey lighten-3 p-2">
+                                <button type="button" class="deleteNoteGroup close" aria-label="Close" data-postid="@item.Id">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <a href="#" class="d-flex flex-row justify-content-md-between noteHeader" data-noteid="@item.Id" data-postid="@item.PostId">
+
+                                    <div class="text-smaller d-flex" width="250px">
+                                        <img src="@item.Post.UrlImage" height="60" width="60" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                                        <strong>#@item.PostId </strong>
+                                        <p class="last-message text-muted"> - @item.Post.SubAreas.AreaName</p>
+                                    </div>
+                                    <div class="chat-footer d-flex align-self-end ">
+                                        <span class="badge badge-dark float-right">@item.CreatedAt</span>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-6 col-xl-8 pl-md-3 px-lg-auto px-0">
+                <div class="chat-message pt-3">
+                    <ul class="list-unstyled chat-1 scrollbar-sm-4 scrollbar-navy-blue-skin-slim overflow-scroll chatList">
+                    </ul>
+                    <div class="white">
+                        <div class="form-group basic-textarea">
+                            <textarea class="md-textarea form-control z-depth-1 pl-2 my-0" id="exampleFormControlTextarea2" rows="3" placeholder="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Typeyourmessagehere))..." name="note"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" class="btn gradient white-text btn-rounded btn-sm waves-effect waves-dark float-right sendButton">Αποστολη</button>
+
+                </div>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,89 @@
+﻿@page
+@model LoginModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="d-flex justify-content-center">
+    <div class="text-center col-xl-4 col-lg-5 col-md-7 col-sm-12">
+        <!-- Material form login -->
+        <div class="card">
+            <h5 class="card-header gradient white-text text-center py-4">
+                <strong>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Login))</strong>
+            </h5>
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+                <!-- Form -->
+                <form method="post" class="text-center" style="color: #757575;">
+                    <div class="md-form danger-color-dark">@Html.ValidationSummary(false)</div>
+                    <!-- Email -->
+                    <div class="md-form mt-4">
+                        <input type="email" class="form-control" asp-for="Input.Email">
+                        <label for="Input_Email">E-mail</label>
+                    </div>
+                    <!-- Password -->
+                    <div class="md-form mt-4">
+                        <input type="password" class="form-control" asp-for="Input.Password">
+                        <label for="Input_Password">Password</label>
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <!-- Remember me -->
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" asp-for="Input.RememberMe" />
+                                <label class="form-check-label" asp-for="Input.RememberMe">@Html.DisplayNameFor(m => m.Input.RememberMe)</label>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Forgot password -->
+                            <a href="~/Identity/Account/ForgotPassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Forgotyourpassword))</a>
+                        </div>
+                    </div>
+                    <!-- Sign in button -->
+                <button class="btn navy-blue-skin gradient white-text btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Login))</button>
+
+                    <!-- Register -->
+                    <p>
+                        @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.JointoourPage))
+                        <a href="~/Identity/Account/Register">: @SharedLocalizer.GetLocalized("Εγγραφή")</a>
+                    </p>
+                </form>
+                <!-- Social login -->
+                <p class="grey-text">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Youcanalsoconnectfromtheapplications)):</p>
+                <form asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-center">
+                    @foreach (var provider in Model.ExternalLogins)
+                    {
+                        if (provider.DisplayName == "Facebook")
+                        {
+                            <button class="btn-floating btn-fb btn-sm border-0" name="provider" value="@provider.Name">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                        }
+                        else if (provider.DisplayName == "Google")
+                        {
+                            <button class="btn-floating btn-tw btn-sm border-0" name="provider" value="@provider.Name">
+                                <i class="fab fa-google"></i>
+                            </button>
+                        }
+                        else if (provider.DisplayName == "Microsoft")
+                        {
+                            <button class="btn-floating btn-git btn-sm border-0" name="provider" value="@provider.Name">
+                                <i class="fab fa-windows"></i>
+                            </button>
+                        }
+                    }
+                </form>
+                <!-- Form -->
+            </div>
+        </div>
+        <!-- Material form login -->
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

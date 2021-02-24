@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "braintree-web-drop-in": "^1.25.0",
+    "datatables": "^1.10.18",
+    "datatables-select": "^1.1.0",
+    "datejs": "^1.0.0-rc3",
+    "fine-uploader": "^5.16.2",
+    "flag-icon-css": "^3.5.0",
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "mapbox-gl": "^2.0.1",
+    "moment": "^2.29.1",
+    "moment-with-locales-es6": "^1.0.1",
+    "popper.js": "^1.16.1",
+    "requirejs": "^2.3.6",
+    "select2": "^4.0.13",
+    "toastr": "^2.1.4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

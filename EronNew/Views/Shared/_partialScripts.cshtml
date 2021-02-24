@@ -1,0 +1,131 @@
+﻿@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+
+<script type="text/template" id="qq-template">
+    <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Dragthephotoshere))">
+        <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
+            <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
+        </div>
+        <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+            <span class="qq-upload-drop-area-text-selector"></span>
+        </div>
+        <div class="qq-upload-button-selector qq-upload-button">
+            <div>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Choose))</div>
+        </div>
+        <span class="qq-drop-processing-selector qq-drop-processing">
+            <span>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Uploadingphotosstarted))</span>
+            <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+        </span>
+        <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals">
+            <li>
+                <div class="qq-progress-bar-container-selector">
+                    <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                </div>
+                <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                <img class="qq-thumbnail-selector" qq-max-size="100" qq-server-scale>
+                <span class="qq-upload-file-selector qq-upload-file"></span>
+                <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Edit))"></span>
+                <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                <span class="qq-upload-size-selector qq-upload-size"></span>
+                <button type="button" class="qq-btn qq-upload-cancel-selector qq-upload-cancel">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Cancel))</button>
+                <button type="button" class="qq-btn qq-upload-retry-selector qq-upload-retry">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Retry))</button>
+                <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Delete))</button>
+                <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+            </li>
+        </ul>
+
+        <dialog class="qq-alert-dialog-selector">
+            <div class="qq-dialog-message-selector"></div>
+            <div class="qq-dialog-buttons">
+                <button type="button" class="qq-cancel-button-selector">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Close))</button>
+            </div>
+        </dialog>
+
+        <dialog class="qq-confirm-dialog-selector">
+            <div class="qq-dialog-message-selector"></div>
+            <div class="qq-dialog-buttons">
+                <button type="button" class="qq-cancel-button-selector">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.No))</button>
+                <button type="button" class="qq-ok-button-selector">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Yes))</button>
+            </div>
+        </dialog>
+
+        <dialog class="qq-prompt-dialog-selector">
+            <div class="qq-dialog-message-selector"></div>
+            <input type="text">
+            <div class="qq-dialog-buttons">
+                <button type="button" class="qq-cancel-button-selector">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Cancel))</button>
+                <button type="button" class="qq-ok-button-selector">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Ok))</button>
+            </div>
+        </dialog>
+    </div>
+</script>
+
+<!-- Central Modal Fluid -->
+<div class="modal fade" id="promptModal" tabindex="-1" role="dialog" aria-labelledby="promptModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-fluid" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <h4 class="modal-title w-100" id="promptModalLabel"> ... </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                ...
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Close))</button>
+                <button type="button" class="btn btn-primary">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Ok))</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!-- Central Modal Fluid -->
+
+<script src="~/js/bundle.js"></script>
+<script src="~/lib/jquery.ihavecookies/jquery.ihavecookies.js"></script>
+<script src="~/js/addons/datatables.js"></script>
+<script src="~/js/addons/datatables-select.js"></script>
+<script src="~/lib/fine-uploader/fine-uploader.core.js"></script>
+<script src="~/lib/fine-uploader/fine-uploader.js"></script>
+<script src="~/lib/moment/moment-with-locales.js"></script>
+<script src="~/lib/validate-js/validate.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+<script src="~/js/mdb.js"></script>
+
+<script>
+    var textLocalised = `{
+    "noSearch" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.NoadswerefoundaccordingtoSearchfilters)))",
+    "price" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price)))",
+    "square":"@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Square)))",
+    "build":"@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Construction)))",
+    "sale":"@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Sale)))",
+    "rent":"@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rent))))",
+    "demand":"@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Demand)))",
+    "phone" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactPhone)))",
+    "obligatory" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Obligatory)))",
+    "moreThan100" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.moreThan100)))",
+    "onlyInteger" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.onlyInteger)))",
+    "minimumThreeCharacters" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.minimumThreeCharacters)))",
+    "validCity" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.validCity)))",
+    "maximumCharacters5" : "@Html.Raw(SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.maximumCharacters5)))",
+    "subArea" : "@Html.Raw(@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict)))",
+    "subType" : "@Html.Raw(@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Subcategory)))"
+    }`;
+</script>
+@if (hostingEnv.EnvironmentName == "Development")
+{
+    <script src="~/js/site.common.js"></script>
+}
+else
+{
+    <script src="~/js/site.common.min.js"></script>
+}

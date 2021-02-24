@@ -1,0 +1,130 @@
+﻿@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color mt-2 lighten-3 pt-2">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 mr-auto my-md-4 my-0 mt-4 mb-1">
+                <h5 class="font-weight-bold text-uppercase mb-4">@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Doyouneedhelp))</h5>
+                <a href="~/Home/ContactUs"><i class="fas fa-envelope fa-3x"></i><h6 class="font-weight-bold text-uppercase mb-4"> @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.WriteToUs))</h6></a>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <a href="~/Home/OurServices">Our Services</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="~/Home/FAQ">FAQ</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="~/Home/AboutUs">About Us</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#!"></a>
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Contact details -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <i class="fas fa-home mr-3"></i> Piraeus, Greece
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> contact@eron.gr
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> +30 698 503 4100
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+                <!-- Social buttons -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+                <!--Facebook-->
+                <a type="button" href="https://www.facebook.com/eron.2021" class="btn-floating btn-fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!--Twitter-->
+                <a type="button" href="https://twitter.com/eron_gr" class="btn-floating btn-tw">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- Google +-->
+                <!--<a type="button" class="btn-floating btn-gplus">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>-->
+                <!-- Dribbble -->
+                <!--<a type="button" class="btn-floating btn-dribbble">
+                    <i class="fab fa-dribbble"></i>
+                </a>-->
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        © 2021 Copyright:
+        <a href="https://www.eron.gr/"> Eron.gr</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

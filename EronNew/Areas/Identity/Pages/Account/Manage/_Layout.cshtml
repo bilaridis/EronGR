@@ -1,0 +1,26 @@
+﻿@inject SignInManager<ExtendedIdentityUser> SignInManager
+@inject EronNew.Data.ExtendedUserManager<ExtendedIdentityUser> UserManager
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@{
+    Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
+}
+
+@RenderBody()
+
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+    @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="~/js/site.identity.js"></script>
+        <script src="~/js/site.mynotes.js"></script>
+    }
+    else
+    {
+        <script src="~/js/site.identity.min.js"></script>
+        <script src="~/js/site.mynotes.min.js"></script>
+    }
+
+}

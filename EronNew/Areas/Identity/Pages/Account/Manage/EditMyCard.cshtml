@@ -1,0 +1,272 @@
+﻿@page
+@model EditMyCardModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@{
+    ViewData["Title"] = "Edit My Card";
+    ViewData["ActivePage"] = ManageNavPages.EditMyCard;
+}
+<partial name="_StatusMessage" model="Model.StatusMessage" />
+<div class="row jumbotron cloudy-knoxville-gradient lighten-4">
+    <div class="col-lg-6 col-md-12">
+        <form id="myCard-form" method="post" enctype="multipart/form-data">
+            <input asp-for="Input.Id" type="hidden">
+            <input asp-for="Input.PhotoImage" type="hidden">
+
+            <!-- Form with header -->
+            <div class="card card-cascade narrower">
+                <div class="view view-cascade gradient-card-header gradient">
+                    <h6 class="font-weight-500 mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Myinformation))</h6>
+                </div>
+                <div class="card-body">
+                    <!-- Header -->
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" asp-for="Input.Image">
+                            <label class="custom-file-label input-group-text">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Chooseaprofileimage))</label>
+                        </div>
+                    </div>
+                    <!-- Body -->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.TitleName))</span>
+                        </div>
+                        <input asp-for="Input.Title" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-default">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Subtitle))</span>
+                        </div>
+                        <input asp-for="Input.SubTitle" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.InfoCard))</span>
+                        </div>
+                        <input asp-for="Input.Info" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon">Facebook</span>
+                        </div>
+                        <input asp-for="Input.Facebook" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon">Twitter</span>
+                        </div>
+                        <input asp-for="Input.Twitter" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon">LinkedIn</span>
+                        </div>
+                        <input asp-for="Input.LinkedIn" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WebSite))</span>
+                        </div>
+                        <input asp-for="Input.ContactWebSite" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Mobile))</span>
+                        </div>
+                        <input asp-for="Input.ContactPhone" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text md-addon">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</span>
+                        </div>
+                        <input asp-for="Input.ContactEmail" type="text" class="form-control">
+                    </div>
+                    <div class="md-form amber-textarea active-amber-textarea mt-5 mx-3">
+                        <textarea asp-for="Input.InfoText" id="form19" class="md-textarea form-control" rows="7"></textarea>
+                        <label for="form19">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Writeashortdescription))</label>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-light-blue">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Save))</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Form with header -->
+        </form>
+    </div>
+    <!-- Section: Basic Info Editable -->
+    <!-- Section: Basic Info -->
+    <div class="col-lg-6 col-md-12">
+
+        <div class="card card-cascade narrower">
+            <div class="view view-cascade gradient-card-header gradient">
+                <h6 class="font-weight-500 mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</h6>
+            </div>
+            <div class="card-body">
+                <section class="card profile-card mb-4 text-center">
+                    <div class="avatar z-depth-1-half">
+                        <img src="https://www.eron.gr/@Model.Input.PhotoImage" class="img-fluid">
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h4 class="card-title"><strong>@Model.Input.Title</strong></h4>
+                        <h5>@Model.Input.SubTitle</h5>
+                        <p class="dark-grey-text">@Model.Input.Info</p>
+
+                        <!-- Social -->
+                        <a type="button" href="https://www.facebook.com/@Model.Input.Facebook" class="btn-floating btn-small"><i class="fab fa-facebook-f grey-text"></i></a>
+                        <a type="button" href="https://twitter.com/@Model.Input.Twitter" class="btn-floating btn-small"><i class="fab fa-twitter grey-text"></i></a>
+                        <a type="button" href="https://www.linkedin.com/in/@Model.Input.LinkedIn" class="btn-floating btn-small"><i class="fab fa-linkedin-in grey-text"></i></a>
+
+                        <!-- Text -->
+                        <p style="white-space: pre-line" class="card-text mt-3">
+                            @(Model.Input.InfoText)
+                        </p>
+
+                        <button type="button" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#modalContact">
+                            Contact<i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Section: Basic Info -->
+</div>
+<!--Modal: modalCookie-->
+<div class="modal fade top" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalContact"
+     aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-lg modal-top" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Body-->
+            <div class="modal-body">
+                <!-- Form with header -->
+                <div class="card contact-section dark-grey-text">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-lg-7">
+
+                            <div class="card-body form">
+
+                                <!-- Header -->
+                                <h3 class="font-weight-bold dark-grey-text mt-4"><i class="fas fa-envelope pr-2 mr-1"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Sendyourmessage))</h3>
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="form-contact-name" class="form-control">
+                                            <label for="form-contact-name" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Name))</label>
+                                        </div>
+                                    </div>
+                                    <!-- Grid column -->
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="form-contact-email" class="form-control">
+                                            <label for="form-contact-email" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</label>
+                                        </div>
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="form-contact-phone" class="form-control">
+                                            <label for="form-contact-phone" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Mobile))</label>
+                                        </div>
+                                    </div>
+                                    <!-- Grid column -->
+                                </div>
+                                <!-- Grid row -->
+                                <!-- Grid row -->
+                                <div class="row mt-3">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <textarea id="form-contact-message" class="form-control md-textarea" rows="5"></textarea>
+                                            <label for="form-contact-message">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Howcanwehelpyou))</label>
+                                            <a class="btn-floating btn-lg blue">
+                                                <i class="far fa-paper-plane"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-lg-5    ">
+
+                            <div class="card-body contact text-center h-100 white-text">
+
+                                <h3 class="font-weight-bold my-4 pb-2">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactInfo))</h3>
+                                <ul class="text-lg-left list-unstyled ml-4">
+                                    <li>
+                                        <p><i class="fas fa-globe-europe pr-2"></i><a href="@Model.Input.ContactWebSite">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WebSite))</a></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-phone pr-2"></i>@Model.Input.ContactPhone</p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-envelope pr-2"></i>@Model.Input.ContactEmail</p>
+                                    </li>
+                                </ul>
+                                <hr class="hr-light my-4">
+                                <ul class="list-inline text-center list-unstyled">
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg tw-ic" href="https://www.facebook.com/@Model.Input.Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg li-ic" href="https://twitter.com/@Model.Input.Twitter">
+                                            <i class="fab fa-twitter"> </i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p-2 fa-lg ins-ic" href="https://www.linkedin.com/in/@Model.Input.LinkedIn">
+                                            <i class="fab fa-linkedin-in"> </i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Form with header -->
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</div>
+<!--Modal: modalCookie-->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

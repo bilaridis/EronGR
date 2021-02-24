@@ -1,0 +1,21 @@
+﻿@model EronNew.Models.PostsModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+<!-- Central Modal Preview360 -->
+<div class="modal fade" id="centralModalPreview360" tabindex="-1" role="dialog" aria-labelledby="Preview360ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100 white-text" id="Preview360ModalLabel">@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.HtmlPreview360))</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body d-flex align-content-center justify-content-center">
+                <iframe width='853' height='480' src='' frameborder='0' allowfullscreen allow='xr-spatial-tracking'></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Central Modal Preview360 -->

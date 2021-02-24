@@ -1,0 +1,191 @@
+﻿@namespace EronNew.Models
+@using EronNew.Helpers
+@using EronNew.Resources
+@model EronNew.Models.PageViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section metatags
+{
+    <meta property="fb:app_id" content="407388710507530" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eron.gr" />
+    <meta property="og:url" content="https://www.eron.gr" />
+    <meta property="og:image" content="https://www.eron.gr/images/image_v2.png" />
+    <meta property="og:description" content="Καταχωρείστε τις αγγελίες σας στο Eron.gr." />
+}
+
+<div class="corner white-text">
+    <span>
+        <a href="~/Posts/Details/20073" class="p-0 m-0 white-text">Αγγελία Δοκιμαστική</a>
+    </span>
+</div>
+<!--Section: Live preview-->
+@if (Model.WelcomeOfferShow)
+{
+    <!--Modal: modalCoupon-->
+    <div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-frame modal-top modal-notify modal-success" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="heading">
+                        @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WelcomeMessage0))
+                    </p>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-6">
+                            <p class="pt-3 mx-4">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WelcomeVoucherMessage1)) <strong>10 €</strong>.
+                            </p>
+                            <p class="pt-3 mx-4">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WelcomeVoucherMessage2)) <strong>90 €</strong>.
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <a id="onlyFirst" type="button" class="btn btn-success" data-product="4">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ThankYou))
+                                <i class="fas fa-trophy ml-1 white-text"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+}
+<!--Modal: modalCoupon-->
+<!--Section: Live preview-->
+<div class="row mt-5">
+    <div class="card mt-2 col-12">
+        <div class="card-body">
+            <form asp-action="Search" method="get">
+                <div class="row">
+                    <div class="md-form input-group mt-2 col-xl-3 col-lg col-md col-sm">
+                        <label class="form-check-label" for="inp_Category">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdType))</label>
+                        <select id="inp_Category" aria-label="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdType))" class="mdb-select form-control border-0 md-form" name="SaleCategory">
+                            <option value="Sale" selected> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Sale))</option>
+                            <option value="Rent"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rent)) </option>
+                            <option value="Demand"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Demand)) </option>
+                        </select>
+                    </div>
+                    <div class="md-form input-group mt-2 col-xl-3 col-lg-6 col-md-6 col-sm">
+                        <label class="form-check-label" for="selectType">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))</label>
+                        <select id="selectType" searchable="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))" name="TypeDesc" class="mdb-select form-control border-0 md-form category1">
+                            <option value="Residential">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Residential))</option>
+                            <option value="Commercial"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Commercial))</option>
+                            <option value="Land"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Land))</option>
+                            <option value="Other Properties"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.OtherProperties))</option>
+                        </select>
+                    </div>
+                    <div class="md-form input-group mt-2 col-xl-3 col-lg-6 col-md-6 col-sm">
+                        <label class="form-check-label" for="selectParentArea">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion))</label>
+                        <select id="selectParentArea" searchable="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion))" name="Area" class="mdb-select form-control border-0 md-form">
+                        </select>
+                    </div>
+                    <div class="md-form input-group col-xl-3 col-lg-12 col-md col-sm">
+                        <input type="submit" class="btn gradient white-text btn-md w-100" value=" @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Search)) " />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group-prepend dropdown mt-2 col-md-3 col-6">
+                        <button class="btn btn-outline-primary btn-md m-0 px-3 dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RangePrice))
+                        </button>
+                        <div class="dropdown-menu dropdown-primary">
+                            <a class="dropdown-item mt-3">
+                                <div class="md-form input-group mt-2">
+                                    <label class="form-check-label" for="inp_priceFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                                    <input id="inp_priceFrom" type="number" class="form-control border-0 md-form" name="priceFrom" min="0">
+                                </div>
+                            </a>
+                            <a class="dropdown-item mt-3">
+                                <div class="md-form input-group mt-2">
+                                    <label class="form-check-label" for="inp_priceTo">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.to))</label>
+                                    <input id="inp_priceTo" type="number" class="form-control border-0 md-form" name="priceTo" min="0">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="input-group-prepend dropdown mt-2 col-md-3 col-6">
+                        <button class="btn btn-outline-primary btn-md m-0 px-3 dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Square)) m<sup>2</sup>
+                        </button>
+                        <div class="dropdown-menu dropdown-primary">
+                            <a class="dropdown-item mt-3">
+                                <div class="md-form input-group mt-2">
+                                    <label class="form-check-label" for="inp_squaresFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                                    <input id="inp_squaresFrom" type="number" class="form-control border-0 md-form" name="squaresFrom" min="0">
+                                </div>
+                            </a>
+                            <a class="dropdown-item mt-3">
+                                <div class="md-form input-group mt-2">
+                                    <label class="form-check-label" for="inp_squaresTo">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.to))</label>
+                                    <input id="inp_squaresTo" type="number" class="form-control border-0 md-form" name="squaresTo" min="0">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@if (Model.Tiles.Count > 0)
+{
+    <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 mt-5" data-ride="carousel">
+
+        <!--Controls-->
+        <div class="controls-top d-flex justify-content-center align-items-center">
+            <a class="btn-floating" href="#carousel-example-multi" data-slide="prev">
+                <i class="fas fa-chevron-left gradient"></i>
+            </a>
+            <h5 class="font-weight-bold cyan-lighter-hover mb-3">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RecentPosts))</h5>
+            <a class="btn-floating" href="#carousel-example-multi" data-slide="next">
+                <i class="fas fa-chevron-right gradient"></i>
+            </a>
+        </div>
+        <!--/.Controls-->
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            @for (int i = 0; i < Model.Tiles.Count; i++)
+            {
+                <li data-target="#carousel-example-multi" data-slide-to="@i.ToString()" class="@(i == 0 ? "active" : "" )"></li>
+            }
+        </ol>
+        <!--/.Indicators-->
+
+        <div class="carousel-inner v-2" role="listbox">
+            <div class="carousel-item active">
+                <partial name="_TileCard" model="Model.Tiles.First()" />
+            </div>
+            @foreach (BasicInformationBase item in Model.Tiles.Skip(1))
+            {
+                <div class="carousel-item">
+                    <partial name="_TileCard" model="item" />
+                </div>
+            }
+        </div>
+    </div>
+}
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@section Scripts{
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="~/js/site.home.js"></script>
+    }
+    else
+    {
+        <script src="~/js/site.home.min.js"></script>
+    }
+}

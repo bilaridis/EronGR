@@ -1,0 +1,232 @@
+﻿@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eron</title>
+    <meta content="/images/logo.png" itemprop="image">
+    <meta name="title" content="Eron.gr">
+    <meta name="description" content="Καταχωρείστε τις αγγελίες σας στο Eron.gr.">
+    <meta name="keywords" content="Advertisment,Real Estate,Ακίνητο,Πώληση,Ενοικίαση,Eron.gr">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="5 days">
+    <meta name="author" content="Vasileios Valasidis">
+    <meta property="fb:app_id" content="407388710507530" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eron.gr" />
+    <meta property="og:url" content="https://www.eron.gr" />
+    <meta property="og:image" content="https://www.eron.gr/images/image.png" />
+    <meta property="og:description" content="Καταχωρείστε τις αγγελίες σας στο Eron.gr." />
+    <!-- MDB icon -->
+    <link rel="icon" href="~/img/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="~/css/mdb.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <link href="~/lib/fine-uploader/fine-uploader-gallery.css" rel="stylesheet" />
+
+    <link href="~/lib/fine-uploader/fine-uploader-new.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/flag-icon.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    @if (hostingEnv.EnvironmentName == "Production")
+    {
+        <!-- Hotjar Tracking Code for www.eron.gr -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2219362,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZJT4KTT5R"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-9ZJT4KTT5R');
+        </script>
+    }
+</head>
+<body class="navy-blue-skin">
+    <!--Main Navigation-->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg p-0">
+            <a class="navbar-brand" href="~/Home"><img src="~/images/logo.png" height="45" /></a>
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fa-1x"></i>
+            </button>
+            <!--Navbar links-->
+
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+            <!--/Navbar links-->
+        </nav>
+        <!--Navbar -->
+    </header>
+    <!--Main Navigation-->
+    <main class="d-flex flex-fill">
+        <div class="container-fluid mt-3 text-left text-sm-left text-md-left">
+            <!-- Jumbotron -->
+            <div class="card card-image" style=" background-image: url('/images/WhiteDesk.jpg');">
+                <div class="text-white text-center rgba-stylish-slight py-5 px-4">
+                    <div class="py-5">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <!-- Jumbotron -->
+
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small mdb-color mt-5 lighten-3 pt-4">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 mr-auto my-md-4 my-0 mt-4 mb-1">
+                    <h5 class="font-weight-bold text-uppercase mb-4">@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Doyouneedhelp))</h5>
+                    <a href="~/Home/ContactUs"><i class="fas fa-envelope fa-3x"></i><h6 class="font-weight-bold text-uppercase mb-4"> @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.WriteToUs))</h6></a>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <a href="~/Home/OurServices">Our Services</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="~/Home/FAQ">FAQ</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="~/Home/AboutUs">About Us</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#!"></a>
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                    <!-- Contact details -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <i class="fas fa-home mr-3"></i> Piraeus, Greece
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i> contact@eron.gr
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i> +30 698 503 4100
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+                    <!-- Social buttons -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+                    <!--Facebook-->
+                    <a type="button" href="https://www.facebook.com/eron.2021" class="btn-floating btn-fb">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!--Twitter-->
+                    <a type="button" href="https://twitter.com/eron_gr" class="btn-floating btn-tw">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <!-- Google +-->
+                    <!--<a type="button" class="btn-floating btn-gplus">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>-->
+                    <!-- Dribbble -->
+                    <!--<a type="button" class="btn-floating btn-dribbble">
+                        <i class="fab fa-dribbble"></i>
+                    </a>-->
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2021 Copyright:
+            <a href="https://www.eron.gr/"> Eron.gr</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <partial name="_partialScripts" />
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

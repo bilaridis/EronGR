@@ -1,0 +1,256 @@
+﻿@model EronNew.Models.SearchData
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@{
+    Layout = "~/Views/Shared/_Layout-fluid.cshtml";
+}
+@section metatags
+{
+    <meta property="fb:app_id" content="407388710507530" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eron.gr - @Model.CardProfile.Title" />
+    <meta property="og:url" content="https://www.eron.gr/Card/Index/@Model.CardProfile.AspNetUserId" />
+    <meta property="og:image" content="https://www.eron.gr/@Model.CardProfile.PhotoImage" />
+    <meta property="og:description" content="@Model.CardProfile.InfoText" />
+}
+<div class="row d-flex flex-sm-fill">
+    <div class="scrollbar-sm-4 scrollbar-navy-blue-skin overflow-scroll col-lg-3 col-md-12 flex-md-shrink-1 mt-2">
+        <!-- Section: Basic Info -->
+        <section class="card profile-card mb-2 text-center">
+            <div class="avatar z-depth-1-half">
+                <img src="https://www.eron.gr/@Model.CardProfile.PhotoImage" alt="" class="img-fluid">
+            </div>
+            <!-- Card content -->
+            <div class="card-body">
+                <!-- Title -->
+                <h4 class="card-title"><strong>@Model.CardProfile.Title</strong></h4>
+                <h5>@Model.CardProfile.SubTitle</h5>
+                <p class="dark-grey-text">@Model.CardProfile.Info</p>
+
+                <!-- Social -->
+
+                <a type="button" class="btn-floating btn-small blue darken-4" target="_blank" href="https://www.facebook.com/@Model.CardProfile.Facebook"><i class="fab fa-facebook-f white-text"></i></a>
+                <a type="button" class="btn-floating btn-small light-blue darken-1" target="_blank" href="https://www.twitter.com/@Model.CardProfile.Twitter"><i class="fab fa-twitter white-text"></i></a>
+                <a type="button" class="btn-floating btn-small blue darken-3" target="_blank" href="https://www.linkedin.com/in/@Model.CardProfile.LinkedIn"><i class="fab fa-linkedin-in white-text"></i></a>
+
+                <!-- Text -->
+                <p style="white-space: pre-line" class="card-text mt-3">
+                    @Model.CardProfile.InfoText
+                </p>
+
+                <button type="button" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#modalContact" data-userId="@Model.CardProfile.AspNetUserId">
+                    Contact<i class="fas fa-paper-plane ml-2"></i>
+                </button>
+                <a class="btn btn-info btn-rounded btn-sm blue darken-4 white-text" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FCard%2FIndex%2F@(Model.CardProfile.AspNetUserId)','popup','width=400,height=500'); return false;">Share on Facebook</a>
+            </div>
+
+        </section>
+
+        <section class="Filters">
+            <form>
+                <section filter="numberOfPage">
+                    <input id="numberOfPage" type="number" class="filter-option" style="display:none;" name="numberOfPage" numberOfPage value="1">
+                </section>
+                <section filter="SortList">
+                    <input id="SortList" type="hidden" class="filter-option" name="SortList" SortList />
+                </section>
+            </form>
+        </section>
+        <!-- Section: Experience -->
+
+    </div>
+    <div class="col-lg-9 col-md-12 flex-row">
+        <partial name="_PartialViewCards" />
+    </div>
+    <!--Modal: modalCookie-->
+    <div class="modal fade top" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalContact"
+         aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-lg modal-top" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div id="modalHeader" class="modal-header">
+                    <p class="heading"><h4 class="font-weight-bold white-text mt-4"><i class="fas fa-envelope pr-2 mr-1"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WriteToUs)):</h4></p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+                <!--Header-->
+                <!--Body-->
+                <div class="modal-body">
+                    <!-- Form with header -->
+                    <div class="card contact-section dark-grey-text">
+                        <!-- Grid row -->
+                        <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-lg-7">
+                                <form class="p-0 m-0 col-12" action="ContactUs/@Model.CardProfile.AspNetUserId" method="post">
+
+                                    <div class="card-body form">
+
+                                        <!-- Header -->
+                                        <!-- Grid row -->
+                                        <div class="row">
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="form-contact-name" class="form-control" name="contactEmail.name">
+                                                    <label for="form-contact-name" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Name))</label>
+                                                </div>
+                                            </div>
+                                            <!-- Grid column -->
+                                            <!-- Grid column -->
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="form-contact-email" class="form-control" name="contactEmail.email">
+                                                    <label for="form-contact-email" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</label>
+                                                </div>
+                                            </div>
+                                            <!-- Grid column -->
+
+                                        </div>
+                                        <!-- Grid row -->
+                                        <!-- Grid row -->
+                                        <div class="row">
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="form-contact-phone" class="form-control" name="contactEmail.phone">
+                                                    <label for="form-contact-phone" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Mobile))</label>
+                                                </div>
+                                            </div>
+                                            <!-- Grid column -->
+
+                                        </div>
+                                        <!-- Grid row -->
+                                        <!-- Grid row -->
+                                        <div class="row mt-3">
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12">
+                                                <div class="md-form mb-0">
+                                                    <textarea id="form-contact-message" name="contactEmail.message" class="form-control md-textarea" rows="6" required></textarea>
+                                                    <label for="form-contact-message">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Howcanwehelpyou))?</label>
+                                                    <button type="submit" class="btn-floating btn-md blue-gradient border-0">
+                                                        <i class="far fa-paper-plane"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- Grid column -->
+
+                                        </div>
+                                        <!-- Grid row -->
+
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-lg-5    ">
+
+                                <div class="card-body contact text-center h-100 white-text">
+
+                                    <h5 class="font-weight-bold my-4 pb-2">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactInfo))</h5>
+                                    <ul class="text-lg-left list-unstyled ml-4">
+                                        <li>
+                                            <p><i class="fas fa-globe-europe pr-2"></i><a href="@Model.CardProfile.ContactWebSite">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WebSite))</a></p>
+                                        </li>
+                                        <li>
+                                            <p><i class="fas fa-phone pr-2"></i>@Model.CardProfile.ContactPhone</p>
+                                        </li>
+                                        <li>
+                                            <p><i class="fas fa-envelope pr-2"></i>@Model.CardProfile.ContactEmail</p>
+                                        </li>
+                                    </ul>
+                                    <hr class="hr-light my-4">
+                                    <ul class="list-inline text-center list-unstyled">
+                                        <li class="list-inline-item">
+                                            <a class="p-2 fa-lg tw-ic" target="_blank" href="https://www.facebook.com/@Model.CardProfile.Facebook">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="p-2 fa-lg li-ic" target="_blank" href="https://twitter.com/@Model.CardProfile.Twitter">
+                                                <i class="fab fa-twitter"> </i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="p-2 fa-lg ins-ic" target="_blank" href="https://www.linkedin.com/in/@Model.CardProfile.LinkedIn">
+                                                <i class="fab fa-linkedin-in"> </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Form with header -->
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+    </div>
+    <!--Modal: modalCookie-->
+</div>
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@section Scripts{
+    <script src="~/src/CLDRPluralRuleParser.js"></script>
+    <script src="~/src/jquery.i18n.js"></script>
+    <script src="~/src/jquery.i18n.emitter.js"></script>
+    <script src="~/src/jquery.i18n.emitter.bidi.js"></script>
+    <script src="~/src/jquery.i18n.fallbacks.js"></script>
+    <script src="~/src/jquery.i18n.language.js"></script>
+    <script src="~/src/jquery.i18n.messagestore.js"></script>
+    <script src="~/src/jquery.i18n.parser.js"></script>
+    <script src="~/src/languages/premium.js"></script>
+    <script>
+        $(function () {
+            var activeLang = decodeURIComponent(getCookie(".AspNetCore.Culture")).split('|')[0].split('=')[1];
+            $.i18n().locale = activeLang;
+            $.i18n().load({
+                'el-GR': `/i18n/el-GR.json`,
+                'en-US': '/i18n/en-US.json',
+                'es': '/i18n/es.json',
+                'fr': '/i18n/fr.json',
+                'tr': '/i18n/tr.json',
+                'de': '/i18n/de.json'
+            }).done(function () {
+                $('.switch-locale').on('click', 'a', function (e) {
+                    e.preventDefault();
+                    $.i18n().locale = $(this).data('locale');
+                    console.log("Locale language: " + $.i18n().locale);
+                    $(`[data-i18n]`).each(function (index, elem) {
+                        $(elem).html($.i18n($(elem).data('i18n')));
+                    });
+                });
+                $(`[data-i18n]`).each(function (index, elem) {
+                    $(elem).html($.i18n($(elem).data('i18n')));
+                });
+            });
+        });
+    </script>
+    <script>
+            var userId = "@Model.CardProfile.AspNetUserId";
+    </script>
+
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="~/js/site.card.js"></script>
+    }
+    else
+    {
+        <script src="~/js/site.card.min.js"></script>
+    }
+}

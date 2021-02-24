@@ -1,0 +1,94 @@
+﻿@page
+@model RegisterModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@{
+    ViewData["Title"] = "Register";
+}
+<div class="row d-flex justify-content-center">
+    <div class="text-center col-xl-4 col-lg-6 col-md-8 col-sm-12">
+        <div class="card">
+            <h5 class="card-header gradient white-text text-center py-4">
+                <strong>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Register))</strong>
+            </h5>
+
+            <div class="card-body px-lg-5 pt-0">
+                <form asp-route-returnUrl="@Model.ReturnUrl" method="post" class="md-form" style="color: #757575;">
+                    <div class="red-msg mb-3">@Html.ValidationSummary(false)</div>
+                    <div class="md-form input-group mt-4">
+                        <input type="text" asp-for="Input.FirstName" class="form-control">
+                        <label for="Input_FirstName">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Name))</label>
+                    </div>
+                    <div class="md-form input-group mt-4">
+                        <input type="text" asp-for="Input.LastName" class="form-control">
+                        <label for="Input_LastName">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Surname))</label>
+                    </div>
+                    <div class="md-form input-group mt-4">
+                        <input type="email" asp-for="Input.Email" class="form-control">
+                        <label for="Input_Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</label>
+                    </div>
+                    <div class="md-form input-group mt-4">
+                        <input type="password" asp-for="Input.Password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                        <label for="Input_Password">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</label>
+                    </div>
+                    <div class="md-form input-group mt-4">
+                        <input type="password" asp-for="Input.ConfirmPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                        <label for="Input_ConfirmPassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ConfirmPassword))</label>
+                    </div>
+                    <div class="md-form input-group mt-4">
+                        <input type="text" asp-for="Input.PhoneNumber" class="form-control">
+                        <label for="Input_Phone">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactPhone)) (@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.optional)))</label>
+                    </div>
+                    <div class="md-form input-group mt-4">
+                        <div class="form-check">
+                            <input type="checkbox" asp-for="Input.Newsletter" class="form-check-input" id="materialRegisterFormNewsletter">
+                            <label class="form-check-label" for="materialRegisterFormNewsletter">Subscribe to our newsletter</label>
+                        </div>
+                    </div>
+                    <div class="md-form input-group mt-4">
+                        <button class="btn navy-blue-skin gradient white-text btn-rounded btn-block my-4 waves-effect z-depth-2" type="submit">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Submit))</button>
+                    </div>
+                </form>
+                <div class="text-center grey-text">
+                    <p>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Registerfromtheapplications)):</p>
+                    <form asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-center">
+                        @foreach (var provider in Model.ExternalLogins)
+                        {
+                            if (provider.DisplayName == "Facebook")
+                            {
+                                <button class="btn-floating btn-fb btn-sm border-0" name="provider" value="@provider.Name">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                            }
+                            else if (provider.DisplayName == "Google")
+                            {
+                                <button class="btn-floating btn-tw btn-sm border-0" name="provider" value="@provider.Name">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                            }
+                            else if (provider.DisplayName == "Microsoft")
+                            {
+                                <button class="btn-floating btn-git btn-sm border-0" name="provider" value="@provider.Name">
+                                    <i class="fab fa-windows"></i>
+                                </button>
+                            }
+                        }
+                    </form>
+                    <hr>
+
+                    <p class="grey-text">
+                        @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.ByclickingRegisteryouautomaticallyagreetoour))
+                        <a href="https://www.eron.gr/Home/Privacy" target="_blank">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Termsofuse))</a>.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

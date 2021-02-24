@@ -1,0 +1,33 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+
+        <div class="container my-5 py-5 z-depth-1">
+
+
+            <!--Section: Content-->
+            <section class="text-center px-md-5 mx-md-5 dark-grey-text">
+
+                <h3 class="font-weight-bold">Registration has been sent to your Email. Check out your email Account. </h3>
+
+            </section>
+            <!--Section: Content-->
+
+
+        </div>
+    }
+    else
+    {
+        <p>
+            Please check your email to confirm your account.
+        </p>
+        <p>
+            <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
+        </p>
+    }
+}

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EronNew.Models.Order>
+
+@{
+    ViewData["Title"] = "MyOrders";
+    Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
+}
+
+<h1>MyOrders</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order Code
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fpost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Summary)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fpost.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Description)
+            </td>
+            <td>
+                @item.Summary.Value.ToString("C")
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,858 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-EronNew-704DBDED-5E93-43D4-AD16-7AA4F1593221</UserSecretsId>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AssemblyVersion>1.0.5.6</AssemblyVersion>
+    <FileVersion>1.0.5.6</FileVersion>
+    <AssemblyName>EronNew</AssemblyName>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+	<CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Uploads\**" />
+    <Content Remove="wwwroot\Uploads\**" />
+    <EmbeddedResource Remove="wwwroot\Uploads\**" />
+    <None Remove="wwwroot\Uploads\**" />
+    <TypeScriptCompile Remove="wwwroot\Uploads\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.css" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.css.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.min.css" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.js" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Remove="C:\Users\billi\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\flags\1x1\ad.svg" />
+    <None Include="wwwroot\flags\1x1\ae.svg" />
+    <None Include="wwwroot\flags\1x1\af.svg" />
+    <None Include="wwwroot\flags\1x1\ag.svg" />
+    <None Include="wwwroot\flags\1x1\ai.svg" />
+    <None Include="wwwroot\flags\1x1\al.svg" />
+    <None Include="wwwroot\flags\1x1\am.svg" />
+    <None Include="wwwroot\flags\1x1\ao.svg" />
+    <None Include="wwwroot\flags\1x1\aq.svg" />
+    <None Include="wwwroot\flags\1x1\ar.svg" />
+    <None Include="wwwroot\flags\1x1\as.svg" />
+    <None Include="wwwroot\flags\1x1\at.svg" />
+    <None Include="wwwroot\flags\1x1\au.svg" />
+    <None Include="wwwroot\flags\1x1\aw.svg" />
+    <None Include="wwwroot\flags\1x1\ax.svg" />
+    <None Include="wwwroot\flags\1x1\az.svg" />
+    <None Include="wwwroot\flags\1x1\ba.svg" />
+    <None Include="wwwroot\flags\1x1\bb.svg" />
+    <None Include="wwwroot\flags\1x1\bd.svg" />
+    <None Include="wwwroot\flags\1x1\be.svg" />
+    <None Include="wwwroot\flags\1x1\bf.svg" />
+    <None Include="wwwroot\flags\1x1\bg.svg" />
+    <None Include="wwwroot\flags\1x1\bh.svg" />
+    <None Include="wwwroot\flags\1x1\bi.svg" />
+    <None Include="wwwroot\flags\1x1\bj.svg" />
+    <None Include="wwwroot\flags\1x1\bl.svg" />
+    <None Include="wwwroot\flags\1x1\bm.svg" />
+    <None Include="wwwroot\flags\1x1\bn.svg" />
+    <None Include="wwwroot\flags\1x1\bo.svg" />
+    <None Include="wwwroot\flags\1x1\bq.svg" />
+    <None Include="wwwroot\flags\1x1\br.svg" />
+    <None Include="wwwroot\flags\1x1\bs.svg" />
+    <None Include="wwwroot\flags\1x1\bt.svg" />
+    <None Include="wwwroot\flags\1x1\bv.svg" />
+    <None Include="wwwroot\flags\1x1\bw.svg" />
+    <None Include="wwwroot\flags\1x1\by.svg" />
+    <None Include="wwwroot\flags\1x1\bz.svg" />
+    <None Include="wwwroot\flags\1x1\ca.svg" />
+    <None Include="wwwroot\flags\1x1\cc.svg" />
+    <None Include="wwwroot\flags\1x1\cd.svg" />
+    <None Include="wwwroot\flags\1x1\cf.svg" />
+    <None Include="wwwroot\flags\1x1\cg.svg" />
+    <None Include="wwwroot\flags\1x1\ch.svg" />
+    <None Include="wwwroot\flags\1x1\ci.svg" />
+    <None Include="wwwroot\flags\1x1\ck.svg" />
+    <None Include="wwwroot\flags\1x1\cl.svg" />
+    <None Include="wwwroot\flags\1x1\cm.svg" />
+    <None Include="wwwroot\flags\1x1\cn.svg" />
+    <None Include="wwwroot\flags\1x1\co.svg" />
+    <None Include="wwwroot\flags\1x1\cr.svg" />
+    <None Include="wwwroot\flags\1x1\cu.svg" />
+    <None Include="wwwroot\flags\1x1\cv.svg" />
+    <None Include="wwwroot\flags\1x1\cw.svg" />
+    <None Include="wwwroot\flags\1x1\cx.svg" />
+    <None Include="wwwroot\flags\1x1\cy.svg" />
+    <None Include="wwwroot\flags\1x1\cz.svg" />
+    <None Include="wwwroot\flags\1x1\de.svg" />
+    <None Include="wwwroot\flags\1x1\dj.svg" />
+    <None Include="wwwroot\flags\1x1\dk.svg" />
+    <None Include="wwwroot\flags\1x1\dm.svg" />
+    <None Include="wwwroot\flags\1x1\do.svg" />
+    <None Include="wwwroot\flags\1x1\dz.svg" />
+    <None Include="wwwroot\flags\1x1\ec.svg" />
+    <None Include="wwwroot\flags\1x1\ee.svg" />
+    <None Include="wwwroot\flags\1x1\eg.svg" />
+    <None Include="wwwroot\flags\1x1\eh.svg" />
+    <None Include="wwwroot\flags\1x1\er.svg" />
+    <None Include="wwwroot\flags\1x1\es-ca.svg" />
+    <None Include="wwwroot\flags\1x1\es-ga.svg" />
+    <None Include="wwwroot\flags\1x1\es.svg" />
+    <None Include="wwwroot\flags\1x1\et.svg" />
+    <None Include="wwwroot\flags\1x1\eu.svg" />
+    <None Include="wwwroot\flags\1x1\fi.svg" />
+    <None Include="wwwroot\flags\1x1\fj.svg" />
+    <None Include="wwwroot\flags\1x1\fk.svg" />
+    <None Include="wwwroot\flags\1x1\fm.svg" />
+    <None Include="wwwroot\flags\1x1\fo.svg" />
+    <None Include="wwwroot\flags\1x1\fr.svg" />
+    <None Include="wwwroot\flags\1x1\ga.svg" />
+    <None Include="wwwroot\flags\1x1\gb-eng.svg" />
+    <None Include="wwwroot\flags\1x1\gb-nir.svg" />
+    <None Include="wwwroot\flags\1x1\gb-sct.svg" />
+    <None Include="wwwroot\flags\1x1\gb-wls.svg" />
+    <None Include="wwwroot\flags\1x1\gb.svg" />
+    <None Include="wwwroot\flags\1x1\gd.svg" />
+    <None Include="wwwroot\flags\1x1\ge.svg" />
+    <None Include="wwwroot\flags\1x1\gf.svg" />
+    <None Include="wwwroot\flags\1x1\gg.svg" />
+    <None Include="wwwroot\flags\1x1\gh.svg" />
+    <None Include="wwwroot\flags\1x1\gi.svg" />
+    <None Include="wwwroot\flags\1x1\gl.svg" />
+    <None Include="wwwroot\flags\1x1\gm.svg" />
+    <None Include="wwwroot\flags\1x1\gn.svg" />
+    <None Include="wwwroot\flags\1x1\gp.svg" />
+    <None Include="wwwroot\flags\1x1\gq.svg" />
+    <None Include="wwwroot\flags\1x1\gr.svg" />
+    <None Include="wwwroot\flags\1x1\gs.svg" />
+    <None Include="wwwroot\flags\1x1\gt.svg" />
+    <None Include="wwwroot\flags\1x1\gu.svg" />
+    <None Include="wwwroot\flags\1x1\gw.svg" />
+    <None Include="wwwroot\flags\1x1\gy.svg" />
+    <None Include="wwwroot\flags\1x1\hk.svg" />
+    <None Include="wwwroot\flags\1x1\hm.svg" />
+    <None Include="wwwroot\flags\1x1\hn.svg" />
+    <None Include="wwwroot\flags\1x1\hr.svg" />
+    <None Include="wwwroot\flags\1x1\ht.svg" />
+    <None Include="wwwroot\flags\1x1\hu.svg" />
+    <None Include="wwwroot\flags\1x1\id.svg" />
+    <None Include="wwwroot\flags\1x1\ie.svg" />
+    <None Include="wwwroot\flags\1x1\il.svg" />
+    <None Include="wwwroot\flags\1x1\im.svg" />
+    <None Include="wwwroot\flags\1x1\in.svg" />
+    <None Include="wwwroot\flags\1x1\io.svg" />
+    <None Include="wwwroot\flags\1x1\iq.svg" />
+    <None Include="wwwroot\flags\1x1\ir.svg" />
+    <None Include="wwwroot\flags\1x1\is.svg" />
+    <None Include="wwwroot\flags\1x1\it.svg" />
+    <None Include="wwwroot\flags\1x1\je.svg" />
+    <None Include="wwwroot\flags\1x1\jm.svg" />
+    <None Include="wwwroot\flags\1x1\jo.svg" />
+    <None Include="wwwroot\flags\1x1\jp.svg" />
+    <None Include="wwwroot\flags\1x1\ke.svg" />
+    <None Include="wwwroot\flags\1x1\kg.svg" />
+    <None Include="wwwroot\flags\1x1\kh.svg" />
+    <None Include="wwwroot\flags\1x1\ki.svg" />
+    <None Include="wwwroot\flags\1x1\km.svg" />
+    <None Include="wwwroot\flags\1x1\kn.svg" />
+    <None Include="wwwroot\flags\1x1\kp.svg" />
+    <None Include="wwwroot\flags\1x1\kr.svg" />
+    <None Include="wwwroot\flags\1x1\kw.svg" />
+    <None Include="wwwroot\flags\1x1\ky.svg" />
+    <None Include="wwwroot\flags\1x1\kz.svg" />
+    <None Include="wwwroot\flags\1x1\la.svg" />
+    <None Include="wwwroot\flags\1x1\lb.svg" />
+    <None Include="wwwroot\flags\1x1\lc.svg" />
+    <None Include="wwwroot\flags\1x1\li.svg" />
+    <None Include="wwwroot\flags\1x1\lk.svg" />
+    <None Include="wwwroot\flags\1x1\lr.svg" />
+    <None Include="wwwroot\flags\1x1\ls.svg" />
+    <None Include="wwwroot\flags\1x1\lt.svg" />
+    <None Include="wwwroot\flags\1x1\lu.svg" />
+    <None Include="wwwroot\flags\1x1\lv.svg" />
+    <None Include="wwwroot\flags\1x1\ly.svg" />
+    <None Include="wwwroot\flags\1x1\ma.svg" />
+    <None Include="wwwroot\flags\1x1\mc.svg" />
+    <None Include="wwwroot\flags\1x1\md.svg" />
+    <None Include="wwwroot\flags\1x1\me.svg" />
+    <None Include="wwwroot\flags\1x1\mf.svg" />
+    <None Include="wwwroot\flags\1x1\mg.svg" />
+    <None Include="wwwroot\flags\1x1\mh.svg" />
+    <None Include="wwwroot\flags\1x1\mk.svg" />
+    <None Include="wwwroot\flags\1x1\ml.svg" />
+    <None Include="wwwroot\flags\1x1\mm.svg" />
+    <None Include="wwwroot\flags\1x1\mn.svg" />
+    <None Include="wwwroot\flags\1x1\mo.svg" />
+    <None Include="wwwroot\flags\1x1\mp.svg" />
+    <None Include="wwwroot\flags\1x1\mq.svg" />
+    <None Include="wwwroot\flags\1x1\mr.svg" />
+    <None Include="wwwroot\flags\1x1\ms.svg" />
+    <None Include="wwwroot\flags\1x1\mt.svg" />
+    <None Include="wwwroot\flags\1x1\mu.svg" />
+    <None Include="wwwroot\flags\1x1\mv.svg" />
+    <None Include="wwwroot\flags\1x1\mw.svg" />
+    <None Include="wwwroot\flags\1x1\mx.svg" />
+    <None Include="wwwroot\flags\1x1\my.svg" />
+    <None Include="wwwroot\flags\1x1\mz.svg" />
+    <None Include="wwwroot\flags\1x1\na.svg" />
+    <None Include="wwwroot\flags\1x1\nc.svg" />
+    <None Include="wwwroot\flags\1x1\ne.svg" />
+    <None Include="wwwroot\flags\1x1\nf.svg" />
+    <None Include="wwwroot\flags\1x1\ng.svg" />
+    <None Include="wwwroot\flags\1x1\ni.svg" />
+    <None Include="wwwroot\flags\1x1\nl.svg" />
+    <None Include="wwwroot\flags\1x1\no.svg" />
+    <None Include="wwwroot\flags\1x1\np.svg" />
+    <None Include="wwwroot\flags\1x1\nr.svg" />
+    <None Include="wwwroot\flags\1x1\nu.svg" />
+    <None Include="wwwroot\flags\1x1\nz.svg" />
+    <None Include="wwwroot\flags\1x1\om.svg" />
+    <None Include="wwwroot\flags\1x1\pa.svg" />
+    <None Include="wwwroot\flags\1x1\pe.svg" />
+    <None Include="wwwroot\flags\1x1\pf.svg" />
+    <None Include="wwwroot\flags\1x1\pg.svg" />
+    <None Include="wwwroot\flags\1x1\ph.svg" />
+    <None Include="wwwroot\flags\1x1\pk.svg" />
+    <None Include="wwwroot\flags\1x1\pl.svg" />
+    <None Include="wwwroot\flags\1x1\pm.svg" />
+    <None Include="wwwroot\flags\1x1\pn.svg" />
+    <None Include="wwwroot\flags\1x1\pr.svg" />
+    <None Include="wwwroot\flags\1x1\ps.svg" />
+    <None Include="wwwroot\flags\1x1\pt.svg" />
+    <None Include="wwwroot\flags\1x1\pw.svg" />
+    <None Include="wwwroot\flags\1x1\py.svg" />
+    <None Include="wwwroot\flags\1x1\qa.svg" />
+    <None Include="wwwroot\flags\1x1\re.svg" />
+    <None Include="wwwroot\flags\1x1\ro.svg" />
+    <None Include="wwwroot\flags\1x1\rs.svg" />
+    <None Include="wwwroot\flags\1x1\ru.svg" />
+    <None Include="wwwroot\flags\1x1\rw.svg" />
+    <None Include="wwwroot\flags\1x1\sa.svg" />
+    <None Include="wwwroot\flags\1x1\sb.svg" />
+    <None Include="wwwroot\flags\1x1\sc.svg" />
+    <None Include="wwwroot\flags\1x1\sd.svg" />
+    <None Include="wwwroot\flags\1x1\se.svg" />
+    <None Include="wwwroot\flags\1x1\sg.svg" />
+    <None Include="wwwroot\flags\1x1\sh.svg" />
+    <None Include="wwwroot\flags\1x1\si.svg" />
+    <None Include="wwwroot\flags\1x1\sj.svg" />
+    <None Include="wwwroot\flags\1x1\sk.svg" />
+    <None Include="wwwroot\flags\1x1\sl.svg" />
+    <None Include="wwwroot\flags\1x1\sm.svg" />
+    <None Include="wwwroot\flags\1x1\sn.svg" />
+    <None Include="wwwroot\flags\1x1\so.svg" />
+    <None Include="wwwroot\flags\1x1\sr.svg" />
+    <None Include="wwwroot\flags\1x1\ss.svg" />
+    <None Include="wwwroot\flags\1x1\st.svg" />
+    <None Include="wwwroot\flags\1x1\sv.svg" />
+    <None Include="wwwroot\flags\1x1\sx.svg" />
+    <None Include="wwwroot\flags\1x1\sy.svg" />
+    <None Include="wwwroot\flags\1x1\sz.svg" />
+    <None Include="wwwroot\flags\1x1\tc.svg" />
+    <None Include="wwwroot\flags\1x1\td.svg" />
+    <None Include="wwwroot\flags\1x1\tf.svg" />
+    <None Include="wwwroot\flags\1x1\tg.svg" />
+    <None Include="wwwroot\flags\1x1\th.svg" />
+    <None Include="wwwroot\flags\1x1\tj.svg" />
+    <None Include="wwwroot\flags\1x1\tk.svg" />
+    <None Include="wwwroot\flags\1x1\tl.svg" />
+    <None Include="wwwroot\flags\1x1\tm.svg" />
+    <None Include="wwwroot\flags\1x1\tn.svg" />
+    <None Include="wwwroot\flags\1x1\to.svg" />
+    <None Include="wwwroot\flags\1x1\tr.svg" />
+    <None Include="wwwroot\flags\1x1\tt.svg" />
+    <None Include="wwwroot\flags\1x1\tv.svg" />
+    <None Include="wwwroot\flags\1x1\tw.svg" />
+    <None Include="wwwroot\flags\1x1\tz.svg" />
+    <None Include="wwwroot\flags\1x1\ua.svg" />
+    <None Include="wwwroot\flags\1x1\ug.svg" />
+    <None Include="wwwroot\flags\1x1\um.svg" />
+    <None Include="wwwroot\flags\1x1\un.svg" />
+    <None Include="wwwroot\flags\1x1\us.svg" />
+    <None Include="wwwroot\flags\1x1\uy.svg" />
+    <None Include="wwwroot\flags\1x1\uz.svg" />
+    <None Include="wwwroot\flags\1x1\va.svg" />
+    <None Include="wwwroot\flags\1x1\vc.svg" />
+    <None Include="wwwroot\flags\1x1\ve.svg" />
+    <None Include="wwwroot\flags\1x1\vg.svg" />
+    <None Include="wwwroot\flags\1x1\vi.svg" />
+    <None Include="wwwroot\flags\1x1\vn.svg" />
+    <None Include="wwwroot\flags\1x1\vu.svg" />
+    <None Include="wwwroot\flags\1x1\wf.svg" />
+    <None Include="wwwroot\flags\1x1\ws.svg" />
+    <None Include="wwwroot\flags\1x1\xk.svg" />
+    <None Include="wwwroot\flags\1x1\ye.svg" />
+    <None Include="wwwroot\flags\1x1\yt.svg" />
+    <None Include="wwwroot\flags\1x1\za.svg" />
+    <None Include="wwwroot\flags\1x1\zm.svg" />
+    <None Include="wwwroot\flags\1x1\zw.svg" />
+    <None Include="wwwroot\flags\4x3\ad.svg" />
+    <None Include="wwwroot\flags\4x3\ae.svg" />
+    <None Include="wwwroot\flags\4x3\af.svg" />
+    <None Include="wwwroot\flags\4x3\ag.svg" />
+    <None Include="wwwroot\flags\4x3\ai.svg" />
+    <None Include="wwwroot\flags\4x3\al.svg" />
+    <None Include="wwwroot\flags\4x3\am.svg" />
+    <None Include="wwwroot\flags\4x3\ao.svg" />
+    <None Include="wwwroot\flags\4x3\aq.svg" />
+    <None Include="wwwroot\flags\4x3\ar.svg" />
+    <None Include="wwwroot\flags\4x3\as.svg" />
+    <None Include="wwwroot\flags\4x3\at.svg" />
+    <None Include="wwwroot\flags\4x3\au.svg" />
+    <None Include="wwwroot\flags\4x3\aw.svg" />
+    <None Include="wwwroot\flags\4x3\ax.svg" />
+    <None Include="wwwroot\flags\4x3\az.svg" />
+    <None Include="wwwroot\flags\4x3\ba.svg" />
+    <None Include="wwwroot\flags\4x3\bb.svg" />
+    <None Include="wwwroot\flags\4x3\bd.svg" />
+    <None Include="wwwroot\flags\4x3\be.svg" />
+    <None Include="wwwroot\flags\4x3\bf.svg" />
+    <None Include="wwwroot\flags\4x3\bg.svg" />
+    <None Include="wwwroot\flags\4x3\bh.svg" />
+    <None Include="wwwroot\flags\4x3\bi.svg" />
+    <None Include="wwwroot\flags\4x3\bj.svg" />
+    <None Include="wwwroot\flags\4x3\bl.svg" />
+    <None Include="wwwroot\flags\4x3\bm.svg" />
+    <None Include="wwwroot\flags\4x3\bn.svg" />
+    <None Include="wwwroot\flags\4x3\bo.svg" />
+    <None Include="wwwroot\flags\4x3\bq.svg" />
+    <None Include="wwwroot\flags\4x3\br.svg" />
+    <None Include="wwwroot\flags\4x3\bs.svg" />
+    <None Include="wwwroot\flags\4x3\bt.svg" />
+    <None Include="wwwroot\flags\4x3\bv.svg" />
+    <None Include="wwwroot\flags\4x3\bw.svg" />
+    <None Include="wwwroot\flags\4x3\by.svg" />
+    <None Include="wwwroot\flags\4x3\bz.svg" />
+    <None Include="wwwroot\flags\4x3\ca.svg" />
+    <None Include="wwwroot\flags\4x3\cc.svg" />
+    <None Include="wwwroot\flags\4x3\cd.svg" />
+    <None Include="wwwroot\flags\4x3\cf.svg" />
+    <None Include="wwwroot\flags\4x3\cg.svg" />
+    <None Include="wwwroot\flags\4x3\ch.svg" />
+    <None Include="wwwroot\flags\4x3\ci.svg" />
+    <None Include="wwwroot\flags\4x3\ck.svg" />
+    <None Include="wwwroot\flags\4x3\cl.svg" />
+    <None Include="wwwroot\flags\4x3\cm.svg" />
+    <None Include="wwwroot\flags\4x3\cn.svg" />
+    <None Include="wwwroot\flags\4x3\co.svg" />
+    <None Include="wwwroot\flags\4x3\cr.svg" />
+    <None Include="wwwroot\flags\4x3\cu.svg" />
+    <None Include="wwwroot\flags\4x3\cv.svg" />
+    <None Include="wwwroot\flags\4x3\cw.svg" />
+    <None Include="wwwroot\flags\4x3\cx.svg" />
+    <None Include="wwwroot\flags\4x3\cy.svg" />
+    <None Include="wwwroot\flags\4x3\cz.svg" />
+    <None Include="wwwroot\flags\4x3\de.svg" />
+    <None Include="wwwroot\flags\4x3\dj.svg" />
+    <None Include="wwwroot\flags\4x3\dk.svg" />
+    <None Include="wwwroot\flags\4x3\dm.svg" />
+    <None Include="wwwroot\flags\4x3\do.svg" />
+    <None Include="wwwroot\flags\4x3\dz.svg" />
+    <None Include="wwwroot\flags\4x3\ec.svg" />
+    <None Include="wwwroot\flags\4x3\ee.svg" />
+    <None Include="wwwroot\flags\4x3\eg.svg" />
+    <None Include="wwwroot\flags\4x3\eh.svg" />
+    <None Include="wwwroot\flags\4x3\er.svg" />
+    <None Include="wwwroot\flags\4x3\es-ca.svg" />
+    <None Include="wwwroot\flags\4x3\es-ga.svg" />
+    <None Include="wwwroot\flags\4x3\es.svg" />
+    <None Include="wwwroot\flags\4x3\et.svg" />
+    <None Include="wwwroot\flags\4x3\eu.svg" />
+    <None Include="wwwroot\flags\4x3\fi.svg" />
+    <None Include="wwwroot\flags\4x3\fj.svg" />
+    <None Include="wwwroot\flags\4x3\fk.svg" />
+    <None Include="wwwroot\flags\4x3\fm.svg" />
+    <None Include="wwwroot\flags\4x3\fo.svg" />
+    <None Include="wwwroot\flags\4x3\fr.svg" />
+    <None Include="wwwroot\flags\4x3\ga.svg" />
+    <None Include="wwwroot\flags\4x3\gb-eng.svg" />
+    <None Include="wwwroot\flags\4x3\gb-nir.svg" />
+    <None Include="wwwroot\flags\4x3\gb-sct.svg" />
+    <None Include="wwwroot\flags\4x3\gb-wls.svg" />
+    <None Include="wwwroot\flags\4x3\gb.svg" />
+    <None Include="wwwroot\flags\4x3\gd.svg" />
+    <None Include="wwwroot\flags\4x3\ge.svg" />
+    <None Include="wwwroot\flags\4x3\gf.svg" />
+    <None Include="wwwroot\flags\4x3\gg.svg" />
+    <None Include="wwwroot\flags\4x3\gh.svg" />
+    <None Include="wwwroot\flags\4x3\gi.svg" />
+    <None Include="wwwroot\flags\4x3\gl.svg" />
+    <None Include="wwwroot\flags\4x3\gm.svg" />
+    <None Include="wwwroot\flags\4x3\gn.svg" />
+    <None Include="wwwroot\flags\4x3\gp.svg" />
+    <None Include="wwwroot\flags\4x3\gq.svg" />
+    <None Include="wwwroot\flags\4x3\gr.svg" />
+    <None Include="wwwroot\flags\4x3\gs.svg" />
+    <None Include="wwwroot\flags\4x3\gt.svg" />
+    <None Include="wwwroot\flags\4x3\gu.svg" />
+    <None Include="wwwroot\flags\4x3\gw.svg" />
+    <None Include="wwwroot\flags\4x3\gy.svg" />
+    <None Include="wwwroot\flags\4x3\hk.svg" />
+    <None Include="wwwroot\flags\4x3\hm.svg" />
+    <None Include="wwwroot\flags\4x3\hn.svg" />
+    <None Include="wwwroot\flags\4x3\hr.svg" />
+    <None Include="wwwroot\flags\4x3\ht.svg" />
+    <None Include="wwwroot\flags\4x3\hu.svg" />
+    <None Include="wwwroot\flags\4x3\id.svg" />
+    <None Include="wwwroot\flags\4x3\ie.svg" />
+    <None Include="wwwroot\flags\4x3\il.svg" />
+    <None Include="wwwroot\flags\4x3\im.svg" />
+    <None Include="wwwroot\flags\4x3\in.svg" />
+    <None Include="wwwroot\flags\4x3\io.svg" />
+    <None Include="wwwroot\flags\4x3\iq.svg" />
+    <None Include="wwwroot\flags\4x3\ir.svg" />
+    <None Include="wwwroot\flags\4x3\is.svg" />
+    <None Include="wwwroot\flags\4x3\it.svg" />
+    <None Include="wwwroot\flags\4x3\je.svg" />
+    <None Include="wwwroot\flags\4x3\jm.svg" />
+    <None Include="wwwroot\flags\4x3\jo.svg" />
+    <None Include="wwwroot\flags\4x3\jp.svg" />
+    <None Include="wwwroot\flags\4x3\ke.svg" />
+    <None Include="wwwroot\flags\4x3\kg.svg" />
+    <None Include="wwwroot\flags\4x3\kh.svg" />
+    <None Include="wwwroot\flags\4x3\ki.svg" />
+    <None Include="wwwroot\flags\4x3\km.svg" />
+    <None Include="wwwroot\flags\4x3\kn.svg" />
+    <None Include="wwwroot\flags\4x3\kp.svg" />
+    <None Include="wwwroot\flags\4x3\kr.svg" />
+    <None Include="wwwroot\flags\4x3\kw.svg" />
+    <None Include="wwwroot\flags\4x3\ky.svg" />
+    <None Include="wwwroot\flags\4x3\kz.svg" />
+    <None Include="wwwroot\flags\4x3\la.svg" />
+    <None Include="wwwroot\flags\4x3\lb.svg" />
+    <None Include="wwwroot\flags\4x3\lc.svg" />
+    <None Include="wwwroot\flags\4x3\li.svg" />
+    <None Include="wwwroot\flags\4x3\lk.svg" />
+    <None Include="wwwroot\flags\4x3\lr.svg" />
+    <None Include="wwwroot\flags\4x3\ls.svg" />
+    <None Include="wwwroot\flags\4x3\lt.svg" />
+    <None Include="wwwroot\flags\4x3\lu.svg" />
+    <None Include="wwwroot\flags\4x3\lv.svg" />
+    <None Include="wwwroot\flags\4x3\ly.svg" />
+    <None Include="wwwroot\flags\4x3\ma.svg" />
+    <None Include="wwwroot\flags\4x3\mc.svg" />
+    <None Include="wwwroot\flags\4x3\md.svg" />
+    <None Include="wwwroot\flags\4x3\me.svg" />
+    <None Include="wwwroot\flags\4x3\mf.svg" />
+    <None Include="wwwroot\flags\4x3\mg.svg" />
+    <None Include="wwwroot\flags\4x3\mh.svg" />
+    <None Include="wwwroot\flags\4x3\mk.svg" />
+    <None Include="wwwroot\flags\4x3\ml.svg" />
+    <None Include="wwwroot\flags\4x3\mm.svg" />
+    <None Include="wwwroot\flags\4x3\mn.svg" />
+    <None Include="wwwroot\flags\4x3\mo.svg" />
+    <None Include="wwwroot\flags\4x3\mp.svg" />
+    <None Include="wwwroot\flags\4x3\mq.svg" />
+    <None Include="wwwroot\flags\4x3\mr.svg" />
+    <None Include="wwwroot\flags\4x3\ms.svg" />
+    <None Include="wwwroot\flags\4x3\mt.svg" />
+    <None Include="wwwroot\flags\4x3\mu.svg" />
+    <None Include="wwwroot\flags\4x3\mv.svg" />
+    <None Include="wwwroot\flags\4x3\mw.svg" />
+    <None Include="wwwroot\flags\4x3\mx.svg" />
+    <None Include="wwwroot\flags\4x3\my.svg" />
+    <None Include="wwwroot\flags\4x3\mz.svg" />
+    <None Include="wwwroot\flags\4x3\na.svg" />
+    <None Include="wwwroot\flags\4x3\nc.svg" />
+    <None Include="wwwroot\flags\4x3\ne.svg" />
+    <None Include="wwwroot\flags\4x3\nf.svg" />
+    <None Include="wwwroot\flags\4x3\ng.svg" />
+    <None Include="wwwroot\flags\4x3\ni.svg" />
+    <None Include="wwwroot\flags\4x3\nl.svg" />
+    <None Include="wwwroot\flags\4x3\no.svg" />
+    <None Include="wwwroot\flags\4x3\np.svg" />
+    <None Include="wwwroot\flags\4x3\nr.svg" />
+    <None Include="wwwroot\flags\4x3\nu.svg" />
+    <None Include="wwwroot\flags\4x3\nz.svg" />
+    <None Include="wwwroot\flags\4x3\om.svg" />
+    <None Include="wwwroot\flags\4x3\pa.svg" />
+    <None Include="wwwroot\flags\4x3\pe.svg" />
+    <None Include="wwwroot\flags\4x3\pf.svg" />
+    <None Include="wwwroot\flags\4x3\pg.svg" />
+    <None Include="wwwroot\flags\4x3\ph.svg" />
+    <None Include="wwwroot\flags\4x3\pk.svg" />
+    <None Include="wwwroot\flags\4x3\pl.svg" />
+    <None Include="wwwroot\flags\4x3\pm.svg" />
+    <None Include="wwwroot\flags\4x3\pn.svg" />
+    <None Include="wwwroot\flags\4x3\pr.svg" />
+    <None Include="wwwroot\flags\4x3\ps.svg" />
+    <None Include="wwwroot\flags\4x3\pt.svg" />
+    <None Include="wwwroot\flags\4x3\pw.svg" />
+    <None Include="wwwroot\flags\4x3\py.svg" />
+    <None Include="wwwroot\flags\4x3\qa.svg" />
+    <None Include="wwwroot\flags\4x3\re.svg" />
+    <None Include="wwwroot\flags\4x3\ro.svg" />
+    <None Include="wwwroot\flags\4x3\rs.svg" />
+    <None Include="wwwroot\flags\4x3\ru.svg" />
+    <None Include="wwwroot\flags\4x3\rw.svg" />
+    <None Include="wwwroot\flags\4x3\sa.svg" />
+    <None Include="wwwroot\flags\4x3\sb.svg" />
+    <None Include="wwwroot\flags\4x3\sc.svg" />
+    <None Include="wwwroot\flags\4x3\sd.svg" />
+    <None Include="wwwroot\flags\4x3\se.svg" />
+    <None Include="wwwroot\flags\4x3\sg.svg" />
+    <None Include="wwwroot\flags\4x3\sh.svg" />
+    <None Include="wwwroot\flags\4x3\si.svg" />
+    <None Include="wwwroot\flags\4x3\sj.svg" />
+    <None Include="wwwroot\flags\4x3\sk.svg" />
+    <None Include="wwwroot\flags\4x3\sl.svg" />
+    <None Include="wwwroot\flags\4x3\sm.svg" />
+    <None Include="wwwroot\flags\4x3\sn.svg" />
+    <None Include="wwwroot\flags\4x3\so.svg" />
+    <None Include="wwwroot\flags\4x3\sr.svg" />
+    <None Include="wwwroot\flags\4x3\ss.svg" />
+    <None Include="wwwroot\flags\4x3\st.svg" />
+    <None Include="wwwroot\flags\4x3\sv.svg" />
+    <None Include="wwwroot\flags\4x3\sx.svg" />
+    <None Include="wwwroot\flags\4x3\sy.svg" />
+    <None Include="wwwroot\flags\4x3\sz.svg" />
+    <None Include="wwwroot\flags\4x3\tc.svg" />
+    <None Include="wwwroot\flags\4x3\td.svg" />
+    <None Include="wwwroot\flags\4x3\tf.svg" />
+    <None Include="wwwroot\flags\4x3\tg.svg" />
+    <None Include="wwwroot\flags\4x3\th.svg" />
+    <None Include="wwwroot\flags\4x3\tj.svg" />
+    <None Include="wwwroot\flags\4x3\tk.svg" />
+    <None Include="wwwroot\flags\4x3\tl.svg" />
+    <None Include="wwwroot\flags\4x3\tm.svg" />
+    <None Include="wwwroot\flags\4x3\tn.svg" />
+    <None Include="wwwroot\flags\4x3\to.svg" />
+    <None Include="wwwroot\flags\4x3\tr.svg" />
+    <None Include="wwwroot\flags\4x3\tt.svg" />
+    <None Include="wwwroot\flags\4x3\tv.svg" />
+    <None Include="wwwroot\flags\4x3\tw.svg" />
+    <None Include="wwwroot\flags\4x3\tz.svg" />
+    <None Include="wwwroot\flags\4x3\ua.svg" />
+    <None Include="wwwroot\flags\4x3\ug.svg" />
+    <None Include="wwwroot\flags\4x3\um.svg" />
+    <None Include="wwwroot\flags\4x3\un.svg" />
+    <None Include="wwwroot\flags\4x3\us.svg" />
+    <None Include="wwwroot\flags\4x3\uy.svg" />
+    <None Include="wwwroot\flags\4x3\uz.svg" />
+    <None Include="wwwroot\flags\4x3\va.svg" />
+    <None Include="wwwroot\flags\4x3\vc.svg" />
+    <None Include="wwwroot\flags\4x3\ve.svg" />
+    <None Include="wwwroot\flags\4x3\vg.svg" />
+    <None Include="wwwroot\flags\4x3\vi.svg" />
+    <None Include="wwwroot\flags\4x3\vn.svg" />
+    <None Include="wwwroot\flags\4x3\vu.svg" />
+    <None Include="wwwroot\flags\4x3\wf.svg" />
+    <None Include="wwwroot\flags\4x3\ws.svg" />
+    <None Include="wwwroot\flags\4x3\xk.svg" />
+    <None Include="wwwroot\flags\4x3\ye.svg" />
+    <None Include="wwwroot\flags\4x3\yt.svg" />
+    <None Include="wwwroot\flags\4x3\za.svg" />
+    <None Include="wwwroot\flags\4x3\zm.svg" />
+    <None Include="wwwroot\flags\4x3\zw.svg" />
+    <None Include="wwwroot\html\PostInfo_files\themedata.thmx" />
+    <None Include="wwwroot\html\RegisterInfo_files\themedata.thmx" />
+    <None Include="wwwroot\js\addons\datatables-select.min.js" />
+    <None Include="wwwroot\js\addons\datatables-select.min.js.map" />
+    <None Include="wwwroot\js\addons\datatables-select2.min.js" />
+    <None Include="wwwroot\js\addons\datatables-select2.min.js.map" />
+    <None Include="wwwroot\js\addons\datatables.min.js" />
+    <None Include="wwwroot\js\addons\datatables.min.js.map" />
+    <None Include="wwwroot\js\addons\datatables2.min.js" />
+    <None Include="wwwroot\js\addons\datatables2.min.js.map" />
+    <None Include="wwwroot\js\addons\directives.min.js" />
+    <None Include="wwwroot\js\addons\directives.min.js.map" />
+    <None Include="wwwroot\js\addons\flag.min.js" />
+    <None Include="wwwroot\js\addons\flag.min.js.map" />
+    <None Include="wwwroot\js\addons\imagesloaded.pkgd.min.js" />
+    <None Include="wwwroot\js\addons\imagesloaded.pkgd.min.js.map" />
+    <None Include="wwwroot\js\addons\jquery.zmd.hierarchical-display.min.js" />
+    <None Include="wwwroot\js\addons\jquery.zmd.hierarchical-display.min.js.map" />
+    <None Include="wwwroot\js\addons\masonry.pkgd.min.js" />
+    <None Include="wwwroot\js\addons\masonry.pkgd.min.js.map" />
+    <None Include="wwwroot\js\addons\rating.min.js" />
+    <None Include="wwwroot\js\addons\rating.min.js.map" />
+    <None Include="wwwroot\js\modules\accordion-extended.min.js" />
+    <None Include="wwwroot\js\modules\accordion-extended.min.js.map" />
+    <None Include="wwwroot\js\modules\animations-extended.min.js" />
+    <None Include="wwwroot\js\modules\animations-extended.min.js.map" />
+    <None Include="wwwroot\js\modules\buttons.min.js" />
+    <None Include="wwwroot\js\modules\buttons.min.js.map" />
+    <None Include="wwwroot\js\modules\cards.min.js" />
+    <None Include="wwwroot\js\modules\cards.min.js.map" />
+    <None Include="wwwroot\js\modules\character-counter.min.js" />
+    <None Include="wwwroot\js\modules\character-counter.min.js.map" />
+    <None Include="wwwroot\js\modules\chips.min.js" />
+    <None Include="wwwroot\js\modules\chips.min.js.map" />
+    <None Include="wwwroot\js\modules\collapsible.min.js" />
+    <None Include="wwwroot\js\modules\collapsible.min.js.map" />
+    <None Include="wwwroot\js\modules\dropdown\dropdown-searchable.min.js" />
+    <None Include="wwwroot\js\modules\dropdown\dropdown-searchable.min.js.map" />
+    <None Include="wwwroot\js\modules\dropdown\dropdown.min.js" />
+    <None Include="wwwroot\js\modules\dropdown\dropdown.min.js.map" />
+    <None Include="wwwroot\js\modules\file-input.min.js" />
+    <None Include="wwwroot\js\modules\file-input.min.js.map" />
+    <None Include="wwwroot\js\modules\forms-free.min.js" />
+    <None Include="wwwroot\js\modules\forms-free.min.js.map" />
+    <None Include="wwwroot\js\modules\lightbox.min.js" />
+    <None Include="wwwroot\js\modules\lightbox.min.js.map" />
+    <None Include="wwwroot\js\modules\material-select\material-select-view-renderer.min.js" />
+    <None Include="wwwroot\js\modules\material-select\material-select-view-renderer.min.js.map" />
+    <None Include="wwwroot\js\modules\material-select\material-select-view.min.js" />
+    <None Include="wwwroot\js\modules\material-select\material-select-view.min.js.map" />
+    <None Include="wwwroot\js\modules\material-select\material-select.min.js" />
+    <None Include="wwwroot\js\modules\material-select\material-select.min.js.map" />
+    <None Include="wwwroot\js\modules\mdb-autocomplete.min.js" />
+    <None Include="wwwroot\js\modules\mdb-autocomplete.min.js.map" />
+    <None Include="wwwroot\js\modules\megamenu.min.js" />
+    <None Include="wwwroot\js\modules\megamenu.min.js.map" />
+    <None Include="wwwroot\js\modules\parallax.min.js" />
+    <None Include="wwwroot\js\modules\parallax.min.js.map" />
+    <None Include="wwwroot\js\modules\preloading.min.js" />
+    <None Include="wwwroot\js\modules\preloading.min.js.map" />
+    <None Include="wwwroot\js\modules\range-input.min.js" />
+    <None Include="wwwroot\js\modules\range-input.min.js.map" />
+    <None Include="wwwroot\js\modules\scrolling-navbar.min.js" />
+    <None Include="wwwroot\js\modules\scrolling-navbar.min.js.map" />
+    <None Include="wwwroot\js\modules\sidenav.min.js" />
+    <None Include="wwwroot\js\modules\sidenav.min.js.map" />
+    <None Include="wwwroot\js\modules\smooth-scroll.min.js" />
+    <None Include="wwwroot\js\modules\smooth-scroll.min.js.map" />
+    <None Include="wwwroot\js\modules\sticky.min.js" />
+    <None Include="wwwroot\js\modules\sticky.min.js.map" />
+    <None Include="wwwroot\js\modules\treeview.min.js" />
+    <None Include="wwwroot\js\modules\treeview.min.js.map" />
+    <None Include="wwwroot\js\modules\wow.min.js" />
+    <None Include="wwwroot\js\modules\wow.min.js.map" />
+    <None Include="wwwroot\lib\jquery.ihavecookies\jquery.ihavecookies.js" />
+    <None Include="wwwroot\lib\jquery.ihavecookies\LICENSE" />
+    <None Include="wwwroot\lib\jquery.ihavecookies\README.md" />
+    <None Include="wwwroot\lib\perfect-scrollbar\handlers\click-rail.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\handlers\drag-thumb.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\handlers\keyboard.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\handlers\mouse-wheel.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\handlers\touch.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\index.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\lib\class-names.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\lib\css.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\lib\dom.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\lib\event-manager.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\lib\util.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\process-scroll-diff.js" />
+    <None Include="wwwroot\lib\perfect-scrollbar\update-geometry.js" />
+    <None Include="wwwroot\mdb5\css\mdb.min.css.map" />
+    <None Include="wwwroot\mdb5\css\mdb.rtl.min.css.map" />
+    <None Include="wwwroot\mdb5\js\mdb.min.js" />
+    <None Include="wwwroot\mdb5\js\mdb.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\css\calendar.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\color-picker.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\cookie.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\countdown.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\drag-and-drop.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\dummy.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\ecommerce-gallery.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\file-upload.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\filters.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\inputmask.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\mention.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\multi-carousel.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\onboarding.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\parallax.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\storage.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\table-editor.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\transfer.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\treeview.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\vector-maps.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\wysiwyg.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\js\all.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\calendar.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\calendar.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\color-picker.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\color-picker.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\cookie.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\cookie.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\countdown.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\countdown.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\data-parser.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\data-parser.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\drag-and-drop.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\drag-and-drop.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\dummy.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\dummy.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\ecommerce-gallery.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\ecommerce-gallery.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\file-upload.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\file-upload.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\filters.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\filters.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\inputmask.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\inputmask.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\mention.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\mention.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\multi-carousel.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\multi-carousel.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\onboarding.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\onboarding.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\parallax.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\parallax.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\storage.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\storage.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\table-editor.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\table-editor.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\transfer.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\transfer.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\treeview.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\treeview.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\vector-maps.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\vector-maps.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\wysiwyg.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\wysiwyg.min.js.map" />
+    <None Include="wwwroot\src\languages\bs.js" />
+    <None Include="wwwroot\src\languages\dsb.js" />
+    <None Include="wwwroot\src\languages\fi.js" />
+    <None Include="wwwroot\src\languages\ga.js" />
+    <None Include="wwwroot\src\languages\he.js" />
+    <None Include="wwwroot\src\languages\hsb.js" />
+    <None Include="wwwroot\src\languages\hu.js" />
+    <None Include="wwwroot\src\languages\hy.js" />
+    <None Include="wwwroot\src\languages\la.js" />
+    <None Include="wwwroot\src\languages\ml.js" />
+    <None Include="wwwroot\src\languages\os.js" />
+    <None Include="wwwroot\src\languages\ru.js" />
+    <None Include="wwwroot\src\languages\sl.js" />
+    <None Include="wwwroot\src\languages\uk.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.5.3" />
+    <PackageReference Include="Braintree" Version="5.2.0" />
+    <PackageReference Include="Elastic.Apm.AspNetCore" Version="1.7.1" />
+    <PackageReference Include="IndexEngine" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
+    <PackageReference Include="Moment.js" Version="2.29.1" />
+    <PackageReference Include="OsmSharp" Version="6.2.0" />
+    <PackageReference Include="OsmSharp.Geo" Version="6.2.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.6.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
+    <PackageReference Include="WatsonORM.Core" Version="1.3.0.19" />
+    <PackageReference Include="WatsonORM.SqlServer" Version="1.3.0.21" />
+    <PackageReference Include="XLocalizer.TagHelpers" Version="1.0.0" />
+    <PackageReference Include="XLocalizer.Translate" Version="1.0.0" />
+    <PackageReference Include="XLocalizer.Translate.GoogleTranslate" Version="1.0.1" />
+    <PackageReference Include="XLocalizer.Translate.MicrosoftTranslate" Version="1.0.1" />
+    <PackageReference Include="XLocalizer.Translate.MyMemoryTranslate" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\animations.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\code.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\colors.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\grid.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\hover.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\icons.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\images.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\masks.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\media.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\shadows.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\skins.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\typography.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\utilities.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\_navigation.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\mapbox\" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES2015</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>ES6</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+
+</Project>

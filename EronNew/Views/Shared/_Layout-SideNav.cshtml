@@ -1,0 +1,222 @@
+﻿@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eron</title>
+    <meta content="/images/logo.png" itemprop="image">
+    <meta name="title" content="Eron.gr">
+    <meta name="description" content="Καταχωρείστε τις αγγελίες σας στο Eron.gr.">
+    <meta name="keywords" content="Advertisment,Real Estate,Ακίνητο,Πώληση,Ενοικίαση,Eron.gr">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="5 days">
+    <meta name="author" content="Vasileios Valasidis">
+    <meta property="fb:app_id" content="407388710507530" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eron.gr" />
+    <meta property="og:url" content="https://www.eron.gr" />
+    <meta property="og:image" content="https://www.eron.gr/images/image.png" />
+    <meta property="og:description" content="Καταχωρείστε τις αγγελίες σας στο Eron.gr." />
+    <!-- MDB icon -->
+    <link rel="icon" href="~/img/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="~/css/mdb.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <link href="~/lib/fine-uploader/fine-uploader-gallery.css" rel="stylesheet" />
+
+    <link href="~/lib/fine-uploader/fine-uploader-new.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/flag-icon.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    @if (hostingEnv.EnvironmentName == "Production")
+    {
+        <!-- Hotjar Tracking Code for www.eron.gr -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+                h._hjSettings = { hjid: 2219362, hjsv: 6 };
+                a = o.getElementsByTagName('head')[0];
+                r = o.createElement('script'); r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZJT4KTT5R"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-9ZJT4KTT5R');
+        </script>
+    }
+</head>
+<body class="fixed-sn navy-blue-skin scrollbar-navy-blue-skin-slim">
+    <!--Main Navigation-->
+    <header>
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav sn-bg-2 fixed">
+            <ul class="custom-scrollbar">
+                <!-- Logo -->
+                <li>
+                    <div class="logo-wrapper waves-light">
+                        <a class="navbar-brand" href="~/Home">
+                            <img src="~/images/logo.png" class="p-0 m-0 mt-2" style="height:58px;" />
+                        </a>
+                    </div>
+                </li>
+                <!--/. Logo -->
+                <!--Search Form-->
+                @*<li>
+                        <form class="search-form" role="search">
+                            <div class="form-group md-form mt-0 pt-1 waves-light">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </form>
+                    </li>*@
+                <!--/.Search Form-->
+                <!-- Side navigation links -->
+                <li>
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r">
+                                <i class="fas fa-cogs"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))<i class="fas fa-angle-down rotate-icon"></i>
+                            </a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li>
+                                        <a class="nav-link" id="profile" href="/Identity/Account/Manage/Index">
+                                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" id="email" href="/Identity/Account/Manage/Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Changeemail))</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" id="change-password" href="/Identity/Account/Manage/ChangePassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" id="personal-data" href="/Identity/Account/Manage/PersonalData">GDPR</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r" href="/Identity/Account/Manage/EditMyCard"><i class="fas fa-user-circle"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</a>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r" href="/Administration/Index"><i class="fas fa-folder-open"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r" href="/Identity/Account/Manage/Notes"><i class="fas fa-comment-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Notes))</a>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r" href="/WishList/Index"><i class="fas fa-heart"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))</a>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r" href="/RecentPosts/Index"><i class="fas fa-history"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RecentPosts))</a>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r" href="/Search/Index"><i class="fas fa-history"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SavedSearches))</a>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r">
+                                <i class="fas fa-wallet"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Finance))<i class="fas fa-angle-down rotate-icon"></i>
+                            </a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li>
+                                        <a class="nav-link" id="profile" href="/Wallet/Finance">
+                                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Finance))
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" id="profile" href="/Wallet/MyOrders">
+                                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyOrders))
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--/. Side navigation links -->
+            </ul>
+            <div class="sidenav-bg mask-strong"></div>
+        </div>
+        <!--/. Sidebar navigation -->
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav p-0">
+            <div class="float-left">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+            </div>
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fa-1x"></i>
+            </button>
+            <!--Navbar links-->
+
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+            <!--/Navbar links-->
+        </nav>
+        <!--Navbar -->
+    </header>
+    <!--Main Navigation-->
+    <main class="d-flex flex-fill">
+        <div class="container-fluid text-left text-sm-left text-md-left">
+            @RenderBody()
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small mdb-color mt-3 lighten-3 pt-2">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2021 Copyright:
+            <a href="https://www.eron.gr/"> Eron.gr</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!--Modal: modalCookie-->
+    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+                        <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ml-1"></i></a>
+                        <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: modalCookie-->
+    <partial name="_partialScripts" />
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&lt;strong&gt;All&lt;/strong&gt; Languages Available" xml:space="preserve">
+    <value>&lt;strong&gt; Todos &lt;/strong&gt; los idiomas disponibles</value>
+  </data>
+  <data name="&lt;strong&gt;Boosted&lt;/strong&gt; Advertisement" xml:space="preserve">
+    <value>Publicidad &lt;strong&gt; potenciada &lt;/strong&gt;</value>
+  </data>
+  <data name="Account Management" xml:space="preserve">
+    <value>Administración de cuentas</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="Ad Code" xml:space="preserve">
+    <value>Código de anuncio</value>
+  </data>
+  <data name="Ad Management" xml:space="preserve">
+    <value>Gestión de anuncios</value>
+  </data>
+  <data name="Ad Type" xml:space="preserve">
+    <value>Tipo de anuncio</value>
+  </data>
+  <data name="Additional characteristics" xml:space="preserve">
+    <value>Caracteristicas adicionales</value>
+  </data>
+  <data name="Additional information" xml:space="preserve">
+    <value>Información Adicional</value>
+  </data>
+  <data name="Additional Property Features" xml:space="preserve">
+    <value>Características adicionales de la propiedad</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Habla a</value>
+  </data>
+  <data name="Air Condition" xml:space="preserve">
+    <value>Aire acondicionado</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>y</value>
+  </data>
+  <data name="Apartment" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="Apartment Complex" xml:space="preserve">
+    <value>Complejo de apartamentos</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Región</value>
+  </data>
+  <data name="Ask for the Price" xml:space="preserve">
+    <value>Pregunte por el precio</value>
+  </data>
+  <data name="Bathrooms" xml:space="preserve">
+    <value>Baños</value>
+  </data>
+  <data name="BBQ" xml:space="preserve">
+    <value>Barbacoa</value>
+  </data>
+  <data name="Bedrooms" xml:space="preserve">
+    <value>Dormitorios</value>
+  </data>
+  <data name="Building" xml:space="preserve">
+    <value>edificio</value>
+  </data>
+  <data name="Bungalow" xml:space="preserve">
+    <value>Bungalow</value>
+  </data>
+  <data name="Business building" xml:space="preserve">
+    <value>Edificio de negocios</value>
+  </data>
+  <data name="By clicking &lt;em&gt; Register &lt;/em&gt; you automatically agree to our" xml:space="preserve">
+    <value>Al hacer clic en &lt;em&gt; Registrarse &lt;/em&gt;, automáticamente los acepta.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anulación</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
+  <data name="Change email" xml:space="preserve">
+    <value>Cambiar e-mail</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Selección</value>
+  </data>
+  <data name="Choose a profile image" xml:space="preserve">
+    <value>Selección de imágenes</value>
+  </data>
+  <data name="Choose your preferred language" xml:space="preserve">
+    <value>Elija el idioma que desee</value>
+  </data>
+  <data name="Click here to Logout" xml:space="preserve">
+    <value>Click aqui para salir</value>
+  </data>
+  <data name="CloakRoom" xml:space="preserve">
+    <value>Guardarropa</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cierre</value>
+  </data>
+  <data name="Commands" xml:space="preserve">
+    <value>Pedidos de anuncios</value>
+  </data>
+  <data name="Commercial" xml:space="preserve">
+    <value>Negocio Techo</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Negocio</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Integración</value>
+  </data>
+  <data name="Complete Registration" xml:space="preserve">
+    <value>Finalización de registro</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completar</value>
+  </data>
+  <data name="Conference Room" xml:space="preserve">
+    <value>Habitación</value>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>Confirmar contraseña</value>
+  </data>
+  <data name="Construction" xml:space="preserve">
+    <value>Construcción</value>
+  </data>
+  <data name="Construction Year" xml:space="preserve">
+    <value>Año de construcción</value>
+  </data>
+  <data name="Contact Info" xml:space="preserve">
+    <value>Datos de contacto</value>
+  </data>
+  <data name="Contact Phone" xml:space="preserve">
+    <value>teléfono de contacto</value>
+  </data>
+  <data name="Contact us" xml:space="preserve">
+    <value>Contáctenos</value>
+  </data>
+  <data name="Control Panel" xml:space="preserve">
+    <value>Panel de control</value>
+  </data>
+  <data name="Cottage" xml:space="preserve">
+    <value>Villa</value>
+  </data>
+  <data name="County/Region" xml:space="preserve">
+    <value>Prefectura / Región</value>
+  </data>
+  <data name="Craft Property" xml:space="preserve">
+    <value>Espacio de artesanía</value>
+  </data>
+  <data name="Create Draft Ad" xml:space="preserve">
+    <value>Crear borrador de anuncio</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supresión</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Eliminado</value>
+  </data>
+  <data name="Demand" xml:space="preserve">
+    <value>Demanda</value>
+  </data>
+  <data name="Desired Information from Buyers" xml:space="preserve">
+    <value>Información deseada de los compradores</value>
+  </data>
+  <data name="Detached House" xml:space="preserve">
+    <value>Casa independiente</value>
+  </data>
+  <data name="Do you need help" xml:space="preserve">
+    <value>necesitas ayuda;</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Sequía</value>
+  </data>
+  <data name="Drag the photos here" xml:space="preserve">
+    <value>Arrastra las fotos aquí</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Procesando</value>
+  </data>
+  <data name="Elevator" xml:space="preserve">
+    <value>Ascensor</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="euroSymbol" xml:space="preserve">
+    <value>€</value>
+  </data>
+  <data name="Exhibition Area" xml:space="preserve">
+    <value>Galería</value>
+  </data>
+  <data name="Farm/Ranch" xml:space="preserve">
+    <value>Granja / Rancho</value>
+  </data>
+  <data name="Fill in the email to have the password reset email sent to you." xml:space="preserve">
+    <value>Complete el correo electrónico para que se le envíe el correo electrónico de restablecimiento de contraseña.</value>
+  </data>
+  <data name="Fireplace" xml:space="preserve">
+    <value>Hogar</value>
+  </data>
+  <data name="floor" xml:space="preserve">
+    <value>Piso</value>
+  </data>
+  <data name="Forgot your password" xml:space="preserve">
+    <value>¿Olvidaste tu contraseña?</value>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>desde</value>
+  </data>
+  <data name="Furniture" xml:space="preserve">
+    <value>Mueble</value>
+  </data>
+  <data name="Garden" xml:space="preserve">
+    <value>Jardín</value>
+  </data>
+  <data name="greater than 100" xml:space="preserve">
+    <value>mayor que 100</value>
+  </data>
+  <data name="Gym" xml:space="preserve">
+    <value>Gimnasio</value>
+  </data>
+  <data name="Hall" xml:space="preserve">
+    <value>sala</value>
+  </data>
+  <data name="Heating System" xml:space="preserve">
+    <value>Calefacción</value>
+  </data>
+  <data name="Hidden Searches" xml:space="preserve">
+    <value>Búsquedas ocultas</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Esconder</value>
+  </data>
+  <data name="Highest -&gt; Lowest Price" xml:space="preserve">
+    <value>Precio decreciente</value>
+  </data>
+  <data name="Home Energy Rate" xml:space="preserve">
+    <value>Clase energética doméstica</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="Houseboat" xml:space="preserve">
+    <value>Casa flotante</value>
+  </data>
+  <data name="Housekeeping" xml:space="preserve">
+    <value>Compartido</value>
+  </data>
+  <data name="How can we help you" xml:space="preserve">
+    <value>Como podemos ayudarte</value>
+  </data>
+  <data name="How Many Bathrooms Does It Have?" xml:space="preserve">
+    <value>¿Cuántos baños tiene?</value>
+  </data>
+  <data name="How Many Bedrooms Does It Have?" xml:space="preserve">
+    <value>¿Cuantos cuartos tiene?</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Carné de identidad</value>
+  </data>
+  <data name="Important Information" xml:space="preserve">
+    <value>Información importante</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="Industrial Property" xml:space="preserve">
+    <value>Area Industrial</value>
+  </data>
+  <data name="Info Card" xml:space="preserve">
+    <value>Tarjeta de información</value>
+  </data>
+  <data name="Internet Fiber" xml:space="preserve">
+    <value>Fibra óptica</value>
+  </data>
+  <data name="Join to our Page" xml:space="preserve">
+    <value>Únete a la página</value>
+  </data>
+  <data name="Living room" xml:space="preserve">
+    <value>Sala</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="Loft" xml:space="preserve">
+    <value>Desván</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Conexión</value>
+  </data>
+  <data name="Login/Register" xml:space="preserve">
+    <value>Iniciar sesión / Registrarse</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="Lowest To Highest" xml:space="preserve">
+    <value>Precio creciente</value>
+  </data>
+  <data name="Maisonette" xml:space="preserve">
+    <value>Casita</value>
+  </data>
+  <data name="Mandatory Information" xml:space="preserve">
+    <value>Información obligatoria</value>
+  </data>
+  <data name="Master" xml:space="preserve">
+    <value>Maestro</value>
+  </data>
+  <data name="maximum of Characters are 5" xml:space="preserve">
+    <value>los caracteres máximos son 5</value>
+  </data>
+  <data name="minimum Three Characters" xml:space="preserve">
+    <value>mínimo tres caracteres</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Móvil</value>
+  </data>
+  <data name="Mobile Home" xml:space="preserve">
+    <value>Retirable</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>Meses</value>
+  </data>
+  <data name="Most Popular" xml:space="preserve">
+    <value>Popularidad</value>
+  </data>
+  <data name="Municipality / District" xml:space="preserve">
+    <value>Municipio / Distrito</value>
+  </data>
+  <data name="My Card" xml:space="preserve">
+    <value>Mi tarjeta</value>
+  </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>Mis favoritos</value>
+  </data>
+  <data name="My information" xml:space="preserve">
+    <value>Mi informacion</value>
+  </data>
+  <data name="My Notes" xml:space="preserve">
+    <value>Mis notas</value>
+  </data>
+  <data name="My Orders" xml:space="preserve">
+    <value>Mis ordenes</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="No ads were found according to Search filters." xml:space="preserve">
+    <value>No se encontraron anuncios según los filtros de búsqueda.</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>número</value>
+  </data>
+  <data name="Obligatory" xml:space="preserve">
+    <value>Obligatorio</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Oficina</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Bueno</value>
+  </data>
+  <data name="only Number" xml:space="preserve">
+    <value>solo numero</value>
+  </data>
+  <data name="optional" xml:space="preserve">
+    <value>Opcional</value>
+  </data>
+  <data name="Other Categories" xml:space="preserve">
+    <value>Otras categorias</value>
+  </data>
+  <data name="Other Properties" xml:space="preserve">
+    <value>Otras propiedades</value>
+  </data>
+  <data name="Parcels" xml:space="preserve">
+    <value>Parcela de tierra</value>
+  </data>
+  <data name="Parking" xml:space="preserve">
+    <value>Estacionamiento</value>
+  </data>
+  <data name="Parking Area" xml:space="preserve">
+    <value>Plaza de aparcamiento</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Penthouse" xml:space="preserve">
+    <value>Ático</value>
+  </data>
+  <data name="Personal settings" xml:space="preserve">
+    <value>Configuraciones personales</value>
+  </data>
+  <data name="Pets" xml:space="preserve">
+    <value>Mascotas</value>
+  </data>
+  <data name="Photos" xml:space="preserve">
+    <value>Imágenes de anuncios</value>
+  </data>
+  <data name="Place your ad" xml:space="preserve">
+    <value>Coloque su anuncio</value>
+  </data>
+  <data name="Please enter an email address for this site below and click the Register button to finish logging in." xml:space="preserve">
+    <value>&lt;/strong&gt;. Ingrese una dirección de correo electrónico para este sitio a continuación y haga clic en el botón Registrarse para terminar de iniciar sesión.</value>
+  </data>
+  <data name="Plot of Land" xml:space="preserve">
+    <value>Trama</value>
+  </data>
+  <data name="Pool" xml:space="preserve">
+    <value>Piscina</value>
+  </data>
+  <data name="Post a request" xml:space="preserve">
+    <value>Solicitar entrada</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>Código postal</value>
+  </data>
+  <data name="Prefabricated Home" xml:space="preserve">
+    <value>Prefabricado</value>
+  </data>
+  <data name="Premium" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="Premium Features" xml:space="preserve">
+    <value>Características premium</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Avance</value>
+  </data>
+  <data name="Preview 360" xml:space="preserve">
+    <value>Vista previa 360</value>
+  </data>
+  <data name="Preview &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt;&lt;/strong&gt;" xml:space="preserve">
+    <value>Vista previa &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt; &lt;/strong&gt;</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Impresión</value>
+  </data>
+  <data name="Property Area" xml:space="preserve">
+    <value>Área de propiedad</value>
+  </data>
+  <data name="Property Category" xml:space="preserve">
+    <value>Categoría de anuncio</value>
+  </data>
+  <data name="Property Features" xml:space="preserve">
+    <value>caracteristicas de la propiedad</value>
+  </data>
+  <data name="Property Price" xml:space="preserve">
+    <value>Precio de la propiedad</value>
+  </data>
+  <data name="Property Type" xml:space="preserve">
+    <value>tipo de propiedad</value>
+  </data>
+  <data name="Public" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="Publish" xml:space="preserve">
+    <value>Publicación</value>
+  </data>
+  <data name="Publish Ad" xml:space="preserve">
+    <value>Publicar un anuncio</value>
+  </data>
+  <data name="Publish/Save" xml:space="preserve">
+    <value>Publicar / Guardar</value>
+  </data>
+  <data name="Range Price" xml:space="preserve">
+    <value>Rango de precios</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Clasificación</value>
+  </data>
+  <data name="Recent Posts" xml:space="preserve">
+    <value>Mensajes recientes</value>
+  </data>
+  <data name="Recent Searches" xml:space="preserve">
+    <value>Búsquedas recientes</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Regístrate</value>
+  </data>
+  <data name="Register from the applications" xml:space="preserve">
+    <value>Registrarse desde las aplicaciones</value>
+  </data>
+  <data name="Rent" xml:space="preserve">
+    <value>Tenencia</value>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>Retransmisión</value>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>Residencia</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Repetición</value>
+  </data>
+  <data name="Safety door" xml:space="preserve">
+    <value>Puerta de seguridad</value>
+  </data>
+  <data name="Safety Frames" xml:space="preserve">
+    <value>Marcos</value>
+  </data>
+  <data name="Sale" xml:space="preserve">
+    <value>Rebaja</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Saved Searches" xml:space="preserve">
+    <value>Búsquedas guardadas</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Search Filters" xml:space="preserve">
+    <value>Filtros de búsqueda</value>
+  </data>
+  <data name="Security Alarm" xml:space="preserve">
+    <value>Alarma</value>
+  </data>
+  <data name="See Other Seller Ads" xml:space="preserve">
+    <value>Ver otros anuncios del vendedor</value>
+  </data>
+  <data name="Select the energy rate of the Property (if available)" xml:space="preserve">
+    <value>Seleccione la clase energética de la propiedad (si está disponible)</value>
+  </data>
+  <data name="Semi-outdoors" xml:space="preserve">
+    <value>Semi-al aire libre</value>
+  </data>
+  <data name="Send verification email" xml:space="preserve">
+    <value>Envia un correo electronico de verificación</value>
+  </data>
+  <data name="Send your comments &lt;strong&gt;here&lt;/strong&gt;." xml:space="preserve">
+    <value>Envíe sus comentarios &lt;strong&gt; aquí &lt;/strong&gt;.</value>
+  </data>
+  <data name="Send your message" xml:space="preserve">
+    <value>Envíe su mensaje</value>
+  </data>
+  <data name="Shall we check ?" xml:space="preserve">
+    <value>¿Vamos a ver?</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Compartir</value>
+  </data>
+  <data name="Shop" xml:space="preserve">
+    <value>Tienda</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Apariencia</value>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="Status Ad" xml:space="preserve">
+    <value>Estado de listado</value>
+  </data>
+  <data name="Storage" xml:space="preserve">
+    <value>Almacén</value>
+  </data>
+  <data name="Studio" xml:space="preserve">
+    <value>Estudio</value>
+  </data>
+  <data name="Subcategory" xml:space="preserve">
+    <value>Subcategoría</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Submit Post" xml:space="preserve">
+    <value>Enviar anuncio</value>
+  </data>
+  <data name="Subscribe to our newsletter" xml:space="preserve">
+    <value>Suscríbete a nuestro boletín</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Subtitular</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Adjetivo</value>
+  </data>
+  <data name="Terms of use" xml:space="preserve">
+    <value>Términos de Uso</value>
+  </data>
+  <data name="Title/Name" xml:space="preserve">
+    <value>Nombre del título</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Type your message here" xml:space="preserve">
+    <value>Escribe tu mensaje aquí</value>
+  </data>
+  <data name="Unlocked" xml:space="preserve">
+    <value>desbloquear</value>
+  </data>
+  <data name="Uploading photos started" xml:space="preserve">
+    <value>Se inició la carga de fotos</value>
+  </data>
+  <data name="valid City" xml:space="preserve">
+    <value>ciudad válida</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="views" xml:space="preserve">
+    <value>Vistas</value>
+  </data>
+  <data name="Wallet" xml:space="preserve">
+    <value>Billetera</value>
+  </data>
+  <data name="WC" xml:space="preserve">
+    <value>baño</value>
+  </data>
+  <data name="WebSite" xml:space="preserve">
+    <value>Sitio web</value>
+  </data>
+  <data name="WishList" xml:space="preserve">
+    <value>WishList</value>
+  </data>
+  <data name="Write a short description" xml:space="preserve">
+    <value>Escribe una breve descripción</value>
+  </data>
+  <data name="Write To Us" xml:space="preserve">
+    <value>Deja tu mensaje</value>
+  </data>
+  <data name="Year of Renovation" xml:space="preserve">
+    <value>Año de Renovación</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>si</value>
+  </data>
+  <data name="You can also connect from the applications" xml:space="preserve">
+    <value>También puede conectarse a sus datos desde las aplicaciones</value>
+  </data>
+  <data name="You can choose what amenities are available for the property" xml:space="preserve">
+    <value>Puede elegir qué servicios están disponibles para la propiedad</value>
+  </data>
+  <data name="You can reset your password now." xml:space="preserve">
+    <value>Puede restablecer su contraseña ahora.</value>
+  </data>
+  <data name="You do not have access to this resource." xml:space="preserve">
+    <value>No tienes acceso a este recurso.</value>
+  </data>
+  <data name="You have successfully logged out of the application." xml:space="preserve">
+    <value>Ha cerrado la sesión con éxito de la aplicación.</value>
+  </data>
+  <data name="You've successfully authenticated with" xml:space="preserve">
+    <value>Te has autenticado correctamente con &lt;strong&gt;</value>
+  </data>
+</root>

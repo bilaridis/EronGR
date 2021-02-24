@@ -1,0 +1,146 @@
+[
+  {
+    "outputFileName": "wwwroot/lib/jquery.ihavecookies/jquery.ihavecookies.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery.ihavecookies/jquery.ihavecookies.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.home.search.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.home.search.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.home.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.home.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.card.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.card.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.common.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.common.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.identity.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.identity.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.posts.create.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.posts.create.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.posts.details.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.posts.details.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.posts.submit.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.posts.submit.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.userprofile.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.userprofile.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.wallet.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.wallet.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.wishlist.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.wishlist.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.administration.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.administration.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.all.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.all.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.mynotes.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.mynotes.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/bootstrap.min.css",
+    "inputFiles": [
+      "wwwroot/css/bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/mdb.min.css",
+    "inputFiles": [
+      "wwwroot/css/mdb.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/mdb.min.js",
+    "inputFiles": [
+      "wwwroot/js/mdb.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/addons-pro/wysiwyg.min.min.js",
+    "inputFiles": [
+      "wwwroot/js/addons-pro/wysiwyg.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.administration.traffic.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.administration.traffic.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.blog.create.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.blog.create.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.recentposts.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.recentposts.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.search.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.search.js"
+    ]
+  }
+]

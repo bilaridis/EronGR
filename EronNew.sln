@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EronNew", "EronNew\EronNew.csproj", "{F98466B2-C08D-4404-A499-480EDA1F409B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F98466B2-C08D-4404-A499-480EDA1F409B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98466B2-C08D-4404-A499-480EDA1F409B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98466B2-C08D-4404-A499-480EDA1F409B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98466B2-C08D-4404-A499-480EDA1F409B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF1215BA-D5CB-43EA-B5C5-3CD10B3CCF39}
+	EndGlobalSection
+EndGlobal

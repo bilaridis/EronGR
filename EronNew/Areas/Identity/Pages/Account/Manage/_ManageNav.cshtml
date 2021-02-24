@@ -1,0 +1,21 @@
+﻿@inject SignInManager<ExtendedIdentityUser> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+        <a class="btn btn-indigo btn-sm m-0 .z-depth-3 .bounceInLeft w-100 @ManageNavPages.EditMyCardNavClass(ViewContext)" id="editMyCard" asp-page="./EditMyCard">Αλλαγή της Κάρτας μου</a>
+    </li>
+    <li class="nav-item">
+        <a class="btn btn-indigo btn-sm m-0 .z-depth-3 .bounceInLeft w-100 @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Προσωπικά στοιχεία</a>
+    </li>
+    <li class="nav-item">
+        <a class="btn btn-indigo btn-sm m-0 .z-depth-3 .bounceInLeft w-100 @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Αλλαγή Email/Username</a>
+    </li>
+    <li class="nav-item">
+        <a class="btn btn-indigo btn-sm m-0 .z-depth-3 .bounceInLeft w-100 @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Αλλαγή Κωδικού</a>
+    </li>
+    <li class="nav-item">
+        <a class="btn btn-indigo btn-sm m-0 .z-depth-3 .bounceInLeft w-100 @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Προσωπικά Δεδομένα</a>
+    </li>
+</ul>

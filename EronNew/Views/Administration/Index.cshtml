@@ -1,0 +1,187 @@
+﻿@namespace EronNew.Models
+@model EronNew.Models.AdministrationViewModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@{
+    ViewData["Title"] = "Administration Panel";
+    Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
+}
+
+<div class="card card-cascade z-depth-1 mt-1 col">
+
+    <!-- Card image -->
+    <div class="view view-cascade gradient-card-header gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between">
+
+        <div>
+            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-th-large mt-0"></i></button>*@
+            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-columns mt-0"></i></button>*@
+        </div>
+
+        <a href="" class="white-text mx-3">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a>
+
+        <div>
+            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-pencil-alt mt-0"></i></button>*@
+            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-eraser mt-0"></i></button>*@
+            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-info-circle mt-0"></i></button>*@
+        </div>
+
+    </div>
+    <!-- /Card image -->
+
+    <div class="px-4 table-responsive col-12">
+        <!-- Table -->
+        <table id="dtMaterialDesignExample" class="table table-hover col-12">
+            <!-- Table head -->
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Id)) <i class="fas fa-sort ml-1"></i></a></th>
+                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))<i class="fas fa-sort ml-1"></i></a></th>
+                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion)) - @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))<i class="fas fa-sort ml-1"></i></a></th>
+                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price))<i class="fas fa-sort ml-1"></i></a></th>
+                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Premium))<i class="fas fa-sort ml-1"></i></a></th>
+                </tr>
+            </thead>
+            <!-- Table head -->
+            <!-- Table body -->
+            <tbody>
+                @foreach (var basicInformation in Model.basicInformation)
+                {
+                    <tr>
+                        <td>
+                            <div class="btn-group dropleft">
+                                <a class="navbar-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg-left" id="basicExampleNav_@basicInformation.id">
+                                    <div class="clearfix gradient-card-header gradient narrower white-text text-smaller rounded-pill p-1"> #@basicInformation.id</div>
+                                    @if (!basicInformation.Active)
+                                    {
+                                        <a href="~/Posts/Submit/@basicInformation.id" class="dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="far fa-edit"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Edit))</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="~/Posts/Submit/@basicInformation.id" class="dropdown-item "><i class="far fa-edit"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Edit))</a>
+                                    }
+                                    @if (basicInformation.Active || basicInformation.Sold)
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-publish dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-globe-europe"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Public))</a>
+                                    }
+                                    else
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-publish dropdown-item "><i class="fas fa-globe-europe"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Public))</a>
+                                    }
+                                    @if (basicInformation.Hide)
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-hide dropdown-item "><i class="fas fa-eye"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Show))</a>
+                                    }
+                                    else
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-hide dropdown-item "><i class="fas fa-shield-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Hide))</a>
+                                    }
+                                    @if (basicInformation.Reserved)
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-reserve dropdown-item @((basicInformation.Deleted) ? "cloudy-knoxville-gradient disabled disabled-material" : "  ")"><i class="fas fa-lock-open"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Unlocked))</a>
+                                    }
+                                    else
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-reserve dropdown-item @((basicInformation.Deleted) ? "cloudy-knoxville-gradient disabled disabled-material" : "  ")"><i class="fas fa-lock"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Locked))</a>
+                                    }
+                                    @if (basicInformation.Deleted)
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-delete dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-trash-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Delete))</a>
+                                    }
+                                    else
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-delete dropdown-item "><i class="fas fa-trash-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Delete))</a>
+                                    }
+                                    @if (basicInformation.Sold || basicInformation.Deleted)
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-sold dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-check-square"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Complete))</a>
+                                    }
+                                    else
+                                    {
+                                        <a data-postid="@basicInformation.id" class="admin-sold dropdown-item "><i class="fas fa-check-square"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Complete))</a>
+                                    }
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-rounded gradient z-depth-1 d-flex flex-fill p-2 previewPost " data-postid="@basicInformation.id">
+                                <strong class="white-text">@basicInformation.id</strong>
+
+                                @if (basicInformation.StateOfPost.Value == 1)
+                                {
+                                    <span class="badge badge-pill red darken-3 ml-2">
+                                        <i class='fas fa-user-edit' data-toggle="tooltip" title="Draft Ad"></i>
+                                    </span>
+                                }
+                                else if (basicInformation.StateOfPost.Value == 2)
+                                {
+                                    @*<span class="badge badge-light ml-2">
+                                            <i class='fas fa-globe-europe'></i>
+                                        </span>*@
+                                }
+                                @if (basicInformation.Hide)
+                                {
+                                    <span class="badge badge-pill yellow darken-3 ml-2">
+                                        <i class='fas fa-shield-alt' data-toggle="tooltip" title="Private"></i>
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-pill badge-primary ml-2">
+                                        <i class="fas fa-eye" data-toggle="tooltip" title="Public"></i>
+                                    </span>
+                                }
+                                @if (basicInformation.Reserved)
+                                {
+                                    <span class="badge badge-pill purple darken-3 ml-2">
+                                        <i class='fas fa-lock' data-toggle="tooltip" title="Locked"></i>
+                                    </span>
+                                }
+
+                                @if (basicInformation.Sold)
+                                {
+                                    <span class="badge badge-pill badge-secondary ml-2">
+                                        <i class='fas fa-check-square' data-toggle="tooltip" title="Completed"></i>
+                                    </span>
+                                }
+
+                            </button>
+                            <a style="display:block;height:100%;width:100%;margin:0; padding:0" href="~/Posts/Details/@basicInformation.id" class="mask cloudy-knoxville-gradient"></a>
+                        </td>
+                        <td>@SharedLocalizer.GetLocalized(@basicInformation.SaleCategory)</td>
+                        <td>@basicInformation.TitleOfPost</td>
+                        <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("C") : 0)</td>
+                        <td>
+                            <div class="switch switch-price">
+                                <label>
+                                    Basic
+                                    <input type="checkbox" class="toggle-premium" data-postid="@basicInformation.id" @Html.Raw(basicInformation.Premium ? "checked disabled" : "")>
+                                    <span class="lever"></span> Premium
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <!-- Table body -->
+        </table>
+        <!-- Table -->
+    </div>
+</div>
+<partial name="_ActivationModal" />
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@section Scripts{
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="~/js/site.administration.js"></script>
+    }
+    else
+    {
+        <script src="~/js/site.administration.min.js"></script>
+    }
+}
+

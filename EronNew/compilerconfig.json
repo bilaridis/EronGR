@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/js/site.all.es5.js",
+    "inputFile": "wwwroot/js/site.all.js"
+  },
+  {
+    "outputFile": "wwwroot/js/site.card.es5.js",
+    "inputFile": "wwwroot/js/site.card.js"
+  },
+  {
+    "outputFile": "wwwroot/js/addons-pro/wysiwyg.min.es5.js",
+    "inputFile": "wwwroot/js/addons-pro/wysiwyg.min.js"
+  }
+]

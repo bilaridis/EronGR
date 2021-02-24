@@ -1,0 +1,412 @@
+﻿@model EronNew.Models.SearchData
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
+@{
+    Layout = "~/Views/Shared/_Layout-fluid.cshtml";
+}
+<!--Grid row-->
+<div class="row d-flex flex-sm-fill">
+    <!--Grid column-->
+    <div class="card card-cascade col-lg-4 col-md-12 mt-2 mb-1 scrollbar-2 scrollbar-lg-4 scrollbar-navy-blue-skin overflow-scroll">
+        <!-- Card image -->
+        <div class="view view-cascade gradient-card-header gradient">
+            <h6 class="font-weight-500 mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SearchFilters))<span id="countOfAds" class="badge badge-info ml-2"></span></h6>
+
+        </div>
+        <!-- Card image -->
+        <!-- Card content -->
+        <div class="card-body card-body-cascade  pl-0 pr-0">
+            <form id="searchDataForm">
+                <!-- Section: Filters -->
+                <section class="filters">
+                    <script type="text/javascript">
+                        var searchData = '@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model, Newtonsoft.Json.Formatting.None, new Newtonsoft.Json.JsonSerializerSettings() { ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore }))';
+                    </script>
+                    <div class="row md-form input-group mt-0 mb-0">
+                        <div class="form-control border-0 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <section filter="SaleCategory">
+                                <label class="form-check-label" for="inp_Category">
+                                    @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdType))
+                                </label>
+                                <select id="inp_Category" class="mdb-select md-form border-0 filter-option" name="SaleCategory" SaleCategory>
+                                    <option value="Sale" selected>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Sale))</option>
+                                    <option value="Rent">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rent))</option>
+                                    <option value="Demand">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Demand))</option>
+                                </select>
+                            </section>
+                        </div>
+                        <div class="form-control border-0 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                            <section filter="EnergyEfficiency">
+                                <label class="form-check-label" for="EnergyEfficiency">
+                                    @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HomeEnergyRate))
+                                </label>
+                                <select id="EnergyEfficiency" class="mdb-select md-form border-0 filter-option" name="EnergyEfficiency" EnergyEfficiency>
+                                    <option value=""></option>
+                                    <option value="A+">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Aplus))</option>
+                                    <option value="A">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.A))</option>
+                                    <option value="Β+">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Bplus))</option>
+                                    <option value="Β">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.B))</option>
+                                    <option value="Γ">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.C))</option>
+                                    <option value="Δ">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.D))</option>
+                                    <option value="Ε">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.E))</option>
+                                    <option value="Ζ">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.F))</option>
+                                    <option value="Η">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.G))</option>
+                                </select>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row md-form input-group mt-0 mb-0">
+                        <div class="form-control border-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <section filter="TypeDesc">
+                                <label class="form-check-label" for="selectType">
+                                    @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))
+                                </label>
+                                <select id="selectType" name="TypeDesc" class="mdb-select border-0 md-form filter-option" TypeDesc>
+                                    <option value="Residential">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Residential))</option>
+                                    <option value="Commercial">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Commercial))</option>
+                                    <option value="Land"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Land))</option>
+                                    <option value="Other Properties"> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.OtherProperties))</option>
+                                </select>
+                            </section>
+                        </div>
+                        <div class="form-control border-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <section filter="SubType">
+                                <select id="selectSubType" class="mdb-select md-form colorful-select dropdown-primary filter-option" multiple name="SubType" SubType>
+                                </select>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row md-form input-group mt-0 mb-0">
+                        <div class="form-control border-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <section filter="Area">
+                                <label class="form-check-label" for="selectParentArea">
+                                    @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion))
+                                </label>
+                                <select id="selectParentArea" asp-items="@ViewBag.Areas" asp-for="Area" class="mdb-select md-form border-0 filter-option md-form" Area>
+                                </select>
+                            </section>
+                        </div>
+                        <div class="form-control border-0 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <section filter="SubArea">
+                                <select id="selectArea" class="mdb-select md-form border-0 filter-option" name="SubArea" multiple SubArea>
+                                </select>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row input-group mb-1">
+                        <div class="col-6">
+                            <label class="form-check-label">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price))</label>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="priceFrom">
+                                    <input id="priceFrom" type="number" class="form-control filter-option" name="priceFrom" priceFrom value="@Model.priceFrom">
+                                    <label style="padding-left:12px;" for="priceFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                                </section>
+                            </div>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="priceTo">
+                                    <input id="priceTo" type="number" class="form-control filter-option" name="priceTo" priceTo value="@Model.priceTo">
+                                    <label style="padding-left:12px;" for="priceTo">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.to))</label>
+                                </section>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <label class="form-check-label" for="inp_squaresFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Square))</label>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="squareFrom">
+                                    <input id="squareFrom" type="number" class="form-control filter-option" name="squareFrom" squareFrom value="@Model.squaresFrom">
+                                    <label style="padding-left:12px;" for="squaresFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                                </section>
+                            </div>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="squareTo">
+                                    <input id="squareTo" type="number" class="form-control filter-option" name="squareTo" squareTo value="@Model.squaresTo">
+                                    <label style="padding-left:12px;" for="squareTo">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.to))</label>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row input-group mb-1">
+                        <div class="col-6">
+                            <label class="form-check-label" for="inp_constructionYearFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ConstructionYear))</label>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="conYearFrom">
+                                    <input id="conYearFrom" type="number" class="form-control filter-option" name="conYearFrom" conYearFrom value="@Model.conYearFrom">
+                                    <label style="padding-left:12px;" for="conYearFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                                </section>
+                            </div>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="conYearTo">
+                                    <input id="conYearTo" type="number" class="form-control filter-option" name="conYearTo" conYearTo value="@Model.conYearTo">
+                                    <label style="padding-left:12px;" for="conYearTo">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.to))</label>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-check-label" for="inp_renYearFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.YearofRenovation))</label>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="renYearFrom">
+                                    <input id="renYearFrom" type="number" class="form-control filter-option" name="renYearFrom" renYearFrom="" value="@Model.renYearFrom">
+                                    <label style="padding-left:12px;" for="renYearFrom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                                </section>
+                            </div>
+                            <div class="md-form form-control border-0 col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2">
+                                <section filter="renYearTo">
+                                    <input id="renYearTo" type="number" class="form-control filter-option" name="renYearTo" renYearTo="" value="@Model.renYearTo">
+                                    <label style="padding-left:12px;" for="renYearTo">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.to))</label>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row input-group mb-1">
+                        <div class="md-form form-control border-0 col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-2">
+                            <section filter="Bedroom">
+                                <input type="number" class="form-control filter-option" id="Bedroom" name="Bedroom" Bedroom>
+                                <label style="padding-left:12px;" for="Bedroom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Bedrooms)) @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                            </section>
+                        </div>
+                        <div class="md-form form-control border-0 col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-2">
+                            <section filter="Bathroom">
+                                <input type="number" class="form-control filter-option" id="Bathroom" name="Bathroom" Bathroom>
+                                <label style="padding-left:12px;" for="Bathroom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Bathrooms)) @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row md-form input-group mt-3 mb-0">
+                        <h6 class="font-weight-bold mb-3 col-12">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PropertyFeatures))</h6>
+                        <div class="col-lg input-group">
+                            <fieldset class="form-check mb-2 pl-1 pr-1  col-sm-6">
+                                <section filter="HouseKeepingMoney">
+                                    <input class="filter-option form-check-input" name="HouseKeepingMoney" HouseKeepingMoney type="checkbox" id="cb001">
+                                    <label class="form-check-label" for="cb001">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Housekeeping))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="PetAllowed">
+                                    <input class="filter-option form-check-input" name="PetAllowed" PetAllowed="true" type="checkbox" id="cb002">
+                                    <label class="form-check-label" for="cb002">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Pets))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="Livingroom">
+                                    <input class="filter-option form-check-input" name="Livingroom" Livingroom="true" type="checkbox" id="cb003">
+                                    <label class="form-check-label" for="cb003">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Livingroom))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="Furniture">
+                                    <input class="filter-option form-check-input" name="Furniture" Furniture type="checkbox" id="cb004">
+                                    <label class="form-check-label" for="cb004">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Furniture))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="ParkingArea">
+                                    <input class="filter-option form-check-input" name="ParkingArea" ParkingArea type="checkbox" id="cb006">
+                                    <label class="form-check-label" for="cb006">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ParkingArea))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-lg-4 col-sm-6">
+                                <section filter="Garden">
+                                    <input class="filter-option form-check-input" name="Garden" Garden type="checkbox" id="cb007">
+                                    <label class="form-check-label" for="cb007">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Garden))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="Gym">
+                                    <input class="filter-option form-check-input" name="Gym" Gym type="checkbox" id="cb009">
+                                    <label class="form-check-label" for="cb009">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Gym))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="RoofFloor">
+                                    <input class="filter-option form-check-input" name="RoofFloor" RoofFloor type="checkbox" id="cb010">
+                                    <label class="form-check-label" for="cb010">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Penthouse))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="SecureDoor">
+                                    <input class="filter-option form-check-input" name="SecureDoor" SecureDoor type="checkbox" id="cb101">
+                                    <label class="form-check-label" for="cb101">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Safetydoor))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="FTTH">
+                                    <input class="filter-option form-check-input" name="FTTH" FTTH type="checkbox" id="cb102">
+                                    <label class="form-check-label" for="cb102">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.InternetFiber))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="View">
+                                    <input class="filter-option form-check-input" name="View" View type="checkbox" id="cb103">
+                                    <label class="form-check-label" for="cb103">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.View))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="Heating">
+                                    <input class="filter-option form-check-input" name="Heating" Heating type="checkbox" id="cb104">
+                                    <label class="form-check-label" for="cb104">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HeatingSystem))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="Fireplace">
+                                    <input class="filter-option form-check-input" name="Fireplace" Fireplace="true" type="checkbox" id="cb105">
+                                    <label class="form-check-label" for="cb105">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Fireplace))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="Swimmingpool">
+                                    <input class="filter-option form-check-input" name="Swimmingpool" Swimmingpool type="checkbox" id="cb106">
+                                    <label class="form-check-label" for="cb106">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Pool))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="SemiOutdoor">
+                                    <input class="filter-option form-check-input" name="SemiOutdoor" SemiOutdoor type="checkbox" id="cb107">
+                                    <label class="form-check-label" for="cb107">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Semioutdoors))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1  col-sm-6">
+                                <section filter="Maidroom">
+                                    <input class="filter-option form-check-input" name="Maidroom" Maidroom type="checkbox" id="cb108">
+                                    <label class="form-check-label" for="cb108">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CloakRoom))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="HomeAlarm">
+                                    <input class="filter-option form-check-input" name="HomeAlarm" HomeAlarm type="checkbox" id="cb201">
+                                    <label class="form-check-label" for="cb201">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SecurityAlarm))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="AluminumFrames">
+                                    <input class="filter-option form-check-input" name="AluminumFrames" AluminumFrames type="checkbox" id="cb202">
+                                    <label class="form-check-label" for="cb202">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SafetyFrames))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="Wc">
+                                    <input class="filter-option form-check-input" name="Wc" Wc type="checkbox" id="cb203">
+                                    <label class="form-check-label" for="cb203">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WC))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="Elevator">
+                                    <input class="filter-option form-check-input" name="Elevator" Elevator type="checkbox" id="cb204">
+                                    <label class="form-check-label" for="cb204">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Elevator))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="Bbq">
+                                    <input class="filter-option form-check-input" name="Bbq" Bbq type="checkbox" id="cb205">
+                                    <label class="form-check-label" for="cb205">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.BBQ))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="AirCondition">
+                                    <input class="filter-option form-check-input" name="AirCondition" AirCondition type="checkbox" id="cb206">
+                                    <label class="form-check-label" for="cb206">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AirCondition))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="Master">
+                                    <input class="filter-option form-check-input" name="Master" Master type="checkbox" id="cb207">
+                                    <label class="form-check-label" for="cb207">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Master))</label>
+                                </section>
+                            </fieldset>
+                            <fieldset class="form-check  mb-2  pl-1 pr-1   col-sm-6">
+                                <section filter="Hall">
+                                    <input class="filter-option form-check-input" name="Hall" Hall type="checkbox" id="cb208">
+                                    <label class="form-check-label" for="cb208">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Hall))</label>
+                                </section>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <section filter="numberOfPage">
+                        <input id="numberOfPage" type="number" class="filter-option" style="display:none;" name="numberOfPage" numberOfPage value="1">
+                    </section>
+                    <section filter="SortList">
+                        <input id="SortList" type="hidden" class="filter-option" name="SortList" SortList />
+                    </section>
+                </section>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-12 mb-1 flex-row">
+        <partial name="_PartialViewCards" />
+    </div>
+</div>
+
+<!--Modal: Login with Avatar Form-->
+<div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header">
+                <h5 class="mt-1 mb-2 white-text">Συμπλήρωσε ένα τίτλο:</h5>
+            </div>
+            <!--Body-->
+            <div class="modal-body text-center mb-1">
+                <div class="md-form my-5 mx-0">
+                    <input type="text" id="searchTitle" class="form-control form-control-sm validate ml-0">
+                </div>
+
+                <div class="text-center mt-4">
+                    <button id="btnSaveQuery" class="btn btn-cyan mt-1">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Save)) <i class="far fa-save ml-2"></i></button>
+                </div>
+            </div>
+
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login with Avatar Form-->
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
+@section Scripts{
+    <script src="~/src/CLDRPluralRuleParser.js"></script>
+    <script src="~/src/jquery.i18n.js"></script>
+    <script src="~/src/jquery.i18n.emitter.js"></script>
+    <script src="~/src/jquery.i18n.emitter.bidi.js"></script>
+    <script src="~/src/jquery.i18n.fallbacks.js"></script>
+    <script src="~/src/jquery.i18n.language.js"></script>
+    <script src="~/src/jquery.i18n.messagestore.js"></script>
+    <script src="~/src/jquery.i18n.parser.js"></script>
+    <script src="~/src/languages/premium.js"></script>
+    <script>
+        $(function () {
+            var activeLang = decodeURIComponent(getCookie(".AspNetCore.Culture")).split('|')[0].split('=')[1];
+            $.i18n().locale = activeLang;
+            $.i18n().load({
+                'el-GR': `/i18n/el-GR.json`,
+                'en-US': '/i18n/en-US.json',
+                'es': '/i18n/es.json',
+                'fr': '/i18n/fr.json',
+                'tr': '/i18n/tr.json',
+                'de': '/i18n/de.json'
+            }).done(function () {
+                $('.switch-locale').on('click', 'a', function (e) {
+                    e.preventDefault();
+                    $.i18n().locale = $(this).data('locale');
+                    console.log("Locale language: " + $.i18n().locale);
+                    $(`[data-i18n]`).each(function (index, elem) {
+                        $(elem).html($.i18n($(elem).data('i18n')));
+                    });
+                });
+                $(`[data-i18n]`).each(function (index, elem) {
+                    $(elem).html($.i18n($(elem).data('i18n')));
+                });
+            });
+        });
+    </script>
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="~/js/site.home.search.js"></script>
+    }
+    else
+    {
+        <script src="~/js/site.home.search.min.js"></script>
+    }
+}

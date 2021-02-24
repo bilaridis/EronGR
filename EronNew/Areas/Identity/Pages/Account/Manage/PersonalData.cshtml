@@ -1,0 +1,29 @@
+﻿@page
+@model PersonalDataModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@{
+    ViewData["Title"] = "Personal Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<!-- Jumbotron -->
+<div class="jumbotron text-center cloudy-knoxville-gradient lighten-4 mx-2 mb-5">
+    <div class="col-md-6">
+        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+        <p>
+            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+        </p>
+        <form id="download-data" asp-page="DownloadPersonalData" method="post" class="form-group">
+            <button class="btn btn-primary" type="submit">@SharedLocalizer.GetLocalized("Download")</button>
+        </form>
+        <p>
+            <a id="delete" asp-page="DeletePersonalData" class="btn btn-secondary">
+                @SharedLocalizer.GetLocalized("Διαγραφή")
+            </a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
