@@ -119,7 +119,7 @@ namespace EronNew.CurrencyCulture
                         return -1;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return -1;
             }
