@@ -207,34 +207,18 @@ namespace EronNew.Models
                 if (postViewModel.Post != null && string.IsNullOrEmpty(postViewModel.Post.SearchRawKey))
                     postViewModel.Post.SearchRawKey = Guid.NewGuid().ToString();
 
-
-
                 _model.UpdateBasicInformation(id.Value, postViewModel);
                 if (postViewModel.ExtraInformation != null)
                     _model.UpdateExtraInformation(id.Value, postViewModel);
                 var user = await _userManager.GetUserAsync(User);
-                //var post = await _model.GetPostInformation(id.Value, user.Id);
-                //var data = Encoding.UTF8.GetBytes(post.ExtractInformation());
-                //Document doc = new Document()
-                //{
-                //    GUID = post.Post.SearchRawKey,
-                //    Handle = post.Post.SearchRawKey,
-                //    Added = DateTime.Now,
-                //    AddedBy = "System",
-                //    RawText = post.ExtractInformation(),
-                //    Description = post.Post.Description,
-                //    Data = data,
-                //    Source = "WebForm",
-                //    Title = post.Post.Title,
-                //};
 
-                //List<string> tags = new List<string>();
-                //_model.AddDocumentForSearch(doc, tags);
-                var orders = await _model.GetOrdersByOwnerId(user.Id);
-                if (!orders.Any(x => x.Product.Id == 5))
-                {
-                    await _model.InsertOrder(5, user.Id, id);
-                }
+                
+                /* Welcome Post Offer */
+                //var orders = await _model.GetOrdersByOwnerId(user.Id);
+                //if (!orders.Any(x => x.Product.Id == 5))
+                //{
+                //    await _model.InsertOrder(5, user.Id, id);
+                //}
                 return RedirectToAction("Index", "Administration");
             }
             catch (Exception ex)

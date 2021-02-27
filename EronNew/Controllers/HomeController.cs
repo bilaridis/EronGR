@@ -100,8 +100,9 @@ namespace EronNew.Controllers
                         }
                         else
                         {
-                            await _model.InsertOrder(4, user.Id, null);
-                            viewModel.WelcomeOfferShow = true;
+                            //await _model.InsertOrder(4, user.Id, null);
+                            //viewModel.WelcomeOfferShow = true;
+                            viewModel.WelcomeOfferShow = false;
                         }
                         await _model.PostInterest(0, user.Id, remoteIpAddress.ToString(), UserInterest.fbclid, fbclid);
                         viewModel.Tiles = _model.GetRelatedPosts(null, user.Id);
@@ -125,8 +126,9 @@ namespace EronNew.Controllers
                         }
                         else
                         {
-                            await _model.InsertOrder(4, user.Id, null);
-                            viewModel.WelcomeOfferShow = true;
+                            //await _model.InsertOrder(4, user.Id, null);
+                            //viewModel.WelcomeOfferShow = true;
+                            viewModel.WelcomeOfferShow = false;
                         }
                         viewModel.Tiles = _model.GetRelatedPosts(null, user.Id);
                     }

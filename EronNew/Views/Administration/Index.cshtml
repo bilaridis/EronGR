@@ -40,7 +40,7 @@
                     <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))<i class="fas fa-sort ml-1"></i></a></th>
                     <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion)) - @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))<i class="fas fa-sort ml-1"></i></a></th>
                     <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price))<i class="fas fa-sort ml-1"></i></a></th>
-                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Premium))<i class="fas fa-sort ml-1"></i></a></th>
+                    <th class="th-lg d-none"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Premium))<i class="fas fa-sort ml-1"></i></a></th>
                 </tr>
             </thead>
             <!-- Table head -->
@@ -155,7 +155,7 @@
                         <td>@SharedLocalizer.GetLocalized(@basicInformation.SaleCategory)</td>
                         <td>@basicInformation.TitleOfPost</td>
                         <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("N") : 0) @SharedLocalizer.GetCurrencySymbol(basicInformation.Currency)</td>
-                        <td>
+                        <td class="d-none">
                             <div class="switch switch-price">
                                 <label>
                                     Basic
