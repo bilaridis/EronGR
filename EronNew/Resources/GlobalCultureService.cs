@@ -43,7 +43,7 @@ namespace EronNew.Resources
             var _to = new Currency(to);
             //var rate = _currencyConverter.GetRate(Currency.TRY, Currency.USD);
             var exchange = _currencyConverter.Convert(_from, amount, _to);
-            return exchange.ToString("N") + " " + _to.Symbol;
+            return exchange.ToString("N2") + " " + _to.Symbol;
         }
 
         public string GetCurrencySymbol(string currency)

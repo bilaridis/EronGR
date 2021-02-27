@@ -43,7 +43,7 @@ namespace EronNew.Helpers
                         ConstructionYear = item.ConstructionYear,
                         PriceTotal = item.PriceTotal,
                         Currency = item.Currency,
-                        CurrencyConvertedLocal = item.PriceTotal.HasValue ? item.PriceTotal.Value.ToString("N") + " " + CurrencyCulture.Model.Currency.CurrencySymbol[item.Currency] : "0" + " " + CurrencyCulture.Model.Currency.CurrencySymbol[item.Currency],
+                        CurrencyConvertedLocal = item.PriceTotal.HasValue ? item.PriceTotal.Value.ToString("N2") + " " + CurrencyCulture.Model.Currency.CurrencySymbol[item.Currency] : "0" + " " + CurrencyCulture.Model.Currency.CurrencySymbol[item.Currency],
                         Square = item.Square,
                         CreatedDate = item.CreatedDate,
                         Areas = item.Areas.AreaName,

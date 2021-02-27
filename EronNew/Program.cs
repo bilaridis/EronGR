@@ -26,7 +26,7 @@ namespace EronNew
             //   .CreateLogger();
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
             var configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                //.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{environment}.json", optional: true)
                 .Build();
             Log.Logger = new LoggerConfiguration()
@@ -51,7 +51,7 @@ namespace EronNew
                 })
             .ConfigureAppConfiguration(configuration =>
                 {
-                    configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                    //configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
                     configuration.AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional: true);
                 }).UseSerilog();
 
