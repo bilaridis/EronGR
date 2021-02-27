@@ -154,7 +154,7 @@
                         </td>
                         <td>@SharedLocalizer.GetLocalized(@basicInformation.SaleCategory)</td>
                         <td>@basicInformation.TitleOfPost</td>
-                        <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("C") : 0)</td>
+                        <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("N") : 0) @SharedLocalizer.GetCurrencySymbol(basicInformation.Currency)</td>
                         <td>
                             <div class="switch switch-price">
                                 <label>

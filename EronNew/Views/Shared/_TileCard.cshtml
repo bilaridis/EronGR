@@ -23,7 +23,7 @@
         </div>
         <div class="card-body d-flex px-2 py-1 form-check-label">
             <span class="p-0 pt-2">
-                @(Model.PriceTotal.HasValue ? Model.PriceTotal.Value.ToString("C") : 0) - @(Model.Square.HasValue ? Model.Square.Value.ToString("F") : 0) <b>m<sup>2</sup></b> - @Model.ConstructionYear <i class="fas fa-home"></i>
+                @(Model.PriceTotal.HasValue ? Model.PriceTotal.Value.ToString("N") : 0) @SharedLocalizer.GetCurrencySymbol(Model.Currency) - @(Model.Square.HasValue ? Model.Square.Value.ToString("F") : 0) <b>m<sup>2</sup></b> - @Model.ConstructionYear <i class="fas fa-home"></i>
             </span>
             <a type="button" href="#!" data-postid="@Model.Id" class="details-heart @(Model.WishList == true ? " details-unwish" : "details-wish" ) btn-sm ml-auto pb-0 justify-content-end">
                 <i class="@(Model.WishList == true ? "fas" : "far" ) fa-heart fa-1x pink-text"></i>

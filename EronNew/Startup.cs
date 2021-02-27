@@ -174,10 +174,12 @@ namespace EronNew
             services.AddTransient<IDomainModel, DomainModel>();
             services.AddTransient<IPostViewModel, PostViewModel>();
             services.AddTransient<IAdministrationViewModel, AdministrationViewModel>();
+            
             services.AddScoped<IIronKeyContext, IronKeyContext>();
             services.AddScoped<IMyIndexEngine, MyIndexEngine>();
             services.AddScoped<IEmailSender, EmailService>();
             services.AddScoped<ExtendedUserManager<ExtendedIdentityUser>>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

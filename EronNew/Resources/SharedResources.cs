@@ -1,52 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc.Localization;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Localization;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace EronNew.Resources
 {
     public class SharedResources
     {
 
-    }
-
-    public class GlobalCultureService
-    {
-        private readonly IStringLocalizer _localizer;
-
-        private readonly IHtmlLocalizer _htmlLocalizer;
-
-        private readonly IOptions<RequestLocalizationOptions> _locOptions;
-
-        public bool Premium { get; set; }
-
-        public GlobalCultureService(IStringLocalizerFactory factory, IHtmlLocalizerFactory htmlFactory, IOptions<RequestLocalizationOptions> locOptions)
-        {
-            var type = typeof(SharedResources);
-            var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-            _localizer = factory.Create("SharedResources", assemblyName.Name);
-            _htmlLocalizer = htmlFactory.Create("SharedResources", assemblyName.Name);
-            _locOptions = locOptions;
-        }
-
-        public LocalizedString GetLocalized(string key)
-        {
-            return _localizer[key];
-        }
-
-        public LocalizedHtmlString GetLocalizedHtml(string key)
-        {
-            return _htmlLocalizer[key];
-        }
     }
 
     public enum LocalizedPhrases

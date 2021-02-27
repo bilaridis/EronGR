@@ -43,10 +43,28 @@
                                 @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PropertyPrice))
                             </label>
                             <div class="input-group-append">
-                                <span class="input-group-text md-addon">.00</span>
-                            </div>
-                            <div class="input-group-append">
-                                <span class="input-group-text md-addon">€</span>
+                                <span class="input-group-text md-addon black-text">.00</span>
+                                <select id="currencySelect" class="mdb-select" asp-for="Post.Currency">
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.EUR">@EronNew.CurrencyCulture.Model.Currency.EUR @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.EUR.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.USD">@EronNew.CurrencyCulture.Model.Currency.USD @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.USD.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.GBP">@EronNew.CurrencyCulture.Model.Currency.GBP @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.GBP.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.AUD">@EronNew.CurrencyCulture.Model.Currency.AUD @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.AUD.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.BGN">@EronNew.CurrencyCulture.Model.Currency.BGN @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.BGN.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.CAD">@EronNew.CurrencyCulture.Model.Currency.CAD @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.CAD.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.CHF">@EronNew.CurrencyCulture.Model.Currency.CHF @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.CHF.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.CNY">@EronNew.CurrencyCulture.Model.Currency.CNY @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.CNY.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.DKK">@EronNew.CurrencyCulture.Model.Currency.DKK @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.DKK.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.IRR">@EronNew.CurrencyCulture.Model.Currency.IRR @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.IRR.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.JPY">@EronNew.CurrencyCulture.Model.Currency.JPY @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.JPY.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.KWD">@EronNew.CurrencyCulture.Model.Currency.KWD @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.KWD.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.NOK">@EronNew.CurrencyCulture.Model.Currency.NOK @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.NOK.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.PKR">@EronNew.CurrencyCulture.Model.Currency.PKR @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.PKR.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.RON">@EronNew.CurrencyCulture.Model.Currency.RON @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.RON.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.RUB">@EronNew.CurrencyCulture.Model.Currency.RUB @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.RUB.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.SAR">@EronNew.CurrencyCulture.Model.Currency.SAR @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.SAR.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.SEK">@EronNew.CurrencyCulture.Model.Currency.SEK @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.SEK.ToString()]</option>
+                                    <option value="@EronNew.CurrencyCulture.Model.Currency.TRY">@EronNew.CurrencyCulture.Model.Currency.TRY @EronNew.CurrencyCulture.Model.Currency.CurrencySymbol[EronNew.CurrencyCulture.Model.Currency.TRY.ToString()]</option>
+                                </select>
                             </div>
                             <div class="messages w-100"></div>
                         </div>
@@ -100,7 +118,7 @@
                         <!--First column-->
                         <div class="col-md-6">
                             <div class="md-form form-group">
-                                <input type="text" id="Address" asp-for="Post.Address" class="form-control" >
+                                <input type="text" id="Address" asp-for="Post.Address" class="form-control">
                                 <label for="Address" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Address))</label>
                                 <div class="messages w-100"></div>
                             </div>
@@ -118,7 +136,7 @@
                         <!--Third column-->
                         <div class="col-md-4">
                             <div class="md-form form-group">
-                                <input type="text" id="PostalCode" asp-for="Post.PostalCode" class="form-control" >
+                                <input type="text" id="PostalCode" asp-for="Post.PostalCode" class="form-control">
                                 <label for="form61" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PostalCode))</label>
                                 <div class="messages w-100"></div>
                             </div>

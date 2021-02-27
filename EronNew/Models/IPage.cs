@@ -8,6 +8,8 @@ namespace EronNew.Models
         long Id { get; set; }
         int? ConstructionYear { get; set; }
         int? PriceTotal { get; set; }
+        string Currency{ get; set; }
+        string CurrencyConvertedLocal { get; }
         int? Square { get; set; }
         DateTime? CreatedDate { get; set; }
         string UrlImage { get; set; }
@@ -15,6 +17,5 @@ namespace EronNew.Models
         string Areas { get; set; }
         string SubAreas { get; set; }
         bool WishList { get; set; }
-
     }
 }

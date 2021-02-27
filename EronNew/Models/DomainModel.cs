@@ -1,6 +1,8 @@
 ﻿using EronNew.Helpers;
+using EronNew.Resources;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
@@ -20,11 +22,15 @@ namespace EronNew.Models
         private readonly ILogger<DomainModel> _logger;
         private string _cultureName;
         private bool disposedValue;
-        public DomainModel(ILogger<DomainModel> logger, IServiceScopeFactory serviceScopeFactory)
+        private GlobalCultureService _services { get; set; }
+        public DomainModel(
+            ILogger<DomainModel> logger, 
+            IServiceScopeFactory serviceScopeFactory,
+            GlobalCultureService services)
         {
             _logger = logger;
             _serviceScopeFactory = serviceScopeFactory;
-
+            _services = services;
         }
         public void SetCulture(string cultureName)
         {
@@ -125,7 +131,7 @@ namespace EronNew.Models
 
             if (postId != null) res = res.Where(x => postId.Value != x.id);
 
-            return res.OrderByDescending(x => x.CreatedDate.Value).Take(10).ToList().GetBase(10, aspNetUserId);
+            return res.OrderByDescending(x => x.CreatedDate.Value).Take(10).ToList().GetBase(10, aspNetUserId, _services);
         }
         public async Task<bool> SaveMyCard(AspNetUserProfile model)
         {
@@ -238,7 +244,7 @@ namespace EronNew.Models
             results = results.OrderBy(searchData.SortList);
             var res = await results.ToListAsync();
 
-            return res.Skip((searchData.numberOfPage - 1) * 16).Take(16).ToList().GetBase(res.Count, aspNetUserId);
+            return res.Skip((searchData.numberOfPage - 1) * 16).Take(16).ToList().GetBase(res.Count, aspNetUserId, _services);
         }
         public async Task<bool> SaveQuerySearch(string title, SearchData searchData, string referer, string aspNetUserId = null)
         {
@@ -678,7 +684,7 @@ namespace EronNew.Models
                    .Where(x => x.Active && x.StateOfPost == 2 && !x.Deleted && !x.Hide && x.OwnerId == aspNetUserId);
                 var res = await results.ToListAsync();
 
-                return res.Skip((searchData.numberOfPage - 1) * 12).Take(12).ToList().GetBase(res.Count, aspNetUserId);
+                return res.Skip((searchData.numberOfPage - 1) * 12).Take(12).ToList().GetBase(res.Count, aspNetUserId, _services);
             }
             else
             {
@@ -692,7 +698,7 @@ namespace EronNew.Models
                                 .Include(p => p.Images).Where(x => x.Active && x.StateOfPost == 2 && !x.Deleted && !x.Hide && x.OwnerId == aspNetUserId);
                 var res = await results.ToListAsync();
 
-                return res.Skip((searchData.numberOfPage - 1) * 12).Take(12).ToList().GetBase(res.Count, aspNetUserId);
+                return res.Skip((searchData.numberOfPage - 1) * 12).Take(12).ToList().GetBase(res.Count, aspNetUserId, _services);
             }
 
         }
@@ -713,7 +719,7 @@ namespace EronNew.Models
                 .Where(x => x.Active == true && !x.Deleted && !x.Hide && x.WishLists.Any(x => x.AspNetUserId == aspNetUserId && x.Active == true));
             var res = await results.ToListAsync();
 
-            return res.Skip((searchData.numberOfPage - 1) * 16).Take(16).ToList().GetBase(res.Count, aspNetUserId);
+            return res.Skip((searchData.numberOfPage - 1) * 16).Take(16).ToList().GetBase(res.Count, aspNetUserId, _services);
         }
         public async Task<List<IPage>> QueryRecentsPostsList(SearchData searchData, string aspNetUserId)
         {
@@ -744,7 +750,7 @@ namespace EronNew.Models
                 {
                     item.Post.Post.SetLocaliseOptions(_cultureName);
                 }
-                return results.OrderByDescending(x => x.ClickDate).Skip((searchData.numberOfPage - 1) * 16).Take(16).Select(x => x.Post.Post).ToList().GetBase(results.ToList().Count, aspNetUserId);
+                return results.OrderByDescending(x => x.ClickDate).Skip((searchData.numberOfPage - 1) * 16).Take(16).Select(x => x.Post.Post).ToList().GetBase(results.ToList().Count, aspNetUserId, _services);
             }
             catch (Exception ex)
             {

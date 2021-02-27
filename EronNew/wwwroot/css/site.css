@@ -66,7 +66,7 @@ for details on configuring this project to bundle and minify static web assets. 
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.input-group-text {
+.input-group-text-mdb {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;

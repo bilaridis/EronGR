@@ -1,4 +1,8 @@
-﻿using System;
+﻿using EronNew.Resources;
+using Microsoft.Extensions.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 
 namespace EronNew.Models
@@ -8,7 +12,6 @@ namespace EronNew.Models
     {
         public BasicInformationBase()
         {
-
         }
         [DataMember]
         public long Id { get; set; }
@@ -16,6 +19,10 @@ namespace EronNew.Models
         public int? ConstructionYear { get; set; }
         [DataMember]
         public int? PriceTotal { get; set; }
+        [DataMember]
+        public string Currency { get; set; }
+        [DataMember]
+        public string CurrencyConvertedLocal { get; set; }
         [DataMember]
         public int? Square { get; set; }
         [DataMember]

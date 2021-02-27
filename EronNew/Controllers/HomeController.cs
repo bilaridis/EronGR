@@ -1,6 +1,7 @@
 ﻿using EronNew.Data;
 using EronNew.Helpers;
 using EronNew.Models;
+using EronNew.Resources;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
@@ -32,11 +34,13 @@ namespace EronNew.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IEmailSender _emailSender;
         private IDomainModel _model;
+        private GlobalCultureService _services { get; set; }
         public HomeController(
             ILogger<HomeController> logger,
             IDomainModel model,
             IEmailSender emailSender,
-            ExtendedUserManager<ExtendedIdentityUser> userManager
+            ExtendedUserManager<ExtendedIdentityUser> userManager,
+            GlobalCultureService services
             )
         {
 
@@ -44,6 +48,7 @@ namespace EronNew.Controllers
             _logger = logger;
             _model = model;
             _userManager = userManager;
+            _services = services;
             _logger.LogInformation("EronSite - Home Controller starts");
             try
             {
@@ -58,10 +63,15 @@ namespace EronNew.Controllers
         [AllowAnonymous]
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
+            var cultureService = _services;
+            if (cultureService != null)
+            {
+                cultureService.CurrentCurrency = CurrencyCulture.Model.Currency.MatchingCulture.FirstOrDefault(x => x.Key == culture).Value;
+            }
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
                 CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
 
             return LocalRedirect(returnUrl);

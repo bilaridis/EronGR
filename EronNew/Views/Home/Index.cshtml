@@ -178,6 +178,67 @@
         </div>
     </div>
 }
+<!--Section: Currency Live-->
+<div class="row mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Currency Code</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Currency Symbol</th>
+                <th scope="col">Currency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">EUR/USD</th>
+                <td>1</td>
+                <td>@SharedLocalizer.GetCurrencySymbol("EUR")</td>
+                <td>@SharedLocalizer.ConvertCurrency("EUR", 1, "USD")</td>
+            </tr>
+            <tr>
+                <th scope="row">EUR/GBP</th>
+                <td>1</td>
+                <td>@SharedLocalizer.GetCurrencySymbol("EUR")</td>
+                <td>@SharedLocalizer.ConvertCurrency("EUR", 1, "GBP")</td>
+            </tr>
+            <tr>
+                <th scope="row">GBP/USD</th>
+                <td>1</td>
+                <td>@SharedLocalizer.GetCurrencySymbol("GBP")</td>
+                <td>@SharedLocalizer.ConvertCurrency("GBP", 1, "USD")</td>
+            </tr>
+            <tr>
+                <th scope="row">USD/CNY</th>
+                <td>1</td>
+                <td>@SharedLocalizer.GetCurrencySymbol("USD")</td>
+                <td>@SharedLocalizer.ConvertCurrency("USD", 1, "CNY")</td>
+            </tr>
+            <tr>
+                <th scope="row">USD/JPY</th>
+                <td>1</td>
+                <td>@SharedLocalizer.GetCurrencySymbol("USD")</td>
+                <td>@SharedLocalizer.ConvertCurrency("USD", 1, "JPY")</td>
+            </tr>
+            <tr>
+                <th scope="row">USD/TRY</th>
+                <td>1</td>
+                <td>@SharedLocalizer.GetCurrencySymbol("USD")</td>
+                <td>@SharedLocalizer.ConvertCurrency("USD", 1, "TRY")</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-flex flex-row-reverse">
+                    <a target="_blank" href="https://www.tcmb.gov.tr/kurlar/today.xml"><sup>powered by TCMB</sup></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<!--Section: Currency Live-->
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
 @section Scripts{
     @if (hostingEnv.EnvironmentName == "Development")

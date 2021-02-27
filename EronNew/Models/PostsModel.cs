@@ -98,6 +98,8 @@ namespace EronNew.Models
         [DataMember]
         public int? PriceTotal { get; set; }
         [DataMember]
+        public string Currency { get; set; }
+        [DataMember]
         public int? Square { get; set; }
         [DataMember]
         public DateTime? CreatedDate { get; set; }
