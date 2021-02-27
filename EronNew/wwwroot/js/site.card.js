@@ -97,7 +97,7 @@
         </div>
         <div class="card-body d-flex px-2 py-1 form-check-label">
             <span class="p-0 pt-2">
-                ${product.PriceTotal} ${product.Currency} - ${formatMoney(product.Square, 0, ',', '.') || ""}  <b>m<sup>2</sup></b> - ${product.ConstructionYear || ""} <i class="fas fa-home"></i>
+                ${product.CurrencyConvertedLocal} - ${formatMoney(product.Square, 0, ',', '.') || ""}  <b>m<sup>2</sup></b> - ${product.ConstructionYear || ""} <i class="fas fa-home"></i>
             </span>
             <a type="button" href="#!" data-postid="${product.Id}" class="details-heart ${product.WishList == true ? "details-unwish" : "details-wish"} btn-sm ml-auto pb-0 justify-content-end">
                 <i class="${product.WishList == true ? "fas" : "far"} fa-heart fa-1x pink-text"></i>
