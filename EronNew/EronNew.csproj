@@ -4,8 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-EronNew-704DBDED-5E93-43D4-AD16-7AA4F1593221</UserSecretsId>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    <AssemblyVersion>1.0.5.6</AssemblyVersion>
-    <FileVersion>1.0.5.6</FileVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
     <AssemblyName>EronNew</AssemblyName>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
 	<CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
@@ -654,6 +654,8 @@
     <None Include="wwwroot\lib\perfect-scrollbar\lib\util.js" />
     <None Include="wwwroot\lib\perfect-scrollbar\process-scroll-diff.js" />
     <None Include="wwwroot\lib\perfect-scrollbar\update-geometry.js" />
+    <None Include="wwwroot\mdb5\css\mdb.dark.min.css.map" />
+    <None Include="wwwroot\mdb5\css\mdb.dark.rtl.min.css.map" />
     <None Include="wwwroot\mdb5\css\mdb.min.css.map" />
     <None Include="wwwroot\mdb5\css\mdb.rtl.min.css.map" />
     <None Include="wwwroot\mdb5\js\mdb.min.js" />
@@ -671,7 +673,9 @@
     <None Include="wwwroot\mdb5\plugins\css\mention.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\multi-carousel.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\onboarding.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\organization-chart.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\parallax.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\scroll-status.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\storage.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\table-editor.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\transfer.min.css.map" />
@@ -707,8 +711,12 @@
     <None Include="wwwroot\mdb5\plugins\js\multi-carousel.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\onboarding.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\onboarding.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\organization-chart.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\organization-chart.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\parallax.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\parallax.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\scroll-status.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\scroll-status.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\storage.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\storage.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\table-editor.min.js" />

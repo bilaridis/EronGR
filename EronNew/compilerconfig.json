@@ -10,5 +10,9 @@
   {
     "outputFile": "wwwroot/js/addons-pro/wysiwyg.min.es5.js",
     "inputFile": "wwwroot/js/addons-pro/wysiwyg.min.js"
+  },
+  {
+    "outputFile": "wwwroot/mdb5/src/mdb/scss/mdb.pro.css",
+    "inputFile": "wwwroot/mdb5/src/mdb/scss/mdb.pro.scss"
   }
 ]

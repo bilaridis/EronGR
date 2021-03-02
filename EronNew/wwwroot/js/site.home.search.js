@@ -46,7 +46,7 @@
             $(this).removeAttr('selected');
         });
         $('#selectType option[value="' + parsedSearchData.TypeDesc + '"]').attr('selected', 'selected').change();
-        $(".mdb-select").materialSelect();
+        //$(".mdb-select").materialSelect();
         FillSubTypes();
         FillSubAreas();
         init = true;
@@ -65,28 +65,28 @@
             .done(function (msg) {
                 var areas = JSON.parse(msg);
                 var parseLoc = JSON.parse(textLocalised);
-                $("#selectParentArea").materialSelect('destroy');
+                //$("#selectParentArea").materialSelect('destroy');
                 $("#selectParentArea").empty();
                 $("#selectParentArea").append(`<option value="" disabled></option>`);
                 $.each(areas, function (index, value) {
                     var checked = contains(option, value.Value) ? 'selected' : '' || '';
                     $("#selectParentArea").append(`<option value="${value.Value}" ${checked}>${value.Text}</option>`);
                 });
-                $("#selectParentArea").materialSelect();
+                //$("#selectParentArea").materialSelect();
             })
             .fail(function (jqXHR, textStatus) {
                 //alert("Request api/GetArea/ failed: " + textStatus);
             });
     }
     function fillWithClone(id, option = "") {
-        $(`#${id}`).materialSelect('destroy');
+        //$(`#${id}`).materialSelect('destroy');
         var options = $(`#${id}`).find('option').clone();
         $(`#${id}`).empty();
         for (let i = 0; i < options.length; i++) {
             var checked = options[i].value == option ? 'selected' : '' || '';
             $(`#${id}`).append(`<option value="${options[i].value}" ${checked}>${options[i].innerText}</option>`);
         }
-        $(`#${id}`).materialSelect();
+        //$(`#${id}`).materialSelect();
     }
     function FillSubTypes(option = []) {
         $.ajax({
@@ -97,7 +97,7 @@
             .done(function (t) {
                 var typesForAppend = JSON.parse(t);
                 var parseLoc = JSON.parse(textLocalised);
-                $("#selectSubType").materialSelect("destroy");
+                //$("#selectSubType").materialSelect("destroy");
                 $("#selectSubType").empty();
                 $("#selectSubType").append(`<option value="" disabled>${parseLoc.subType}</option>`);
                 $.each(typesForAppend, function (index, value) {
@@ -105,7 +105,7 @@
                     $("#selectSubType").append(`<option value="${value.Value}" ${checked}>${value.Text}</option>`);
                 });
                 //$("#selectType").change();
-                $("#selectSubType").materialSelect();
+                //$("#selectSubType").materialSelect();
             })
             .fail(function (jqXHR, textStatus) {
                 //alert("Request api/Types/ failed: " + textStatus);
@@ -121,14 +121,14 @@
             .done(function (t) {
                 var subAreas = JSON.parse(t);
                 var parseLoc = JSON.parse(textLocalised);
-                $("#selectArea").materialSelect('destroy');
+                //$("#selectArea").materialSelect('destroy');
                 $("#selectArea").empty();
                 $("#selectArea").append(`<option value="" disabled>${parseLoc.subArea}</option>`);
                 $.each(subAreas, function (index, value) {
                     var checked = contains(option, value.Value) ? 'selected' : '' || '';
                     $("#selectArea").append(`<option value="${value.Value}" ${checked}>${value.Text}</option>`);
                 });
-                $("#selectArea").materialSelect();
+                //$("#selectArea").materialSelect();
             })
             .fail(function (jqXHR, textStatus) {
                 //alert("Request api/GetArea/ failed: " + textStatus);
@@ -289,18 +289,18 @@
 <div class="col-sm-12 col-md-3 mb-3">
     <div class="card promoting-card m-2">
         <a href="/Posts/Details/${product.Id}">
-            <div class="d-flex flex-row m-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                <label class="form-check-label font-weight-bold mb-0 mr-0" data-toggle="tooltip" title="${(product.Title || "")}" ><span class="badge badge-primary text-wrap">${$.i18n(product.Category)}</span> > ${(product.Title || "")} ${product.Premium}</label>
+            <div class="d-flex flex-row m-1" style="white-space: nowrap; overflow: hidden;">
+                <span class="badge rounded-pill bg-primary"> ${$.i18n(product.Category)}</span> ${(product.Title || "")} ${product.Premium}
             </div>
         </a>
-        <div class="view overlay z-depth-1">
+        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
             <img class="card-img-top rounded-0" src="${product.UrlImage || "/images/DefaultImage1.jpg"}" alt="Card image cap">
             <a href="/Posts/Details/${product.Id}">
-                <div class="mask img-gradient">
+                <div class="mask" style="background:rgba(75, 75, 75, 0.35);">
                     <span class="text-default btn-sm" style="position: absolute; top: 0px; left: 0px;">
                         # ${product.Id}
                     </span>
-                    <span class="form-check-label px-2 rounded mdb-color white-text" style="position: absolute; bottom: 10px; right: 10px;">
+                    <span class="badge rounded-pill bg-primary" style="position: absolute; bottom: 10px; right: 10px;">
                         ${moment(product.CreatedDate).format('L')} <i class="fas fa-clock"></i>
                     </span>
                 </div>

@@ -10,12 +10,12 @@
             .done(function (msg) {
                 console.log("After Load" + moment().toDate());
                 var childAreasForAppend = JSON.parse(msg);
-                $("#selectParentArea").materialSelect("destroy");
+                //$("#selectParentArea").materialSelect("destroy");
                 $("#selectParentArea").empty();
                 $.each(childAreasForAppend, function (index, value) {
                     $("#selectParentArea").append('<option value="' + value.Value + '" >' + value.Text + '</option>');
                 });
-                $("#selectParentArea").materialSelect();
+                //$("#selectParentArea").materialSelect();
                 console.log("After Implement" + moment().toDate());
             })
             .fail(function (jqXHR, textStatus) {
@@ -31,14 +31,14 @@
                 .done(function (msg) {
                     var jObj = JSON.parse(msg);
                     $("#selectSubType").materialSelect("destroy");
-                    $("#selectSubType").empty();
+                    //$("#selectSubType").empty();
                     $("#selectSubType").append('<option value=""></option>');
                     $.each(jObj, function (index, value) {
                         //this wrapped in jQuery will give us the current .letter-q div
                         var urii = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
                         $("#selectSubType").append('<option value="' + value.Value + '">' + value.Text + '</option>');
                     });
-                    $("#selectSubType").materialSelect();
+                    //$("#selectSubType").materialSelect();
 
                 })
                 .fail(function (jqXHR, textStatus) {
@@ -53,17 +53,13 @@
             })
                 .done(function (msg) {
                     var jObj1 = JSON.parse(msg);
-                    $("#selectArea").materialSelect("destroy");
+                    //$("#selectArea").materialSelect("destroy");
                     $("#selectArea").empty();
                     $("#selectArea").append('<option value=""></option>');
                     $.each(jObj1, function (index, value) {
                         $("#selectArea").append('<option value="' + value.Value + '">' + value.Text + '</option>');
                     });
-                    $("#selectArea").materialSelect();
-                    $("#selectArea").parent().find('input')
-                        .val("")
-                        .removeAttr('readonly')
-                        .prop('required', true);
+                    //$("#selectArea").materialSelect();
 
                 })
                 .fail(function (jqXHR, textStatus) {

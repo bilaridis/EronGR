@@ -3,7 +3,7 @@ require('braintree-web-drop-in/index.js')
 $ = jQuery = require('jquery');
 //require('jquery-ui');
 require('popper.js');
-require('bootstrap');
+//require('bootstrap');
 require('datatables');
 require('datatables-select');
 //require('moment');

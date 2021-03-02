@@ -89,23 +89,23 @@ $(function () {
         $("#langButton").html('<span class="flag-icon flag-icon-el-gr fa-2x"></span>');
     }
 
-    toastr.options = {
-        "closeButton": true, // true/false
-        "debug": false, // true/false
-        "newestOnTop": false, // true/false
-        "progressBar": false, // true/false
-        "positionClass": "md-toast-top-center", // md-toast-top-right / md-toast-top-left / md-toast-bottom-right / md- toast - bottom - left
-        "preventDuplicates": false, //true / false
-        "onclick": null,
-        "showDuration": "300", // in milliseconds
-        "hideDuration": "1000", // in milliseconds
-        "timeOut": "5000", // in milliseconds
-        "extendedTimeOut": "1000", // in milliseconds
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    };
+    //toastr.options = {
+    //    "closeButton": true, // true/false
+    //    "debug": false, // true/false
+    //    "newestOnTop": false, // true/false
+    //    "progressBar": false, // true/false
+    //    "positionClass": "md-toast-top-center", // md-toast-top-right / md-toast-top-left / md-toast-bottom-right / md- toast - bottom - left
+    //    "preventDuplicates": false, //true / false
+    //    "onclick": null,
+    //    "showDuration": "300", // in milliseconds
+    //    "hideDuration": "1000", // in milliseconds
+    //    "timeOut": "5000", // in milliseconds
+    //    "extendedTimeOut": "1000", // in milliseconds
+    //    "showEasing": "swing",
+    //    "hideEasing": "linear",
+    //    "showMethod": "fadeIn",
+    //    "hideMethod": "fadeOut"
+    //};
 
     $('[data-toggle="tooltip"]').tooltip({
         template: '<div class="tooltip md-tooltip d-print-none"><div class="tooltip-inner md-inner"></div></div>'
@@ -117,10 +117,9 @@ $(function () {
         $('#ihavecookiesBtn').on('click', function () {
             $('body').ihavecookies(cookieOptions, 'reinit');
         });
-        $(".mdb-select").materialSelect();
     }
 
-    new WOW().init();
+    //new WOW().init();
 });
 
 

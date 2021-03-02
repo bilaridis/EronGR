@@ -18,25 +18,9 @@
     <meta name="revisit-after" content="5 days">
     <meta name="author" content="Vasileios Valasidis">
     @RenderSection("metatags", false)
-    <!-- MDB icon -->
-    <link rel="icon" href="~/img/favicon.ico" type="image/x-icon">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="~/css/bootstrap.min.css">
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="~/css/mdb.css">
-    <link href="~/css/addons-pro/steppers.min.css" rel="stylesheet" />
-    <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="~/css/style.css">
 
-    <link href="~/lib/fine-uploader/fine-uploader-gallery.css" rel="stylesheet" />
+    <partial name="_partialStyleSheets.cshtml" />
 
-    <link href="~/lib/fine-uploader/fine-uploader-new.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/css/flag-icon.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
     @if (hostingEnv.EnvironmentName == "Production")
     {
@@ -53,24 +37,7 @@
 <body class="navy-blue-skin scrollbar-navy-blue-skin-slim">
     <!--Main Navigation-->
     <header>
-        <!-- Navbar -->
-        <nav class="navbar fixed-top navbar navbar-expand-lg p-0">
-            <a class="navbar-brand" href="~/Home"><img src="~/images/logo.png" height="45" /></a>
-            <!-- Collapse button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars fa-1x"></i>
-            </button>
-            <!--Navbar links-->
-
-            <div class="collapse navbar-collapse" id="basicExampleNav">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-                <partial name="_LoginPartial" />
-            </div>
-            <!--/Navbar links-->
-        </nav>
-        <!--Navbar -->
+        <partial name="_navbar" />
     </header>
     <!--Main Navigation-->
     <main class="d-flex flex-fill mt-5">
@@ -92,7 +59,7 @@
 
                         <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
 
-                        <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ml-1"></i></a>
+                        <a type="button" class="btn btn-primary">Learn more <i class="fas fa-book ms-1"></i></a>
                         <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, thanks</a>
                     </div>
                 </div>
