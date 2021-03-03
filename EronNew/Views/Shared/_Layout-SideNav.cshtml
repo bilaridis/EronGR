@@ -23,113 +23,110 @@
     <meta property="og:url" content="https://www.eron.gr" />
     <meta property="og:image" content="https://www.eron.gr/images/image.png" />
     <meta property="og:description" content="Καταχωρείστε τις αγγελίες σας στο Eron.gr." />
+    @RenderSection("metatags", false)
+    <style>
+        @@media (min-width: 1400px) {
+            main,
+            header,
+            #main-navbar {
+                padding-left: 240px;
+            }
+        }
+
+        #mainLogo {
+            display: none !important;
+        }
+    </style>
     <partial name="_partialStyleSheets.cshtml" />
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
     @if (hostingEnv.EnvironmentName == "Production")
     {
         <!-- Hotjar Tracking Code for www.eron.gr -->
-    <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 2219362, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZJT4KTT5R"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+                h._hjSettings = { hjid: 2219362, hjsv: 6 };
+                a = o.getElementsByTagName('head')[0];
+                r = o.createElement('script'); r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZJT4KTT5R"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-        gtag('config', 'G-9ZJT4KTT5R');
-    </script>
+            gtag('config', 'G-9ZJT4KTT5R');
+        </script>
     }
 </head>
-<body class="fixed-sn navy-blue-skin scrollbar-navy-blue-skin-slim">
+<body class="scrollbar-navy-blue-skin-slim">
     <!--Main Navigation-->
     <header>
         <!-- Sidebar navigation -->
-        <div id="slide-out" class="side-nav sn-bg-2 fixed">
-            <ul class="custom-scrollbar">
-                <!-- Logo -->
-                <li>
-                    <div class="logo-wrapper waves-light">
-                        <a class="navbar-brand" href="~/Home">
-                            <img src="~/images/logo.png" class="p-0 m-0 mt-2" style="height:58px;" />
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <ul class="collapsible collapsible-accordion">
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r">
-                                <i class="fas fa-cogs"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))<i class="fas fa-angle-down rotate-icon"></i>
+        <nav id="sidenav-admin"
+             class="sidenav"
+             data-mdb-slim="true"
+             data-mdb-hidden="false"
+             data-mdb-accordion="true">
+
+            <div class="text-center">
+                <a class="navbar-brand" href="~/Home">
+                    <img src="~/images/logo.png" class="p-0 m-0 mt-2" style="height:58px;" />
+                </a>
+            </div>
+            <ul class="sidenav-menu">
+                <li class="sidenav-item">
+                    <a class="sidenav-link">
+                        <i class="fas fa-cogs me-2"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))<i class="fas fa-angle-down rotate-icon"></i>
+                    </a>
+                    <ul class="sidenav-collapse">
+                        <li class="sidenav-item">
+
+                            <a class="sidenav-link" id="profile" href="/Identity/Account/Manage/Index">
+                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))
                             </a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li>
-                                        <a class="nav-link" id="profile" href="/Identity/Account/Manage/Index">
-                                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" id="email" href="/Identity/Account/Manage/Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Changeemail))</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" id="change-password" href="/Identity/Account/Manage/ChangePassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" id="personal-data" href="/Identity/Account/Manage/PersonalData">GDPR</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r" href="/Identity/Account/Manage/EditMyCard"><i class="fas fa-user-circle"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</a>
+                        <li class="sidenav-item">
+                            <a class="nav-link" id="email" href="/Identity/Account/Manage/Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Changeemail))</a>
                         </li>
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r" href="/Administration/Index"><i class="fas fa-folder-open"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a>
+                        <li class="sidenav-item">
+                            <a class="nav-link" id="change-password" href="/Identity/Account/Manage/ChangePassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</a>
                         </li>
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r" href="/Identity/Account/Manage/Notes"><i class="fas fa-comment-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Notes))</a>
-                        </li>
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r" href="/WishList/Index"><i class="fas fa-heart"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))</a>
-                        </li>
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r" href="/RecentPosts/Index"><i class="fas fa-history"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RecentPosts))</a>
-                        </li>
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r" href="/Search/Index"><i class="fas fa-history"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SavedSearches))</a>
-                        </li>
-                        <li>
-                            <a class="collapsible-header waves-effect arrow-r">
-                                <i class="fas fa-wallet"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Finance))<i class="fas fa-angle-down rotate-icon"></i>
-                            </a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li>
-                                        <a class="nav-link" id="profile" href="/Wallet/Finance">
-                                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Finance))
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" id="profile" href="/Wallet/MyOrders">
-                                            @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyOrders))
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <li class="sidenav-item">
+                            <a class="nav-link" id="personal-data" href="/Identity/Account/Manage/PersonalData">GDPR</a>
                         </li>
                     </ul>
                 </li>
-                <!--/. Side navigation links -->
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="/Identity/Account/Manage/EditMyCard"><i class="fas fa-user-circle me-2"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="/Administration/Index"><i class="fas fa-folder-open me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="/Identity/Account/Manage/Notes"><i class="fas fa-comment-alt me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Notes))</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="/WishList/Index"><i class="fas fa-heart me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="/RecentPosts/Index"><i class="fas fa-history me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RecentPosts))</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="/Search/Index"><i class="fas fa-history me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SavedSearches))</a>
+                </li>
+                <li class="sidenav-item">
+                    <a class="sidenav-link" href="/Wallet/Finance"><i class="fas fa-wallet me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Wallet))</a>
+                </li>
             </ul>
-            <div class="sidenav-bg mask-strong"></div>
-        </div>
+            <div class="text-center" style="min-height: 3rem;">
+                <hr class="mt-0 mb-2" />
+                <small>Footer</small>
+            </div>
+        </nav>
         <!--/. Sidebar navigation -->
         <partial name="_navbar" />
     </header>
@@ -170,6 +167,14 @@
     </div>
     <!--Modal: modalCookie-->
     <partial name="_partialScripts" />
+    @if (hostingEnv.EnvironmentName == "Development")
+    {
+        <script src="~/js/site.administration.js"></script>
+    }
+    else
+    {
+        <script src="~/js/site.administration.min.js"></script>
+    }
     @RenderSection("Scripts", required: false)
 </body>
 </html>

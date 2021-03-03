@@ -1,9 +1,7 @@
 ﻿(function () {
 
     $(function () {
-            $(".button-collapse").sideNav();
-            $('.datepicker').pickadate();
-            $('[data-toggle="tooltip"]').tooltip();
+
             var data = {
                 labels: ["January", "February", "March", "April", "May", "June", "July"],
                 datasets: [{

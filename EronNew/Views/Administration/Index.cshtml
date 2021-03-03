@@ -8,7 +8,7 @@
     Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
 }
 
-<div class="card card-cascade z-depth-1 mt-1 col">
+<div class="card card-cascade mt-5 row">
 
     <!-- Card image -->
     <div class="view view-cascade gradient-card-header gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between">
@@ -28,8 +28,16 @@
 
     </div>
     <!-- /Card image -->
-
-    <div class="px-4 table-responsive col-12">
+    <div class="input-group mb-4">
+        <input type="text"
+               class="form-control"
+               id="advanced-search-input"
+               placeholder="phrase in:column1,column2" />
+        <button class="btn btn-primary" id="advanced-search-button" type="button" id="button-addon1">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+    <div id="datatable" class="px-4 table-responsive col-12">
         <!-- Table -->
         <table id="dtMaterialDesignExample" class="table table-hover col-12">
             <!-- Table head -->
