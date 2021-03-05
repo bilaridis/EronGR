@@ -153,10 +153,22 @@
                     </div>
                     <div class="row mx-0">
                         <section filter="Bedroom" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-2">
-                            <div class="form-outline">
-                                <input type="number" class="form-control filter-option" id="Bedroom" name="Bedroom" Bedroom>
-                                <label class="form-label" for="Bedroom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Bedrooms)) @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                            <!-- Quantity -->
+                            <div class="d-flex mb-4" style="max-width: 300px">
+                                <button class="btn btn-primary px-3 me-2"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="form-outline">
+                                    <input id="Bedroom" min="0" value="0" name="Bedroom" Bedroom type="number" class="form-control filter-option" />
+                                    <label class="form-label" for="Bedroom">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Bedrooms)) @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.from))</label>
+                                </div>
+                                <button class="btn btn-primary px-3 ms-2"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
                             </div>
+                            <!-- Quantity -->
                         </section>
                         <section filter="Bathroom" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-2">
                             <div class="form-outline">

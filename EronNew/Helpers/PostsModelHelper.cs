@@ -25,15 +25,6 @@ namespace EronNew.Helpers
                     {
                         imageUrl = @$"/{image.UrlImage}/Thumbnails/{image.ImageName}";
                     }
-                    //var localCurrency = "";
-                    //if (item.PriceTotal.HasValue && services?.CurrentCurrency != null)
-                    //{
-                    //    localCurrency = services.ConvertCurrency(item.Currency, item.PriceTotal.Value, services.CurrentCurrency);
-                    //}
-                    //else
-                    //{
-                    //    localCurrency = item.PriceTotal.HasValue ? item.PriceTotal.Value.ToString("N") + " " + services.GetCurrencySymbol(item.Currency) : "0" + " " + services.GetCurrencySymbol(item.Currency);
-                    //}
 
                     var item2Add = new BasicInformationBase()
                     {

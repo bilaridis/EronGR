@@ -104,7 +104,7 @@
 {
     <div class="multi-carousel mt-5" data-mdb-interval="4000" data-mdb-items="4">
         <div class="multi-carousel-inner">
-            @foreach (BasicInformationBase item in Model.Tiles.Skip(0))
+            @foreach (BasicInformationBase item in Model.Tiles)
             {
                 <partial name="_TileCard" model="item" />
             }
@@ -138,11 +138,11 @@
                     <div class="row">
                         <!-- Admin card -->
                         <div class="card col-12 mt-3">
-                            <div class="">
-                                <p class="text-uppercase hover primary-color z-depth-2 p-4 mx-5 mt-n3 rounded text-white">
-                                    <i class="fas fa-money-bill my-2"></i>
-                                    <span class="h5-responsive">EUR/USD</span>
-                                </p>
+                            <div class="card-header">
+                                <i class="fas fa-money-bill my-2"></i>
+                                <span class="h5-responsive text-uppercase">EUR/USD</span>
+                            </div>
+                            <div class="card-body">
                                 <div class="float-right text-right p-3">
                                     <h6 class="font-weight-bold mb-0">1 @SharedLocalizer.GetCurrencySymbol("EUR") <i class="fas fa-exchange-alt mx-3"></i> @SharedLocalizer.ConvertCurrency("EUR", 1, "USD")</h6>
                                 </div>
@@ -156,11 +156,11 @@
                     <div class="row">
                         <!-- Admin card -->
                         <div class="card col-12 mt-3">
-                            <div class="">
-                                <p class="text-uppercase primary-color z-depth-2 p-4 mx-5 mt-n3 rounded text-white">
-                                    <i class="fas fa-money-bill my-2"></i>
-                                    <span class="h5-responsive">EUR/GBP</span>
-                                </p>
+                            <div class="card-header">
+                                <i class="fas fa-money-bill my-2"></i>
+                                <span class="h5-responsive text-uppercase">EUR/GBP</span>
+                            </div>
+                            <div class="card-body">
                                 <div class="float-right text-right p-3">
                                     <h6 class="font-weight-bold mb-0">1 @SharedLocalizer.GetCurrencySymbol("EUR") <i class="fas fa-exchange-alt mx-3"></i> @SharedLocalizer.ConvertCurrency("EUR", 1, "GBP")</h6>
                                 </div>
@@ -174,11 +174,11 @@
                     <div class="row">
                         <!-- Admin card -->
                         <div class="card col-12 mt-3">
-                            <div class="">
-                                <p class="text-uppercase primary-color z-depth-2 p-4 mx-5 mt-n3 rounded text-white">
-                                    <i class="fas fa-money-bill my-2"></i>
-                                    <span class="h5-responsive">GBP/USD</span>
-                                </p>
+                            <div class="card-header">
+                                <i class="fas fa-money-bill my-2"></i>
+                                <span class="h5-responsive text-uppercase">GBP/USD</span>
+                            </div>
+                            <div class="card-body">
                                 <div class="float-right text-right p-3">
                                     <h6 class="font-weight-bold mb-0">1 @SharedLocalizer.GetCurrencySymbol("GBP") <i class="fas fa-exchange-alt mx-3"></i> @SharedLocalizer.ConvertCurrency("GBP", 1, "USD")</h6>
                                 </div>
@@ -192,11 +192,11 @@
                     <div class="row">
                         <!-- Admin card -->
                         <div class="card col-12 mt-3">
+                            <div class="card-header">
+                                <i class="fas fa-money-bill my-2"></i>
+                                <span class="h5-responsive text-uppercase">USD/CNY</span>
+                            </div>
                             <div class="">
-                                <p class="text-uppercase primary-color z-depth-2 p-4 mx-5 mt-n3 rounded text-white">
-                                    <i class="fas fa-money-bill my-2"></i>
-                                    <span class="h5-responsive">USD/CNY</span>
-                                </p>
                                 <div class="float-right text-right p-3">
                                     <h6 class="font-weight-bold mb-0">1 @SharedLocalizer.GetCurrencySymbol("USD") <i class="fas fa-exchange-alt mx-3"></i> @SharedLocalizer.ConvertCurrency("USD", 1, "CNY")</h6>
                                 </div>
@@ -210,11 +210,11 @@
                     <div class="row">
                         <!-- Admin card -->
                         <div class="card col-12 mt-3">
-                            <div class="">
-                                <p class="text-uppercase primary-color z-depth-2 p-4 mx-5 mt-n3 rounded text-white">
-                                    <i class="fas fa-money-bill my-2"></i>
-                                    <span class="h5-responsive">USD/JPY</span>
-                                </p>
+                            <div class="card-header">
+                                <i class="fas fa-money-bill my-2"></i>
+                                <span class="h5-responsive text-uppercase">USD/JPY</span>
+                            </div>
+                            <div class="card-body">
                                 <div class="float-right text-right p-3">
                                     <h6 class="font-weight-bold mb-0">1 @SharedLocalizer.GetCurrencySymbol("USD") <i class="fas fa-exchange-alt mx-3"></i> @SharedLocalizer.ConvertCurrency("USD", 1, "JPY")</h6>
                                 </div>
@@ -228,11 +228,11 @@
                     <div class="row">
                         <!-- Admin card -->
                         <div class="card col-12 mt-3">
-                            <div class="">
-                                <p class="text-uppercase primary-color z-depth-2 p-4 mx-5 mt-n3 rounded text-white">
-                                    <i class="fas fa-money-bill my-2"></i>
-                                    <span class="h5-responsive">USD/TRY</span>
-                                </p>
+                            <div class="card-header">
+                                <i class="fas fa-money-bill my-2"></i>
+                                <span class="h5-responsive text-uppercase">USD/TRY</span>
+                            </div>
+                            <div class="card-body">
                                 <div class="float-right text-right p-3">
                                     <h6 class="font-weight-bold mb-0">1 @SharedLocalizer.GetCurrencySymbol("USD") <i class="fas fa-exchange-alt mx-3"></i> @SharedLocalizer.ConvertCurrency("USD", 1, "TRY")</h6>
                                 </div>

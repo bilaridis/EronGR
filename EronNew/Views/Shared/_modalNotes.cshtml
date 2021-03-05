@@ -4,22 +4,19 @@
 @using EronNew.Resources
 
 <!-- Central Modal Notes -->
-<div class="modal fade" id="centralModalNotes" tabindex="-1" role="dialog" aria-labelledby="NotesModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg " role="document">
+<div class="modal fade" id="centralModalNotes" tabindex="-1" aria-labelledby="myModalContact" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
+    <div class="modal-dialog modal-lg " >
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title w-100 white-text" id="NotesModalLabel">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Notes))</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h4 class="modal-title  d-flex align-items-start" id="NotesModalLabel">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Notes))</h4>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="notesForm" class="p-0 m-0 col-12" action="SaveNotes/@Model.id" method="post">
                     <div class="col-md-12">
-                        <div class="md-form mt-2">
-                            <i class="fas fa-pencil-alt prefix grey-text"></i>
-                            <textarea name="notes" id="form107" class="md-textarea form-control" rows="5"></textarea>
-                            <label for="form107">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Writeashortdescription))</label>
+                        <div class="form-outline mt-2">
+                            <textarea name="notes" id="form107" class="form-control" rows="5"></textarea>
+                            <label class="form-label" for="form107">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Writeashortdescription))</label>
                         </div>
                     </div>
                     <!--Grid row-->

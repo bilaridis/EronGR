@@ -1,7 +1,5 @@
 ﻿(function () {
     $(function () {
-        $("#mdb-lightbox-ui").load("/mdb-addons/mdb-lightbox-ui.html");
-
         function addMarkerToGroup(coordinate, html) {
             var outerElement = document.createElement('div'),
                 innerElement = document.createElement('div');
@@ -146,7 +144,7 @@
                 url: domainUrl + "/Posts/Details/ContactUs/" + postModel.OwnerId + "?postId=" + postModel.id,
                 data: dataString,
                 success: function () {
-                    toastr.success('To email στάθηκε με επιτυχία!');
+                    //toastr.success('To email στάθηκε με επιτυχία!');
                 }
             });
             e.preventDefault();
@@ -162,7 +160,7 @@
                 data: dataString
             })
                 .done(function (msg) {
-                    toastr.success('Οι Σημειώσεις αποθηκεύτηυκαν με επιτυχία!');
+                    //toastr.success('Οι Σημειώσεις αποθηκεύτηυκαν με επιτυχία!');
                 })
                 .fail(function (jqXHR, textStatus) {
                     //alert(jqXHR.status);
@@ -253,36 +251,15 @@
                 }
             }
         }
-        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
-            var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-            for (var i = 0; i < 4; i++) {
-                next = next.next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-                next.children(':first-child').clone().appendTo($(this));
-                $('[data-toggle="tooltip"]').tooltip({
-                    template: '<div class="tooltip md-tooltip d-print-none"><div class="tooltip-inner md-inner"></div></div>'
-                });
-            }
-            //$(this).find('label[data-toggle="tooltip"]').tooltip({
-            //    template: '<div class="tooltip md-tooltip d-print-none"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-inner"></div></div>'
-            //});
-
-        });
     });
 
     function createPhoneTemplate(title, phone) {
         return `
-<td><button type="button" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#modalContact">
-<i class="fas fa-phone ml-2 fa-2x">   <strong>${phone}</strong>  </i></button></td> 
-<td> 
-<button type="button" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#modalContact">
-    Email<i class="fas fa-paper-plane ml-2 fa-2x"></i>
+<td><button type="button" class="btn btn-info" data-mdb-toggle="modal" data-mdb-target="#modalContact">
+<i class="fas fa-phone ms-2 fa-1x">   <strong>${phone}</strong>  </i></button></td> 
+<td>
+<button type="button" class="btn btn-info" data-mdb-toggle="modal" data-mdb-target="#modalContact">
+    Email<i class="fas fa-paper-plane ms-2 fa-1x"></i>
 </button>
 </td>`;
 

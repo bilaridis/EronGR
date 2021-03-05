@@ -64,145 +64,104 @@
     <div class="col-lg-9 col-md-12 flex-row">
         <partial name="_PartialViewCards" />
     </div>
-    <!--Modal: modalCookie-->
-    <div class="modal fade top" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalContact"
-         aria-hidden="true" data-backdrop="true">
-        <div class="modal-dialog modal-lg modal-top" role="document">
+
+    <!--Modal: modalContact-->
+    <div class="modal fade top" id="modalContact" tabindex="-1" aria-labelledby="myModalContact" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-lg">
             <!--Content-->
             <div class="modal-content">
                 <!--Header-->
-                <div id="modalHeader" class="modal-header">
-                    <p class="heading"><h4 class="font-weight-bold white-text mt-4"><i class="fas fa-envelope pr-2 mr-1"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WriteToUs)):</h4></p>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="white-text">&times;</span>
-                    </button>
+                <div id="modalHeader" class="modal-header d-flex align-items-start">
+                    <h3 class="text-center mb-5" data-i18n="Write To Us"></h3>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <!--Header-->
                 <!--Body-->
                 <div class="modal-body">
-                    <!-- Form with header -->
-                    <div class="card contact-section dark-grey-text">
-                        <!-- Grid row -->
+                    <!--Section: Design Block-->
+                    <section>
                         <div class="row">
-
-                            <!-- Grid column -->
-                            <div class="col-lg-7">
-                                <form class="p-0 m-0 col-12" action="ContactUs/@Model.CardProfile.AspNetUserId" method="post">
-
-                                    <div class="card-body form">
-
-                                        <!-- Header -->
-                                        <!-- Grid row -->
-                                        <div class="row">
-
-                                            <!-- Grid column -->
-                                            <div class="col-md-6">
-                                                <div class="md-form mb-0">
-                                                    <input type="text" id="form-contact-name" class="form-control" name="contactEmail.name">
-                                                    <label for="form-contact-name" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Name))</label>
-                                                </div>
+                            <div class="col-md-8 col-lg-9">
+                                <form id="main" class="p-0 m-0 col-12" action="ContactUs/@Model.CardProfile.AspNetUserId" method="post">
+                                    <div class="row mb-4">
+                                        <div class="col-md-6 mb-4 mb-md-0">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3Example1" class="form-control" name="contactEmail.name" />
+                                                <label class="form-label" for="form3Example1" data-i18n="Name"></label>
                                             </div>
-                                            <!-- Grid column -->
-                                            <!-- Grid column -->
-                                            <div class="col-md-6">
-                                                <div class="md-form mb-0">
-                                                    <input type="text" id="form-contact-email" class="form-control" name="contactEmail.email">
-                                                    <label for="form-contact-email" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</label>
-                                                </div>
-                                            </div>
-                                            <!-- Grid column -->
-
                                         </div>
-                                        <!-- Grid row -->
-                                        <!-- Grid row -->
-                                        <div class="row">
-
-                                            <!-- Grid column -->
-                                            <div class="col-md-6">
-                                                <div class="md-form mb-0">
-                                                    <input type="text" id="form-contact-phone" class="form-control" name="contactEmail.phone">
-                                                    <label for="form-contact-phone" class="">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Mobile))</label>
-                                                </div>
+                                        <div class="col-md-6">
+                                            <div class="form-outline">
+                                                <input type="email" id="form3Example2" class="form-control" name="contactEmail.email" />
+                                                <label class="form-label" for="form3Example2" data-i18n="Email"></label>
                                             </div>
-                                            <!-- Grid column -->
-
                                         </div>
-                                        <!-- Grid row -->
-                                        <!-- Grid row -->
-                                        <div class="row mt-3">
-
-                                            <!-- Grid column -->
-                                            <div class="col-md-12">
-                                                <div class="md-form mb-0">
-                                                    <textarea id="form-contact-message" name="contactEmail.message" class="form-control md-textarea" rows="6" required></textarea>
-                                                    <label for="form-contact-message">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Howcanwehelpyou))?</label>
-                                                    <button type="submit" class="btn-floating btn-md blue-gradient border-0">
-                                                        <i class="far fa-paper-plane"></i>
-                                                    </button>
-                                                </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-md-6 mb-4 mb-md-0">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3Example11" class="form-control" name="contactEmail.phone" />
+                                                <label class="form-label" for="form3Example11" data-i18n="Mobile"></label>
                                             </div>
-                                            <!-- Grid column -->
-
                                         </div>
-                                        <!-- Grid row -->
-
+                                        <div class="col-md-6 d-none">
+                                            <div class="form-outline">
+                                                <input type="email" id="form3Example22" class="form-control" />
+                                                <label class="form-label" for="form3Example22">Company</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <textarea class="form-control" id="form4Example3" rows="4" name="contactEmail.message"></textarea>
+                                        <label class="form-label" for="form4Example3" data-i18n="How can we help you"></label>
+                                    </div>
+                                    <div class="row flex-row-reverse">
+                                        <button type="submit" class="btn btn-primary btn-floating mb-5 mb-md-0">
+                                            <i class="far fa-paper-plane"></i>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
-                            <!-- Grid column -->
-                            <!-- Grid column -->
-                            <div class="col-lg-5    ">
-
-                                <div class="card-body contact text-center h-100 white-text">
-
-                                    <h5 class="font-weight-bold my-4 pb-2">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactInfo))</h5>
-                                    <ul class="text-lg-left list-unstyled ml-4">
-                                        <li>
-                                            <p><i class="fas fa-globe-europe pr-2"></i><a href="@Model.CardProfile.ContactWebSite">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WebSite))</a></p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-phone pr-2"></i>@Model.CardProfile.ContactPhone</p>
-                                        </li>
-                                        <li>
-                                            <p><i class="fas fa-envelope pr-2"></i>@Model.CardProfile.ContactEmail</p>
-                                        </li>
-                                    </ul>
-                                    <hr class="hr-light my-4">
-                                    <ul class="list-inline text-center list-unstyled">
-                                        <li class="list-inline-item">
-                                            <a class="p-2 fa-lg tw-ic" target="_blank" href="https://www.facebook.com/@Model.CardProfile.Facebook">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="p-2 fa-lg li-ic" target="_blank" href="https://twitter.com/@Model.CardProfile.Twitter">
-                                                <i class="fab fa-twitter"> </i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="p-2 fa-lg ins-ic" target="_blank" href="https://www.linkedin.com/in/@Model.CardProfile.LinkedIn">
-                                                <i class="fab fa-linkedin-in"> </i>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
+                            <div class="col-md-4 col-lg-3">
+                                <ul class="list-unstyled text-center text-md-start">
+                                    <li>
+                                        <p><i class="fas fa-globe-europe text-primary me-2"></i><a href="@Model.CardProfile.ContactWebSite" data-i18n="WebSite"></a></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-phone text-primary me-2"></i>@Model.CardProfile.ContactPhone</p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-envelope text-primary me-2"></i>@Model.CardProfile.ContactEmail</p>
+                                    </li>
+                                </ul>
+                                <hr class="my-4">
+                                <ul class="list-inline text-center list-unstyled">
+                                    <li class="list-inline-item">
+                                        <a class="p2 fa-lg fb-ic" target="_blank" href="https://www.facebook.com/@Model.CardProfile.Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p2 fa-lg li-ic">
+                                            <i class="fab fa-linkedin-in" target="_blank" href="https://www.linkedin.com/in/@Model.CardProfile.LinkedIn"> </i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="p2 fa-lg tw-ic" target="_blank" href="https://twitter.com/@Model.CardProfile.Twitter">
+                                            <i class="fab fa-twitter"> </i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <!-- Grid column -->
-
                         </div>
-                        <!-- Grid row -->
-
-                    </div>
-                    <!-- Form with header -->
+                    </section>
+                    <!--Section: Design Block-->
                 </div>
                 <!--/.Content-->
             </div>
         </div>
     </div>
-    <!--Modal: modalCookie-->
+    <!--Modal: modalContact-->
 </div>
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
 @section Scripts{
