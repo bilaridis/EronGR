@@ -79,8 +79,8 @@
                         dataType: 'text'
                     })
                         .done(function (msg) {
-                            $(`a.details-heart[data-postid="${postId}"]`).removeClass("details-wish").addClass("details-unwish");
-                            $(`a.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("far").addClass("fas");
+                            $(`.details-heart[data-postid="${postId}"]`).removeClass("details-wish").addClass("details-unwish");
+                            $(`.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("far").addClass("fas");
                         })
                         .fail(function (jqXHR, textStatus) {
                             //alert(jqXHR.status);
@@ -96,8 +96,8 @@
                         dataType: 'text'
                     })
                         .done(function (msg) {
-                            $(`a.details-heart[data-postid="${postId}"]`).removeClass("details-unwish").addClass("details-wish");
-                            $(`a.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("fas").addClass("far");
+                            $(`.details-heart[data-postid="${postId}"]`).removeClass("details-unwish").addClass("details-wish");
+                            $(`.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("fas").addClass("far");
                         })
                         .fail(function (jqXHR, textStatus) {
                             //alert("Request Administration/Delete/ failed: " + textStatus);

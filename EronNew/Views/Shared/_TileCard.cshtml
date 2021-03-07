@@ -6,7 +6,7 @@
     <div class="card promoting-card m-2">
         <a href="/Posts/Details/@Model.Id">
             <div class="d-flex flex-row m-1" style="white-space: normal; overflow: visible; text-overflow: ellipsis;" >
-                <a> <small><span class="badge rounded-pill bg-primary">@SharedLocalizer.GetLocalized(Model.Category) </span> @Model.Title </small></a>
+                <small><span class="badge rounded-pill bg-primary shadow-1-strong">@SharedLocalizer.GetLocalized(Model.Category) </span> @Model.Title </small>
             </div>
         </a>
         <div class="bg-image hover-overlay hover-zoom hover-shadow shadow-1">
@@ -29,9 +29,9 @@
             <small class="p-0 pt-2">
                 @(Model.PriceTotal.HasValue ? Model.PriceTotal.Value.ToString("N2") : 0) @SharedLocalizer.GetCurrencySymbol(Model.Currency) - @(Model.Square.HasValue ? Model.Square.Value.ToString("F") : 0) <b>m<sup>2</sup></b> - @Model.ConstructionYear <i class="fas fa-home"></i>
             </small>
-            <a type="button" href="#!" data-postid="@Model.Id" class="details-heart @(Model.WishList == true ? " details-unwish" : "details-wish" ) btn-sm ms-auto pb-0 justify-content-end">
+            <button href="#!" data-postid="@Model.Id" class="btn shadow-0 details-heart @(Model.WishList == true ? "details-unwish" : "details-wish" ) ms-auto justify-content-end">
                 <i class="@(Model.WishList == true ? "fas" : "far" ) fa-heart fa-1x text-danger"></i>
-            </a>
+            </button>
         </div>
     </div>
 </div> 

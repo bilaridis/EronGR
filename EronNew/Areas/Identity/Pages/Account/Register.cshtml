@@ -9,48 +9,48 @@
 <div class="row d-flex justify-content-center">
     <div class="text-center col-xl-4 col-lg-6 col-md-8 col-sm-12">
         <div class="card">
-            <h5 class="card-header gradient white-text text-center py-4">
+            <div class="card-header h5 gradient text-light text-center py-4">
                 <strong>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Register))</strong>
-            </h5>
+            </div>
 
             <div class="card-body px-lg-5 pt-0">
                 <form asp-route-returnUrl="@Model.ReturnUrl" method="post" class="md-form" style="color: #757575;">
                     <div class="red-msg mb-3">@Html.ValidationSummary(false)</div>
-                    <div class="md-form input-group mt-4">
+                    <div class="form-outline mt-3">
                         <input type="text" asp-for="Input.FirstName" class="form-control">
-                        <label for="Input_FirstName">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Name))</label>
+                        <label class="form-label" for="Input_FirstName">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Name))</label>
                     </div>
-                    <div class="md-form input-group mt-4">
+                    <div class="form-outline mt-3">
                         <input type="text" asp-for="Input.LastName" class="form-control">
-                        <label for="Input_LastName">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Surname))</label>
+                        <label class="form-label" for="Input_LastName">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Surname))</label>
                     </div>
-                    <div class="md-form input-group mt-4">
+                    <div class="form-outline mt-3">
                         <input type="email" asp-for="Input.Email" class="form-control">
-                        <label for="Input_Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</label>
+                        <label class="form-label" for="Input_Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Email))</label>
                     </div>
-                    <div class="md-form input-group mt-4">
+                    <div class="form-outline mt-3">
                         <input type="password" asp-for="Input.Password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
-                        <label for="Input_Password">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</label>
+                        <label class="form-label" for="Input_Password">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</label>
                     </div>
-                    <div class="md-form input-group mt-4">
+                    <div class="form-outline mt-3">
                         <input type="password" asp-for="Input.ConfirmPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
-                        <label for="Input_ConfirmPassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ConfirmPassword))</label>
+                        <label class="form-label" for="Input_ConfirmPassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ConfirmPassword))</label>
                     </div>
-                    <div class="md-form input-group mt-4">
+                    <div class="form-outline mt-3">
                         <input type="text" asp-for="Input.PhoneNumber" class="form-control">
-                        <label for="Input_Phone">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactPhone)) (@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.optional)))</label>
+                        <label class="form-label" for="Input_Phone">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.ContactPhone)) (@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.optional)))</label>
                     </div>
-                    <div class="md-form input-group mt-4">
-                        <div class="form-check">
-                            <input type="checkbox" asp-for="Input.Newsletter" class="form-check-input" id="materialRegisterFormNewsletter">
-                            <label class="form-check-label" for="materialRegisterFormNewsletter">Subscribe to our newsletter</label>
+                    <div class="d-flex justify-content-around mt-4">
+                        <div class="form-check mt-3">
+                            <input type="checkbox" asp-for="Input.Newsletter" class="form-check-input" >
+                            <label class="form-check-label" asp-for="Input.Newsletter">Subscribe to our newsletter</label>
                         </div>
                     </div>
-                    <div class="md-form input-group mt-4">
-                        <button class="btn navy-blue-skin gradient white-text btn-rounded btn-block my-4 waves-effect z-depth-2" type="submit">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Submit))</button>
+                    <div class="d-grid my-4">
+                        <button class="btn btn-success text-light" type="submit">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Submit))</button>
                     </div>
                 </form>
-                <div class="text-center grey-text">
+                <div class="text-center text-dark">
                     <p>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Registerfromtheapplications)):</p>
                     <form asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-center">
                         @foreach (var provider in Model.ExternalLogins)
@@ -77,7 +77,7 @@
                     </form>
                     <hr>
 
-                    <p class="grey-text">
+                    <p class="text-dark">
                         @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.ByclickingRegisteryouautomaticallyagreetoour))
                         <a href="https://www.eron.gr/Home/Privacy" target="_blank">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Termsofuse))</a>.
                     </p>

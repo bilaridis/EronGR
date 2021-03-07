@@ -119,6 +119,43 @@ $(function () {
         });
     }
 
+    $(".details-heart").click(function (e) {
+        var postId = $(this).data("postid");
+        if ($(this).hasClass("details-wish"))
+            ////alert("delete " + postId);
+            $.ajax({
+                url: domainUrl + "/Posts/Details/WishList/" + postId,
+                method: "GET",
+                dataType: 'text'
+            })
+                .done(function (msg) {
+                    $(`a.details-heart[data-postid="${postId}"]`).removeClass("details-wish").addClass("details-unwish");
+                    $(`a.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("far").addClass("fas");
+                })
+                .fail(function (jqXHR, textStatus) {
+                    //alert(jqXHR.status);
+                    if (jqXHR.status == 401) {
+                        window.location.href = domainUrl + "/Identity/Account/Login?ReturnUrl=%2FHome%2F"
+                    }
+                    else { }
+                });
+        else {
+            $.ajax({
+                url: domainUrl + "/Posts/Details/UnWishList/" + postId,
+                method: "GET",
+                dataType: 'text'
+            })
+                .done(function (msg) {
+                    $(`a.details-heart[data-postid="${postId}"]`).removeClass("details-unwish").addClass("details-wish");
+                    $(`a.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("fas").addClass("far");
+                })
+                .fail(function (jqXHR, textStatus) {
+                    //alert("Request Administration/Delete/ failed: " + textStatus);
+                });
+        }
+        e.preventDefault();
+    });
+
     //new WOW().init();
 });
 

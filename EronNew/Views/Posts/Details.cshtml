@@ -79,11 +79,13 @@
                                             </div>
                                         }
                                     </div>
-                                    <button class="carousel-control-prev" tabindex="0" type="button" data-mdb-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <button class="carousel-control-prev hover-overlay" tabindex="0" type="button" data-mdb-slide="prev">
+                                        <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
+                                        <div class="mask gradient-top"></div>
                                     </button>
-                                    <button class="carousel-control-next" tabindex="0" type="button" data-mdb-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <button class="carousel-control-next hover-overlay" tabindex="0" type="button" data-mdb-slide="next">
+                                        <span class="carousel-control-next-icon text-primary" aria-hidden="true"></span>
+                                        <div class="mask gradient-bottom"></div>
                                     </button>
                                 </div>
                             </div>
@@ -399,26 +401,28 @@
 
 @if (Model.RelatedPosts.Count > 0)
 {
-    <div class="multi-carousel mt-5" data-mdb-interval="4000" data-mdb-items="4">
-        <div class="multi-carousel-inner">
-            @foreach (BasicInformationBase item in Model.RelatedPosts)
-            {
-                <partial name="_TileCard" model="item" />
-            }
-        </div>
-        <button class="carousel-control-prev"
-                type="button"
-                tabindex="0"
-                data-mdb-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next"
-                type="button"
-                tabindex="0"
-                data-mdb-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+<div class="multi-carousel mt-5" data-mdb-interval="10000" data-mdb-items="3">
+    <div class="multi-carousel-inner py-5 px-5">
+        @foreach (BasicInformationBase item in Model.RelatedPosts)
+        {
+            <partial name="_TileCard" model="item" />
+        }
     </div>
+    <button class="carousel-control-prev hover-overlay"
+            type="button"
+            tabindex="0"
+            data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
+        <div class="mask gradient-left"></div>
+    </button>
+    <button class="carousel-control-next hover-overlay"
+            type="button"
+            tabindex="0"
+            data-mdb-slide="next">
+        <span class="carousel-control-next-icon text-primary" aria-hidden="true"></span>
+        <div class="mask gradient-right"></div>
+    </button>
+</div>
 }
 
 <script>

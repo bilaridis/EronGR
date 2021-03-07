@@ -102,24 +102,26 @@
 
 @if (Model.Tiles.Count > 0)
 {
-    <div class="multi-carousel mt-5" data-mdb-interval="400000" data-mdb-items="4">
-        <div class="multi-carousel-inner">
+    <div class="multi-carousel mt-5" data-mdb-interval="10000" data-mdb-items="3">
+        <div class="multi-carousel-inner py-5 px-5">
             @foreach (BasicInformationBase item in Model.Tiles)
             {
                 <partial name="_TileCard" model="item" />
             }
         </div>
-        <button class="carousel-control-prev"
+        <button class="carousel-control-prev hover-overlay"
                 type="button"
                 tabindex="0"
                 data-mdb-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
+            <div class="mask gradient-left"></div>
         </button>
-        <button class="carousel-control-next"
+        <button class="carousel-control-next hover-overlay"
                 type="button"
                 tabindex="0"
                 data-mdb-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon text-primary" aria-hidden="true"></span>
+            <div class="mask gradient-right"></div>
         </button>
     </div>
 }

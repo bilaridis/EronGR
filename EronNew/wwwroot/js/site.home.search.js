@@ -144,6 +144,38 @@
             $("#products").empty();
             getProducts(apiUrl);
         });
+        
+        $(".btn-minus").on('click', function (e) {
+            e.preventDefault();
+            this.parentNode.querySelector('input[type=number]').stepDown();
+            $("#numberOfPage").val("1");
+            $("#products").empty();
+            if (e.target.id == "selectType") {
+                FillSubTypes();
+            }
+            if (e.target.id == "selectParentArea") {
+                FillSubAreas();
+            }
+            if (!init) pushHistoryState();
+            getProducts(apiUrl);
+            return false;
+        });
+
+        $(".btn-plus").on('click', function (e) {
+            e.preventDefault();
+            this.parentNode.querySelector('input[type=number]').stepUp();
+            $("#numberOfPage").val("1");
+            $("#products").empty();
+            if (e.target.id == "selectType") {
+                FillSubTypes();
+            }
+            if (e.target.id == "selectParentArea") {
+                FillSubAreas();
+            }
+            if (!init) pushHistoryState();
+            getProducts(apiUrl);
+            return false;
+        });
 
         $(".filter-option").change((e) => {
             e.stopImmediatePropagation();
@@ -157,6 +189,7 @@
             }
             if (!init) pushHistoryState();
             getProducts(apiUrl);
+
         });
     });
     function pushHistoryState() {
@@ -289,33 +322,37 @@
 <div class="col-sm-12 col-md-3 mb-3">
     <div class="card promoting-card m-2">
         <a href="/Posts/Details/${product.Id}">
-            <div class="d-flex flex-row m-1" style="white-space: nowrap; overflow: hidden;">
-                <span class="badge rounded-pill bg-primary"> ${$.i18n(product.Category)}</span> ${(product.Title || "")} ${product.Premium}
+            <div class="d-flex flex-row m-1" style="white-space: normal; overflow: visible; text-overflow: ellipsis;" >
+                <small><span class="badge rounded-pill bg-primary shadow-1-strong">${$.i18n(product.Category)} </span> ${(product.Title || "")} </small>
             </div>
         </a>
-        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-            <img class="card-img-top rounded-0" src="${product.UrlImage || "/images/DefaultImage1.jpg"}" alt="Card image cap">
+        <div class="bg-image hover-overlay hover-zoom hover-shadow shadow-1">
+            <img class="card-img-top rounded-0" src="${product.UrlImage || "/images/DefaultImage1.jpg"}" alt="Image Profile">
             <a href="/Posts/Details/${product.Id}">
                 <div class="mask" style="background:rgba(75, 75, 75, 0.35);">
                     <span class="text-default btn-sm" style="position: absolute; top: 0px; left: 0px;">
-                        # ${product.Id}
+                        #${product.Id}
                     </span>
-                    <span class="badge rounded-pill bg-primary" style="position: absolute; bottom: 10px; right: 10px;">
+                    <span class="text-default btn-sm" style="position: absolute; top: 0px; right: 0px;">
+                        @${product.Premium}
+                    </span>
+                    <span class="form-check-label px-2 rounded mdb-color white-text" style="position: absolute; bottom: 10px; right: 10px;">
                         ${moment(product.CreatedDate).format('L')} <i class="fas fa-clock"></i>
                     </span>
                 </div>
             </a>
         </div>
-        <div class="card-body d-flex px-2 py-1 form-check-label">
-            <span class="p-0 pt-2">
+        <div class="card-body d-flex pe-0">
+            <small class="p-0 pt-2">
                 ${product.CurrencyConvertedLocal} - ${formatMoney(product.Square, 0, ',', '.') || ""}  <b>m<sup>2</sup></b> - ${product.ConstructionYear || ""} <i class="fas fa-home"></i>
-            </span>
-            <a type="button" href="#!" data-postid="${product.Id}" class="details-heart ${product.WishList == true ? "details-unwish" : "details-wish"} btn-sm ml-auto pb-0 justify-content-end">
-                <i class="${product.WishList == true ? "fas" : "far"} fa-heart fa-1x pink-text"></i>
-            </a>
+            </small>
+            <button href="#!" data-postid="${product.Id}" class="btn shadow-0 details-heart ${product.WishList == true ? "details-unwish" : "details-wish"} ms-auto justify-content-end">
+                <i class="${product.WishList == true ? "fas" : "far"} fa-heart fa-1x text-danger"></i>
+            </button>
         </div>
     </div>
-</div> `
+</div>
+`
             ;
 
     }

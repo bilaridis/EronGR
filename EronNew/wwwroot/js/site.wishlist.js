@@ -2,9 +2,6 @@
 
     const apiUrl = "/WishList/Query";
     $(function () {
-        $(".button-collapse").sideNav({
-            breakpoint: 1200
-        });
         $('#loader').css('display', 'none');
         $("#sort").change((e) => {
             e.stopImmediatePropagation();
@@ -39,8 +36,8 @@
                             dataType: 'text'
                         })
                             .done(function (msg) {
-                                $(`a.details-heart[data-postid="${postId}"]`).removeClass("details-wish").addClass("details-unwish");
-                                $(`a.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("far").addClass("fas");
+                                $(`.details-heart[data-postid="${postId}"]`).removeClass("details-wish").addClass("details-unwish");
+                                $(`.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("far").addClass("fas");
                             })
                             .fail(function (jqXHR, textStatus) {
                                 //alert(jqXHR.status);
@@ -56,8 +53,8 @@
                             dataType: 'text'
                         })
                             .done(function (msg) {
-                                $(`a.details-heart[data-postid="${postId}"]`).removeClass("details-unwish").addClass("details-wish");
-                                $(`a.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("fas").addClass("far");
+                                $(`.details-heart[data-postid="${postId}"]`).removeClass("details-unwish").addClass("details-wish");
+                                $(`.details-heart[data-postid="${postId}"]`).find(".fa-heart").removeClass("fas").addClass("far");
                             })
                             .fail(function (jqXHR, textStatus) {
                                 //alert("Request Administration/Delete/ failed: " + textStatus);
@@ -83,16 +80,19 @@
 <div class="col-sm-12 col-md-3 mb-3">
     <div class="card promoting-card m-2">
         <a href="/Posts/Details/${product.Id}">
-            <div class="d-flex flex-row m-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                <label class="form-check-label font-weight-bold mb-0 mr-0" data-toggle="tooltip" title="${(product.Title || "")}" ><span class="badge badge-primary text-wrap">${$.i18n(product.Category)}</span> > ${(product.Title || "")} ${product.Premium}</label>
+            <div class="d-flex flex-row m-1" style="white-space: normal; overflow: visible; text-overflow: ellipsis;" >
+                <small><span class="badge rounded-pill bg-primary shadow-1-strong">${$.i18n(product.Category)} </span> ${(product.Title || "")} </small>
             </div>
         </a>
-        <div class="view overlay z-depth-1">
-            <img class="card-img-top rounded-0" src="${product.UrlImage || "/images/DefaultImage1.jpg"}" alt="Card image cap">
+        <div class="bg-image hover-overlay hover-zoom hover-shadow shadow-1">
+            <img class="card-img-top rounded-0" src="${product.UrlImage || "/images/DefaultImage1.jpg"}" alt="Image Profile">
             <a href="/Posts/Details/${product.Id}">
-                <div class="mask img-gradient">
+                <div class="mask" style="background:rgba(75, 75, 75, 0.35);">
                     <span class="text-default btn-sm" style="position: absolute; top: 0px; left: 0px;">
-                        # ${product.Id}
+                        #${product.Id}
+                    </span>
+                    <span class="text-default btn-sm" style="position: absolute; top: 0px; right: 0px;">
+                        @${product.Premium}
                     </span>
                     <span class="form-check-label px-2 rounded mdb-color white-text" style="position: absolute; bottom: 10px; right: 10px;">
                         ${moment(product.CreatedDate).format('L')} <i class="fas fa-clock"></i>
@@ -100,16 +100,17 @@
                 </div>
             </a>
         </div>
-        <div class="card-body d-flex px-2 py-1 form-check-label">
-            <span class="p-0 pt-2">
+        <div class="card-body d-flex pe-0">
+            <small class="p-0 pt-2">
                 ${product.CurrencyConvertedLocal} - ${formatMoney(product.Square, 0, ',', '.') || ""}  <b>m<sup>2</sup></b> - ${product.ConstructionYear || ""} <i class="fas fa-home"></i>
-            </span>
-            <a type="button" href="#!" data-postid="${product.Id}" class="details-heart ${product.WishList == true ? "details-unwish" : "details-wish"} btn-sm ml-auto pb-0 justify-content-end">
-                <i class="${product.WishList == true ? "fas" : "far"} fa-heart fa-1x pink-text"></i>
-            </a>
+            </small>
+            <button href="#!" data-postid="${product.Id}" class="btn shadow-0 details-heart ${product.WishList == true ? "details-unwish" : "details-wish"} ms-auto justify-content-end">
+                <i class="${product.WishList == true ? "fas" : "far"} fa-heart fa-1x text-danger"></i>
+            </button>
         </div>
     </div>
-</div> `
+</div>
+`
             ;
 
     }
