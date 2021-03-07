@@ -66,22 +66,8 @@
                     //alert("Request api/GetArea/ failed: " + textStatus);
                 });
         });
-        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
-            var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-            for (var i = 0; i < 4; i++) {
-                next = next.next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-                next.children(':first-child').clone().appendTo($(this));
-            }
-            $(this).find('label[data-toggle="tooltip"]').tooltip({
-                template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-inner"></div></div>'
-            });
+        $('.multi-carousel .multi-carousel-inner').each(function () {
+           
             $(".details-heart").unbind('click');
             $(".details-heart").click(function (e) {
                 var postId = $(this).data("postid");

@@ -457,27 +457,26 @@
                             </div>
                             <div class="row form-outline mx-0 my-2">
                                 <label class="form-label" for="Post_EnergyEfficiency"><strong>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HomeEnergyRate))</strong></label>
-                                <div class="col-12 btn-group">
+                                <div class="col-12 btn-group px-0 energyEfficiency">
                                     <input type="radio" class="btn-check" id="EnergyOption1" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Α+" />
-                                    <label class="btn" style="background-color: #036703" for="EnergyOption1">Α+</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "A+" ? "bg-white btn-outline-info" :"")" style="background-color: #036703" for="EnergyOption1">Α+</label>
                                     <input type="radio" class="btn-check" id="EnergyOption2" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Α" />
-                                    <label class="btn" style="background-color: #048004" for="EnergyOption2">Α</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "A" ? "bg-white btn-outline-info" :"")" style="background-color: #048004" for="EnergyOption2">Α</label>
                                     <input type="radio" class="btn-check" id="EnergyOption3" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Β+" />
-                                    <label class="btn" style="background-color: #009c02" for="EnergyOption3">Β+</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "Β+" ? "bg-white btn-outline-info" :"")" style="background-color: #009c02" for="EnergyOption3">Β+</label>
                                     <input type="radio" class="btn-check" id="EnergyOption4" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Β" />
-                                    <label class="btn" style="background-color: #99cd00" for="EnergyOption4">Β</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "Β" ? "bg-white btn-outline-info" :"")" style="background-color: #99cd00" for="EnergyOption4">Β</label>
                                     <input type="radio" class="btn-check" id="EnergyOption5" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Γ" />
-                                    <label class="btn" style="background-color: #fdcc03" for="EnergyOption5">Γ</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "Γ" ? "bg-white btn-outline-info" :"")" style="background-color: #fdcc03" for="EnergyOption5">Γ</label>
                                     <input type="radio" class="btn-check" id="EnergyOption6" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Δ" />
-                                    <label class="btn" style="background-color: #fe6601" for="EnergyOption6">Δ</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "Δ" ? "bg-white btn-outline-info" :"")" style="background-color: #fe6601" for="EnergyOption6">Δ</label>
                                     <input type="radio" class="btn-check" id="EnergyOption7" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Ε" />
-                                    <label class="btn" style="background-color: #f90203" for="EnergyOption7">Ε</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "Ε" ? "bg-white btn-outline-info" :"")" style="background-color: #f90203" for="EnergyOption7">Ε</label>
                                     <input type="radio" class="btn-check" id="EnergyOption8" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Ζ" />
-                                    <label class="btn" style="background-color: #a03000" for="EnergyOption8">Ζ</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "Ζ" ? "bg-white btn-outline-info" :"")" style="background-color: #a03000" for="EnergyOption8">Ζ</label>
                                     <input type="radio" class="btn-check" id="EnergyOption9" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" autocomplete="off" value="Η" />
-                                    <label class="btn" style="background-color: #7e0100" for="EnergyOption9">Η</label>
+                                    <label class="btn btn-class @(Model.Post.EnergyEfficiency == "Η" ? "bg-white btn-outline-info" :"")" style="background-color: #7e0100" for="EnergyOption9">Η</label>
                                 </div>
-
                             </div>
                             <div class="row">
                                 <input type="submit" class="btn btn-success submitForm" data-mdb-ripple-color="dark" value="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PublishSave))">

@@ -67,7 +67,7 @@
     <header>
         <!-- Sidebar navigation -->
         <nav id="sidenav-admin"
-             class="sidenav"
+             class="sidenav gradient-title"
              data-mdb-slim="true"
              data-mdb-hidden="false"
              data-mdb-accordion="true">
@@ -122,9 +122,12 @@
                     <a class="sidenav-link" href="/Wallet/Finance"><i class="fas fa-wallet me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Wallet))</a>
                 </li>
             </ul>
-            <div class="text-center" style="min-height: 3rem;">
+            <div class="text-center mt-5" style="max-height: 240px;">
                 <hr class="mt-0 mb-2" />
-                <small>Footer</small>
+                <small>
+                    © 2021 Copyright:
+                    <a href="https://www.eron.gr/"> Eron.gr</a>
+                </small>
             </div>
         </nav>
         <!--/. Sidebar navigation -->
@@ -136,17 +139,6 @@
             @RenderBody()
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small mdb-color mt-3 lighten-3 pt-2">
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">
-            © 2021 Copyright:
-            <a href="https://www.eron.gr/"> Eron.gr</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
     <!--Modal: modalCookie-->
     <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true" data-backdrop="true">

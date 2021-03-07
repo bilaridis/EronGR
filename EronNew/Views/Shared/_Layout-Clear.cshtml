@@ -53,24 +53,7 @@
 <body class="navy-blue-skin">
     <!--Main Navigation-->
     <header>
-        <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg p-0">
-            <a class="navbar-brand" href="~/Home"><img src="~/images/logo.png" height="45" /></a>
-            <!-- Collapse button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars fa-1x"></i>
-            </button>
-            <!--Navbar links-->
-
-            <div class="collapse navbar-collapse" id="basicExampleNav">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-                <partial name="_LoginPartial" />
-            </div>
-            <!--/Navbar links-->
-        </nav>
-        <!--Navbar -->
+        <partial name="_navbar" />
     </header>
     <!--Main Navigation-->
     <main class="d-flex flex-fill">

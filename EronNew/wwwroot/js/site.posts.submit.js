@@ -96,12 +96,13 @@
                 });
         }
 
-        $(`label[data-value="${$("#Energy").val()}"]`).addClass("btn-outline-info");
-        $('.efficiency').click(function () {
-            $(".energyEfficiency").find("label").removeClass("btn-outline-info");
+        //$(`label[data-value="${$("#Energy").val()}"]`).addClass("btn-outline-info");
+
+        $('.btn-class').click(function () {
+            $(".energyEfficiency").find("label").removeClass("btn-outline-info").removeClass("bg-white");
             //alert($(this).data("value"));
-            $("#Energy").val($(this).data("value"));
-            $(this).addClass("btn-outline-info");
+            //$("#Energy").val($(this).data("value"));
+            $(this).addClass("btn-outline-info").addClass("bg-white");
         });
 
 

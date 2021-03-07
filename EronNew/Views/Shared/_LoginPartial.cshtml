@@ -18,41 +18,13 @@
         .ToList();
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 }
-
-<li class="nav-item dropdown me-3 me-lg-1">
-    <a class="nav-link dropdown-toggle hidden-arrow"
-       href="#"
-       id="navbarDropdownMenuLink"
-       role="button"
-       data-mdb-toggle="dropdown"
-       aria-expanded="false">
-        <i class="fas fa-user fa-1x"></i>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end"
-        aria-labelledby="navbarDropdownMenuLink">
-        <li><a class="dropdown-item colorful-card" href="/Card/Index/@UserManager.GetUserId(User)"><i class="fas fa-user-circle"></i> <strong>@UserManager.GetUserName(User)</strong></a></li>
-        <li><a class="dropdown-item colorful-card" href="/Administration">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a></li>
-        <li><a class="dropdown-item colorful-card" href="/Identity/Account/Manage/Index">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AccountManagement))</a></li>
-        <li>
-            <div class="dropdown-divider"></div>
-            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new {area = ""})" method="post">
-                <button type="submit" class="dropdown-item colorful-card">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Logout))</button>
-            </form>
-            <input type="hidden" id="getId" value="@UserManager.GetUserId(User)">
-        </li>
-
-    </ul>
-</li>
-
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <div class="btn-group">
-            <a href="/Posts/Create" class="btn btn-sm bg-white">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SubmitPost))</a>
-        </div>
+    <li class="nav-item pe-2">
+        <a class="btn bg-success" href="/Posts/Create">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SubmitPost))</a>
     </li>
-    <li class="nav-item dropdown me-3 me-lg-1">
-        <a class="nav-link dropdown-toggle hidden-arrow"
+    <li class="nav-item dropdown pe-2">
+        <a class="nav-link dropdown-toggle btn bg-info"
            href="#"
            id="navbarDropdownMenuLink"
            role="button"
@@ -73,59 +45,59 @@
             </li>
         </ul>
     </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle hidden-arrow"
-           href="#"
-           id="langButton"
-           role="button"
-           data-mdb-toggle="dropdown"
-           aria-expanded="false">
-            <span class="flag-icon flag-icon-en-us fa-2x"></span>
-        </a>
-        <form id="selectLanguage" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl" method="post" class="border-0" role="form" style="max-width:200px;">
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                @foreach (var item in cultureItems)
-                {
-                    <li>
-                        <button class="form-control border-left-0 border-right-0 border-top-0 hoverable" name="culture" value="@item.Value" aria-label="@item.Text">
-                            <span class="label label-default black-text"><span class="flag-icon flag-icon-@item.Value.ToLower()"></span> @item.Text</span>
-                        </button>
-                    </li>
-                }
-            </ul>
-        </form>
+    <li class="nav-item pe-2">
+        <div class="btn-group">
+            <form id="selectLanguage" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl" method="post" class="border-0" role="form" style="max-width:200px;">
+                <button id="langButton"
+                        type="button"
+                        class="btn btn-sm btn-primary dropdown-toggle"
+                        data-mdb-toggle="dropdown"
+                        data-mdb-display="static"
+                        aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-md-end">
+                    @foreach (var item in cultureItems)
+                    {
+                        <li>
+                            <button type="submit" class="dropdown-item" name="culture" value="@item.Value" aria-label="@item.Text">
+                                <span class="label label-default black-text"><span class="flag-icon flag-icon-@item.Value.ToLower()"></span> @item.Text</span>
+                            </button>
+                        </li>
+                    }
+                </ul>
+            </form>
+        </div>
     </li>
 }
 else
 {
-    <li class="nav-item">
+    <li class="nav-item pe-2">
+        <a class="btn bg-success" href="/Posts/Create">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SubmitPost))</a>
+    </li>
+    <li class="nav-item pe-2">
+        <a class="btn bg-info" asp-area="Identity" asp-page="/Account/Login"><span>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.LoginRegister))</span></a>
+    </li>
+    <li class="nav-item pe-2">
         <div class="btn-group">
-            <a href="/Posts/Create" class="btn btn-sm  bg-white">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SubmitPost))</a>
+            <form id="selectLanguage" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl" method="post" class="border-0" role="form" style="max-width:200px;">
+                <button id="langButton"
+                        type="button"
+                        class="btn btn-sm btn-primary dropdown-toggle"
+                        data-mdb-toggle="dropdown"
+                        data-mdb-display="static"
+                        aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-md-end">
+                    @foreach (var item in cultureItems)
+                    {
+                        <li>
+                            <button type="submit" class="dropdown-item" name="culture" value="@item.Value" aria-label="@item.Text">
+                                <span class="label label-default black-text"><span class="flag-icon flag-icon-@item.Value.ToLower()"></span> @item.Text</span>
+                            </button>
+                        </li>
+                    }
+                </ul>
+            </form>
         </div>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="btn btn-sm" asp-area="Identity" asp-page="/Account/Login"><span class="clearfix d-sm-inline-block">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.LoginRegister))</span></a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle hidden-arrow"
-           href="#"
-           id="langButton"
-           role="button"
-           data-mdb-toggle="dropdown"
-           aria-expanded="false">
-            <span class="flag-icon flag-icon-en-us fa-2x"></span>
-        </a>
-        <form id="selectLanguage" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl" method="post" class="border-0" role="form" style="max-width:200px;">
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                @foreach (var item in cultureItems)
-                {
-                    <li>
-                        <button class="form-control border-left-0 border-right-0 border-top-0 hoverable" name="culture" value="@item.Value" aria-label="@item.Text">
-                            <span class="label label-default black-text"><span class="flag-icon flag-icon-@item.Value.ToLower()"></span> @item.Text</span>
-                        </button>
-                    </li>
-                }
-            </ul>
-        </form>
     </li>
 }

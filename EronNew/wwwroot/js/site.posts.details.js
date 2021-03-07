@@ -193,11 +193,6 @@
             e.preventDefault();
         });
 
-        $('.efficiency').change(function () {
-            $(".energyEfficiency").find("label").removeClass("btn-outline-info");
-            $(this).addClass("btn-outline-info");
-        });
-
         $("#printClick").click(function () {
             window.print();
             //printJS({

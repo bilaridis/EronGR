@@ -7,179 +7,178 @@
     ViewData["Title"] = "Administration Panel";
     Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
 }
-
-<div class="card card-cascade mt-5 row">
-
-    <!-- Card image -->
-    <div class="view view-cascade gradient-card-header gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between">
-
-        <div>
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-th-large mt-0"></i></button>*@
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-columns mt-0"></i></button>*@
+<div class="row mt-5">
+    <div class="card mt-3">
+        <div class="card-header gradient d-flex justify-content-center">
+            <a class="white-text text-center text-dark mx-3 col-12"><strong>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</strong></a>
         </div>
+        <div class="carc-body mt-3">
+            <div class="input-group mb-3 mt-1">
+                <input type="text"
+                       class="form-control"
+                       id="advanced-search-input"
+                       placeholder="phrase in:column1,column2" />
+                <button class="btn btn-primary" id="advanced-search-button" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div id="datatable" class="datatable" data-mdb-fixed-header="true" data-mdb-color="blue-grey" data-mdb-striped="true" data-mdb-full-pagination="true" data-mdb-sm="true" data-mdb-hover="true">
+                <!-- Table -->
+                <table id="dtMaterialDesignExample" class="table table-hover">
+                    <!-- Table head -->
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))<i class="fas fa-sort ml-1"></i></a></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion)) - @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))<i class="fas fa-sort ml-1"></i></a></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price))<i class="fas fa-sort ml-1"></i></a></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Premium))<i class="fas fa-sort ml-1"></i></a></th>
+                        </tr>
+                    </thead>
+                    <!-- Table head -->
+                    <!-- Table body -->
+                    <tbody>
+                        @foreach (var basicInformation in Model.basicInformation)
+                        {
+                            <tr>
+                                <td style="overflow:visible;">
+                                    <div class="btn-group dropend">
+                                        <button type="button" class="btn btn-primary">
+                                            Μετάβαση
+                                            @if (basicInformation.StateOfPost.Value == 1)
+                                            {
+                                                <span class="badge bg-danger ms-2">
+                                                    <i class='fas fa-user-edit' data-mdb-toggle="tooltip" title="Draft Ad"></i>
+                                                </span>
+                                            }
+                                            else if (basicInformation.StateOfPost.Value == 2)
+                                            {
+                                            }
+                                            @if (basicInformation.Hide)
+                                            {
+                                                <span class="badge bg-danger ms-2">
+                                                    <i class='fas fa-shield-alt' data-mdb-toggle="tooltip" title="Private"></i>
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-danger ms-2">
+                                                    <i class="fas fa-eye" data-mdb-toggle="tooltip" title="Public"></i>
+                                                </span>
+                                            }
+                                            @if (basicInformation.Reserved)
+                                            {
+                                                <span class="badge bg-danger ms-2">
+                                                    <i class='fas fa-lock' data-mdb-toggle="tooltip" title="Locked"></i>
+                                                </span>
+                                            }
 
-        <a href="" class="white-text mx-3">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a>
-
-        <div>
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-pencil-alt mt-0"></i></button>*@
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-eraser mt-0"></i></button>*@
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-info-circle mt-0"></i></button>*@
+                                            @if (basicInformation.Sold)
+                                            {
+                                                <span class="badge bg-danger ms-2">
+                                                    <i class='fas fa-check-square' data-mdb-toggle="tooltip" title="Completed"></i>
+                                                </span>
+                                            }
+                                        </button>
+                                        <button type="button"
+                                                class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                                data-mdb-toggle="dropdown"
+                                                aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropright</span>
+                                        </button>
+                                        <ul class="dropdown-menu" style="z-index:99;">
+                                            <li>
+                                                <a class="dropdown-item-text"> #@basicInformation.id </a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li>
+                                                @if (!basicInformation.Active)
+                                                {
+                                                    <a href="~/Posts/Submit/@basicInformation.id" class="dropdown-item disabled disabled-material"><i class="far fa-edit"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Edit))</a>
+                                                }
+                                                else
+                                                {
+                                                    <a href="~/Posts/Submit/@basicInformation.id" class="dropdown-item "><i class="far fa-edit"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Edit))</a>
+                                                }
+                                            </li>
+                                            <li>
+                                                @if (basicInformation.Active || basicInformation.Sold)
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-publish dropdown-item disabled disabled-material"><i class="fas fa-globe-europe"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Public))</a>
+                                                }
+                                                else
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-publish dropdown-item "><i class="fas fa-globe-europe"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Public))</a>
+                                                }
+                                            </li>
+                                            <li>
+                                                @if (basicInformation.Hide)
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-hide dropdown-item "><i class="fas fa-eye"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Show))</a>
+                                                }
+                                                else
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-hide dropdown-item "><i class="fas fa-shield-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Hide))</a>
+                                                }
+                                            </li>
+                                            <li>
+                                                @if (basicInformation.Reserved)
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-reserve dropdown-item @((basicInformation.Deleted) ? "cloudy-knoxville-gradient disabled disabled-material" : "  ")"><i class="fas fa-lock-open"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Unlocked))</a>
+                                                }
+                                                else
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-reserve dropdown-item @((basicInformation.Deleted) ? "cloudy-knoxville-gradient disabled disabled-material" : "  ")"><i class="fas fa-lock"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Locked))</a>
+                                                }
+                                            </li>
+                                            <li>
+                                                @if (basicInformation.Deleted)
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-delete dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-trash-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Delete))</a>
+                                                }
+                                                else
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-delete dropdown-item "><i class="fas fa-trash-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Delete))</a>
+                                                }
+                                            </li>
+                                            <li>
+                                                @if (basicInformation.Sold || basicInformation.Deleted)
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-sold dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-check-square"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Complete))</a>
+                                                }
+                                                else
+                                                {
+                                                    <a data-postid="@basicInformation.id" class="admin-sold dropdown-item "><i class="fas fa-check-square"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Complete))</a>
+                                                }
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>@SharedLocalizer.GetLocalized(@basicInformation.SaleCategory)</td>
+                                <td>@basicInformation.TitleOfPost</td>
+                                <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("N") : 0) @SharedLocalizer.GetCurrencySymbol(basicInformation.Currency)</td>
+                                <td>
+                                    <div class="switch switch-price">
+                                        <label>
+                                            Basic
+                                            <input type="checkbox" class="toggle-premium" data-postid="@basicInformation.id" @Html.Raw(basicInformation.Premium ? "checked disabled" : "")>
+                                            <span class="lever"></span> Premium
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <!-- Table body -->
+                </table>
+                <!-- Table -->
+            </div>
         </div>
-
-    </div>
-    <!-- /Card image -->
-    <div class="input-group mb-4">
-        <input type="text"
-               class="form-control"
-               id="advanced-search-input"
-               placeholder="phrase in:column1,column2" />
-        <button class="btn btn-primary" id="advanced-search-button" type="button" id="button-addon1">
-            <i class="fa fa-search"></i>
-        </button>
-    </div>
-    <div id="datatable" class="px-4 table-responsive col-12">
-        <!-- Table -->
-        <table id="dtMaterialDesignExample" class="table table-hover col-12">
-            <!-- Table head -->
-            <thead>
-                <tr>
-                    <th></th>
-                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Id)) <i class="fas fa-sort ml-1"></i></a></th>
-                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))<i class="fas fa-sort ml-1"></i></a></th>
-                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion)) - @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))<i class="fas fa-sort ml-1"></i></a></th>
-                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price))<i class="fas fa-sort ml-1"></i></a></th>
-                    <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Premium))<i class="fas fa-sort ml-1"></i></a></th>
-                </tr>
-            </thead>
-            <!-- Table head -->
-            <!-- Table body -->
-            <tbody>
-                @foreach (var basicInformation in Model.basicInformation)
-                {
-                    <tr>
-                        <td>
-                            <div class="btn-group dropleft">
-                                <a class="navbar-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-lg-left" id="basicExampleNav_@basicInformation.id">
-                                    <div class="clearfix gradient-card-header gradient narrower white-text text-smaller rounded-pill p-1"> #@basicInformation.id</div>
-                                    @if (!basicInformation.Active)
-                                    {
-                                        <a href="~/Posts/Submit/@basicInformation.id" class="dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="far fa-edit"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Edit))</a>
-                                    }
-                                    else
-                                    {
-                                        <a href="~/Posts/Submit/@basicInformation.id" class="dropdown-item "><i class="far fa-edit"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Edit))</a>
-                                    }
-                                    @if (basicInformation.Active || basicInformation.Sold)
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-publish dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-globe-europe"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Public))</a>
-                                    }
-                                    else
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-publish dropdown-item "><i class="fas fa-globe-europe"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Public))</a>
-                                    }
-                                    @if (basicInformation.Hide)
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-hide dropdown-item "><i class="fas fa-eye"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Show))</a>
-                                    }
-                                    else
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-hide dropdown-item "><i class="fas fa-shield-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Hide))</a>
-                                    }
-                                    @if (basicInformation.Reserved)
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-reserve dropdown-item @((basicInformation.Deleted) ? "cloudy-knoxville-gradient disabled disabled-material" : "  ")"><i class="fas fa-lock-open"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Unlocked))</a>
-                                    }
-                                    else
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-reserve dropdown-item @((basicInformation.Deleted) ? "cloudy-knoxville-gradient disabled disabled-material" : "  ")"><i class="fas fa-lock"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Locked))</a>
-                                    }
-                                    @if (basicInformation.Deleted)
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-delete dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-trash-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Delete))</a>
-                                    }
-                                    else
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-delete dropdown-item "><i class="fas fa-trash-alt"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Delete))</a>
-                                    }
-                                    @if (basicInformation.Sold || basicInformation.Deleted)
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-sold dropdown-item cloudy-knoxville-gradient disabled disabled-material"><i class="fas fa-check-square"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Complete))</a>
-                                    }
-                                    else
-                                    {
-                                        <a data-postid="@basicInformation.id" class="admin-sold dropdown-item "><i class="fas fa-check-square"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Complete))</a>
-                                    }
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-rounded gradient z-depth-1 d-flex flex-fill p-2 previewPost " data-postid="@basicInformation.id">
-                                <strong class="white-text">@basicInformation.id</strong>
-
-                                @if (basicInformation.StateOfPost.Value == 1)
-                                {
-                                    <span class="badge badge-pill red darken-3 ml-2">
-                                        <i class='fas fa-user-edit' data-toggle="tooltip" title="Draft Ad"></i>
-                                    </span>
-                                }
-                                else if (basicInformation.StateOfPost.Value == 2)
-                                {
-                                    @*<span class="badge badge-light ml-2">
-                                            <i class='fas fa-globe-europe'></i>
-                                        </span>*@
-                                }
-                                @if (basicInformation.Hide)
-                                {
-                                    <span class="badge badge-pill yellow darken-3 ml-2">
-                                        <i class='fas fa-shield-alt' data-toggle="tooltip" title="Private"></i>
-                                    </span>
-                                }
-                                else
-                                {
-                                    <span class="badge badge-pill badge-primary ml-2">
-                                        <i class="fas fa-eye" data-toggle="tooltip" title="Public"></i>
-                                    </span>
-                                }
-                                @if (basicInformation.Reserved)
-                                {
-                                    <span class="badge badge-pill purple darken-3 ml-2">
-                                        <i class='fas fa-lock' data-toggle="tooltip" title="Locked"></i>
-                                    </span>
-                                }
-
-                                @if (basicInformation.Sold)
-                                {
-                                    <span class="badge badge-pill badge-secondary ml-2">
-                                        <i class='fas fa-check-square' data-toggle="tooltip" title="Completed"></i>
-                                    </span>
-                                }
-
-                            </button>
-                            <a style="display:block;height:100%;width:100%;margin:0; padding:0" href="~/Posts/Details/@basicInformation.id" class="mask cloudy-knoxville-gradient"></a>
-                        </td>
-                        <td>@SharedLocalizer.GetLocalized(@basicInformation.SaleCategory)</td>
-                        <td>@basicInformation.TitleOfPost</td>
-                        <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("N") : 0) @SharedLocalizer.GetCurrencySymbol(basicInformation.Currency)</td>
-                        <td>
-                            <div class="switch switch-price">
-                                <label>
-                                    Basic
-                                    <input type="checkbox" class="toggle-premium" data-postid="@basicInformation.id" @Html.Raw(basicInformation.Premium ? "checked disabled" : "")>
-                                    <span class="lever"></span> Premium
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-            <!-- Table body -->
-        </table>
-        <!-- Table -->
     </div>
 </div>
+
 <partial name="_ActivationModal" />
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
 @section Scripts{

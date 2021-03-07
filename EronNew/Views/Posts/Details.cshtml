@@ -21,12 +21,12 @@
     <meta property="og:image" content="https://www.eron.gr/@Model.Post.Images.First().UrlImage/Images/@Model.Post.Images.First().ImageName" />
     <meta property="og:description" content="@Model.Post.SaleCategory: @SharedLocalizer.GetLocalized(Model.Post.SaleCategory) - @(Model.Post.PriceTotal.HasValue ? Model.Post.PriceTotal.Value.ToString("C") : 0) - @Html.Raw(Model.Post.Square) m2 - @SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.Desc) - @SharedLocalizer.GetLocalized(Model.Post.SubTypeInformation.SubDesc) - @Model.Post.TitleOfPost" />
 }
-<nav class="navbar navbar-expand-md mt-3 rounded">
+<nav class="navbar navbar-expand-md mt-2 rounded gradient-title text-primary px-2">
     <ul class="navbar-nav me-auto">
         <li>
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="white-text" href="#!" data-i18n="@Model.Post.SaleCategory"> </a></li>
+                <ol class="breadcrumb text-light">
+                    <li class="breadcrumb-item"><a class="text-light" data-i18n="@Model.Post.SaleCategory"> </a></li>
                     <li class="breadcrumb-item">@Model.Post.TitleOfPost</li>
                     <li class="breadcrumb-item" data-i18n="@Model.Post.SubTypeInformation.Desc"> </li>
                     <li class="breadcrumb-item" data-i18n="@Model.Post.SubTypeInformation.SubDescEnglish"> </li>
@@ -45,7 +45,7 @@
                         aria-expanded="false">
                     <i class="fas fa-language fa-1x"></i>
                 </button>
-                <ul id="AdvLanguages" class="dropdown-menu switch-locale" aria-labelledby="ddPremiumLang">
+                <ul id="AdvLanguages" class="dropdown-menu dropdown-menu-end switch-locale" aria-labelledby="ddPremiumLang">
                 </ul>
             </div>
         </li>
@@ -98,14 +98,14 @@
             </div>
             <div class="card-body">
                 <div class="row p-0 m-1 justify-content-between gradient shadow-1">
-                    <nav class="navbar navbar-expand-md grey-text col-12rounded">
+                    <nav class="navbar navbar-expand-md text-dark col-12rounded">
                         <div class="me-auto">
-                            <nav aria-label="breadcrumb grey-text">
+                            <nav aria-label="breadcrumb text-dark">
                                 <ol class="breadcrumb d-inline-flex pl-0 pt-0 font-smaller">
                                     <li class="breadcrumb-item breadcrumb-nav light-blue-text"><strong>@Html.Raw(Model.Post.Square) m<sup>2</sup></strong></li>
-                                    <li class="breadcrumb-item breadcrumb-nav grey-text"><i class="fas fa-bed pt-1 pr-1"></i> @Html.Raw(Model.Post.Bedroom.HasValue ? Model.Post.Bedroom.Value.ToString() : "0")</li>
-                                    <li class="breadcrumb-item breadcrumb-nav grey-text"><i class="fas fa-bath pt-1 pr-1"></i> @Html.Raw(Model.Post.Bathroom.HasValue ? Model.Post.Bathroom.Value.ToString() : "0")</li>
-                                    <li class="breadcrumb-item breadcrumb-nav grey-text"><i class="fas fa-home pt-1 pr-1"></i> @Html.Raw(Model.Post.ConstructionYear)</li>
+                                    <li class="breadcrumb-item breadcrumb-nav text-dark"><i class="fas fa-bed pt-1 pr-1"></i> @Html.Raw(Model.Post.Bedroom.HasValue ? Model.Post.Bedroom.Value.ToString() : "0")</li>
+                                    <li class="breadcrumb-item breadcrumb-nav text-dark"><i class="fas fa-bath pt-1 pr-1"></i> @Html.Raw(Model.Post.Bathroom.HasValue ? Model.Post.Bathroom.Value.ToString() : "0")</li>
+                                    <li class="breadcrumb-item breadcrumb-nav text-dark"><i class="fas fa-home pt-1 pr-1"></i> @Html.Raw(Model.Post.ConstructionYear)</li>
                                 </ol>
                             </nav>
                         </div>
@@ -120,8 +120,8 @@
                 <div class="row m-md-2 m-sm-0 justify-content-between shadow-5">
                     <div class="col-md-8 col-lg-6 text-smaller p-0">
                         <div class="card-body row">
-                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="Price"></div>
-                            <div class="text-left col-8 p-1 mb-1">
+                            <div class="text-right col-4 text-dark" data-i18n="Price"></div>
+                            <div class="text-left col-8 ">
                                 <a href="#" class="indigo-text">
                                     @if (Model.Post.PriceTotal.HasValue && Model.Post.PriceTotal.Value > 99)
                                     {
@@ -135,52 +135,29 @@
                                     }
                                 </a>
                             </div>
-                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="Year of Renovation"></div>
-                            <div class="text-left col-8 p-1 mb-1">@Html.Raw(Model.Post.RenovationYear) </div>
-                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="floor"></div>
-                            <div class="text-left col-8 p-1 mb-1">
+                            <div class="text-right col-4 text-dark" data-i18n="Year of Renovation"></div>
+                            <div class="text-left col-8">@Html.Raw(Model.Post.RenovationYear) </div>
+                            <div class="text-right col-4 text-dark" data-i18n="floor"></div>
+                            <div class="text-left col-8">
                                 @(Model.Post.Floor == 0 ? " Ισόγειο" : Model.Post.Floor.ToString()) @if (Model.Post.Floor > 0)
                                 {<sup>ος</sup>}
                             </div>
-                            <div class="text-right col-4 p-1 mb-1 grey-text" data-i18n="Home Energy Rate"></div>
-                            <div class="text-left col-8 p-1 mb-1">
-                                <div class="btn-group btn-group-toggle col-lg energyEfficiency p-0" data-toggle="buttons">
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "A+" ? " btn-outline-info" :"")" style="background-color: #036703">
-                                        <input type="radio" class="form-check-input disabled " value="A+" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Α+
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "A" ? " btn-outline-info" :"")" style="background-color: #048004">
-                                        <input type="radio" class="form-check-input disabled " value="A" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Α&nbsp;
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Β+" ? " btn-outline-info" :"")" style="background-color: #009c02">
-                                        <input type="radio" class="form-check-input disabled " value="Β+" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Β+
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Β" ? " btn-outline-info" :"")" style="background-color: #99cd00">
-                                        <input type="radio" class="form-check-input disabled " value="Β" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Β&nbsp;
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Γ" ? " btn-outline-info" :"")" style="background-color: #fdcc03">
-                                        <input type="radio" class="form-check-input disabled " value="Γ" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Γ&nbsp;
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Δ" ? " btn-outline-info" :"")" style="background-color: #fe6601">
-                                        <input type="radio" class="form-check-input disabled " value="Δ" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Δ&nbsp;
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Ε" ? " btn-outline-info" :"")" style="background-color: #f90203">
-                                        <input type="radio" class="form-check-input disabled " value="Ε" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Ε&nbsp;
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Ζ" ? " btn-outline-info" :"")" style="background-color: #a03000">
-                                        <input type="radio" class="form-check-input disabled " value="Ζ" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Ζ&nbsp;
-                                    </label>
-                                    <label class="btn p-1 m-0 white-text form-check-label efficiency @(Model.Post.EnergyEfficiency == "Η" ? " btn-outline-info" :"")" style="background-color: #7e0100">
-                                        <input type="radio" class="form-check-input disabled " value="Η" asp-for="Post.EnergyEfficiency" name="Post.EnergyEfficiency" />
-                                        Η&nbsp;
-                                    </label>
+                            <div class="text-right col-4 text-dark" data-i18n="Home Energy Rate"></div>
+                            <div class="text-left col-8 ">
+                                <div class="row mx-0 my-2">
+                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                        <div class="btn-group me-2" role="group" aria-label="First group">
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "A+" ? "bg-white btn-outline-info" :"")" style="background-color: #036703">Α+</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "A" ? "bg-white btn-outline-info" :"")" style="background-color: #048004">Α</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "Β+" ? "bg-white btn-outline-info" :"")" style="background-color: #009c02">Β+</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "Β" ? "bg-white btn-outline-info" :"")" style="background-color: #99cd00">Β</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "Γ" ? "bg-white btn-outline-info" :"")" style="background-color: #fdcc03">Γ</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "Δ" ? "bg-white btn-outline-info" :"")" style="background-color: #fe6601">Δ</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "Ε" ? "bg-white btn-outline-info" :"")" style="background-color: #f90203">Ε</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "Ζ" ? "bg-white btn-outline-info" :"")" style="background-color: #a03000">Ζ</button>
+                                            <button type="button" class="btn @(Model.Post.EnergyEfficiency == "Η" ? "bg-white btn-outline-info" :"")" style="background-color: #7e0100">Η</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -192,7 +169,7 @@
                         </div>
                     </div>
                     <div class="col-12 text-smaller p-0 d-none">
-                        <div class="text-left col-12 p-1 mb-1 grey-text flex-row">
+                        <div class="text-left col-12 p-1 mb-1 text-dark flex-row">
                             @if (Model.ExtraInformation.Investment)
                             {
                                 <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
@@ -244,18 +221,18 @@
                         </div>
 
                         <div class="p-2 note-container">
-                            <a class="card-link" data-mdb-toggle="modal" data-mdb-target="#centralModalNotes" data-userid="@Model.CardProfile.AspNetUserId" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyNotes))">
-                                <i class="fas fa-pencil-alt fa-1x prefix grey-text"></i>
+                            <a class="card-link" data-mdb-toggle="modal" data-mdb-target="#centralModalNotes" data-userid="@Model.CardProfile.AspNetUserId" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyNotes))">
+                                <i class="fas fa-pencil-alt fa-1x prefix text-dark"></i>
                             </a>
                         </div>
                         <div class="p-2">
                             <a class="card-link" id="printClick">
-                                <i class="fas fa-print fa-1x prefix grey-text" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Print))"></i>
+                                <i class="fas fa-print fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Print))"></i>
                             </a>
                         </div>
                         <div class="p-2 view-container">
                             <a class="card-link" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.views))">
-                                <i class="fas fa-eye fa-1x prefix grey-text"></i> <label class=" text-smaller grey-text"> @Model.CounterOfView <label data-i18n="views"></label> </label>  |
+                                <i class="fas fa-eye fa-1x prefix text-dark"></i> <label class=" text-smaller text-dark"> @Model.CounterOfView <label data-i18n="views"></label> </label>  |
                             </a>
                         </div>
 
@@ -296,10 +273,10 @@
     <!-- Section: Main panel -->
 
 </div>
-<div class="row mt-3 d-flex justify-content-center gradient gradient wow fadeIn" data-wow-delay="0.2s">
+<div class="row mt-3 d-flex justify-content-center wow fadeIn" data-wow-delay="0.2s">
     <div class="card">
-        <div class="card-header d-flex justify-content-center">
-            <a class="mx-3" data-i18n="Property Features"></a>
+        <div class="card-header d-flex justify-content-center gradient">
+            <a class="mx-3 text-dark" data-i18n="Property Features"></a>
         </div>
         <div class="card-body">
             <!-- Section: Table -->
