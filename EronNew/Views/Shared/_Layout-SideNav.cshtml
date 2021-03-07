@@ -28,7 +28,8 @@
         @@media (min-width: 1400px) {
             main,
             header,
-            #main-navbar {
+            #main-navbar,
+            #message-input {
                 padding-left: 240px;
             }
         }
@@ -79,50 +80,47 @@
             </div>
             <ul class="sidenav-menu">
                 <li class="sidenav-item">
-                    <a class="sidenav-link">
+                    <a class="sidenav-link text-light">
                         <i class="fas fa-cogs me-2"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))<i class="fas fa-angle-down rotate-icon"></i>
                     </a>
                     <ul class="sidenav-collapse">
-                        <li class="sidenav-item">
-
-                            <a class="sidenav-link" id="profile" href="/Identity/Account/Manage/Index">
-                                @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))
-                            </a>
+                        <li class="sidenav-link">
+                            <a class="nav-link text-light" id="profile" href="/Identity/Account/Manage/Index">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Personalsettings))</a>
                         </li>
-                        <li class="sidenav-item">
-                            <a class="nav-link" id="email" href="/Identity/Account/Manage/Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Changeemail))</a>
+                        <li class="sidenav-link">
+                            <a class="nav-link text-light" id="email" href="/Identity/Account/Manage/Email">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Changeemail))</a>
                         </li>
-                        <li class="sidenav-item">
-                            <a class="nav-link" id="change-password" href="/Identity/Account/Manage/ChangePassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</a>
+                        <li class="sidenav-link">
+                            <a class="nav-link text-light" id="change-password" href="/Identity/Account/Manage/ChangePassword">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Password))</a>
                         </li>
-                        <li class="sidenav-item">
-                            <a class="nav-link" id="personal-data" href="/Identity/Account/Manage/PersonalData">GDPR</a>
+                        <li class="sidenav-link">
+                            <a class="nav-link text-light" id="personal-data" href="/Identity/Account/Manage/PersonalData">GDPR</a>
                         </li>
                     </ul>
                 </li>
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="/Identity/Account/Manage/EditMyCard"><i class="fas fa-user-circle me-2"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</a>
+                    <a class="sidenav-link text-light" href="/Identity/Account/Manage/EditMyCard"><i class="fas fa-user-circle me-2"></i>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyCard))</a>
                 </li>
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="/Administration/Index"><i class="fas fa-folder-open me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a>
+                    <a class="sidenav-link text-light" href="/Administration/Index"><i class="fas fa-folder-open me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</a>
                 </li>
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="/Identity/Account/Manage/Notes"><i class="fas fa-comment-alt me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Notes))</a>
+                    <a class="sidenav-link text-light" href="/Identity/Account/Manage/Notes"><i class="fas fa-comment-alt me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Notes))</a>
                 </li>
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="/WishList/Index"><i class="fas fa-heart me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))</a>
+                    <a class="sidenav-link text-light" href="/WishList/Index"><i class="fas fa-heart me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))</a>
                 </li>
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="/RecentPosts/Index"><i class="fas fa-history me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RecentPosts))</a>
+                    <a class="sidenav-link text-light" href="/RecentPosts/Index"><i class="fas fa-history me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RecentPosts))</a>
                 </li>
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="/Search/Index"><i class="fas fa-history me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SavedSearches))</a>
+                    <a class="sidenav-link text-light" href="/Search/Index"><i class="fas fa-history me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SavedSearches))</a>
                 </li>
                 <li class="sidenav-item">
-                    <a class="sidenav-link" href="/Wallet/Finance"><i class="fas fa-wallet me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Wallet))</a>
+                    <a class="sidenav-link text-light" href="/Wallet/Finance"><i class="fas fa-wallet me-2"></i> @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Wallet))</a>
                 </li>
             </ul>
-            <div class="text-center mt-5" style="max-height: 240px;">
+            <div class="text-center mt-5 text-light" style="max-height: 240px;">
                 <hr class="mt-0 mb-2" />
                 <small>
                     © 2021 Copyright:
@@ -140,8 +138,7 @@
         </div>
     </main>
     <!--Modal: modalCookie-->
-    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-         aria-hidden="true" data-backdrop="true">
+    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
         <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
             <!--Content-->
             <div class="modal-content">

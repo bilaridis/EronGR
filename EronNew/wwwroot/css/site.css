@@ -61,6 +61,16 @@ body {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(103, 123, 229, 0.3))
 }
 
+.list-group-naked .list-group-item {
+    background-color: transparent;
+    border: none;
+}
+
+.list-group-item-action:focus,
+.list-group-item-action:hover {
+    background-color: #eeeeee;
+}
+
 
 
 

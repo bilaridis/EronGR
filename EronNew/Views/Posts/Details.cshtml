@@ -30,7 +30,7 @@
                     <li class="breadcrumb-item">@Model.Post.TitleOfPost</li>
                     <li class="breadcrumb-item" data-i18n="@Model.Post.SubTypeInformation.Desc"> </li>
                     <li class="breadcrumb-item" data-i18n="@Model.Post.SubTypeInformation.SubDescEnglish"> </li>
-                    <li class="breadcrumb-item active"><span data-i18n="Ad Code"></span> - @Model.Post.id</li>
+                    <li class="breadcrumb-item text-success"><span data-i18n="Ad Code"></span> - @Model.Post.id</li>
                 </ol>
             </nav>
         </li>
@@ -174,31 +174,31 @@
                         <div class="text-left col-12 p-1 mb-1 text-dark flex-row">
                             @if (Model.ExtraInformation.Investment)
                             {
-                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
                                     <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Investment))
                                 </div>
                             }
                             @if (Model.ExtraInformation.Offer)
                             {
-                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
                                     <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Offer))
                                 </div>
                             }
                             @if (Model.ExtraInformation.NewConstruction)
                             {
-                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
                                     <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.NewConstruction))
                                 </div>
                             }
                             @if (Model.ExtraInformation.BrokerFee)
                             {
-                                <div class="chip chip-sm green darken-3 white-text px-2 z-depth-1">
+                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
                                     <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i> @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
                                 </div>
                             }
                             else
                             {
-                                <div class="chip chip-sm pink darken-3 white-text px-2 z-depth-1">
+                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
                                     <i class="fas fa-times-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
                                 </div>
                             }
@@ -211,13 +211,13 @@
                             @if (Model.Post.WishLists.Any(x => x.AspNetUserId == user && x.Active == true))
                             {
                                 <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-unwish card-link" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
-                                    <i class="fas fa-heart fa-1x pink-text"></i>
+                                    <i class="fas fa-heart fa-1x text-danger"></i>
                                 </a>
                             }
                             else
                             {
                                 <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-wish card-link" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
-                                    <i class="far fa-heart fa-1x pink-text"></i>
+                                    <i class="far fa-heart fa-1x text-danger"></i>
                                 </a>
                             }
                         </div>

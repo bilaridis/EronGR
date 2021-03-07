@@ -8,62 +8,65 @@
     ViewData["ActivePage"] = ManageNavPages.Notes;
 }
 <partial name="_StatusMessage" model="Model.StatusMessage" />
-<div class="card chat-room">
-    <div class="card-body">
-        <!-- Grid row -->
-        <div class="row px-lg-2 px-2">
-            <!-- Grid column -->
-            <div class="col-md-6 col-xl-4 px-0">
-                <h6 class="font-weight-bold mb-3 text-center text-lg-left dark-grey-text">Notes List</h6>
-                <div class="white z-depth-1 px-2 pt-3 pb-0 members-panel-1 scrollbar-sm-4 scrollbar-navy-blue-skin-slim overflow-scroll">
-                    <ul class="list-unstyled friend-list">
-                        @foreach (var item in Model.Input)
-                        {
-                            <li id="noteGroup_@item.Id" class="active grey lighten-3 p-2">
-                                <button type="button" class="deleteNoteGroup close" aria-label="Close" data-postid="@item.Id">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                                <a href="#" class="d-flex flex-row justify-content-md-between noteHeader" data-noteid="@item.Id" data-postid="@item.PostId">
+<div class="row justify-content-center justify-content-lg-between">
+    <!-- Left column -->
+    <div class="col-xl-4 d-none d-xl-block">
+        <!--Section: Contacts-->
+        <section class="sticky-top" style="top: 80px">
 
-                                    <div class="text-smaller d-flex" width="250px">
-                                        <img src="@item.Post.UrlImage" height="60" width="60" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
-                                        <strong>#@item.PostId </strong>
-                                        <p class="last-message text-muted"> - @item.Post.SubAreas.AreaName</p>
-                                    </div>
-                                    <span class="form-check-label px-2 rounded mdb-color white-text d-flex align-self-end nowrap">
-                                        @item.CreatedAt.Value.ToString("dd/MM/yyyy") <i class="fas fa-clock ml-1 mt-1"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        }
-
-                    </ul>
-                </div>
-
+            <h6 class="font-weight-bold mb-3 text-center text-lg-left dark-grey-text">Notes List</h6>
+            <div class="list-group list-group-naked mb-3">
+                @foreach (var item in Model.Input)
+                {
+                <a id="noteGroup_@item.Id" href="#" data-noteid="@item.Id" data-postid="@item.PostId" class="list-group-item list-group-item-action d-flex align-items-center noteHeader" aria-current="true">
+                    <img src="@item.Post.UrlImage" class="border rounded-circle me-2" alt="" style="width: 60px; height: 60px" />
+                    <strong class="mb-auto">#@item.PostId - @item.Post.SubAreas.AreaName</strong>
+                    <button type="button" class="btn-close btn-sm mb-auto ms-auto deleteNoteGroup" data-postid="@item.Id" aria-label="Close"></button>
+                </a>
+                }
             </div>
-            <!-- Grid column -->
-            <!-- Grid column -->
-            <div class="col-md-6 col-xl-8 pl-md-3 px-lg-auto px-0">
-                <div class="chat-message pt-3">
-                    <ul class="list-unstyled chat-1 scrollbar-sm-4 scrollbar-navy-blue-skin-slim overflow-scroll chatList">
-                    </ul>
-                    <div class="white">
-                        <div class="form-group basic-textarea">
-                            <textarea class="md-textarea form-control z-depth-1 pl-2 my-0" id="exampleFormControlTextarea2" rows="3" placeholder="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Typeyourmessagehere))..." name="note"></textarea>
-                        </div>
+        </section>
+    </div>
+    <!-- Grid column -->
+    <!-- Center column -->
+    <div class="col-xl-8 col-12 mb-4 mb-lg-0 border-left border-right">
+        <!--Section: Messages-->
+        <section class="inner-content chatList">
+            <div class="d-flex mt-3">
+                <button data-mdb-toggle="sidenav" data-mdb-target="#sidenav-inner"
+                        class="btn shadow-0 p-0 me-3 d-block d-lg-none" aria-controls="#sidenav-outer" aria-haspopup="true">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+
+                <img src="https://mdbootstrap.com/img/new/avatars/9.jpg" class="rounded-circle me-2"
+                     style="width: 30px; height: 30px" alt="" />
+
+                <span>Anna Doe</span>
+            </div>
+            <hr />
+            <div class="chatList">
+            </div>
+        </section>
+        <!--Section: Messages-->
+        <!--Section: Message input-->
+        <section id="message-input" class="fixed-bottom card bg-light">
+            <div class="card-body">
+                <form class="d-flex">
+
+                    <div class="w-100 mx-2">
+                        <textarea class="form-control" name="note" id="textAreaExample" rows="1" placeholder="Type a message"></textarea>
                     </div>
-                    <button type="button" class="btn gradient white-text btn-rounded btn-sm waves-effect waves-dark float-right sendButton">Αποστολη</button>
 
-                </div>
-
+                    <button type="button" class="btn btn-primary px-3 sendButton">
+                        <strong class="text-light">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Submit))</strong>
+                    </button>
+                </form>
             </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
+        </section>
+        <!--Section: Message input-->
     </div>
 </div>
+<!-- Center column -->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
