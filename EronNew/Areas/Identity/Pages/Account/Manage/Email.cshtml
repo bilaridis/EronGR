@@ -1,41 +1,45 @@
 ﻿@page
 @model EmailModel
+@inject EronNew.Resources.GlobalCultureService SharedLocalizer
+@using EronNew.Helpers
+@using EronNew.Resources
 @{
     ViewData["Title"] = "Manage Email";
     ViewData["ActivePage"] = ManageNavPages.Email;
 }
-<partial name="_StatusMessage" model="Model.StatusMessage" />
-<!-- Jumbotron -->
-<div class="jumbotron text-center cloudy-knoxville-gradient lighten-4 white-text mx-2 mb-5">
-    <div class="col-md-6">
-        <form id="email-form" method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="md-form form-group">
-                @if (Model.IsEmailConfirmed)
-                {
-                    <div class="md-form input-group">
-                        <input asp-for="Email" class="form-control text-success" disabled />
-                        <div class="input-group-append">
+<div class="row mt-5">
+    <div class="card">
+        <div class="card-header">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Changeemail))</div>
+        <div class="card-body">
+            <form id="email-form" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-outline mt-3">
+                    @if (Model.IsEmailConfirmed)
+                    {
+                        <div class="form-outline input-group mt-3">
+                            <input asp-for="Email" class="form-control text-success" disabled />
+                            <label class="form-label" asp-for="Email"></label>
                             <span class="input-group-text text-success font-weight-bold">✓</span>
                         </div>
-                    </div>
-                }
-                else
-                {
-                    <input asp-for="Email" class="form-control" disabled />
-                    <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
-                }
-            </div>
-            <div class="md-form input-group">
-                <label asp-for="Input.NewEmail"></label>
-                <input asp-for="Input.NewEmail" class="form-control" />
-                <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
-            </div>
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary">Change email</button>
-        </form>
+                    }
+                    else
+                    {
+                        <input asp-for="Email" class="form-control" disabled />
+                        <label class="form-label" asp-for="Email"></label>
+                        <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
+                    }
+                </div>
+                <div class="form-outline mt-3">
+                    <input asp-for="Input.NewEmail" class="form-control" />
+                    <label class="form-label" asp-for="Input.NewEmail"></label>
+                    <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+                </div>
+                <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary mt-3">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Changeemail))</button>
+            </form>
+        </div>
+        <div class="card-footer"><partial name="_StatusMessage" for="StatusMessage" /></div>
     </div>
 </div>
-
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

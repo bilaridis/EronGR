@@ -1,12 +1,10 @@
 ﻿(function () {
     function noteTemplate(note) {
         return `
-          <div id="note_${note.Id}" class="d-flex justify-content-start bg-light rounded-3 shadow-1 w-100">
-            <p class="p-3 col-11">
-                
+          <div id="note_${note.Id}" class="d-flex justify-content-start bg-light rounded-3 shadow-2-strong mb-2 w-100">
+            <p class="px-3 pt-3 col-11">
               ${note.Note}
               <small class="float-end text-dark mt-4 mt-auto">${moment(note.CreatedAt).locale('el').format('LL')}</small>
-                
             </p>
             <button type="button" class="btn-close btn-sm mb-auto ms-auto  deleteNote" aria-label="Close" data-noteid="${note.Id}"></button>
           </div>`
@@ -31,6 +29,11 @@
                 dataType: 'text'
             })
                 .done(function (msg) {
+
+                    $("#previewTile").empty();
+                    var innerHtml = $(`#noteGroup_${noteid}`).html();
+                    $("#previewTile").html(innerHtml);
+
                     var jObj = JSON.parse(msg);
                     $.each(jObj.AspNetUserNotesDetails, function (index, value) {
                         $(".chatList").append(noteTemplate(value));
@@ -96,7 +99,7 @@
             $(`textarea[name="note"]`).val("");
         });
 
-
+        setMode1();
 
     });
 })();

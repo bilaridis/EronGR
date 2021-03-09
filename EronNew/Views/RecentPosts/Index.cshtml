@@ -1,4 +1,6 @@
 ﻿@model EronNew.Models.SearchData
+@using EronNew.Helpers
+@using EronNew.Resources
 @inject EronNew.Resources.GlobalCultureService SharedLocalizer
 @{
     Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
@@ -15,6 +17,18 @@
                     <input id="SortList" type="hidden" class="filter-option" name="SortList" SortList />
                 </section>
             </form>
+        </section>
+        <section class="d-flex flex-row justify-content-between align-items-center rounded mt-3">
+            <div>
+                <select id="sort" class="select mt-2">
+                    <option value="-Premium">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MostPopular))</option>
+                    <option value="PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.LowestToHighest))</option>
+                    <option value="-PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HighestLowestPrice))</option>
+                </select>
+                <label class="form-label select-label">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rating))</label>
+            </div>
+            <div class="custom-buttons me-2">
+            </div>
         </section>
         <section id="infinite-list" class="mb-0">
             <div class="row d-flex justify-content-around align-items-center">

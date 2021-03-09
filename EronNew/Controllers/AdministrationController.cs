@@ -38,6 +38,12 @@ namespace EronNew.Controllers
         }
 
         // GET: AdministrationController
+        public ActionResult HomeAsync()
+        {
+            return View();
+        }
+
+        // GET: AdministrationController
         public async Task<ActionResult> IndexAsync()
         {
             var user = await _userManager.GetUserAsync(User);

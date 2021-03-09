@@ -10,15 +10,16 @@
 <partial name="_StatusMessage" model="Model.StatusMessage" />
 <div class="row justify-content-center justify-content-lg-between">
     <!-- Left column -->
-    <div class="col-xl-4 d-none d-xl-block">
+    <div id="sidenav-inner" 
+         class="col-xl-4 d-lg-block bg-light shadow-1 collapse"  
+        >
         <!--Section: Contacts-->
         <section class="sticky-top" style="top: 80px">
-
             <h6 class="font-weight-bold mb-3 text-center text-lg-left dark-grey-text">Notes List</h6>
             <div class="list-group list-group-naked mb-3">
                 @foreach (var item in Model.Input)
                 {
-                <a id="noteGroup_@item.Id" href="#" data-noteid="@item.Id" data-postid="@item.PostId" class="list-group-item list-group-item-action d-flex align-items-center noteHeader" aria-current="true">
+                <a id="noteGroup_@item.Id" href="#" data-noteid="@item.Id" data-postid="@item.PostId" class="list-group-item list-group-item-action d-flex align-items-center noteHeader mb-1" aria-current="true">
                     <img src="@item.Post.UrlImage" class="border rounded-circle me-2" alt="" style="width: 60px; height: 60px" />
                     <strong class="mb-auto">#@item.PostId - @item.Post.SubAreas.AreaName</strong>
                     <button type="button" class="btn-close btn-sm mb-auto ms-auto deleteNoteGroup" data-postid="@item.Id" aria-label="Close"></button>
@@ -31,17 +32,21 @@
     <!-- Center column -->
     <div class="col-xl-8 col-12 mb-4 mb-lg-0 border-left border-right">
         <!--Section: Messages-->
-        <section class="inner-content chatList">
+        <section class="inner-content">
             <div class="d-flex mt-3">
-                <button data-mdb-toggle="sidenav" data-mdb-target="#sidenav-inner"
-                        class="btn shadow-0 p-0 me-3 d-block d-lg-none" aria-controls="#sidenav-outer" aria-haspopup="true">
+                <button class="navbar-toggler btn shadow-0 p-0 me-3 d-block d-lg-none"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#sidenav-inner"
+                        aria-controls="sidenav-inner"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <i class="fas fa-bars fa-lg"></i>
                 </button>
 
-                <img src="https://mdbootstrap.com/img/new/avatars/9.jpg" class="rounded-circle me-2"
-                     style="width: 30px; height: 30px" alt="" />
+                <div id="previewTile" class="list-group-item list-group-item-action d-flex align-items-center">
+                </div>
 
-                <span>Anna Doe</span>
             </div>
             <hr />
             <div class="chatList">

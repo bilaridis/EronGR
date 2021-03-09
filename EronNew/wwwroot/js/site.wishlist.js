@@ -14,6 +14,7 @@
             $("#products").empty();
             getProducts(apiUrl);
         });
+
         getProducts(apiUrl);
     });
     function getProducts(url) {

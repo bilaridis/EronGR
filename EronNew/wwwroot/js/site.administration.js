@@ -19,6 +19,7 @@
             sidenavInstance.show();
         }
     };
+
     $(function () {
 
 

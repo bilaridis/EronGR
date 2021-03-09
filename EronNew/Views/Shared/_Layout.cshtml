@@ -17,10 +17,15 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="Vasileios Valasidis">
+    <style>
+        #toggleSideAdmin {
+            display: none !important;
+        }
+    </style>
     @RenderSection("metatags", false)
 
     <title>Eron </title>
-    <partial name="_partialStyleSheets.cshtml"/>
+    <partial name="_partialStyleSheets.cshtml" />
 
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
     @if (hostingEnv.EnvironmentName == "Production")
@@ -57,7 +62,7 @@
             @RenderBody()
         </div>
     </main>
-    <partial name="_footer"/>
+    <partial name="_footer" />
     <partial name="_partialScripts" />
     @RenderSection("Scripts", required: false)
 </body>
