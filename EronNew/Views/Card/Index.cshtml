@@ -40,7 +40,7 @@
                     @Model.CardProfile.InfoText
                 </p>
 
-                <button type="button" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#modalContact" data-userId="@Model.CardProfile.AspNetUserId">
+                <button type="button" class="btn btn-info btn-rounded btn-sm" data-mdb-toggle="modal" data-mdb-target="#modalContact" data-userId="@Model.CardProfile.AspNetUserId">
                     Contact<i class="fas fa-paper-plane ml-2"></i>
                 </button>
                 <a class="btn btn-info btn-rounded btn-sm blue darken-4 white-text" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FCard%2FIndex%2F@(Model.CardProfile.AspNetUserId)','popup','width=400,height=500'); return false;">Share on Facebook</a>
@@ -49,7 +49,7 @@
         </section>
 
         <section class="Filters">
-            <form>
+            <form  id="searchDataForm">
                 <section filter="numberOfPage">
                     <input id="numberOfPage" type="number" class="filter-option" style="display:none;" name="numberOfPage" numberOfPage value="1">
                 </section>

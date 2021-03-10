@@ -5,6 +5,7 @@
         $('#loader').css('display', 'none');
         $("#sort").change((e) => {
             e.stopImmediatePropagation();
+            $(`#SortList`).val($("#sort").find(":selected").val());
             $("#products").empty();
             $("#numberOfPage").val("1");
             getProducts(apiUrl);

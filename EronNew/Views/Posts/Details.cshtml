@@ -87,9 +87,13 @@
                                         <span class="carousel-control-next-icon text-primary" aria-hidden="true"></span>
                                         <div class="mask gradient-bottom"></div>
                                     </button>
+
                                 </div>
                             </div>
-                            <div class="col-8 col-sm-9 shadow-3">
+                            <div class="col-8 col-sm-9 shadow-3 position-relative">
+                                <a href="#!" class="position-absolute top-0 end-0" style="z-index:10;" data-mdb-toggle="modal" data-mdb-target="#centralModalPreview360">
+                                    <i class="fas fa-globe fa-2x text-primary" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Preview360))"></i>
+                                </a>
                                 <div class="lightbox">
                                     <img src="https://localhost:44396/@(Model.Post.Images.First().UrlImage)Images/@Model.Post.Images.First().ImageName" alt="Gallery image 1" class="ecommerce-gallery-main-img active w-100" />
                                 </div>
@@ -113,8 +117,7 @@
                         </div>
                         @*@if (Model.Post.Premium && Model.Post.Preview360 != null && Model.Post.Preview360.Contains("matterport.com"))*@
                         @*{*@
-                        <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#centralModalPreview360">
-                            @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Preview360))
+                        <button type="button" class="btn btn-primary">
                         </button>
                         @*}*@
                     </nav>
@@ -146,7 +149,7 @@
                             </div>
                             <div class="text-right col-4 text-dark" data-i18n="Home Energy Rate"></div>
                             <div class="text-left col-8 ">
-                                <div class="row mx-0 my-2">
+                                <div class="row mx-0 my-2  d-none d-md-block">
                                     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                         <div class="btn-group me-2" role="group" aria-label="First group">
                                             <button type="button" class="btn @(Model.Post.EnergyEfficiency == "A+" ? "bg-white btn-outline-info" :"")" style="background-color: #036703">Α+</button>
@@ -223,7 +226,7 @@
                         </div>
 
                         <div class="p-2 note-container">
-                            <a class="card-link" data-mdb-toggle="modal" data-mdb-target="#centralModalNotes" data-userid="@Model.CardProfile.AspNetUserId" >
+                            <a class="card-link" data-mdb-toggle="modal" data-mdb-target="#centralModalNotes" data-userid="@Model.CardProfile.AspNetUserId">
                                 <i class="fas fa-pencil-alt fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyNotes))"></i>
                             </a>
                         </div>
@@ -233,7 +236,7 @@
                             </a>
                         </div>
                         <div class="p-2 view-container">
-                            <a class="card-link" >
+                            <a class="card-link">
                                 <i class="fas fa-eye fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.views))"></i> <label class=" text-smaller text-dark"> @Model.CounterOfView <label data-i18n="views"></label> </label>  |
                             </a>
                         </div>
@@ -401,28 +404,28 @@
 
 @if (Model.RelatedPosts.Count > 0)
 {
-<div class="multi-carousel mt-5" data-mdb-interval="10000" data-mdb-items="3">
-    <div class="multi-carousel-inner py-5 px-5">
-        @foreach (BasicInformationBase item in Model.RelatedPosts)
-        {
-            <partial name="_TileCard" model="item" />
-        }
+    <div class="multi-carousel mt-5" data-mdb-interval="10000" data-mdb-items="3">
+        <div class="multi-carousel-inner py-5 px-5">
+            @foreach (BasicInformationBase item in Model.RelatedPosts)
+            {
+                <partial name="_TileCard" model="item" />
+            }
+        </div>
+        <button class="carousel-control-prev hover-overlay"
+                type="button"
+                tabindex="0"
+                data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
+            <div class="mask gradient-left"></div>
+        </button>
+        <button class="carousel-control-next hover-overlay"
+                type="button"
+                tabindex="0"
+                data-mdb-slide="next">
+            <span class="carousel-control-next-icon text-primary" aria-hidden="true"></span>
+            <div class="mask gradient-right"></div>
+        </button>
     </div>
-    <button class="carousel-control-prev hover-overlay"
-            type="button"
-            tabindex="0"
-            data-mdb-slide="prev">
-        <span class="carousel-control-prev-icon text-primary" aria-hidden="true"></span>
-        <div class="mask gradient-left"></div>
-    </button>
-    <button class="carousel-control-next hover-overlay"
-            type="button"
-            tabindex="0"
-            data-mdb-slide="next">
-        <span class="carousel-control-next-icon text-primary" aria-hidden="true"></span>
-        <div class="mask gradient-right"></div>
-    </button>
-</div>
 }
 
 <script>

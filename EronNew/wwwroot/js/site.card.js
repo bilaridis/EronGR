@@ -15,7 +15,7 @@
         getProducts(apiUrl);
     });
     function getProducts(url) {
-        var dataString = $("form").serialize();
+        var dataString = $("form#searchDataForm").serialize();
         $.ajax({
             type: "POST",
             url: url,//,

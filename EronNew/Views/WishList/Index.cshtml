@@ -9,7 +9,7 @@
 <div class="row mt-2">
     <div class="col-lg-12 col-md-12 mb-4 flex-row">
         <section class="Filters">
-            <form>
+            <form id="searchDataForm">
                 <section filter="numberOfPage">
                     <input id="numberOfPage" type="number" class="filter-option" style="display:none;" name="numberOfPage" numberOfPage value="1">
                 </section>
@@ -18,37 +18,39 @@
                 </section>
             </form>
         </section>
-        <section class="d-flex flex-row justify-content-between align-items-center rounded mt-3">
-            <div>
-                <select id="sort" class="select mt-2">
-                    <option value="-Premium">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MostPopular))</option>
-                    <option value="PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.LowestToHighest))</option>
-                    <option value="-PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HighestLowestPrice))</option>
-                </select>
-                <label class="form-label select-label">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rating))</label>
-            </div>
-            <div class="custom-buttons me-2">
-            </div>
-        </section>
-        <section id="infinite-list">
-            <div id="loader" class="loader-overlay">
-                <div class="preloader-wrapper active">
-                    <div class="spinner-layer spinner-blue-only">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
+        <div class="col-12 flex-row">
+            <section class="d-flex flex-row justify-content-between align-items-center rounded mt-3">
+                <div>
+                    <select id="sort" class="select mt-2">
+                        <option value="-Premium">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MostPopular))</option>
+                        <option value="PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.LowestToHighest))</option>
+                        <option value="-PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HighestLowestPrice))</option>
+                    </select>
+                    <label class="form-label select-label">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rating))</label>
+                </div>
+                <div class="custom-buttons me-2">
+                </div>
+            </section>
+            <section id="infinite-list" class="d-md-flex flex-md-row scrollbar-4 scrollbar-navy-blue-skin overflow-scroll">
+                <div id="loader" class="loader-overlay" style="display: none;">
+                    <div class="preloader-wrapper active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex flex-wrap pb-3" id="products">
-            </div>
-        </section>
+                <div class="d-flex flex-wrap pb-3" id="products">
+                </div>
+            </section>
+        </div>
     </div>
 </div>
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv

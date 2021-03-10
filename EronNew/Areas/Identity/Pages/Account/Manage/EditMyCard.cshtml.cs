@@ -48,7 +48,7 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
             Username = userName;
 
             var dbModel = _model.GetMyCard(user.Id);
-            if(dbModel == null)
+            if (dbModel == null)
             {
                 Input = new AspNetUserProfile();
             }
@@ -57,7 +57,7 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
                 Input = dbModel;
                 //Input.SetDescription();
             }
-            
+
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -114,7 +114,11 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
                 }
                 Input.PhotoImage = "Uploads/" + user.Id + "/" + Input.Image.FileName;
             }
-            
+            else
+            {
+                Input.PhotoImage = null;
+            }
+
             await _model.SaveMyCard(Input);
 
             await _signInManager.RefreshSignInAsync(user);

@@ -717,6 +717,7 @@ namespace EronNew.Models
                 .Include(p => p.WishLists)
                 .IncludeLocaliseOptions(_cultureName)
                 .Where(x => x.Active == true && !x.Deleted && !x.Hide && x.WishLists.Any(x => x.AspNetUserId == aspNetUserId && x.Active == true));
+            results = results.OrderBy(searchData.SortList);
             var res = await results.ToListAsync();
 
             return res.Skip((searchData.numberOfPage - 1) * 16).Take(16).ToList().GetBase(res.Count, aspNetUserId, _services);
@@ -734,14 +735,10 @@ namespace EronNew.Models
 
                 var interests = context.AspNetUserInterests
                     .Include(p => p.Post)
-                    //.Include(p => p.Post.ExtraInformation)
-                    //.Include(p => p.Post.Owner)
-                    //.Include(p => p.Post.SubTypeInformation)
-                    .Include(p => p.Post.Areas)//
-                    .Include(p => p.Post.SubAreas)//
-                    .Include(p => p.Post.Images)//
-                                                //.Include(p => p.Post.AspNetUserInterests)
-                    .Include(w => w.Post.WishLists)//
+                    .Include(p => p.Post.Areas)
+                    .Include(p => p.Post.SubAreas)
+                    .Include(p => p.Post.Images)
+                    .Include(w => w.Post.WishLists)
                     .Where(x => x.Post.Active == true && !x.Post.Deleted && !x.Post.Hide && x.AspNetUserId == aspNetUserId).Take(50).AsEnumerable();
 
                 var results = interests.GroupBy(x => new { x.Post })

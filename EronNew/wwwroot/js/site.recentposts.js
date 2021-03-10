@@ -1,12 +1,10 @@
 ﻿(function () {
     const apiUrl = "/RecentPosts/Query";
     $(function () {
-        $(".button-collapse").sideNav({
-            breakpoint: 1200
-        });
         $('#loader').css('display', 'none');
         $("#sort").change((e) => {
             e.stopImmediatePropagation();
+            $(`#SortList`).val($("#sort").find(":selected").val());
             $("#products").empty();
             $("#numberOfPage").val("1");
             getProducts(apiUrl);
@@ -19,7 +17,7 @@
         getProducts(apiUrl);
     });
     function getProducts(url) {
-        var dataString = $("form").serialize();
+        var dataString = $("form#searchDataForm").serialize();
         $.ajax({
             type: "POST",
             url: url,//,

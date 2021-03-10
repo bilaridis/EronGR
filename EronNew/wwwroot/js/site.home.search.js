@@ -139,6 +139,7 @@
         $('#loader').css('display', 'none');
 
         $("#sort").change((e) => {
+            e.stopImmediatePropagation();
             $(`#SortList`).val($("#sort").find(":selected").val());
             $("#numberOfPage").val("1");
             $("#products").empty();

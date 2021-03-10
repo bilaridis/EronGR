@@ -7,10 +7,10 @@
     ViewData["Title"] = "Administration Panel";
     Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
 }
-<div class="row mt-5">
-    <div class="card mt-3">
+<div class="row mt-3">
+    <div class="card">
         <div class="card-header gradient d-flex justify-content-center">
-            <a class="white-text text-center text-dark mx-3 col-12"><strong>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</strong></a>
+            <a class="text-light text-center"><strong>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.AdManagement))</strong></a>
         </div>
         <div class="carc-body mt-3">
             <div class="input-group mb-3 mt-1">
@@ -22,17 +22,17 @@
                     <i class="fa fa-search"></i>
                 </button>
             </div>
-            <div id="datatable" class="datatable" data-mdb-fixed-header="true" data-mdb-color="blue-grey" data-mdb-striped="true" data-mdb-full-pagination="true" data-mdb-sm="true" data-mdb-hover="true">
+            <div id="datatable" class="datatable" data-mdb-fixed-header="true" data-mdb-color="grey" data-mdb-striped="true" data-mdb-full-pagination="true" data-mdb-sm="true" data-mdb-hover="true">
                 <!-- Table -->
                 <table id="dtMaterialDesignExample" class="table table-hover">
                     <!-- Table head -->
                     <thead>
                         <tr>
                             <th></th>
-                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))<i class="fas fa-sort ml-1"></i></a></th>
-                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion)) - @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))<i class="fas fa-sort ml-1"></i></a></th>
-                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price))<i class="fas fa-sort ml-1"></i></a></th>
-                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Premium))<i class="fas fa-sort ml-1"></i></a></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Category))</a></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CountyRegion)) - @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))</a></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Price))</a></th>
+                            <th class="th-lg"><a>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Premium))</a></th>
                         </tr>
                     </thead>
                     <!-- Table head -->

@@ -1,6 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.datatable table td {
+    overflow: visible;
+}
+
 body {
     font-size: 0.85rem !important;
     background-color: #f5f7fa;
@@ -100,6 +104,46 @@ body {
 
 .scrollbar-navy-blue-skin {
     scrollbar-color: #4f68a6 rgba(53, 59, 80, 0.50);
+}
+
+.white {
+    background-color: #FFF !important;
+}
+
+.blue-grey {
+    background-color: #ECEFF1 !important;
+}
+
+.light-blue {
+    background-color: #E3F2FD !important;
+}
+
+.deep-purple {
+    background-color: #EDE7F6 !important;
+}
+
+.grey {
+    background-color: #EEEEEE !important;
+}
+
+.dark {
+    background-color: #212121 !important;
+}
+
+.blue-grey-dark {
+    background-color: #37474F !important;
+}
+
+.teal-dark {
+    background-color: #004D40 !important;
+}
+
+.deep-purple-dark {
+    background-color: #4527A0 !important;
+}
+
+.grey-dark {
+    background-color: #424242 !important;
 }
 
 
