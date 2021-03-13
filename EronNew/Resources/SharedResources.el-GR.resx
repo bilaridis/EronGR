@@ -119,740 +119,1042 @@
   </resheader>
   <data name="&lt;strong&gt;All&lt;/strong&gt; Languages Available" xml:space="preserve">
     <value>&lt;strong&gt; Όλες &lt;/strong&gt; οι Γλώσσες διαθέσιμες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="&lt;strong&gt;Boosted&lt;/strong&gt; Advertisement" xml:space="preserve">
     <value>&lt;strong&gt; Ενισχυμένη &lt;/strong&gt; Διαφήμιση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Account Management" xml:space="preserve">
     <value>Διαχείριση Λογαριασμού</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Activation" xml:space="preserve">
-    <value>Ενεργοποίηση</value>
+    <value>Δραστηριοποίηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Activation of Premium Ad" xml:space="preserve">
+    <value>Ενεργοποίηση Premium Διαφήμισης</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Active" xml:space="preserve">
     <value>Ενεργή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Ad Code" xml:space="preserve">
     <value>Κωδικός Αγγελίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Ad Management" xml:space="preserve">
     <value>Διαχείριση Αγγελίων</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Ad Type" xml:space="preserve">
     <value>Τύπος Αγγελίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Additional characteristics" xml:space="preserve">
     <value>Επιπλέον Χαρακτηριστικά</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Additional information" xml:space="preserve">
     <value>Πρόσθετες Πληροφορίες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Additional Property Features" xml:space="preserve">
     <value>Πρόσθετα χαρακτηριστικά Ακινήτου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Address" xml:space="preserve">
     <value>Διεύθυνση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Air Condition" xml:space="preserve">
     <value>Κλιματισμός</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="and" xml:space="preserve">
     <value>και</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Apartment" xml:space="preserve">
     <value>Διαμέρισμα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Apartment Complex" xml:space="preserve">
     <value>Συγκρότημα διαμερισμάτων</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Area" xml:space="preserve">
     <value>Περιοχή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Ask for the Price" xml:space="preserve">
     <value>Ρωτήστε τιμή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Balance" xml:space="preserve">
-    <value>Υπόλοιπο</value>
+    <value>Ισορροπία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Bathrooms" xml:space="preserve">
     <value>Μπάνια</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="BBQ" xml:space="preserve">
     <value>BBQ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Bedrooms" xml:space="preserve">
     <value>Υπνοδωμάτια</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Broker Fee" xml:space="preserve">
-    <value>Αμοιβή Μεσίτη</value>
+    <value>Χρέωση μεσίτη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Building" xml:space="preserve">
     <value>Κτίριο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Bungalow" xml:space="preserve">
     <value>Bungalow</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Business building" xml:space="preserve">
     <value>Κτίριο επαγγελματικών χώρων</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="By clicking &lt;em&gt; Register &lt;/em&gt; you automatically agree to our" xml:space="preserve">
     <value>Παντώντας για &lt;em&gt;Εγγραφή&lt;/em&gt; αυτόματα συμφωνείτε με τους</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="By Completing the submission of your first Ad will be credited" xml:space="preserve">
-    <value>Με την ολοκλήρωση της πρώτης σας Αγγελίας θα πιστωθούν ακόμα</value>
+    <value>Με την ολοκλήρωση της υποβολής της πρώτης σας διαφήμισης θα πιστωθεί</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Ακύρωση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Κατηγορία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Change email" xml:space="preserve">
     <value>Αλλαγή email</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Άλλαξε κωδικό</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Choose" xml:space="preserve">
     <value>Επιλογή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Choose a profile image" xml:space="preserve">
     <value>Επιλογή εικόνας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Choose tags for the description" xml:space="preserve">
+    <value>Επιλέξτε ετικέτες για την περιγραφή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Choose which package you want for your ad." xml:space="preserve">
-    <value>Διαλέξτε ποιό πακέτο θέλετε για την αγγελία σας.</value>
+    <value>Επιλέξτε ποιο πακέτο θέλετε για τη διαφήμισή σας.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Choose your preferred language" xml:space="preserve">
     <value>Διαλέξτε την γλώσσα που επιθυμείτε</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Click here to Logout" xml:space="preserve">
     <value>Click here to Logout</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="CloakRoom" xml:space="preserve">
     <value>Βεστιάριο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Κλείσιμο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Commands" xml:space="preserve">
     <value>Εντολές Αγγελίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Commercial" xml:space="preserve">
     <value>Επαγγ. Στέγη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Company" xml:space="preserve">
     <value>Επιχείρηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Complete" xml:space="preserve">
     <value>Ολοκλήρωση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Complete Registration" xml:space="preserve">
     <value>Ολοκήρωση Εγγραφής</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Completed" xml:space="preserve">
     <value>Ολοκληρωμένη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Conference Room" xml:space="preserve">
     <value>Αίθουσα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Confirm Password" xml:space="preserve">
     <value>Επαλήθευση Κωδικού</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Construction" xml:space="preserve">
     <value>Κατασκεύη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Construction Year" xml:space="preserve">
     <value>Έτος Κατασκευής</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Επικοινωνία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Contact Info" xml:space="preserve">
     <value>Στοιχεία Επικοινωνίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Contact Phone" xml:space="preserve">
     <value>Τηλέφωνο Επικοινωνίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Contact us" xml:space="preserve">
     <value>Επικοινωνήστε μαζί μας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Control Panel" xml:space="preserve">
     <value>Πίνακας Ελέγχου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Cottage" xml:space="preserve">
     <value>Βίλλα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="County/Region" xml:space="preserve">
     <value>Νομός/Περιφέρεια</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Craft Property" xml:space="preserve">
     <value>Βιοτεχνικός χώρος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Create Draft Ad" xml:space="preserve">
     <value>Δημιουργία Πρόχειρης Αγγελίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Create your own mobile presentation (Compatible with iPhone and iPad)" xml:space="preserve">
-    <value>Δημιουργείς τη δική σου παρουσίαση μέσω κινητού (Compatible with iPhone and iPad)</value>
+    <value>Δημιουργήστε τη δική σας παρουσίαση για κινητά (Συμβατό με iPhone και iPad)</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Current Balance" xml:space="preserve">
-    <value>Τρέχον υπόλοιπο</value>
+    <value>Τωρινή ισσοροπία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Current Costs" xml:space="preserve">
     <value>Τρέχουσες δαπάνες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Διαγραφή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Deleted" xml:space="preserve">
     <value>Διαγεγραμμένη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Demand" xml:space="preserve">
     <value>Ζήτηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Περιγραφή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Desired Information from Buyers" xml:space="preserve">
     <value>Επιθυμητές Πληροφορίες από τους Αγοραστές</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Detached House" xml:space="preserve">
     <value>Μονοκατοικία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Do you need help" xml:space="preserve">
     <value>χρειαζεσαι βοηθεια;</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Draft" xml:space="preserve">
     <value>Πρόχειρη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Drag the photos here" xml:space="preserve">
     <value>Σύρε τις φωτογραφίες εδώ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Επεξεργασία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Elevator" xml:space="preserve">
     <value>Ανελκυστήρας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="euroSymbol" xml:space="preserve">
     <value>€</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Exchange Rate Table" xml:space="preserve">
+    <value>Πίνακας συναλλαγματικών ισοτιμιών</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Exhibition Area" xml:space="preserve">
     <value>Εκθεσιακός χώρος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Farm/Ranch" xml:space="preserve">
     <value>Φάρμα/Ράντσο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Fill in the email to have the password reset email sent to you." xml:space="preserve">
     <value>Συμπλήρωσε το email για να σου αποσταλλεί το email επαναφοράς του κωδικού.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Finance" xml:space="preserve">
-    <value>Οικονομικά</value>
+    <value>Χρηματοδότηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Fireplace" xml:space="preserve">
     <value>Τζάκι</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="floor" xml:space="preserve">
     <value>Όροφος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Follow us" xml:space="preserve">
+    <value>Ακολουθησε μας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Forgot your password" xml:space="preserve">
     <value>Ξέχασες το κωδικό;</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="from" xml:space="preserve">
     <value>από</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Furniture" xml:space="preserve">
     <value>Επίπλωση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Garden" xml:space="preserve">
     <value>Κήπος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="greater than 100" xml:space="preserve">
     <value>μεγαλύτερο από 100</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Gym" xml:space="preserve">
     <value>Γυμναστήριο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Hall" xml:space="preserve">
     <value>Hall</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Heating System" xml:space="preserve">
     <value>Θέρμανση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Hidden Searches" xml:space="preserve">
     <value>Κρυφές αναζητήσεις</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Hide" xml:space="preserve">
     <value>Κρυφή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Highest -&gt; Lowest Price" xml:space="preserve">
     <value>Φθίνουσα τιμή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Home Energy Rate" xml:space="preserve">
     <value>Ενεργιακή κλάση Σπιτιού</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Hotel" xml:space="preserve">
     <value>Ξενοδοχείο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Houseboat" xml:space="preserve">
     <value>Πλωτό σπίτι</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Housekeeping" xml:space="preserve">
     <value>Κοινόχρηστα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="How can we help you" xml:space="preserve">
     <value>Πως μπορούμε να σας βοηθήσουμε</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="How Many Bathrooms Does It Have?" xml:space="preserve">
     <value>Πόσα Μπάνια έχει;</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="How Many Bedrooms Does It Have?" xml:space="preserve">
     <value>Πόσα Υπνοδωμάτια έχει;</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Id" xml:space="preserve">
     <value>Ταυτότητα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Important Information" xml:space="preserve">
     <value>Σημαντικές Πληροφορίες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Inactive" xml:space="preserve">
     <value>Ανενεργή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Industrial Property" xml:space="preserve">
     <value>Βιομηχανικός χώρος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Info Card" xml:space="preserve">
     <value>Πληροφορίες κάρτας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Internet Fiber" xml:space="preserve">
     <value>Οπτικές Ίνες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Investment" xml:space="preserve">
-    <value>Επενδυτικό</value>
+    <value>Επένδυση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Join to our Page" xml:space="preserve">
     <value>Γίνε μέλος στη σελίδα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Land" xml:space="preserve">
     <value>Γη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Γλώσσες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Living room" xml:space="preserve">
     <value>Σαλόνι</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Locked" xml:space="preserve">
     <value>Κλειδωμένη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Loft" xml:space="preserve">
     <value>Loft</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Σύνδεση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Login/Register" xml:space="preserve">
     <value>Σύνδεση/Εγγραφή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Αποσυνδεση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Lowest To Highest" xml:space="preserve">
     <value>Αύξουσα τιμή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Maisonette" xml:space="preserve">
     <value>Μεζονέτα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Mandatory Information" xml:space="preserve">
     <value>Υποχρεωτικά Στοιχεία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Master" xml:space="preserve">
     <value>Master</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="maximum of Characters are 5" xml:space="preserve">
     <value>το μέγιστο των χαρακτήρων είναι 5</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="minimum Three Characters" xml:space="preserve">
     <value>τουλάχιστον τρεις χαρακτήρες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Mobile" xml:space="preserve">
     <value>Κινητό</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Mobile Home" xml:space="preserve">
     <value>Λυόμενο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Month" xml:space="preserve">
     <value>Μήνας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Months" xml:space="preserve">
     <value>Μήνες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Most Popular" xml:space="preserve">
     <value>Δημοτικότητα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Municipality / District" xml:space="preserve">
     <value>Δήμο/Συνοικία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="My Card" xml:space="preserve">
     <value>Η Κάρτα μου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Τα Αγαπημένα μου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="My information" xml:space="preserve">
     <value>Τα Στοιχεία μου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="My Notes" xml:space="preserve">
     <value>Σημειώσεις μου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="My Orders" xml:space="preserve">
     <value>Οι παραγγελίες μου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Όνομα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="New Construction" xml:space="preserve">
-    <value>Νεόδμητο</value>
+    <value>Νέα κατασκευή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="No" xml:space="preserve">
     <value>Όχι</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="No ads were found according to Search filters." xml:space="preserve">
     <value>Δεν βρέθηκαν αγγελίες σύμφωνα με τα φίλτρα Αναζήτησης.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="No Orders To Display" xml:space="preserve">
-    <value>Δεν υπάρχουν παραγγελίες για εμφάνιση</value>
+    <value>Δεν υπάρχουν συναλλαγές</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Notes" xml:space="preserve">
     <value>Σημειώσεις</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="number" xml:space="preserve">
     <value>Αριθμός</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Obligatory" xml:space="preserve">
     <value>υποχρεωτικό</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Offer" xml:space="preserve">
-    <value>Ευκαιρία</value>
+    <value>Προσφορά</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Office" xml:space="preserve">
     <value>Γραφείο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Εντάξει</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Once the download is complete. Copy the link here" xml:space="preserve">
-    <value>Μόλις ολοκληρωθεί η μεταφόρτωση. Αντέγραψε τον σύνδεσμο εδώ</value>
+    <value>Μόλις ολοκληρωθεί η λήψη. Αντιγράψτε τον σύνδεσμο εδώ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="only Number" xml:space="preserve">
     <value>μόνο αριθμός</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="optional" xml:space="preserve">
     <value>προαιρετικό</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Orders History" xml:space="preserve">
     <value>Ιστορικό παραγγελιών</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Other Categories" xml:space="preserve">
     <value>Άλλες Κατηγορίες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Other Properties" xml:space="preserve">
     <value>Λοιπά Ακίνητα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Our Services" xml:space="preserve">
+    <value>Οι Υπηρεσίες μας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Parcels" xml:space="preserve">
     <value>Αγροτεμάχιο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Parking" xml:space="preserve">
     <value>Πάρκινγκ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Parking Area" xml:space="preserve">
     <value>Θέση Πάρκινγκ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Κωδικός</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Penthouse" xml:space="preserve">
     <value>Ρετιρέ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Personal settings" xml:space="preserve">
     <value>Προσωπικές ρυθμίσεις</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Pets" xml:space="preserve">
     <value>Κατοικίδια Ζώα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Photos" xml:space="preserve">
-    <value>Εικόνες</value>
+    <value>Φωτογραφίες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Place your ad" xml:space="preserve">
     <value>Καταχωρηση Αγγελιας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Please enter an email address for this site below and click the Register button to finish logging in." xml:space="preserve">
     <value>&lt;/strong&gt;. Εισαγάγετε μια διεύθυνση email για αυτόν τον ιστότοπο παρακάτω και κάντε κλικ στο κουμπί Εγγραφή για να ολοκληρώσετε τη σύνδεση.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Plot of Land" xml:space="preserve">
     <value>Οικόπεδο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Pool" xml:space="preserve">
     <value>Πισίνα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Post a request" xml:space="preserve">
     <value>Καταχώρη αιτήματος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="PostalCode" xml:space="preserve">
     <value>Τ.Κ.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Prefabricated Home" xml:space="preserve">
     <value>Προκατασκευασμένο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Premium" xml:space="preserve">
     <value>Premium</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Premium Features" xml:space="preserve">
     <value>Premium Χαρακτηριστικά</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Prepaid Balance for Ads" xml:space="preserve">
     <value>Προπληρωμένο υπόλοιπο για διαφημίσεις</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Προεπισκόπηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Preview 360" xml:space="preserve">
     <value>Προεπισκόπηση 360</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Preview &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt;&lt;/strong&gt;" xml:space="preserve">
     <value>Προεπισκόπηση &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt; &lt;/strong&gt;</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Αξία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Print" xml:space="preserve">
     <value>Εκτύπωση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Property Area" xml:space="preserve">
     <value>Εμβαδόν Ακινήτου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Property Category" xml:space="preserve">
     <value>Κατηγορία Ακινήτου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Property Features" xml:space="preserve">
     <value>Χαρακτηριστικά Ακινήτου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Property Price" xml:space="preserve">
     <value>Τιμή Ακινήτου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Property Type" xml:space="preserve">
     <value>Είδος Ακινήτου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Public" xml:space="preserve">
     <value>Εμφανίσημη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Publish" xml:space="preserve">
     <value>Δημοσίευση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Publish Ad" xml:space="preserve">
     <value>Δημοσίευση Αγγελίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Publish/Save" xml:space="preserve">
     <value>Δημοσίευση/Αποθήκευση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Range Price" xml:space="preserve">
     <value>Ευρος Τιμης</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Rating" xml:space="preserve">
     <value>Ταξινόμηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Recent Posts" xml:space="preserve">
     <value>Πρόσφατες δημοσιεύσεις</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Recent Searches" xml:space="preserve">
     <value>Πρόσφατες αναζητήσεις</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Refill Balance" xml:space="preserve">
     <value>Φόρτωση Υπολοίπου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Εγγραφή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Register from the applications" xml:space="preserve">
     <value>Κάντε εγγραφή από τις εφαρμογές</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Rent" xml:space="preserve">
     <value>Ενοικίαση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Resend" xml:space="preserve">
     <value>Επαναποστολή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Residential" xml:space="preserve">
     <value>Κατοικία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Επανάληψη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Safety door" xml:space="preserve">
     <value>Πόρτα Ασφαλείας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Safety Frames" xml:space="preserve">
     <value>Κουφώματα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Sale" xml:space="preserve">
     <value>Πώληση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Αποθήκευση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Save Search" xml:space="preserve">
+    <value>Αποθήκευση αναζήτησης</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Saved Searches" xml:space="preserve">
-    <value>Αποθηκευμένες Αναζητήσεις</value>
+    <value>Αποθηκευμένες έρευνες</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Αναζήτηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Search Filters" xml:space="preserve">
     <value>Φίλτρα Αναζήτησης</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Security Alarm" xml:space="preserve">
     <value>Συναγερμό</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="See Other Seller Ads" xml:space="preserve">
     <value>Δείτε Άλλες Αγγελίες του Πωλητή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Επιλέγω</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Select the energy rate of the Property (if available)" xml:space="preserve">
     <value>Επέλεξε την ενεςργειακή κλάση του Ακινήτου (αν είναι διαθέσιμη)</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Semi-outdoors" xml:space="preserve">
     <value>Ημιυπαίθριους</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Στείλετε</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Send verification email" xml:space="preserve">
     <value>Αποστολή email επιβεβαίωσης</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Send your comments &lt;strong&gt;here&lt;/strong&gt;." xml:space="preserve">
     <value>Στειλε τα σχολια σου &lt;strong&gt;εδω&lt;/strong&gt;.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Send your message" xml:space="preserve">
     <value>Στείλε το μήνυμα σου</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Shall we check ?" xml:space="preserve">
     <value>Παμε να δουμε ;</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Share" xml:space="preserve">
     <value>Κοινοποίηση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Share on Facebook" xml:space="preserve">
+    <value>Μοιραστείτε το στο Facebook</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Shop" xml:space="preserve">
     <value>Κατάστημα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Show" xml:space="preserve">
     <value>Εμφάνιση</value>
+    <comment>2021-03-13 19:31:01.833</comment>
+  </data>
+  <data name="Specifications of image" xml:space="preserve">
+    <value>Προδιαγραφές εικόνας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Square" xml:space="preserve">
-    <value>Εμβαδον</value>
+    <value>Τετραγωνικά</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Status Ad" xml:space="preserve">
     <value>Κατάσταση Αγγελίας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Storage" xml:space="preserve">
     <value>Αποθήκη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Studio" xml:space="preserve">
     <value>Studio/Γκαρσονιέρα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Υποκατηγορία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Θέμα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>Υποβολή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Submit Post" xml:space="preserve">
-    <value>Καταχωρειστε Αγγελια</value>
+    <value>Καταχωρείστε Αγγελία</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Subscribe to our newsletter" xml:space="preserve">
     <value>Subscribe to our newsletter</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Subtitle" xml:space="preserve">
     <value>Υπότιτλος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Επίθετο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Terms of use" xml:space="preserve">
     <value>Όρους Χρήσης</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Thank you" xml:space="preserve">
-    <value>Ευχαριστω πολυ</value>
+    <value>Ευχαριστώ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="The Welcome Voucher has just been activated" xml:space="preserve">
-    <value>Μόλις ενεργοποιήθηκε το κουπόνι Καλωσορίσματος</value>
+    <value>Το κουπόνι καλωσορίσματος μόλις ενεργοποιήθηκε</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Title/Name" xml:space="preserve">
     <value>Τίτλος/Όνομα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="to" xml:space="preserve">
     <value>έως</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Τύπος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Type your message here" xml:space="preserve">
     <value>Πληκτρολογήστε το μήνυμά σας εδώ</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Unlocked" xml:space="preserve">
     <value>Ξεκλείδωμα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Uploading photos started" xml:space="preserve">
     <value>Η μεταφόρτωση των φωτογραφιών άρχισε</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Usage For The Current Month" xml:space="preserve">
     <value>Χρήση για τον τρέχοντα μήνα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="valid City" xml:space="preserve">
     <value>έγκυρη πόλη</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="View" xml:space="preserve">
     <value>Θέα</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="views" xml:space="preserve">
     <value>Εμφανίσεις</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Wallet" xml:space="preserve">
     <value>Πορτοφόλι</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="WC" xml:space="preserve">
     <value>WC</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="WebSite" xml:space="preserve">
     <value>Ιστότοπος</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Welcome to Eron.gr" xml:space="preserve">
-    <value>Καλώς Ήρθατε στο Eron.gr</value>
+    <value>Καλώς ήλθατε στο Eron.gr</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="WishList" xml:space="preserve">
-    <value>Λίστα Αγαπημένων</value>
+    <value>Λίστα επιθυμιών</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Write a short description" xml:space="preserve">
     <value>Γράψε μία μικρή περιγραφή</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Write To Us" xml:space="preserve">
     <value>Αφήστε το μήνυμα σας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Year of Renovation" xml:space="preserve">
     <value>Έτος Ανακαίνισης</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ναι</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You can also connect from the applications" xml:space="preserve">
     <value>Μπορείς να συνδεθείς και με τα στοιχεία σου από τις εφαρμογές</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You can choose what amenities are available for the property" xml:space="preserve">
     <value>Μπορείς να διαλέξεις ποιές ανέσεις είναι διαθέσιμες για το ακίνητο</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You can create your own Preview 360 video &lt;sup&gt;o&lt;/sup&gt; with Matterport Capture" xml:space="preserve">
-    <value>Μπορείς να δημιουργήσεις το δικό σου βίντεο Preview 360&lt;sup&gt;o&lt;/sup&gt; μέσω της εφαρμογής Matterport Capture</value>
+    <value>Μπορείτε να δημιουργήσετε το δικό σας βίντεο προεπισκόπησης 360 &lt;sup&gt; o &lt;/sup&gt; με το Matterport Capture</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You can reset your password now." xml:space="preserve">
     <value>Μπορείτε να κάνετε επαναφορά κωδικού τώρα.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You do not have access to this resource." xml:space="preserve">
     <value>You do not have access to this resource.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You have successfully logged out of the application." xml:space="preserve">
     <value>You have successfully logged out of the application.</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You upload the presentation to your account" xml:space="preserve">
-    <value>Ανεβάζεις την παρουσίαση στο λογαριασμό σου</value>
+    <value>Ανεβάζετε την παρουσίαση στον λογαριασμό σας</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
   <data name="You've successfully authenticated with" xml:space="preserve">
     <value>Ο έλεγχος ταυτότητας έγινε επιτυχώς με &lt;strong&gt;</value>
+    <comment>2021-03-13 19:31:01.833</comment>
   </data>
 </root>

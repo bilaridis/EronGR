@@ -119,743 +119,1042 @@
   </resheader>
   <data name="&lt;strong&gt;All&lt;/strong&gt; Languages Available" xml:space="preserve">
     <value>&lt;strong&gt; Toutes &lt;/strong&gt; Langues disponibles</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="&lt;strong&gt;Boosted&lt;/strong&gt; Advertisement" xml:space="preserve">
     <value>Publicité &lt;strong&gt; Boosted &lt;/strong&gt;</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Account Management" xml:space="preserve">
     <value>Gestion de compte</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Activation" xml:space="preserve">
     <value>Activation</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Activation of Premium Ad" xml:space="preserve">
     <value>Activation de l'annonce Premium</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Active" xml:space="preserve">
     <value>actif</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Ad Code" xml:space="preserve">
     <value>Code d'annonce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Ad Management" xml:space="preserve">
     <value>Gestion d'annonces</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Ad Type" xml:space="preserve">
     <value>Type d'annonce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Additional characteristics" xml:space="preserve">
     <value>Caractéristiques supplémentaires</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Additional information" xml:space="preserve">
     <value>Information additionnelle</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Additional Property Features" xml:space="preserve">
     <value>Caractéristiques supplémentaires de la propriété</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Address" xml:space="preserve">
     <value>Adresse</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Air Condition" xml:space="preserve">
     <value>Climatisation</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="and" xml:space="preserve">
     <value>et</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Apartment" xml:space="preserve">
     <value>Appartement</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Apartment Complex" xml:space="preserve">
     <value>Complexe d'appartements</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Area" xml:space="preserve">
     <value>Région</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Ask for the Price" xml:space="preserve">
     <value>Demandez le prix</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Balance" xml:space="preserve">
     <value>Équilibre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Bathrooms" xml:space="preserve">
     <value>Salles de bain</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="BBQ" xml:space="preserve">
     <value>barbecue</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Bedrooms" xml:space="preserve">
     <value>Chambres</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Broker Fee" xml:space="preserve">
     <value>Frais de courtier</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Building" xml:space="preserve">
     <value>Bâtiment</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Bungalow" xml:space="preserve">
     <value>Bungalow</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Business building" xml:space="preserve">
     <value>Bâtiment d'affaires</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="By clicking &lt;em&gt; Register &lt;/em&gt; you automatically agree to our" xml:space="preserve">
     <value>En cliquant sur &lt;em&gt; S'inscrire &lt;/em&gt;, vous les acceptez automatiquement</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="By Completing the submission of your first Ad will be credited" xml:space="preserve">
     <value>En terminant la soumission de votre première annonce sera crédité</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Annulation</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Catégorie</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Change email" xml:space="preserve">
     <value>Changer l'e-mail</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Changer le mot de passe</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Choose" xml:space="preserve">
     <value>Sélection</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Choose a profile image" xml:space="preserve">
     <value>Sélectionnez une photo de profil</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Choose tags for the description" xml:space="preserve">
+    <value>Choisissez des balises pour la description</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Choose which package you want for your ad." xml:space="preserve">
     <value>Choisissez le package que vous souhaitez pour votre annonce.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Choose your preferred language" xml:space="preserve">
     <value>Choisissez la langue que vous voulez</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Click here to Logout" xml:space="preserve">
     <value>Cliquez ici pour se déconnecter</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="CloakRoom" xml:space="preserve">
     <value>Vestiaire</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Fermé</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Commands" xml:space="preserve">
     <value>Commandes d'annonces</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Commercial" xml:space="preserve">
     <value>Affaires Toit</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Company" xml:space="preserve">
     <value>Affaires</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Complete" xml:space="preserve">
     <value>L'intégration</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Complete Registration" xml:space="preserve">
     <value>Achèvement de l'inscription</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Completed" xml:space="preserve">
     <value>Achevée</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Conference Room" xml:space="preserve">
     <value>Pièce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Confirm Password" xml:space="preserve">
     <value>Confirmez le mot de passe</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Construction" xml:space="preserve">
     <value>Construction</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Construction Year" xml:space="preserve">
     <value>Année de construction</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contacter</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Contact Info" xml:space="preserve">
     <value>Informations de contact</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Contact Phone" xml:space="preserve">
     <value>Numéro du contact</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Contact us" xml:space="preserve">
     <value>Nous contacter</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Control Panel" xml:space="preserve">
     <value>Panneau de commande</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Cottage" xml:space="preserve">
     <value>Villa</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="County/Region" xml:space="preserve">
     <value>Préfecture / Région</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Craft Property" xml:space="preserve">
     <value>Espace artisanal</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Create Draft Ad" xml:space="preserve">
     <value>Créer un brouillon d'annonce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Create your own mobile presentation (Compatible with iPhone and iPad)" xml:space="preserve">
     <value>Créez votre propre présentation mobile (Compatible avec iPhone et iPad)</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Current Balance" xml:space="preserve">
     <value>Solde actuel</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Current Costs" xml:space="preserve">
     <value>Coûts actuels</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Effacement</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Deleted" xml:space="preserve">
     <value>Supprimé</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Demand" xml:space="preserve">
     <value>Demande</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Desired Information from Buyers" xml:space="preserve">
     <value>Informations souhaitées par les acheteurs</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Detached House" xml:space="preserve">
     <value>Maison individuelle</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Do you need help" xml:space="preserve">
     <value>vous avez besoin d'aide;</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Draft" xml:space="preserve">
     <value>Brouillon</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Drag the photos here" xml:space="preserve">
     <value>Faites glisser les photos ici</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>En traitement</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Elevator" xml:space="preserve">
     <value>Ascenseur</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="euroSymbol" xml:space="preserve">
     <value>€</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Exchange Rate Table" xml:space="preserve">
+    <value>Tableau des taux de change</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Exhibition Area" xml:space="preserve">
     <value>Galerie</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Farm/Ranch" xml:space="preserve">
     <value>Ferme / Ranch</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Fill in the email to have the password reset email sent to you." xml:space="preserve">
     <value>Remplissez l'e-mail pour recevoir l'e-mail de réinitialisation du mot de passe.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Finance" xml:space="preserve">
     <value>La finance</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Fireplace" xml:space="preserve">
     <value>Cheminée</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="floor" xml:space="preserve">
     <value>Étage</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Follow us" xml:space="preserve">
+    <value>Suivez nous</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Forgot your password" xml:space="preserve">
     <value>Mot de passe oublié?</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="from" xml:space="preserve">
     <value>de</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Furniture" xml:space="preserve">
     <value>Meubles</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Garden" xml:space="preserve">
     <value>Jardin</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="greater than 100" xml:space="preserve">
     <value>supérieur à 100</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Gym" xml:space="preserve">
     <value>Gym</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Hall" xml:space="preserve">
     <value>salle</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Heating System" xml:space="preserve">
     <value>Chauffage</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Hidden Searches" xml:space="preserve">
     <value>Recherches cachées</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Hide" xml:space="preserve">
     <value>Cacher</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Highest -&gt; Lowest Price" xml:space="preserve">
     <value>Prix ​​en baisse</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Home Energy Rate" xml:space="preserve">
     <value>Classe énergétique domestique</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Hotel" xml:space="preserve">
     <value>Hôtel</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Houseboat" xml:space="preserve">
     <value>Péniche</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Housekeeping" xml:space="preserve">
     <value>partagé</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="How can we help you" xml:space="preserve">
     <value>Comment pouvons-nous vous aider</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="How Many Bathrooms Does It Have?" xml:space="preserve">
     <value>Combien de salles de bain a-t-il?</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="How Many Bedrooms Does It Have?" xml:space="preserve">
     <value>Combien de chambre y a-t-il?</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Id" xml:space="preserve">
     <value>Id</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Important Information" xml:space="preserve">
     <value>Une information important</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Inactive" xml:space="preserve">
     <value>Inactif</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Industrial Property" xml:space="preserve">
     <value>Zone industrielle</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Info Card" xml:space="preserve">
     <value>Carte info</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Internet Fiber" xml:space="preserve">
     <value>Fibre optique</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Investment" xml:space="preserve">
     <value>Investissement</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Join to our Page" xml:space="preserve">
     <value>Rejoignez la page</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Land" xml:space="preserve">
     <value>Terre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Langues</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Living room" xml:space="preserve">
     <value>Salon</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Locked" xml:space="preserve">
     <value>Fermé à clé</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Loft" xml:space="preserve">
     <value>Grenier</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Connexion</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Login/Register" xml:space="preserve">
     <value>S'identifier S'enregistrer</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Se déconnecter</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Lowest To Highest" xml:space="preserve">
     <value>Prix ​​croissant</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Maisonette" xml:space="preserve">
     <value>Maisonnette</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Mandatory Information" xml:space="preserve">
     <value>Informations obligatoires</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Master" xml:space="preserve">
     <value>Maître</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="maximum of Characters are 5" xml:space="preserve">
     <value>maximum de caractères sont 5</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="minimum Three Characters" xml:space="preserve">
     <value>minimum trois caractères</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Mobile" xml:space="preserve">
     <value>Mobile</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Mobile Home" xml:space="preserve">
     <value>Amovible</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Month" xml:space="preserve">
     <value>Mois</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Months" xml:space="preserve">
     <value>Mois</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Most Popular" xml:space="preserve">
     <value>Popularité</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Municipality / District" xml:space="preserve">
     <value>Municipalité / District</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="My Card" xml:space="preserve">
     <value>Ma carte</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Mes favoris</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="My information" xml:space="preserve">
     <value>Mon information</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="My Notes" xml:space="preserve">
     <value>Mes notes</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="My Orders" xml:space="preserve">
     <value>Mes commandes</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nom</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="New Construction" xml:space="preserve">
     <value>Nouvelle construction</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="No" xml:space="preserve">
     <value>Non</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="No ads were found according to Search filters." xml:space="preserve">
     <value>Aucune annonce n'a été trouvée selon les filtres de recherche.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="No Orders To Display" xml:space="preserve">
     <value>Aucune commande à afficher</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Notes" xml:space="preserve">
     <value>Remarques</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="number" xml:space="preserve">
     <value>nombre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Obligatory" xml:space="preserve">
     <value>Obligatoire</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Offer" xml:space="preserve">
     <value>Offre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Office" xml:space="preserve">
     <value>Bureau</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>d'accord</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Once the download is complete. Copy the link here" xml:space="preserve">
     <value>Une fois le téléchargement terminé. Copiez le lien ici</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="only Number" xml:space="preserve">
     <value>seulement Nombre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="optional" xml:space="preserve">
     <value>optionnel</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Orders History" xml:space="preserve">
     <value>Historique des commandes</value>
-  </data>
-  <data name="Other" xml:space="preserve">
-    <value>Autres propriétés</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Other Categories" xml:space="preserve">
     <value>Autres catégories</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Other Properties" xml:space="preserve">
+    <value>Autres propriétés</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Our Services" xml:space="preserve">
+    <value>Nos services</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Parcels" xml:space="preserve">
     <value>Terrain</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Parking" xml:space="preserve">
     <value>Parking</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Parking Area" xml:space="preserve">
     <value>Place de parking</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Code</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Penthouse" xml:space="preserve">
     <value>Penthouse</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Personal settings" xml:space="preserve">
     <value>Paramètres personnels</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Pets" xml:space="preserve">
     <value>Animaux domestiques</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Photos" xml:space="preserve">
     <value>Photos</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Place your ad" xml:space="preserve">
     <value>Placez votre annonce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Please enter an email address for this site below and click the Register button to finish logging in." xml:space="preserve">
     <value>&lt;/strong&gt;. Veuillez saisir une adresse e-mail pour ce site ci-dessous et cliquez sur le bouton S'inscrire pour terminer la connexion.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Plot of Land" xml:space="preserve">
     <value>Terrain</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Pool" xml:space="preserve">
     <value>bassin</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Post a request" xml:space="preserve">
     <value>Demander une entrée</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="PostalCode" xml:space="preserve">
     <value>Code postal</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Prefabricated Home" xml:space="preserve">
     <value>Préfabriqué</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Premium" xml:space="preserve">
     <value>Premium</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Premium Features" xml:space="preserve">
     <value>Des fonctionnalités premium</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Prepaid Balance for Ads" xml:space="preserve">
     <value>Solde prépayé pour les annonces</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Aperçu</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Preview 360" xml:space="preserve">
     <value>Aperçu 360</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Preview &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt;&lt;/strong&gt;" xml:space="preserve">
     <value>Aperçu &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt; &lt;/strong&gt;</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Valeur</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Print" xml:space="preserve">
     <value>Impression</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Property Area" xml:space="preserve">
     <value>Zone de propriété</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Property Category" xml:space="preserve">
     <value>Catégorie d'annonce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Property Features" xml:space="preserve">
     <value>Caractéristiques de l'établissement</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Property Price" xml:space="preserve">
     <value>Prix ​​de l'immobilier</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Property Type" xml:space="preserve">
     <value>Type de propriété</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Public" xml:space="preserve">
     <value>Publique</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Publish" xml:space="preserve">
     <value>Publication</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Publish Ad" xml:space="preserve">
     <value>Publier une annonce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Publish/Save" xml:space="preserve">
     <value>Publier / Enregistrer</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Range Price" xml:space="preserve">
     <value>Échelle des prix</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Rating" xml:space="preserve">
     <value>Classification</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Recent Posts" xml:space="preserve">
     <value>Annonces récentes</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Recent Searches" xml:space="preserve">
     <value>recherches récentes</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Refill Balance" xml:space="preserve">
     <value>Solde de recharge</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Register" xml:space="preserve">
     <value>S'inscrire</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Register from the applications" xml:space="preserve">
     <value>Inscrivez-vous depuis les applications</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Rent" xml:space="preserve">
     <value>Location</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Resend" xml:space="preserve">
     <value>Retransmission</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Residential" xml:space="preserve">
     <value>Résidence</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Répétition</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Safety door" xml:space="preserve">
     <value>Porte de sécurité</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Safety Frames" xml:space="preserve">
     <value>Cadres</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Sale" xml:space="preserve">
     <value>Vente</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Save" xml:space="preserve">
     <value>sauver</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Save Search" xml:space="preserve">
+    <value>Sauvegarder la recherche</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Saved Searches" xml:space="preserve">
     <value>Recherches sauvegardées</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Chercher</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Search Filters" xml:space="preserve">
     <value>Filtres de recherche</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Security Alarm" xml:space="preserve">
     <value>Alarme</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="See Other Seller Ads" xml:space="preserve">
     <value>Voir d'autres annonces de vendeurs</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Sélectionner</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Select the energy rate of the Property (if available)" xml:space="preserve">
     <value>Sélectionnez la classe énergétique de la propriété (si disponible)</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Semi-outdoors" xml:space="preserve">
     <value>Semi-extérieur</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Envoyer</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Send verification email" xml:space="preserve">
     <value>Envoyer email de vérification</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Send your comments &lt;strong&gt;here&lt;/strong&gt;." xml:space="preserve">
     <value>Envoyez vos commentaires &lt;strong&gt; ici &lt;/strong&gt;.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Send your message" xml:space="preserve">
     <value>Envoyez votre message</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Shall we check ?" xml:space="preserve">
     <value>Allons-nous voir?</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Share" xml:space="preserve">
     <value>Partager</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Share on Facebook" xml:space="preserve">
+    <value>Partager sur Facebook</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Shop" xml:space="preserve">
     <value>Boutique</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Show" xml:space="preserve">
     <value>Apparence</value>
+    <comment>2021-03-13 19:33:59.153</comment>
+  </data>
+  <data name="Specifications of image" xml:space="preserve">
+    <value>Spécifications de l'image</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Square" xml:space="preserve">
     <value>Carré</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Status Ad" xml:space="preserve">
     <value>Statut de la liste</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Storage" xml:space="preserve">
     <value>Entrepôt</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Studio" xml:space="preserve">
     <value>Studio</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Sous-catégorie</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Thème</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>Soumettre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Submit Post" xml:space="preserve">
     <value>Soumettre l'annonce</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Subscribe to our newsletter" xml:space="preserve">
     <value>Abonnez-vous à notre newsletter</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Subtitle" xml:space="preserve">
     <value>Sous-titre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Adjectif</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Terms of use" xml:space="preserve">
     <value>Conditions d'utilisation</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Thank you" xml:space="preserve">
     <value>Merci</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="The Welcome Voucher has just been activated" xml:space="preserve">
     <value>Le bon de bienvenue vient d'être activé</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Title/Name" xml:space="preserve">
     <value>Nom du titre</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="to" xml:space="preserve">
     <value>à</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Type your message here" xml:space="preserve">
     <value>tapez votre message ici</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Unlocked" xml:space="preserve">
     <value>Déverrouillé</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Uploading photos started" xml:space="preserve">
     <value>Le téléchargement des photos a commencé</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Usage For The Current Month" xml:space="preserve">
     <value>Utilisation pour le mois en cours</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="valid City" xml:space="preserve">
     <value>ville valide</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="View" xml:space="preserve">
     <value>Vue</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="views" xml:space="preserve">
     <value>Vues</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Wallet" xml:space="preserve">
     <value>Portefeuille</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="WC" xml:space="preserve">
     <value>toilettes</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="WebSite" xml:space="preserve">
     <value>Site Internet</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Welcome to Eron.gr" xml:space="preserve">
     <value>Bienvenue à Eron.gr</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="WishList" xml:space="preserve">
     <value>Liste de souhaits</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Write a short description" xml:space="preserve">
     <value>Rédigez une brève description</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Write To Us" xml:space="preserve">
     <value>Laissez votre message</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Year of Renovation" xml:space="preserve">
     <value>Année de rénovation</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Oui</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You can also connect from the applications" xml:space="preserve">
     <value>Vous pouvez également vous connecter à vos données depuis les applications</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You can choose what amenities are available for the property" xml:space="preserve">
     <value>Vous pouvez choisir les équipements disponibles pour la propriété</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You can create your own Preview 360 video &lt;sup&gt;o&lt;/sup&gt; with Matterport Capture" xml:space="preserve">
     <value>Vous pouvez créer votre propre vidéo Preview 360 &lt;sup&gt; o &lt;/sup&gt; avec Matterport Capture</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You can reset your password now." xml:space="preserve">
     <value>Vous pouvez réinitialiser votre mot de passe maintenant.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You do not have access to this resource." xml:space="preserve">
     <value>Vous n'avez pas accès à cette ressource.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You have successfully logged out of the application." xml:space="preserve">
     <value>Vous vous êtes déconnecté de l'application avec succès.</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You upload the presentation to your account" xml:space="preserve">
     <value>Vous téléchargez la présentation sur votre compte</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
   <data name="You've successfully authenticated with" xml:space="preserve">
     <value>Vous vous êtes authentifié avec &lt;strong&gt;</value>
+    <comment>2021-03-13 19:33:59.153</comment>
   </data>
 </root>

@@ -119,668 +119,1042 @@
   </resheader>
   <data name="&lt;strong&gt;All&lt;/strong&gt; Languages Available" xml:space="preserve">
     <value>&lt;strong&gt; Tüm &lt;/strong&gt; Diller Mevcuttur</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="&lt;strong&gt;Boosted&lt;/strong&gt; Advertisement" xml:space="preserve">
     <value>&lt;strong&gt; Güçlendirilmiş &lt;/strong&gt; Reklam</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Account Management" xml:space="preserve">
     <value>Hesap Yönetimi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Activation" xml:space="preserve">
+    <value>Aktivasyon</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Activation of Premium Ad" xml:space="preserve">
+    <value>Premium Reklamın Etkinleştirilmesi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Active" xml:space="preserve">
     <value>Aktif</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Ad Code" xml:space="preserve">
     <value>İlan Kodu</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Ad Management" xml:space="preserve">
     <value>reklam yöneticiliği</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Ad Type" xml:space="preserve">
     <value>İlan Türü</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Additional characteristics" xml:space="preserve">
     <value>Ek özellikler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Additional information" xml:space="preserve">
     <value>Ek bilgi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Additional Property Features" xml:space="preserve">
     <value>Ek Mülk Özellikleri</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Address" xml:space="preserve">
     <value>Adres</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Air Condition" xml:space="preserve">
     <value>Klima</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="and" xml:space="preserve">
     <value>ve</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Apartment" xml:space="preserve">
     <value>Apartman</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Apartment Complex" xml:space="preserve">
     <value>Apartman kompleksi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Area" xml:space="preserve">
     <value>Bölge</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Ask for the Price" xml:space="preserve">
     <value>Fiyat İsteyin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Denge</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Bathrooms" xml:space="preserve">
     <value>Banyolar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="BBQ" xml:space="preserve">
     <value>Barbekü</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Bedrooms" xml:space="preserve">
     <value>Yatak odaları</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Broker Fee" xml:space="preserve">
+    <value>Broker Ücreti</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Building" xml:space="preserve">
     <value>Bina</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Bungalow" xml:space="preserve">
     <value>Tek katlı ev</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Business building" xml:space="preserve">
     <value>İş binası</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="By clicking &lt;em&gt; Register &lt;/em&gt; you automatically agree to our" xml:space="preserve">
     <value>&lt;em&gt; Kaydol &lt;/em&gt; 'u tıklayarak bunları otomatik olarak kabul etmiş olursunuz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="By Completing the submission of your first Ad will be credited" xml:space="preserve">
+    <value>İlk İlanınızın teslimi tamamlandığında kredilendirilecektir.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>İptal</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Kategori</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Change email" xml:space="preserve">
     <value>Değişim e-posta</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Şifre değiştir</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Choose" xml:space="preserve">
     <value>Seçimi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Choose a profile image" xml:space="preserve">
     <value>Görüntü seçimi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Choose tags for the description" xml:space="preserve">
+    <value>Açıklama için etiketleri seçin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Choose which package you want for your ad." xml:space="preserve">
+    <value>Reklamınız için istediğiniz paketi seçin.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Choose your preferred language" xml:space="preserve">
     <value>İstediğiniz dili seçin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Click here to Logout" xml:space="preserve">
     <value>Çıkış yapmak için buraya tıklayın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="CloakRoom" xml:space="preserve">
     <value>Vestiyer</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Kapanış</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Commands" xml:space="preserve">
     <value>İlan Siparişleri</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Commercial" xml:space="preserve">
     <value>İş Çatı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Company" xml:space="preserve">
     <value>İş</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Complete" xml:space="preserve">
     <value>Entegrasyon</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Complete Registration" xml:space="preserve">
     <value>Kayıt Tamamlama</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Completed" xml:space="preserve">
     <value>Tamamlayınız</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Conference Room" xml:space="preserve">
     <value>Oda</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Confirm Password" xml:space="preserve">
     <value>Şifreyi Onayla</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Construction" xml:space="preserve">
     <value>İnşaat</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Construction Year" xml:space="preserve">
     <value>Yapım Yılı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>İletişim</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Contact Info" xml:space="preserve">
     <value>İletişim bilgileri</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Contact Phone" xml:space="preserve">
     <value>İletişim Telefonu</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Contact us" xml:space="preserve">
     <value>Bize Ulaşın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Control Panel" xml:space="preserve">
     <value>Kontrol Paneli</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Cottage" xml:space="preserve">
     <value>Villa</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="County/Region" xml:space="preserve">
     <value>İdari Bölge / Bölge</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Craft Property" xml:space="preserve">
     <value>Zanaat alanı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Create Draft Ad" xml:space="preserve">
     <value>Taslak Reklam Oluşturun</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Create your own mobile presentation (Compatible with iPhone and iPad)" xml:space="preserve">
+    <value>Kendi mobil sunumunuzu oluşturun (iPhone ve iPad ile uyumlu)</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Current Balance" xml:space="preserve">
+    <value>Mevcut Bakiye</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Current Costs" xml:space="preserve">
+    <value>Mevcut Maliyetler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Silme</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Deleted" xml:space="preserve">
     <value>silindi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Demand" xml:space="preserve">
     <value>Talep</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Açıklama</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Desired Information from Buyers" xml:space="preserve">
     <value>Alıcılardan İstenen Bilgiler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Detached House" xml:space="preserve">
     <value>Müstakil ev</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Do you need help" xml:space="preserve">
     <value>yardıma ihtiyacın var;</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Draft" xml:space="preserve">
     <value>Taslak</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Drag the photos here" xml:space="preserve">
     <value>Fotoğrafları buraya sürükleyin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>İşleme</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Elevator" xml:space="preserve">
     <value>Asansör</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Email" xml:space="preserve">
     <value>E-posta</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="euroSymbol" xml:space="preserve">
     <value>€</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Exchange Rate Table" xml:space="preserve">
+    <value>Döviz Kuru Tablosu</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Exhibition Area" xml:space="preserve">
     <value>Fotoğraf Galerisi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Farm/Ranch" xml:space="preserve">
     <value>Çiftlik / Çiftlik</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Fill in the email to have the password reset email sent to you." xml:space="preserve">
     <value>Şifre sıfırlama e-postasının size gönderilmesi için e-postayı doldurun.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Finance" xml:space="preserve">
+    <value>Finansman</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Fireplace" xml:space="preserve">
     <value>Şömine</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="floor" xml:space="preserve">
     <value>Zemin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Follow us" xml:space="preserve">
+    <value>Bizi takip et</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Forgot your password" xml:space="preserve">
     <value>Parolanızı mı unuttunuz?</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="from" xml:space="preserve">
     <value>itibaren</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Furniture" xml:space="preserve">
     <value>Mobilya</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Garden" xml:space="preserve">
     <value>Bahçe</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="greater than 100" xml:space="preserve">
     <value>100'den fazla</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Gym" xml:space="preserve">
     <value>Jimnastik</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Hall" xml:space="preserve">
     <value>Salon</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Heating System" xml:space="preserve">
     <value>Isıtma</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Hidden Searches" xml:space="preserve">
     <value>Gizli Aramalar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Hide" xml:space="preserve">
     <value>Saklamak</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Highest -&gt; Lowest Price" xml:space="preserve">
     <value>Düşen fiyat</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Home Energy Rate" xml:space="preserve">
     <value>Ev enerji sınıfı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Hotel" xml:space="preserve">
     <value>Otel</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Houseboat" xml:space="preserve">
     <value>Tekne ev</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Housekeeping" xml:space="preserve">
     <value>Paylaşılan</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="How can we help you" xml:space="preserve">
     <value>Nasıl yardım edebiliriz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="How Many Bathrooms Does It Have?" xml:space="preserve">
     <value>Kaç Banyo Var?</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="How Many Bedrooms Does It Have?" xml:space="preserve">
     <value>Kaç yatak odası var?</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Id" xml:space="preserve">
     <value>İD</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Important Information" xml:space="preserve">
     <value>Önemli bilgi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Inactive" xml:space="preserve">
     <value>Etkin değil</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Industrial Property" xml:space="preserve">
     <value>Endüstriyel alan</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Info Card" xml:space="preserve">
     <value>Bilgi Kartı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Internet Fiber" xml:space="preserve">
     <value>Optik lif</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Investment" xml:space="preserve">
+    <value>Yatırım</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Join to our Page" xml:space="preserve">
     <value>Sayfaya katılın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Land" xml:space="preserve">
+    <value>Arazi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Diller</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Living room" xml:space="preserve">
     <value>Oturma odası</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Locked" xml:space="preserve">
     <value>Kilitli</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Loft" xml:space="preserve">
     <value>Loft</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Bağ</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Login/Register" xml:space="preserve">
     <value>Giriş / Kayıt</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Çıkış Yap</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Lowest To Highest" xml:space="preserve">
     <value>Artan fiyat</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Maisonette" xml:space="preserve">
     <value>İki Katlı Daire</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Mandatory Information" xml:space="preserve">
     <value>Zorunlu Bilgi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Master" xml:space="preserve">
     <value>Usta</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="maximum of Characters are 5" xml:space="preserve">
     <value>maksimum karakter 5'tir</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="minimum Three Characters" xml:space="preserve">
     <value>minimum üç karakter</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Mobile" xml:space="preserve">
     <value>Cep Telefonu</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Mobile Home" xml:space="preserve">
     <value>Çıkarılabilir</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Month" xml:space="preserve">
     <value>Ay</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Months" xml:space="preserve">
     <value>Aylar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Most Popular" xml:space="preserve">
     <value>Popülerlik</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Municipality / District" xml:space="preserve">
     <value>Belediye / Bölge</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="My Card" xml:space="preserve">
     <value>Benim kartım</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>Favorilerim</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="My information" xml:space="preserve">
     <value>Benim bilgim</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="My Notes" xml:space="preserve">
     <value>Notlarım</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="My Orders" xml:space="preserve">
     <value>Siparişlerim</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Name" xml:space="preserve">
     <value>İsim</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="New Construction" xml:space="preserve">
+    <value>Yeni İnşaat</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="No" xml:space="preserve">
     <value>Hayır</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="No ads were found according to Search filters." xml:space="preserve">
     <value>Arama filtrelerine göre ilan bulunamadı.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="No Orders To Display" xml:space="preserve">
+    <value>Görüntülenecek Sipariş Yok</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Notes" xml:space="preserve">
     <value>Notlar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="number" xml:space="preserve">
     <value>numara</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Obligatory" xml:space="preserve">
     <value>Zorunlu</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Teklif</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Office" xml:space="preserve">
     <value>Ofis</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Tamam</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Once the download is complete. Copy the link here" xml:space="preserve">
+    <value>İndirme tamamlandığında. Bağlantıyı buraya kopyalayın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="only Number" xml:space="preserve">
     <value>sadece Numara</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="optional" xml:space="preserve">
     <value>isteğe bağlı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Orders History" xml:space="preserve">
+    <value>Sipariş Geçmişi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Other Categories" xml:space="preserve">
     <value>Diğer Kategoriler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Other Properties" xml:space="preserve">
     <value>Diğer Özellikler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Our Services" xml:space="preserve">
+    <value>hizmetlerimiz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Parcels" xml:space="preserve">
     <value>Arsa</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Parking" xml:space="preserve">
     <value>Otopark</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Parking Area" xml:space="preserve">
     <value>Park alanı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Kod</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Penthouse" xml:space="preserve">
     <value>Çatı katı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Personal settings" xml:space="preserve">
     <value>Kişisel ayarlar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Pets" xml:space="preserve">
     <value>Evcil Hayvanlar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Photos" xml:space="preserve">
     <value>Fotoğraflar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Place your ad" xml:space="preserve">
     <value>Reklamınızı yerleştirin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Please enter an email address for this site below and click the Register button to finish logging in." xml:space="preserve">
     <value>&lt;/strong&gt;. Lütfen aşağıya bu site için bir e-posta adresi girin ve oturum açmayı bitirmek için Kaydol düğmesini tıklayın.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Plot of Land" xml:space="preserve">
     <value>Arsa</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Pool" xml:space="preserve">
     <value>Havuz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Post a request" xml:space="preserve">
     <value>Giriş talep et</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="PostalCode" xml:space="preserve">
     <value>Posta kodu</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Prefabricated Home" xml:space="preserve">
     <value>Prefabrik</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Premium" xml:space="preserve">
     <value>Premium</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Premium Features" xml:space="preserve">
     <value>Premium Özellikler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Prepaid Balance for Ads" xml:space="preserve">
+    <value>Reklamlar için Ön Ödemeli Bakiye</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Ön izleme</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Preview 360" xml:space="preserve">
     <value>360 Önizleme</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Preview &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt;&lt;/strong&gt;" xml:space="preserve">
     <value>Önizleme &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt; &lt;/strong&gt;</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Fiyat</value>
+    <value>Değer</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Print" xml:space="preserve">
     <value>Yazdır</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Property Area" xml:space="preserve">
     <value>Emlak Alanı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Property Category" xml:space="preserve">
     <value>İlan Kategorisi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Property Features" xml:space="preserve">
     <value>mülk özellikleri</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Property Price" xml:space="preserve">
     <value>Emlak fiyatı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Property Type" xml:space="preserve">
     <value>Emlak Tipi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Public" xml:space="preserve">
     <value>Gözle görülür</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Publish" xml:space="preserve">
     <value>Yayın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Publish Ad" xml:space="preserve">
     <value>İlan Vermek</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Publish/Save" xml:space="preserve">
     <value>Yayınla / Kaydet</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Range Price" xml:space="preserve">
     <value>Fiyat aralığı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Rating" xml:space="preserve">
     <value>Sınıflandırma</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Recent Posts" xml:space="preserve">
     <value>yakın zamanda Gönderilenler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Recent Searches" xml:space="preserve">
     <value>son aramalar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Refill Balance" xml:space="preserve">
+    <value>Bakiyeyi Yeniden Doldur</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Register" xml:space="preserve">
     <value>kaydol</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Register from the applications" xml:space="preserve">
     <value>Uygulamalardan kaydolun</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Rent" xml:space="preserve">
     <value>Kiracılık</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Resend" xml:space="preserve">
     <value>Yeniden iletim</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Residential" xml:space="preserve">
     <value>Konut</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Tekrarlama</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Safety door" xml:space="preserve">
     <value>Güvenlik kapısı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Safety Frames" xml:space="preserve">
     <value>Çerçeveler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Sale" xml:space="preserve">
     <value>Satış</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Kayıt etmek</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Save Search" xml:space="preserve">
+    <value>Kaydet arama</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Saved Searches" xml:space="preserve">
     <value>Kaydedilmiş Aramalar</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Arama</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Search Filters" xml:space="preserve">
     <value>Arama Filtreleri</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Security Alarm" xml:space="preserve">
     <value>Alarm</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="See Other Seller Ads" xml:space="preserve">
     <value>Diğer Satıcı Reklamlarını Gör</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Seçiniz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Select the energy rate of the Property (if available)" xml:space="preserve">
     <value>Mülkün enerji sınıfını seçin (varsa)</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Semi-outdoors" xml:space="preserve">
     <value>Yarı açık havada</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Gönder</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Send verification email" xml:space="preserve">
     <value>doğrulama e-postası gönder</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Send your comments &lt;strong&gt;here&lt;/strong&gt;." xml:space="preserve">
     <value>Yorumlarınızı &lt;strong&gt; buraya &lt;/strong&gt; gönderin.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Send your message" xml:space="preserve">
     <value>Mesajınızı gönderin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Shall we check ?" xml:space="preserve">
     <value>Gidip görelim mi?</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Share" xml:space="preserve">
     <value>Paylaş</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Share on Facebook" xml:space="preserve">
+    <value>Facebook'ta Paylaş</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Shop" xml:space="preserve">
     <value>Mağaza</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Show" xml:space="preserve">
     <value>Görünüm</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Specifications of image" xml:space="preserve">
+    <value>Görüntünün özellikleri</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Square" xml:space="preserve">
-    <value>Alan</value>
+    <value>Meydan</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Status Ad" xml:space="preserve">
     <value>İlan Durumu</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Storage" xml:space="preserve">
     <value>Depo</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Studio" xml:space="preserve">
     <value>Stüdyo</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Alt kategori</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Tema</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>Gönder</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Submit Post" xml:space="preserve">
     <value>İlan gönder</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Subscribe to our newsletter" xml:space="preserve">
     <value>Haber bültenimize abone ol</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Subtitle" xml:space="preserve">
     <value>Alt yazı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Sıfat</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Terms of use" xml:space="preserve">
     <value>Kullanım Şartları</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Thank you" xml:space="preserve">
+    <value>teşekkür ederim</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="The Welcome Voucher has just been activated" xml:space="preserve">
+    <value>Hoş Geldiniz Kuponu yeni etkinleştirildi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Title/Name" xml:space="preserve">
     <value>Başlık adı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="to" xml:space="preserve">
     <value>e</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Tür</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Type your message here" xml:space="preserve">
     <value>Mesajınızı buraya yazın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Unlocked" xml:space="preserve">
     <value>Kilidini aç</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Uploading photos started" xml:space="preserve">
     <value>Fotoğrafların yüklenmesi başladı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Usage For The Current Month" xml:space="preserve">
+    <value>Geçerli Ay İçin Kullanım</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="valid City" xml:space="preserve">
     <value>geçerli şehir</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="View" xml:space="preserve">
     <value>Görünüm</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="views" xml:space="preserve">
     <value>Görünümler</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Wallet" xml:space="preserve">
     <value>Cüzdan</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="WC" xml:space="preserve">
     <value>tuvalet</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="WebSite" xml:space="preserve">
     <value>İnternet sitesi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="Welcome to Eron.gr" xml:space="preserve">
+    <value>Eron.gr'ye hoş geldiniz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="WishList" xml:space="preserve">
     <value>İstek Listesi</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Write a short description" xml:space="preserve">
     <value>Kısa bir açıklama yazın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Write To Us" xml:space="preserve">
     <value>Mesajınızı bırakın</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Year of Renovation" xml:space="preserve">
     <value>Yenileme Yılı</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Evet</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="You can also connect from the applications" xml:space="preserve">
     <value>Verilerinize uygulamalardan da bağlanabilirsiniz.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="You can choose what amenities are available for the property" xml:space="preserve">
     <value>Mülk için hangi olanakların mevcut olduğunu seçebilirsiniz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="You can create your own Preview 360 video &lt;sup&gt;o&lt;/sup&gt; with Matterport Capture" xml:space="preserve">
+    <value>Matterport Capture ile kendi Preview 360 videonuzu &lt;sup&gt; o &lt;/sup&gt; oluşturabilirsiniz</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="You can reset your password now." xml:space="preserve">
     <value>Şifrenizi şimdi sıfırlayabilirsiniz.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="You do not have access to this resource." xml:space="preserve">
     <value>Bu kaynağa erişiminiz yok.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="You have successfully logged out of the application." xml:space="preserve">
     <value>Uygulamadan başarıyla çıkış yaptınız.</value>
+    <comment>2021-03-13 19:34:53.400</comment>
+  </data>
+  <data name="You upload the presentation to your account" xml:space="preserve">
+    <value>Sunuyu hesabınıza yükleyin</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
   <data name="You've successfully authenticated with" xml:space="preserve">
     <value>ile başarıyla kimlik doğruladınız &lt;strong&gt;</value>
+    <comment>2021-03-13 19:34:53.400</comment>
   </data>
 </root>
