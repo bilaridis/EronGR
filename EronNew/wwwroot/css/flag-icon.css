@@ -869,6 +869,13 @@
     .flag-icon-in.flag-icon-squared {
         background-image: url(../flags/1x1/in.svg);
     }
+.flag-icon-hi-in {
+    background-image: url(../flags/4x3/in.svg);
+}
+
+    .flag-icon-hi-in.flag-icon-squared {
+        background-image: url(../flags/1x1/in.svg);
+    }
 
 .flag-icon-io {
     background-image: url(../flags/4x3/io.svg);

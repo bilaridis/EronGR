@@ -16,6 +16,7 @@
 
 	$.i18n = $.i18n || {};
 	$.extend($.i18n.fallbacks, {
+		hi:['hi-IN'],
 		el: ['el-GR'],
 		en: ['en-US'],
 		ab: [ 'ru' ],
