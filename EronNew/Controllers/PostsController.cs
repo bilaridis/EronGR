@@ -56,6 +56,9 @@ namespace EronNew.Models
         {
             try
             {
+                ViewData["domain"] = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+
+
                 if (id == null)
                 {
                     return RedirectToAction("Index", "Home");

@@ -7,34 +7,22 @@
     ViewData["Title"] = "Administration Panel";
     Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
 }
-<div class="card card-cascade z-depth-1 mt-1 col">
-
+<div class="card mt-2">
     <!-- Card image -->
-    <div class="view view-cascade gradient-card-header gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between">
-
-        <div>
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-th-large mt-0"></i></button>*@
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-columns mt-0"></i></button>*@
-        </div>
-
-        <a href="" class="white-text mx-3">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SavedSearches))</a>
-
-        <div>
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-pencil-alt mt-0"></i></button>*@
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-eraser mt-0"></i></button>*@
-            @*<button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i class="fas fa-info-circle mt-0"></i></button>*@
-        </div>
-
+    <div class="card-header gradient text-light text-center ">
+        <span>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.SavedSearches))</span>
     </div>
     <!-- /Card image -->
 
-    <div class="px-4 table-responsive col-12">
+    <div class="card-body">
         <!-- Table -->
         <table id="dtMaterialDesignExample" class="table table-hover col-12">
             <!-- Table head -->
             <thead>
                 <tr>
-                    <th></th>
+                    <th>
+
+                    </th>
                 </tr>
             </thead>
             <!-- Table head -->
@@ -45,23 +33,12 @@
                     <tr id="@item.Id">
                         <td class="pb-1 p-0">
                             <a href="/Home/Search/?@(item.QueryString)">
-                                <div class="media">
-                                    <img class="d-flex mr-3" src="~/images/molecular.png" alt="Browser Search" width=" 60">
-                                    <div class="media-body">
-
-                                        <h6 class="mt-1 font-weight-bold">
-                                            <a href="/Home/Search/?@(item.QueryString)">@item.Title  <i class="fas fa-external-link-alt"></i></a>
-                                            <button type="button" class="close float-right" aria-label="Close" data-queryid="@item.Id">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </h6>
-
-                                        <p class="text-muted">
-
-                                        </p>
-                                        <a>
-                                            <span class="badge badge-info float-right">@item.CreatedAt</span>
-                                        </a>
+                                <!-- Comment -->
+                                <div class="d-flex align-items-start mb-4">
+                                    <div class="col-12 position-relative">
+                                        <img src="~/images/molecular.png" class="img-fluid shadow-1-strong rounded" width="60" height="60" />
+                                        <a href="/Home/Search/?@(item.QueryString)" class="mb-2"><strong><span class="badge badge-info float-right"></span>@item.Title - @item.CreatedAt</strong></a>
+                                        <button type="button" class="btn-close position-absolute end-0 top-0" aria-label="Close" data-queryid="@item.Id"></button>
                                     </div>
                                 </div>
                             </a>
@@ -71,7 +48,7 @@
             </tbody>
         </table>
     </div>
-
+</div>
     @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
     @section Scripts{
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

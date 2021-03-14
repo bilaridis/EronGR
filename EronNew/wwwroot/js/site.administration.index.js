@@ -102,16 +102,11 @@
             window.location.href = domainUrl + "/Posts/Details/" + $(this).data("postid");
         });
 
-        $(".toggle-premium").change(function () {
-
-            if ($(this).is(':checked')) {
-                $('#postId').val($(this).data('postid'));
-                $('.bd-example-modal-xl').modal('show');
-                $(this).prop('checked', false);
-            }
-            else {
-                //$('#Post_Premium').val('False');
-            }
+        $(`input[name="Post.Premium"]`).click(function () {
+            $('#postId').val($(this).data('postid'));
+            $('.bd-example-modal-xl').modal('show');
+            $("#option1").prop('checked', true);
+            $("#option2").prop('checked', false);
         });
 
         $('.product-activate').on('click', function () {
@@ -121,20 +116,56 @@
             $.ajax({
                 url: `${domainUrl}/api/Order/${$("#postId").val()}`,
                 method: "POST",
-                dataType: 'text',
                 data: jsonData
             })
                 .done(function (msg) {
-                    //alert(msg);
+                    $(`input[name="Post.Premium"]`).attr({ 'disabled': 'disabled' });
+                    $("#option1").prop('checked', false);
+                    $("#option2").prop('checked', true);
                     $('.bd-example-modal-xl').modal('hide');
-                    $(`input[class="toggle-premium"][data-postid="${$("#postId").val()}"]`).attr({ 'disabled': 'disabled' });
-                    $(`input[class="toggle-premium"][data-postid="${$("#postId").val()}"]`).prop('checked', true);
+                    $('.premium-feature').removeAttr('disabled');
                 })
                 .fail(function (jqXHR, textStatus) {
+                    $('.bd-example-modal-xl').modal('show');
                     toastr.error('Κάτι πήγε στραβά. Θα το κοιτάξουμε αμέσως.');
-                    $(`input[class="toggle-premium"][data-postid="${$("#postId").val()}"]`).prop('checked', false);
+                    $(`input[name="Post.Premium"]`).removeAttr('disabled');
+                    $("#option1").prop('checked', true);
+                    $("#option2").prop('checked', false);
                 });
         });
+        //$(".toggle-premium").change(function () {
+
+        //    if ($(this).is(':checked')) {
+        //        $('#postId').val($(this).data('postid'));
+        //        $('.bd-example-modal-xl').modal('show');
+        //        $(this).prop('checked', false);
+        //    }
+        //    else {
+        //        //$('#Post_Premium').val('False');
+        //    }
+        //});
+
+        //$('.product-activate').on('click', function () {
+        //    var jsonData = {
+        //        productId: $(this).data('product')
+        //    };
+        //    $.ajax({
+        //        url: `${domainUrl}/api/Order/${$("#postId").val()}`,
+        //        method: "POST",
+        //        dataType: 'text',
+        //        data: jsonData
+        //    })
+        //        .done(function (msg) {
+        //            //alert(msg);
+        //            $('.bd-example-modal-xl').modal('hide');
+        //            $(`input[class="toggle-premium"][data-postid="${$("#postId").val()}"]`).attr({ 'disabled': 'disabled' });
+        //            $(`input[class="toggle-premium"][data-postid="${$("#postId").val()}"]`).prop('checked', true);
+        //        })
+        //        .fail(function (jqXHR, textStatus) {
+        //            toastr.error('Κάτι πήγε στραβά. Θα το κοιτάξουμε αμέσως.');
+        //            $(`input[class="toggle-premium"][data-postid="${$("#postId").val()}"]`).prop('checked', false);
+        //        });
+        //});
 
         //$('#dtMaterialDesignExample').DataTable({
         //    "searching": true,

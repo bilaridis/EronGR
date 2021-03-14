@@ -117,628 +117,1044 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&lt;strong&gt;All&lt;/strong&gt; Languages Available" xml:space="preserve">
+    <value>&lt;strong&gt;all&lt;/strong&gt; भाषाओं उपलब्ध</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="&lt;strong&gt;Boosted&lt;/strong&gt; Advertisement" xml:space="preserve">
+    <value>&lt;strong&gt;boosted&lt;/strong&gt; विज्ञापन</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
   <data name="Account Management" xml:space="preserve">
     <value>खाता प्रबंधन</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Activation" xml:space="preserve">
+    <value>सक्रियण</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Activation of Premium Ad" xml:space="preserve">
+    <value>प्रीमियम विज्ञापन की सक्रियता</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Active" xml:space="preserve">
     <value>सक्रिय</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Ad Code" xml:space="preserve">
     <value>विज्ञापन कोड</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Ad Management" xml:space="preserve">
     <value>विज्ञापन प्रबंधन</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Ad Type" xml:space="preserve">
     <value>विज्ञापन का प्रकार</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Additional characteristics" xml:space="preserve">
     <value>अतिरिक्त विशेषताएं</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Additional information" xml:space="preserve">
     <value>अधिक जानकारी </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Additional Property Features" xml:space="preserve">
     <value>अतिरिक्त संपत्ति सुविधाएँ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Address" xml:space="preserve">
     <value>पता </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Air Condition" xml:space="preserve">
     <value>वातानुकूलन</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="and" xml:space="preserve">
     <value>और </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Apartment" xml:space="preserve">
     <value>अपार्टमेंट</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Apartment Complex" xml:space="preserve">
     <value>अपार्टमेंट कॉम्प्लेक्स</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Area" xml:space="preserve">
     <value>इलाका </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Ask for the Price" xml:space="preserve">
+    <value>कीमत पूछें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>शेष</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Bathrooms" xml:space="preserve">
     <value>बाथरूम</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="BBQ" xml:space="preserve">
     <value>बारबेक्यू</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Bedrooms" xml:space="preserve">
     <value>सोने का कमरा </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Broker Fee" xml:space="preserve">
+    <value>दलाल की फीस </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Building" xml:space="preserve">
     <value>इमारत</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Bungalow" xml:space="preserve">
     <value>बंगला</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Business building" xml:space="preserve">
     <value>दफ्तरी इमारत </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="By clicking &lt;em&gt; Register &lt;/em&gt; you automatically agree to our" xml:space="preserve">
     <value>क्लिक करने से &lt;em&gt; रजिस्टर करें &lt;/em&gt; आप स्वचालित रूप से हमारे लिए सहमत हैं</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="By Completing the submission of your first Ad will be credited" xml:space="preserve">
+    <value>पूरा करने से आपका पहला विज्ञापन जमा हो जाएगा</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>रद्द</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Category" xml:space="preserve">
     <value>विभाग</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Change email" xml:space="preserve">
     <value>ईमेल बदले </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>पासवर्ड बदलें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Choose" xml:space="preserve">
     <value>चुनना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Choose a profile image" xml:space="preserve">
     <value>अपनी तस्वीर चुनिए </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Choose tags for the description" xml:space="preserve">
+    <value>विवरण के लिए टैग चुनें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Choose which package you want for your ad." xml:space="preserve">
+    <value>अपने विज्ञापन के लिए कोई  पैकेज चुनें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Choose your preferred language" xml:space="preserve">
     <value>अपनी भाषा चुने </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Click here to Logout" xml:space="preserve">
     <value>लॉग-आउट के लिए यहाँ दबाये </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="CloakRoom" xml:space="preserve">
     <value>कपड़द्वार</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Close" xml:space="preserve">
     <value>बंध </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Commands" xml:space="preserve">
     <value>आदेश</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Commercial" xml:space="preserve">
     <value>व्यावसायिक</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Company" xml:space="preserve">
     <value>कम्पनी</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Complete" xml:space="preserve">
     <value>पूरा</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Complete Registration" xml:space="preserve">
     <value>पूरी  रजिस्ट्री</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Completed" xml:space="preserve">
     <value>पूरा हुआ </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Conference Room" xml:space="preserve">
     <value>बड़ा कमरा</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Confirm Password" xml:space="preserve">
     <value>पासवर्ड जांचे </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Construction" xml:space="preserve">
     <value>रचना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Construction Year" xml:space="preserve">
     <value>रचना का साल </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>संपर्क</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Contact Info" xml:space="preserve">
     <value>सम्पर्क जानकारी</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Contact Phone" xml:space="preserve">
     <value>सम्पर्क फ़ोन नमबर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Contact us" xml:space="preserve">
     <value>हमसे सम्पर्क करे </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Control Panel" xml:space="preserve">
+    <value>Control Panel</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Cottage" xml:space="preserve">
     <value>झोंपड़ी</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="County/Region" xml:space="preserve">
     <value>ज़िला/देश</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Craft Property" xml:space="preserve">
     <value>हस्तकला संपत्ति</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Create Draft Ad" xml:space="preserve">
     <value>प्रारूप विज्ञापन बनाएँ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Create your own mobile presentation (Compatible with iPhone and iPad)" xml:space="preserve">
+    <value>अपनी खुद की मोबाइल प्रस्तुति बनाएं (iPhone और iPad के साथ)</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Current Balance" xml:space="preserve">
+    <value>वर्तमान शेष</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Current Costs" xml:space="preserve">
+    <value>वर्तमान दाम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>मिटायें </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Deleted" xml:space="preserve">
     <value>मिटाया गया </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Demand" xml:space="preserve">
     <value>माँग</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>विवरण</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Desired Information from Buyers" xml:space="preserve">
     <value>खरीदारों से वांछित जानकारी</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Detached House" xml:space="preserve">
     <value>अलग घर</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Do you need help" xml:space="preserve">
     <value>आपको मदद चाहिए </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Draft" xml:space="preserve">
     <value>प्रारूप</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Drag the photos here" xml:space="preserve">
     <value>तस्वीरें यहाँ खींच कर रखें </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>संपादित करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Elevator" xml:space="preserve">
     <value>लिफ्ट</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Email" xml:space="preserve">
     <value>ईमेल</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="euroSymbol" xml:space="preserve">
     <value>€</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Exchange Rate Table" xml:space="preserve">
+    <value>विनिमय दर टेबल </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Exhibition Area" xml:space="preserve">
     <value>प्रदर्शनी की जगह </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Farm/Ranch" xml:space="preserve">
     <value>खेत</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Fill in the email to have the password reset email sent to you." xml:space="preserve">
     <value>अपना ईमेल भरें अगर  आप चाहते हैं हम आपको अपना पासवर्ड रिसेट करने वाला ईमेल भेजे </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Finance" xml:space="preserve">
+    <value>वित्त</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Fireplace" xml:space="preserve">
     <value>चिमनी</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="floor" xml:space="preserve">
     <value>फ़र्श</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Follow us" xml:space="preserve">
+    <value>हमारा अनुसरण करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Forgot your password" xml:space="preserve">
     <value>अपना पासवर्ड भूल गए </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="from" xml:space="preserve">
     <value>से </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Furniture" xml:space="preserve">
     <value>फर्नीचर</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Garden" xml:space="preserve">
     <value>बगीचा </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="greater than 100" xml:space="preserve">
     <value>100 से अधिक</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Gym" xml:space="preserve">
     <value>कसरत जिम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Hall" xml:space="preserve">
     <value>बड़ा कमरा </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Heating System" xml:space="preserve">
     <value>गर्म करने का सिस्टम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Hidden Searches" xml:space="preserve">
+    <value>छिपी हुई खोजें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Hide" xml:space="preserve">
     <value>छुपा हुआ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Highest -&gt; Lowest Price" xml:space="preserve">
     <value>ज्यादा - काम दाम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Home Energy Rate" xml:space="preserve">
     <value>घर की ऊर्जा दर</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Hotel" xml:space="preserve">
     <value>होटल </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Houseboat" xml:space="preserve">
     <value>तैरनेवाला घर</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Housekeeping" xml:space="preserve">
     <value>घर की देख-भाल करना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="How can we help you" xml:space="preserve">
     <value>हम आपकी क्या मदद कर सकते है ?</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="How Many Bathrooms Does It Have?" xml:space="preserve">
     <value>इसमें कितने बाथरूम हैं ?</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="How Many Bedrooms Does It Have?" xml:space="preserve">
     <value>इसमें सोने के कमरे कितने हैं </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Id" xml:space="preserve">
     <value>पहचान</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Important Information" xml:space="preserve">
     <value>जरूरी सूचना </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Inactive" xml:space="preserve">
     <value>बेकार</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Industrial Property" xml:space="preserve">
     <value>औद्यौगिक संपत्ति</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Info Card" xml:space="preserve">
     <value>जानकारी कार्ड</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Internet Fiber" xml:space="preserve">
     <value>इंटरनेट फाइबर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Investment" xml:space="preserve">
+    <value>निवेश</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Join to our Page" xml:space="preserve">
     <value>हमारे पेज में शामिल हुए </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Land" xml:space="preserve">
+    <value>भूमि</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>भाषाएं </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Living room" xml:space="preserve">
     <value>बैठक का कमरा</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Locked" xml:space="preserve">
     <value>बंद</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Loft" xml:space="preserve">
     <value>मकान</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Login" xml:space="preserve">
     <value>प्रवेश करना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Login/Register" xml:space="preserve">
     <value>प्रवेश करे / रजिस्ट्री करे </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>लॉग-आउट</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Lowest To Highest" xml:space="preserve">
     <value>काम- जयादा दाम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Maisonette" xml:space="preserve">
     <value>छोटा सा मकान</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Mandatory Information" xml:space="preserve">
     <value>आज्ञा संबंधी जानकारी </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Master" xml:space="preserve">
     <value>बड़ा</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="maximum of Characters are 5" xml:space="preserve">
     <value>अधिकतम वर्ण पाँच हैं</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="minimum Three Characters" xml:space="preserve">
     <value>न्यूनतम तीन वर्ण</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Mobile" xml:space="preserve">
     <value>मोबाइल</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Mobile Home" xml:space="preserve">
     <value>घर का मोबाइल </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>महीना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>महीने</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Most Popular" xml:space="preserve">
     <value>बहुत मशहूर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Municipality / District" xml:space="preserve">
     <value>नगरपालिका /जिला </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="My Card" xml:space="preserve">
     <value>मेरा कार्ड </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="My Favorites" xml:space="preserve">
     <value>मेरे पसंदीदा </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="My information" xml:space="preserve">
     <value>मेरी जानकारी </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="My Notes" xml:space="preserve">
     <value>मेरे शब्द </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="My Orders" xml:space="preserve">
+    <value>मेरे आदेश</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Name" xml:space="preserve">
     <value>नाम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="New Construction" xml:space="preserve">
+    <value>नयी रचना </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="No" xml:space="preserve">
     <value>नहीं </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="No ads were found according to Search filters." xml:space="preserve">
     <value>खोज के अनुसार कोई विज्ञापन नहीं मिला</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="No Orders To Display" xml:space="preserve">
+    <value>प्रदर्शित करने के लिए कोई आदेश नहीं</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Notes" xml:space="preserve">
     <value>टिप्पणियाँ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="number" xml:space="preserve">
     <value>नंबर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Obligatory" xml:space="preserve">
     <value>आवश्यक</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>प्रस्ताव</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Office" xml:space="preserve">
     <value>दफ्तर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>ठीक </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Once the download is complete. Copy the link here" xml:space="preserve">
+    <value>जब डाउनलोड पूरा हो जाये । लिंक यहां कॉपी करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="only Number" xml:space="preserve">
     <value>केवल संख्या</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="optional" xml:space="preserve">
     <value>इच्छानुसार </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
-  <data name="Other" xml:space="preserve">
-    <value>अन्य</value>
+  <data name="Orders History" xml:space="preserve">
+    <value>आदेशों का इतिहास</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Other Categories" xml:space="preserve">
     <value>अन्य विभाग </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Other Properties" xml:space="preserve">
+    <value>अन्य</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Our Services" xml:space="preserve">
+    <value>हमारी सेवाएँ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Parcels" xml:space="preserve">
     <value>डाक </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Parking" xml:space="preserve">
     <value>पार्किंग </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Parking Area" xml:space="preserve">
     <value>गाडी स्थान </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Password" xml:space="preserve">
     <value>पासवर्ड </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Penthouse" xml:space="preserve">
     <value>पेण्ट हॉउस</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Personal settings" xml:space="preserve">
     <value>निजी सेटिंग </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Pets" xml:space="preserve">
     <value>पालतू पशु</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Photos" xml:space="preserve">
     <value>तस्वीर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Place your ad" xml:space="preserve">
     <value>अपना विज्ञापन डालें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Please enter an email address for this site below and click the Register button to finish logging in." xml:space="preserve">
     <value>किर्प्या कोई ईमेल डालें नीचे और रजिस्ट्री पर दबाएं लॉगिंग करने के लिए </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Plot of Land" xml:space="preserve">
     <value>भूमि का टुकड़ा</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Pool" xml:space="preserve">
     <value>तालाब</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Post a request" xml:space="preserve">
     <value> गुजारिश डालें </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="PostalCode" xml:space="preserve">
     <value>डाक कोड</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Prefabricated Home" xml:space="preserve">
     <value>प्रीफैब्रिकैटिड घर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Premium" xml:space="preserve">
+    <value>पूर्वदर्शन</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Premium Features" xml:space="preserve">
+    <value>बेहतर सुविधाएँ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Prepaid Balance for Ads" xml:space="preserve">
+    <value>पूर्वदत्त शेष विज्ञापन के लिए </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Preview" xml:space="preserve">
     <value>पूर्वदर्शन</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Preview 360" xml:space="preserve">
     <value>पूर्वदर्शन 360</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Preview &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt;&lt;/strong&gt;" xml:space="preserve">
+    <value>पूर्वदर्शन &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt;&lt;/strong&gt;</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Price" xml:space="preserve">
     <value>दाम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Print" xml:space="preserve">
     <value>छापा/ प्रिंट </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Property Area" xml:space="preserve">
     <value>सम्पत्ति की जगह </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Property Category" xml:space="preserve">
     <value>सम्पत्ति </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Property Features" xml:space="preserve">
     <value>संपत्ति की सुविधाएँ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Property Price" xml:space="preserve">
     <value>सम्पत्ति का दाम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Property Type" xml:space="preserve">
     <value>सम्पत्ति की किसम </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Public" xml:space="preserve">
     <value>जनता </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Publish" xml:space="preserve">
     <value>प्रकाशित करना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Publish Ad" xml:space="preserve">
     <value>विज्ञापन प्रकाशित करना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Publish/Save" xml:space="preserve">
     <value>प्रकाशित करना/जमा करें </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Range Price" xml:space="preserve">
     <value>दाम की सीमा </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Rating" xml:space="preserve">
     <value>रेटिंग </value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Recent Posts" xml:space="preserve">
+    <value>ताज़ा पोस्ट</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Recent Searches" xml:space="preserve">
+    <value>ताज़ा खोज</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Refill Balance" xml:space="preserve">
+    <value>फिर से भरना शेष</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Register" xml:space="preserve">
     <value>रेजिस्टर </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Register from the applications" xml:space="preserve">
     <value>एप्लीकेशन  के जरिये  रेजिस्टर करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Rent" xml:space="preserve">
     <value>किराया </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Resend" xml:space="preserve">
     <value>दोबारा भेजे </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Residential" xml:space="preserve">
     <value>निवास</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>पुन: प्रयास करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Safety door" xml:space="preserve">
     <value>सुरक्षा दरवाज़ा</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Safety Frames" xml:space="preserve">
     <value>सुरक्षा के तख़ते</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Sale" xml:space="preserve">
     <value>बिक्री</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Save" xml:space="preserve">
     <value>जमा करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Save Search" xml:space="preserve">
+    <value>जमा करें / खोज</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Saved Searches" xml:space="preserve">
+    <value>जमा की हुई खोजें </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Search" xml:space="preserve">
     <value>खोज</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Search Filters" xml:space="preserve">
     <value>खोज फ़िल्टर</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Security Alarm" xml:space="preserve">
     <value>सुरक्षा अलार्म</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="See Other Seller Ads" xml:space="preserve">
     <value>अन्य विक्रेता विज्ञापन देखें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>चुने </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Select the energy rate of the Property (if available)" xml:space="preserve">
     <value>संपत्ति की ऊर्जा दर का चयन करें (यदि उपलब्ध हो)</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Semi-outdoors" xml:space="preserve">
     <value>अर्ध-बाहरी</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>भेजे </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Send verification email" xml:space="preserve">
     <value>सत्यापन ईमेल भेजें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Send your comments &lt;strong&gt;here&lt;/strong&gt;." xml:space="preserve">
     <value>अपनी टिप्पणी भेजें &lt;मज़बूत&gt;यहां&lt;/मज़बूत&gt;.</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Send your message" xml:space="preserve">
     <value>अपना संदेश भेजें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Shall we check ?" xml:space="preserve">
     <value>क्या हम जाँच करेंगे</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Share" xml:space="preserve">
     <value>योगदान</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Share on Facebook" xml:space="preserve">
+    <value>Facebook पर शेयर करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Shop" xml:space="preserve">
     <value>खरीदारी करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Show" xml:space="preserve">
     <value>दिखाना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Specifications of image" xml:space="preserve">
+    <value>छवि के विनिर्देशों</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Square" xml:space="preserve">
     <value>मैदान</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Status Ad" xml:space="preserve">
     <value>स्थिति विज्ञापन</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Storage" xml:space="preserve">
     <value>भंडारण</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Studio" xml:space="preserve">
     <value>स्टूडियो</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>उपश्रेणी</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Subject" xml:space="preserve">
     <value>विषय</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>दाख़िल करना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Submit Post" xml:space="preserve">
     <value>पोस्ट प्रस्तुत करें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Subscribe to our newsletter" xml:space="preserve">
     <value>हमारे न्यूज़लेटर की सदस्यता लें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Subtitle" xml:space="preserve">
     <value>उपशीर्षक</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>उपनाम</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Terms of use" xml:space="preserve">
     <value>उपयोग की शर्ते</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Thank you" xml:space="preserve">
+    <value>धन्यवाद</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="The Welcome Voucher has just been activated" xml:space="preserve">
+    <value>आपका स्वागत वाला टोकन सक्रिय हो गया है </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Title/Name" xml:space="preserve">
     <value>शीर्षक</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="to" xml:space="preserve">
     <value>पर्यत</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Type" xml:space="preserve">
     <value>प्रकार</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Type your message here" xml:space="preserve">
     <value>यहां अपना संदेश लिखें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Unlocked" xml:space="preserve">
     <value>दाख़िल करना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Uploading photos started" xml:space="preserve">
     <value>तस्वीर अपलोड होने लगे</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Usage For The Current Month" xml:space="preserve">
+    <value>इस महीने के लिए उपयोग</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="valid City" xml:space="preserve">
     <value>वैध शहर</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="View" xml:space="preserve">
     <value>देख लेना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="views" xml:space="preserve">
     <value>देख लेना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Wallet" xml:space="preserve">
     <value>बटुआ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="WC" xml:space="preserve">
     <value>गुसलखाना</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="WebSite" xml:space="preserve">
     <value>वेबसाइट</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="Welcome to Eron.gr" xml:space="preserve">
+    <value>Eron.gr में आपका स्वागत है</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="WishList" xml:space="preserve">
     <value>इच्छा सूची</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Write a short description" xml:space="preserve">
     <value>एक छोटा विवरण लिखें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Write To Us" xml:space="preserve">
     <value>हमें लिखें</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Year of Renovation" xml:space="preserve">
     <value>नवीकरण का वर्ष</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>हाँ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="You can also connect from the applications" xml:space="preserve">
     <value>आप अनुप्रयोगों से भी जुड़ सकते हैं</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="You can choose what amenities are available for the property" xml:space="preserve">
     <value>आप चुन सकते हैं कि संपत्ति के लिए क्या सुविधाएं उपलब्ध हैं</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="You can create your own Preview 360 video &lt;sup&gt;o&lt;/sup&gt; with Matterport Capture" xml:space="preserve">
+    <value>आप अपना खुद का पूर्वदर्शन 360 वीडियो बना सकते हैं  &lt;sup&gt;o&lt;/sup&gt; Matterport Capture के साथ</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="You can reset your password now." xml:space="preserve">
     <value>अब आप अपना पासवर्ड रीसेट कर सकते हैं</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="You do not have access to this resource." xml:space="preserve">
     <value>आपके पास इस संसाधन तक पहुँच नहीं है</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="You have successfully logged out of the application." xml:space="preserve">
     <value>आपने एप्लिकेशन से सफलतापूर्वक लॉग आउट कर लिया है</value>
+    <comment>2021-03-14 12:42:50.793</comment>
+  </data>
+  <data name="You upload the presentation to your account" xml:space="preserve">
+    <value>आपने  प्रस्तुति को अपने खाते में अपलोड किया </value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
   <data name="You've successfully authenticated with" xml:space="preserve">
     <value>आपने सफलतापूर्वक प्रमाणित कर दिया है</value>
+    <comment>2021-03-14 12:42:50.793</comment>
   </data>
 </root>

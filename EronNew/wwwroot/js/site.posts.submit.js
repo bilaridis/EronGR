@@ -5,7 +5,11 @@
 
         var inputs = document.querySelectorAll("input[required], select[required], input[validation], textarea[required]");
         var form = document.querySelector("form#main");
-
+        if (JSON.parse(PostObject).Premium) {
+            $.each($(".premium-feature"), function (index, value) {
+                $(value).removeAttr("disabled");
+            });
+        }
         document.querySelector('.stepper .stepper-step').addEventListener('onChangeStep.mdb.stepper', (event) => {
             if (validateConstraintsAndReturnErrors(form, false)) {
                 //event.preventDefault();
@@ -158,6 +162,7 @@
             $("#option1").prop('checked', true);
             $("#option2").prop('checked', false);
         });
+
         $('.product-activate').on('click', function () {
             var parsedObject = JSON.parse(PostObject);
             var jsonData = {

@@ -22,7 +22,7 @@
                     <i class="fa fa-search"></i>
                 </button>
             </div>
-            <div id="datatable" class="datatable" data-mdb-fixed-header="true" data-mdb-color="grey" data-mdb-striped="true" data-mdb-full-pagination="true" data-mdb-sm="true" data-mdb-hover="true">
+            <div id="datatable" class="datatable overflow-visible" data-mdb-fixed-header="true" data-mdb-color="grey" data-mdb-striped="true" data-mdb-full-pagination="true" data-mdb-sm="true" data-mdb-hover="true">
                 <!-- Table -->
                 <table id="dtMaterialDesignExample" class="table table-hover">
                     <!-- Table head -->
@@ -42,9 +42,11 @@
                         {
                             <tr>
                                 <td style="overflow:visible;">
-                                    <div class="btn-group dropend">
-                                        <button type="button" class="btn btn-primary">
-                                            Μετάβαση
+                                    <div class="btn-group d-flex dropend">
+                                        <button type="button" class="btn btn-primary d-flex justify-content-start">
+                                            <a href="~/Posts/Details/@basicInformation.id" class="text-light">
+                                                @basicInformation.id <i class="fas fa-external-link-alt fa-lg"></i>
+                                            </a>
                                             @if (basicInformation.StateOfPost.Value == 1)
                                             {
                                                 <span class="badge bg-danger ms-2">
@@ -81,9 +83,9 @@
                                             }
                                         </button>
                                         <button type="button"
-                                                class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                                class="btn btn-primary dropdown-toggle dropdown-toggle-split px-0"
                                                 data-mdb-toggle="dropdown"
-                                                aria-expanded="false">
+                                                aria-expanded="false" style="width:30px;">
                                             <span class="visually-hidden">Toggle Dropright</span>
                                         </button>
                                         <ul class="dropdown-menu" style="z-index:99;">
@@ -160,12 +162,12 @@
                                 <td>@basicInformation.TitleOfPost</td>
                                 <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("N") : 0) @SharedLocalizer.GetCurrencySymbol(basicInformation.Currency)</td>
                                 <td>
-                                    <div class="switch switch-price">
-                                        <label>
-                                            Basic
-                                            <input type="checkbox" class="toggle-premium" data-postid="@basicInformation.id" @Html.Raw(basicInformation.Premium ? "checked disabled" : "")>
-                                            <span class="lever"></span> Premium
-                                        </label>
+                                    <div class="btn-group ms-3">
+                                        <input type="radio" class="btn-check" name="Post.Premium" @Html.Raw(!basicInformation.Premium ? "checked" : "") value="false" data-postid="@basicInformation.id" autocomplete="off" />
+                                        <label class="btn btn-secondary">Basic</label>
+
+                                        <input type="radio" class="btn-check" name="Post.Premium" @Html.Raw(basicInformation.Premium ? "checked disabled" : "") value="true" data-postid="@basicInformation.id" autocomplete="off" />
+                                        <label class="btn btn-secondary">Premium</label>
                                     </div>
                                 </td>
                             </tr>
@@ -185,10 +187,12 @@
     @if (hostingEnv.EnvironmentName == "Development")
     {
         <script src="~/js/site.administration.js"></script>
+        <script src="~/js/site.administration.index.js"></script>
     }
     else
     {
         <script src="~/js/site.administration.min.js"></script>
+        <script src="~/js/site.administration.index.min.js"></script>
     }
 }
 

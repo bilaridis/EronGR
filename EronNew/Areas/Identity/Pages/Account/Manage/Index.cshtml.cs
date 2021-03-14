@@ -34,15 +34,15 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
         public class InputModel
         {
             [Required]
-            [Display(Name = "Όνομα")]
+            [Display(Name = "Name")]
             public string FirstName { get; set; }
 
             [Required]
-            [Display(Name = "Επίθετο")]
+            [Display(Name = "Surname")]
             public string LastName { get; set; }
 
             [Phone]
-            [Display(Name = "Κινητό")]
+            [Display(Name = "Mobile")]
             public string PhoneNumber { get; set; }
         }
 

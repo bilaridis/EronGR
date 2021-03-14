@@ -86,7 +86,7 @@ $(function () {
         $("#langButton").html('<span class="flag-icon flag-icon-' + culture + ' fa-2x"></span>');
     }
     else {
-        $("#langButton").html('<span class="flag-icon flag-icon-el-gr fa-2x"></span>');
+        $("#langButton").html('<span class="flag-icon flag-icon-en-us fa-2x"></span>');
     }
 
     //toastr.options = {

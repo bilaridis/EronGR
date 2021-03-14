@@ -261,28 +261,25 @@
     }
 
     function createBubbleInfo(product) {
-        var parseLoc = JSON.parse(textLocalised);
-        var postTitle = "";
-        if (product.Category = "Sale") { postTitle = parseLoc.sale }
-        else if (product.Category = "Rent") { postTitle = parseLoc.rent }
-        else if (product.Category = "Demand") { postTitle = parseLoc.demand }
-
         return `
-<div class="col-12 p-0 h-100" style="width:200px;">
-    <div class="view overlay" style="min-width:160;min-height:100;">
-        <img class="card-img-top rounded-0" src="${product.UrlImage}" alt="Card image cap">
-        <a href="/Posts/Details/${product.id}">
-            <div class="mask rgba-white-slight"></div>
-        </a>
-    </div>
-    <div class="ml-1 mr-1">
+<div class="card" style="width:200px;">
+  <div class="bg-image hover-overlay ripple view" data-mdb-ripple-color="light">
+    <img src="${product.UrlImage}" class="img-fluid" />
+    <a href="/Posts/Details/${product.id}">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title">
         <a>
-            ${(product.Bathroom || "")}  <i class="fas fa-bath"></i>  
-            ${(product.Bedroom || "")}  <i class="fas fa-bed"></i>  
-            ${(product.ConstructionYear || "")}  <i class="fas fa-home"></i>  
+            ${(product.Bathroom || "")}  <i class="fas fa-bath"></i>  |
+            ${(product.Bedroom || "")}  <i class="fas fa-bed"></i>  |
+            ${(product.ConstructionYear || "")}  <i class="fas fa-home"></i>
         </a>
-    </div>
-</div>  `
+    </h>
+
+  </div>
+</div> `
 
     }
 })();

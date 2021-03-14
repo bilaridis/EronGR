@@ -11,6 +11,7 @@
     ViewData["Title"] = "Details";
     var userOb = await UserManager.GetUserAsync(User);
     var user = userOb?.Id;
+    
 }
 @section metatags
 {
@@ -64,16 +65,16 @@
                                 <div class="multi-carousel vertical" data-mdb-items="2">
                                     <div class="multi-carousel-inner">
                                         <div class="multi-carousel-item active">
-                                            <img src="https://localhost:44396/@(Model.Post.Images.First().UrlImage)Thumbnails/@Model.Post.Images.First().ImageName"
-                                                 data-mdb-img="https://localhost:44396/@(Model.Post.Images.First().UrlImage)Images/@Model.Post.Images.First().ImageName"
+                                            <img src="@ViewData["domain"]/@(Model.Post.Images.First().UrlImage)Thumbnails/@Model.Post.Images.First().ImageName"
+                                                 data-mdb-img="@ViewData["domain"]/@(Model.Post.Images.First().UrlImage)Images/@Model.Post.Images.First().ImageName"
                                                  alt="Gallery image 1"
                                                  class="active w-100" />
                                         </div>
                                         @foreach (PostsImages image in Model.Post.Images.Skip(1))
                                         {
                                             <div class="multi-carousel-item">
-                                                <img src="https://localhost:44396/@(image.UrlImage)Thumbnails/@image.ImageName"
-                                                     data-mdb-img="https://localhost:44396/@(image.UrlImage)Images/@image.ImageName"
+                                                <img src="@ViewData["domain"]/@(image.UrlImage)Thumbnails/@image.ImageName"
+                                                     data-mdb-img="@ViewData["domain"]/@(image.UrlImage)Images/@image.ImageName"
                                                      alt="@image.ImageName"
                                                      class="w-100" />
                                             </div>
@@ -95,7 +96,7 @@
                                     <i class="fas fa-globe fa-2x text-primary" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Preview360))"></i>
                                 </a>
                                 <div class="lightbox">
-                                    <img src="https://localhost:44396/@(Model.Post.Images.First().UrlImage)Images/@Model.Post.Images.First().ImageName" alt="Gallery image 1" class="ecommerce-gallery-main-img active w-100" />
+                                    <img src="@ViewData["domain"]/@(Model.Post.Images.First().UrlImage)Images/@Model.Post.Images.First().ImageName" alt="Gallery image 1" class="ecommerce-gallery-main-img active w-100" />
                                 </div>
                             </div>
                         </div>
@@ -104,7 +105,7 @@
             </div>
             <div class="card-body">
                 <div class="row p-0 m-1 justify-content-between gradient shadow-1">
-                    <nav class="navbar navbar-expand-md text-dark col-12rounded">
+                    <nav class="navbar navbar-expand-md text-dark col-12 rounded">
                         <div class="me-auto">
                             <nav aria-label="breadcrumb text-light">
                                 <ol class="breadcrumb d-inline-flex pl-0 pt-0 font-smaller">
@@ -115,11 +116,6 @@
                                 </ol>
                             </nav>
                         </div>
-                        @*@if (Model.Post.Premium && Model.Post.Preview360 != null && Model.Post.Preview360.Contains("matterport.com"))*@
-                        @*{*@
-                        <button type="button" class="btn btn-primary">
-                        </button>
-                        @*}*@
                     </nav>
                 </div>
                 <div class="row m-md-2 m-sm-0 justify-content-between shadow-5">
@@ -562,7 +558,7 @@
                     'fr': '/i18n/fr.json',
                     'tr': '/i18n/tr.json',
                     'de': '/i18n/de.json',
-                    'hi': '/i18n/hi-IN.json'
+                    'hi-IN': '/i18n/hi-IN.json'
                 }).done(function () {
                     $('.switch-locale').on('click', 'a', function (e) {
                         e.preventDefault();

@@ -681,10 +681,10 @@
                     <span class="stepper-head-text">
                         Premium Specs
                         <div class="btn-group ms-3">
-                            <input type="radio" class="btn-check" asp-for="@Model.Post.Premium" value="false" id="option1" autocomplete="off" checked />
+                            <input type="radio" class="btn-check @(!Model.Post.Premium ? "checked" : "")" asp-for="@Model.Post.Premium" value="false" id="option1" autocomplete="off" />
                             <label class="btn btn-secondary" for="option1">Basic</label>
 
-                            <input type="radio" class="btn-check" asp-for="@Model.Post.Premium" value="true" id="option2" autocomplete="off" />
+                            <input type="radio" class="btn-check @(Model.Post.Premium ? "checked disabled" : "")" asp-for="@Model.Post.Premium" value="true" id="option2" autocomplete="off"  />
                             <label class="btn btn-secondary" for="option2">Premium</label>
                         </div>
                     </span>
