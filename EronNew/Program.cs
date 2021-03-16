@@ -23,17 +23,17 @@ namespace EronNew
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{environment}.json", optional: true)
                 .Build();
-            Log.Logger = new LoggerConfiguration()
-                .Enrich.FromLogContext()
-                .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(configuration["ElasticConfiguration:Uri"]))
-                {
-                    ModifyConnectionSettings = (c) => c.BasicAuthentication("elastic", "q4rqZMEICp8qCKhQO1gyg1KZ"),
-                    AutoRegisterTemplate = true,
-                    IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower()}-{DateTime.UtcNow:yyyy-MM}"
-                })
-                .Enrich.WithProperty("Environment", environment)
-                .ReadFrom.Configuration(configuration)
-                .CreateLogger();
+            //Log.Logger = new LoggerConfiguration()
+            //    .Enrich.FromLogContext()
+            //    .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(configuration["ElasticConfiguration:Uri"]))
+            //    {
+            //        ModifyConnectionSettings = (c) => c.BasicAuthentication("elastic", "q4rqZMEICp8qCKhQO1gyg1KZ"),
+            //        AutoRegisterTemplate = true,
+            //        IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower()}-{DateTime.UtcNow:yyyy-MM}"
+            //    })
+            //    .Enrich.WithProperty("Environment", environment)
+            //    .ReadFrom.Configuration(configuration)
+            //    .CreateLogger();
             CreateHostBuilder(args).Build().Run();
         }
 

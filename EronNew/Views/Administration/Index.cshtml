@@ -74,7 +74,6 @@
                                                     <i class='fas fa-lock' data-mdb-toggle="tooltip" title="Locked"></i>
                                                 </span>
                                             }
-
                                             @if (basicInformation.Sold)
                                             {
                                                 <span class="badge bg-danger ms-2">
@@ -163,11 +162,12 @@
                                 <td>@(basicInformation.PriceTotal.HasValue ? basicInformation.PriceTotal.Value.ToString("N") : 0) @SharedLocalizer.GetCurrencySymbol(basicInformation.Currency)</td>
                                 <td>
                                     <div class="btn-group ms-3">
-                                        <input type="radio" class="btn-check" name="Post.Premium" @Html.Raw(!basicInformation.Premium ? "checked" : "") value="false" data-postid="@basicInformation.id" autocomplete="off" />
-                                        <label class="btn btn-secondary">Basic</label>
-
-                                        <input type="radio" class="btn-check" name="Post.Premium" @Html.Raw(basicInformation.Premium ? "checked disabled" : "") value="true" data-postid="@basicInformation.id" autocomplete="off" />
-                                        <label class="btn btn-secondary">Premium</label>
+                                        <button type="button"  class="btn d-flex justify-content-start @Html.Raw(basicInformation.Premium ? "btn-primary disabled" : "btn-success disabled")" id="basic_@basicInformation.id" name="Post.Premium" data-postid="@basicInformation.id" autocomplete="off">
+                                            <a>Basic</a>
+                                        </button>
+                                        <button type="button" class="btn d-flex justify-content-start @Html.Raw(basicInformation.Premium ? "btn-success disabled" : "btn-primary")"  id="premium_@basicInformation.id" name="Post.Premium" data-postid="@basicInformation.id" autocomplete="off">
+                                            <a>Premium</a>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
@@ -180,7 +180,7 @@
         </div>
     </div>
 </div>
-
+<div id="postId" class="hidden"></div>
 <partial name="_ActivationModal" />
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
 @section Scripts{

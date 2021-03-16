@@ -102,11 +102,9 @@
             window.location.href = domainUrl + "/Posts/Details/" + $(this).data("postid");
         });
 
-        $(`input[name="Post.Premium"]`).click(function () {
+        $(`button[name="Post.Premium"]`).click(function () {
             $('#postId').val($(this).data('postid'));
             $('.bd-example-modal-xl').modal('show');
-            $("#option1").prop('checked', true);
-            $("#option2").prop('checked', false);
         });
 
         $('.product-activate').on('click', function () {
@@ -119,18 +117,16 @@
                 data: jsonData
             })
                 .done(function (msg) {
-                    $(`input[name="Post.Premium"]`).attr({ 'disabled': 'disabled' });
-                    $("#option1").prop('checked', false);
-                    $("#option2").prop('checked', true);
+                    $(`#basic_${$("#postId").val()}`).removeClass('btn-success');
+                    $(`#basic_${$("#postId").val()}`).addClass('btn-primary');
+                    $(`#premium_${$("#postId").val()}`).addClass('disabled');
+                    $(`#premium_${$("#postId").val()}`).addClass('btn-success');
                     $('.bd-example-modal-xl').modal('hide');
-                    $('.premium-feature').removeAttr('disabled');
+                    $('#postId').val("");
                 })
                 .fail(function (jqXHR, textStatus) {
                     $('.bd-example-modal-xl').modal('show');
-                    toastr.error('Κάτι πήγε στραβά. Θα το κοιτάξουμε αμέσως.');
-                    $(`input[name="Post.Premium"]`).removeAttr('disabled');
-                    $("#option1").prop('checked', true);
-                    $("#option2").prop('checked', false);
+                    $('#postId').val("");
                 });
         });
         //$(".toggle-premium").change(function () {
