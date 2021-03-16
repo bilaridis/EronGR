@@ -177,7 +177,7 @@ namespace EronNew
             services.AddTransient<IPostViewModel, PostViewModel>();
             services.AddTransient<IAdministrationViewModel, AdministrationViewModel>();
             
-            services.AddScoped<IIronKeyContext, IronKeyContext>();
+            //services.AddScoped<IIronKeyContext, IronKeyContext>();
             services.AddScoped<IMyIndexEngine, MyIndexEngine>();
             services.AddScoped<IEmailSender, EmailService>();
             services.AddScoped<ExtendedUserManager<ExtendedIdentityUser>>();

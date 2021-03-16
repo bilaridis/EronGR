@@ -992,6 +992,12 @@ namespace EronNew.Models
                 .Where(x => x.OwnerId == aspNetUserId).ToListAsync();
             return finance;
         }
+        public List<FaqModel> GetFaqs()
+        {
+            using var scope = _serviceScopeFactory.CreateScope();
+            var context = scope.ServiceProvider.GetService<IronKeyContext>();
+            return context.Faq.Where(x => x.Active.Value ).ToList();
+        }
 
         protected virtual void Dispose(bool disposing)
         {

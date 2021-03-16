@@ -157,7 +157,8 @@ namespace EronNew.Controllers
         [AllowAnonymous]
         public IActionResult FAQ()
         {
-            return View();
+
+            return View(_model.GetFaqs());
         }
 
         [AllowAnonymous]

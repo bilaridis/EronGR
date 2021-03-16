@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace EronNew.Models
 {
 
-    public partial class IronKeyContext : DbContext, IIronKeyContext
+    public partial class IronKeyContext : DbContext
     {
 
         public IronKeyContext(DbContextOptions<IronKeyContext> options)
@@ -33,6 +33,7 @@ namespace EronNew.Models
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<PostsModel> Posts { get; set; }
         public virtual DbSet<ExtraInformation> ExtraInformations { get; set; }
+        public virtual DbSet<FaqModel> Faq { get; set; }
         public virtual DbSet<PostFeature> PostFeatures { get; set; }
         public virtual DbSet<PostsHistory> PostsHistories { get; set; }
         public virtual DbSet<TypesModel> Types { get; set; }
@@ -419,7 +420,6 @@ namespace EronNew.Models
                     .HasForeignKey(d => d.AspNetUserId)
                     .HasConstraintName("FK_Wallet_AspNetUsers");
             });
-
 
             modelBuilder.Entity<WishList>(entity =>
             {

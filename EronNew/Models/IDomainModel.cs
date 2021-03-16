@@ -41,5 +41,6 @@ namespace EronNew.Models
         Task<List<Order>> GetOrdersByOwnerId(string ownerId);
         Task<Wallet> GetWallet(string id);
         Task<WalletViewModel> GetFinace(string aspNetUserId);
+        List<FaqModel> GetFaqs();
     }
 }
