@@ -1,0 +1,1160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&lt;strong&gt;All&lt;/strong&gt; Languages Available" xml:space="preserve">
+    <value>所有可用语言</value>
+    <comment>2021-03-17 01:06:25.977</comment>
+  </data>
+  <data name="&lt;strong&gt;Boosted&lt;/strong&gt; Advertisement" xml:space="preserve">
+    <value>增强型广告</value>
+    <comment>2021-03-17 01:06:26.280</comment>
+  </data>
+  <data name="Account Management" xml:space="preserve">
+    <value>账户管理</value>
+    <comment>2021-03-17 01:06:26.460</comment>
+  </data>
+  <data name="Activation" xml:space="preserve">
+    <value>激活</value>
+    <comment>2021-03-17 01:06:26.723</comment>
+  </data>
+  <data name="Activation of Premium Ad" xml:space="preserve">
+    <value>激活高级广告</value>
+    <comment>2021-03-17 01:06:26.983</comment>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>登广告</value>
+    <comment>2021-03-17 01:06:27.253</comment>
+  </data>
+  <data name="Ad Code" xml:space="preserve">
+    <value>广告代码</value>
+    <comment>2021-03-17 01:06:27.510</comment>
+  </data>
+  <data name="Ad Management" xml:space="preserve">
+    <value>广告管理</value>
+    <comment>2021-03-17 01:06:27.743</comment>
+  </data>
+  <data name="Ad Type" xml:space="preserve">
+    <value>广告类型</value>
+    <comment>2021-03-17 01:06:27.940</comment>
+  </data>
+  <data name="Additional characteristics" xml:space="preserve">
+    <value>附加特点</value>
+    <comment>2021-03-17 01:06:28.033</comment>
+  </data>
+  <data name="Additional information" xml:space="preserve">
+    <value>附加信息</value>
+    <comment>2021-03-17 01:06:28.060</comment>
+  </data>
+  <data name="Additional Property Features" xml:space="preserve">
+    <value>财产其他的特征</value>
+    <comment>2021-03-17 01:06:28.083</comment>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>地址</value>
+    <comment>2021-03-17 01:06:28.110</comment>
+  </data>
+  <data name="Air Condition" xml:space="preserve">
+    <value>空调</value>
+    <comment>2021-03-17 01:06:28.133</comment>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>和</value>
+    <comment>2021-03-17 01:06:28.157</comment>
+  </data>
+  <data name="Apartment" xml:space="preserve">
+    <value>房子</value>
+    <comment>2021-03-17 01:06:28.183</comment>
+  </data>
+  <data name="Apartment Complex" xml:space="preserve">
+    <value>公寓综合楼</value>
+    <comment>2021-03-17 01:06:28.207</comment>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>地区</value>
+    <comment>2021-03-17 01:06:28.230</comment>
+  </data>
+  <data name="Ask for the Price" xml:space="preserve">
+    <value>问价格</value>
+    <comment>2021-03-17 01:06:28.257</comment>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>货币余额</value>
+    <comment>2021-03-17 01:06:28.280</comment>
+  </data>
+  <data name="Bathrooms" xml:space="preserve">
+    <value>浴室</value>
+    <comment>2021-03-17 01:06:28.303</comment>
+  </data>
+  <data name="BBQ" xml:space="preserve">
+    <value>烧烤架</value>
+    <comment>2021-03-17 01:06:28.327</comment>
+  </data>
+  <data name="Bedrooms" xml:space="preserve">
+    <value>卧室</value>
+    <comment>2021-03-17 01:06:28.350</comment>
+  </data>
+  <data name="Broker Fee" xml:space="preserve">
+    <value>中介费</value>
+    <comment>2021-03-17 01:06:28.373</comment>
+  </data>
+  <data name="Building" xml:space="preserve">
+    <value>建筑</value>
+    <comment>2021-03-17 01:06:28.397</comment>
+  </data>
+  <data name="Bungalow" xml:space="preserve">
+    <value>平方</value>
+    <comment>2021-03-17 01:06:28.420</comment>
+  </data>
+  <data name="Business building" xml:space="preserve">
+    <value>商业楼</value>
+    <comment>2021-03-17 01:06:28.443</comment>
+  </data>
+  <data name="By clicking &lt;em&gt; Register &lt;/em&gt; you automatically agree to our" xml:space="preserve">
+    <value>单击‘’注册‘’即表示您自动同意跟我们的</value>
+    <comment>2021-03-17 01:06:28.463</comment>
+  </data>
+  <data name="By Completing the submission of your first Ad will be credited" xml:space="preserve">
+    <value>完成您第一个广告提交将被记入贷方</value>
+    <comment>2021-03-17 01:06:28.490</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+    <comment>2021-03-17 01:06:28.510</comment>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>类别</value>
+    <comment>2021-03-17 01:06:28.537</comment>
+  </data>
+  <data name="Change email" xml:space="preserve">
+    <value>更改电子邮件</value>
+    <comment>2021-03-17 01:06:28.560</comment>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>更改密码</value>
+    <comment>2021-03-17 01:06:28.583</comment>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>选择</value>
+    <comment>2021-03-17 01:06:28.607</comment>
+  </data>
+  <data name="Choose a profile image" xml:space="preserve">
+    <value>选择个人头像</value>
+    <comment>2021-03-17 01:06:28.630</comment>
+  </data>
+  <data name="Choose tags for the description" xml:space="preserve">
+    <value>为描述选择标签</value>
+    <comment>2021-03-17 01:06:28.657</comment>
+  </data>
+  <data name="Choose which package you want for your ad." xml:space="preserve">
+    <value>选择您想要的广告套餐</value>
+    <comment>2021-03-17 01:06:28.680</comment>
+  </data>
+  <data name="Choose your preferred language" xml:space="preserve">
+    <value>选择您最喜欢的语言</value>
+    <comment>2021-03-17 01:06:28.707</comment>
+  </data>
+  <data name="Click here to Logout" xml:space="preserve">
+    <value>单击此处注销</value>
+    <comment>2021-03-17 01:06:28.730</comment>
+  </data>
+  <data name="CloakRoom" xml:space="preserve">
+    <value>衣帽间</value>
+    <comment>2021-03-17 01:06:28.757</comment>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+    <comment>2021-03-17 01:06:28.780</comment>
+  </data>
+  <data name="Commands" xml:space="preserve">
+    <value>命令</value>
+    <comment>2021-03-17 01:06:28.807</comment>
+  </data>
+  <data name="Commercial" xml:space="preserve">
+    <value>商品房</value>
+    <comment>2021-03-17 01:06:28.827</comment>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>公司</value>
+    <comment>2021-03-17 01:06:28.850</comment>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>完成</value>
+    <comment>2021-03-17 01:06:28.877</comment>
+  </data>
+  <data name="Complete Registration" xml:space="preserve">
+    <value>完成登记</value>
+    <comment>2021-03-17 01:06:28.900</comment>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>完整</value>
+    <comment>2021-03-17 01:06:28.923</comment>
+  </data>
+  <data name="Conference Room" xml:space="preserve">
+    <value>会议室</value>
+    <comment>2021-03-17 01:06:28.950</comment>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>证实密码</value>
+    <comment>2021-03-17 01:06:28.973</comment>
+  </data>
+  <data name="Construction" xml:space="preserve">
+    <value>建造</value>
+    <comment>2021-03-17 01:06:29.000</comment>
+  </data>
+  <data name="Construction Year" xml:space="preserve">
+    <value>建造年份</value>
+    <comment>2021-03-17 01:06:29.023</comment>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>联系</value>
+    <comment>2021-03-17 01:06:29.047</comment>
+  </data>
+  <data name="Contact Info" xml:space="preserve">
+    <value>联系方式</value>
+    <comment>2021-03-17 01:06:29.070</comment>
+  </data>
+  <data name="Contact Phone" xml:space="preserve">
+    <value>联系电话号码</value>
+    <comment>2021-03-17 01:06:29.097</comment>
+  </data>
+  <data name="Contact us" xml:space="preserve">
+    <value>联系我们</value>
+    <comment>2021-03-17 01:06:29.120</comment>
+  </data>
+  <data name="Control Panel" xml:space="preserve">
+    <value>控制面板</value>
+    <comment>2021-03-17 01:06:29.143</comment>
+  </data>
+  <data name="Cottage" xml:space="preserve">
+    <value>小屋</value>
+    <comment>2021-03-17 01:06:29.167</comment>
+  </data>
+  <data name="County/Region" xml:space="preserve">
+    <value>国家/区域</value>
+    <comment>2021-03-17 01:06:29.190</comment>
+  </data>
+  <data name="Craft Property" xml:space="preserve">
+    <value>工艺财产</value>
+    <comment>2021-03-17 01:06:29.217</comment>
+  </data>
+  <data name="Create Draft Ad" xml:space="preserve">
+    <value>创建草稿广告</value>
+    <comment>2021-03-17 01:06:29.240</comment>
+  </data>
+  <data name="Create your own mobile presentation (Compatible with iPhone and iPad)" xml:space="preserve">
+    <value>在手机上创建自己的演示文稿（兼容iphone和ipad)</value>
+    <comment>2021-03-17 01:06:29.267</comment>
+  </data>
+  <data name="Current Balance" xml:space="preserve">
+    <value>流动货币余额</value>
+    <comment>2021-03-17 01:06:29.290</comment>
+  </data>
+  <data name="Current Costs" xml:space="preserve">
+    <value>当前成本</value>
+    <comment>2021-03-17 01:06:29.313</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+    <comment>2021-03-17 01:06:29.337</comment>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>删除</value>
+    <comment>2021-03-17 01:06:29.360</comment>
+  </data>
+  <data name="Demand" xml:space="preserve">
+    <value>需求量</value>
+    <comment>2021-03-17 01:06:29.383</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+    <comment>2021-03-17 01:06:29.410</comment>
+  </data>
+  <data name="Desired Information from Buyers" xml:space="preserve">
+    <value>卖家期望的信息</value>
+    <comment>2021-03-17 01:06:29.433</comment>
+  </data>
+  <data name="Detached House" xml:space="preserve">
+    <value>独立住宅</value>
+    <comment>2021-03-17 01:06:29.457</comment>
+  </data>
+  <data name="Do you need help" xml:space="preserve">
+    <value>您需要帮助吗？</value>
+    <comment>2021-03-17 01:06:29.480</comment>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>草稿</value>
+    <comment>2021-03-17 01:06:29.507</comment>
+  </data>
+  <data name="Drag the photos here" xml:space="preserve">
+    <value>把您的照片拖到这里</value>
+    <comment>2021-03-17 01:06:29.530</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+    <comment>2021-03-17 01:06:29.550</comment>
+  </data>
+  <data name="Elevator" xml:space="preserve">
+    <value>电梯</value>
+    <comment>2021-03-17 01:06:29.577</comment>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>电子邮件</value>
+    <comment>2021-03-17 01:06:29.600</comment>
+  </data>
+  <data name="euroSymbol" xml:space="preserve">
+    <value>欧元</value>
+    <comment>2021-03-17 01:06:29.623</comment>
+  </data>
+  <data name="Exchange Rate Table" xml:space="preserve">
+    <value>汇率表</value>
+    <comment>2021-03-17 01:06:29.647</comment>
+  </data>
+  <data name="Exhibition Area" xml:space="preserve">
+    <value>展区</value>
+    <comment>2021-03-17 01:06:29.673</comment>
+  </data>
+  <data name="Farm/Ranch" xml:space="preserve">
+    <value>农场/大牧场</value>
+    <comment>2021-03-17 01:06:29.697</comment>
+  </data>
+  <data name="Fill in the email to have the password reset email sent to you." xml:space="preserve">
+    <value>填写电子邮件就被将密码重置电子邮件发送给您</value>
+    <comment>2021-03-17 01:06:29.720</comment>
+  </data>
+  <data name="Finance" xml:space="preserve">
+    <value>财政</value>
+    <comment>2021-03-17 01:06:29.743</comment>
+  </data>
+  <data name="Fireplace" xml:space="preserve">
+    <value>壁炉</value>
+    <comment>2021-03-17 01:06:29.767</comment>
+  </data>
+  <data name="floor" xml:space="preserve">
+    <value>层</value>
+    <comment>2021-03-17 01:06:29.790</comment>
+  </data>
+  <data name="Follow us" xml:space="preserve">
+    <value>跟我们来</value>
+    <comment>2021-03-17 01:06:29.817</comment>
+  </data>
+  <data name="Forgot your password" xml:space="preserve">
+    <value>把密码忘记了？</value>
+    <comment>2021-03-17 01:06:29.840</comment>
+  </data>
+  <data name="from" xml:space="preserve">
+    <value>从</value>
+    <comment>2021-03-17 01:06:29.863</comment>
+  </data>
+  <data name="Furniture" xml:space="preserve">
+    <value>家具</value>
+    <comment>2021-03-17 01:06:29.890</comment>
+  </data>
+  <data name="Garden" xml:space="preserve">
+    <value>花园</value>
+    <comment>2021-03-17 01:06:29.910</comment>
+  </data>
+  <data name="greater than 100" xml:space="preserve">
+    <value>100多</value>
+    <comment>2021-03-17 01:06:29.933</comment>
+  </data>
+  <data name="Gym" xml:space="preserve">
+    <value>体育馆</value>
+    <comment>2021-03-17 01:06:29.960</comment>
+  </data>
+  <data name="Hall" xml:space="preserve">
+    <value>大厅</value>
+    <comment>2021-03-17 01:06:29.980</comment>
+  </data>
+  <data name="Heating System" xml:space="preserve">
+    <value>供热系统</value>
+    <comment>2021-03-17 01:06:30.007</comment>
+  </data>
+  <data name="Hidden Searches" xml:space="preserve">
+    <value>隐藏的搜索</value>
+    <comment>2021-03-17 01:06:30.030</comment>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>隐藏</value>
+    <comment>2021-03-17 01:06:30.053</comment>
+  </data>
+  <data name="Highest -&gt; Lowest Price" xml:space="preserve">
+    <value>最高 -&gt; 最低价格</value>
+    <comment>2021-03-17 01:06:30.077</comment>
+  </data>
+  <data name="Home Energy Rate" xml:space="preserve">
+    <value>家能量率</value>
+    <comment>2021-03-17 01:06:30.100</comment>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>宾馆</value>
+    <comment>2021-03-17 01:06:30.123</comment>
+  </data>
+  <data name="Houseboat" xml:space="preserve">
+    <value>游艇</value>
+    <comment>2021-03-17 01:06:30.147</comment>
+  </data>
+  <data name="Housekeeping" xml:space="preserve">
+    <value>家务</value>
+    <comment>2021-03-17 01:06:30.173</comment>
+  </data>
+  <data name="How can we help you" xml:space="preserve">
+    <value>我们怎么能帮您？</value>
+    <comment>2021-03-17 01:06:30.197</comment>
+  </data>
+  <data name="How Many Bathrooms Does It Have?" xml:space="preserve">
+    <value>有多少个浴室？</value>
+    <comment>2021-03-17 01:06:30.223</comment>
+  </data>
+  <data name="How Many Bedrooms Does It Have?" xml:space="preserve">
+    <value>有多少个卧室？</value>
+    <comment>2021-03-17 01:06:30.247</comment>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>身份证</value>
+    <comment>2021-03-17 01:06:30.273</comment>
+  </data>
+  <data name="Important Information" xml:space="preserve">
+    <value>重要的信息</value>
+    <comment>2021-03-17 01:06:30.297</comment>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>不登</value>
+    <comment>2021-03-17 01:06:30.320</comment>
+  </data>
+  <data name="Industrial Property" xml:space="preserve">
+    <value>工业财产</value>
+    <comment>2021-03-17 01:06:30.343</comment>
+  </data>
+  <data name="Info Card" xml:space="preserve">
+    <value>信息卡</value>
+    <comment>2021-03-17 01:06:30.367</comment>
+  </data>
+  <data name="Internet Fiber" xml:space="preserve">
+    <value>互联网光纤</value>
+    <comment>2021-03-17 01:06:30.390</comment>
+  </data>
+  <data name="Investment" xml:space="preserve">
+    <value>投资</value>
+    <comment>2021-03-17 01:06:30.417</comment>
+  </data>
+  <data name="Join to our Page" xml:space="preserve">
+    <value>加入我们的网页</value>
+    <comment>2021-03-17 01:06:30.440</comment>
+  </data>
+  <data name="Land" xml:space="preserve">
+    <value>土地</value>
+    <comment>2021-03-17 01:06:30.463</comment>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>语言</value>
+    <comment>2021-03-17 01:06:30.487</comment>
+  </data>
+  <data name="Living room" xml:space="preserve">
+    <value>客厅</value>
+    <comment>2021-03-17 01:06:30.510</comment>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>锁定</value>
+    <comment>2021-03-17 01:06:30.533</comment>
+  </data>
+  <data name="Loft" xml:space="preserve">
+    <value>阁楼</value>
+    <comment>2021-03-17 01:06:30.557</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登录</value>
+    <comment>2021-03-17 01:06:30.580</comment>
+  </data>
+  <data name="Login/Register" xml:space="preserve">
+    <value>登录/登记</value>
+    <comment>2021-03-17 01:06:30.607</comment>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>注销</value>
+    <comment>2021-03-17 01:06:30.630</comment>
+  </data>
+  <data name="Lowest To Highest" xml:space="preserve">
+    <value>最低 -&gt;最高价格</value>
+    <comment>2021-03-17 01:06:30.650</comment>
+  </data>
+  <data name="Maisonette" xml:space="preserve">
+    <value>梅索内特</value>
+    <comment>2021-03-17 01:06:30.677</comment>
+  </data>
+  <data name="Mandatory Information" xml:space="preserve">
+    <value>强制的信息</value>
+    <comment>2021-03-17 01:06:30.697</comment>
+  </data>
+  <data name="Master" xml:space="preserve">
+    <value>主卧室</value>
+    <comment>2021-03-17 01:06:30.720</comment>
+  </data>
+  <data name="maximum of Characters are 5" xml:space="preserve">
+    <value>最多五个字符</value>
+    <comment>2021-03-17 01:06:30.743</comment>
+  </data>
+  <data name="minimum Three Characters" xml:space="preserve">
+    <value>最少三个字符</value>
+    <comment>2021-03-17 01:06:30.770</comment>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>手机</value>
+    <comment>2021-03-17 01:06:30.790</comment>
+  </data>
+  <data name="Mobile Home" xml:space="preserve">
+    <value>移动家庭</value>
+    <comment>2021-03-17 01:06:30.817</comment>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>月</value>
+    <comment>2021-03-17 01:06:30.840</comment>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>月</value>
+    <comment>2021-03-17 01:06:30.863</comment>
+  </data>
+  <data name="Most Popular" xml:space="preserve">
+    <value>宣传</value>
+    <comment>2021-03-17 01:06:30.883</comment>
+  </data>
+  <data name="Municipality / District" xml:space="preserve">
+    <value>市/区</value>
+    <comment>2021-03-17 01:06:30.910</comment>
+  </data>
+  <data name="My Card" xml:space="preserve">
+    <value>我的卡片</value>
+    <comment>2021-03-17 01:06:30.933</comment>
+  </data>
+  <data name="My Favorites" xml:space="preserve">
+    <value>我最喜欢的</value>
+    <comment>2021-03-17 01:06:30.957</comment>
+  </data>
+  <data name="My information" xml:space="preserve">
+    <value>我的信息</value>
+    <comment>2021-03-17 01:06:30.980</comment>
+  </data>
+  <data name="My Notes" xml:space="preserve">
+    <value>我的笔记</value>
+    <comment>2021-03-17 01:06:31.003</comment>
+  </data>
+  <data name="My Orders" xml:space="preserve">
+    <value>我的订单</value>
+    <comment>2021-03-17 01:06:31.030</comment>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名字</value>
+    <comment>2021-03-17 01:06:31.053</comment>
+  </data>
+  <data name="New Construction" xml:space="preserve">
+    <value>新建</value>
+    <comment>2021-03-17 01:06:31.077</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>不登</value>
+    <comment>2021-03-17 01:06:31.100</comment>
+  </data>
+  <data name="No ads were found according to Search filters." xml:space="preserve">
+    <value>根据搜索筛选器未找到任何广告</value>
+    <comment>2021-03-17 01:06:31.123</comment>
+  </data>
+  <data name="No Orders To Display" xml:space="preserve">
+    <value>没有要显示订单</value>
+    <comment>2021-03-17 01:06:31.147</comment>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>笔记</value>
+    <comment>2021-03-17 01:06:31.170</comment>
+  </data>
+  <data name="number" xml:space="preserve">
+    <value>号码</value>
+    <comment>2021-03-17 01:06:31.193</comment>
+  </data>
+  <data name="Obligatory" xml:space="preserve">
+    <value>强制的</value>
+    <comment>2021-03-17 01:06:31.217</comment>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>出价</value>
+    <comment>2021-03-17 01:06:31.240</comment>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>办公室</value>
+    <comment>2021-03-17 01:06:31.267</comment>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>行</value>
+    <comment>2021-03-17 01:06:31.317</comment>
+  </data>
+  <data name="Once the download is complete. Copy the link here" xml:space="preserve">
+    <value>下载完成后，请复制此处的链接</value>
+    <comment>2021-03-17 01:06:31.340</comment>
+  </data>
+  <data name="only Number" xml:space="preserve">
+    <value>只能用数字</value>
+    <comment>2021-03-17 01:06:31.363</comment>
+  </data>
+  <data name="optional" xml:space="preserve">
+    <value>可选择</value>
+    <comment>2021-03-17 01:06:31.390</comment>
+  </data>
+  <data name="Orders History" xml:space="preserve">
+    <value>订单历史记录</value>
+    <comment>2021-03-17 01:06:31.413</comment>
+  </data>
+  <data name="Other Categories" xml:space="preserve">
+    <value>其他类别</value>
+    <comment>2021-03-17 01:06:31.437</comment>
+  </data>
+  <data name="Other Properties" xml:space="preserve">
+    <value>别的财产</value>
+    <comment>2021-03-17 01:06:31.460</comment>
+  </data>
+  <data name="Our Services" xml:space="preserve">
+    <value>我们的服务</value>
+    <comment>2021-03-17 01:06:31.483</comment>
+  </data>
+  <data name="Parcels" xml:space="preserve">
+    <value>土地</value>
+    <comment>2021-03-17 01:06:31.507</comment>
+  </data>
+  <data name="Parking" xml:space="preserve">
+    <value>车库</value>
+    <comment>2021-03-17 01:06:31.537</comment>
+  </data>
+  <data name="Parking Area" xml:space="preserve">
+    <value>车位</value>
+    <comment>2021-03-17 01:06:31.563</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>代码</value>
+    <comment>2021-03-17 01:06:31.587</comment>
+  </data>
+  <data name="Penthouse" xml:space="preserve">
+    <value>顶楼</value>
+    <comment>2021-03-17 01:06:31.610</comment>
+  </data>
+  <data name="Personal settings" xml:space="preserve">
+    <value>个人设置</value>
+    <comment>2021-03-17 01:06:31.633</comment>
+  </data>
+  <data name="Pets" xml:space="preserve">
+    <value>宠物</value>
+    <comment>2021-03-17 01:06:31.660</comment>
+  </data>
+  <data name="Photos" xml:space="preserve">
+    <value>照片</value>
+    <comment>2021-03-17 01:06:31.683</comment>
+  </data>
+  <data name="Place your ad" xml:space="preserve">
+    <value>上传广告</value>
+    <comment>2021-03-17 01:06:31.707</comment>
+  </data>
+  <data name="Please enter an email address for this site below and click the Register button to finish logging in." xml:space="preserve">
+    <value>请输入一个电子邮件地址对下面的此网站。然后，单击‘注册’按钮完成登录</value>
+    <comment>2021-03-17 01:06:31.730</comment>
+  </data>
+  <data name="Plot of Land" xml:space="preserve">
+    <value>地块</value>
+    <comment>2021-03-17 01:06:31.753</comment>
+  </data>
+  <data name="Pool" xml:space="preserve">
+    <value>游泳池</value>
+    <comment>2021-03-17 01:06:31.777</comment>
+  </data>
+  <data name="Post a request" xml:space="preserve">
+    <value>提出请求</value>
+    <comment>2021-03-17 01:06:31.800</comment>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>邮政编码</value>
+    <comment>2021-03-17 01:06:31.823</comment>
+  </data>
+  <data name="Prefabricated Home" xml:space="preserve">
+    <value>活动板房</value>
+    <comment>2021-03-17 01:06:31.847</comment>
+  </data>
+  <data name="Premium" xml:space="preserve">
+    <value>保险费</value>
+    <comment>2021-03-17 01:06:31.870</comment>
+  </data>
+  <data name="Premium Features" xml:space="preserve">
+    <value>高级功能</value>
+    <comment>2021-03-17 01:06:31.893</comment>
+  </data>
+  <data name="Prepaid Balance for Ads" xml:space="preserve">
+    <value>预付广告余额</value>
+    <comment>2021-03-17 01:06:31.917</comment>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>预览</value>
+    <comment>2021-03-17 01:06:31.943</comment>
+  </data>
+  <data name="Preview 360" xml:space="preserve">
+    <value>360度预览</value>
+    <comment>2021-03-17 01:06:31.990</comment>
+  </data>
+  <data name="Preview &lt;strong&gt;360&lt;sup&gt;o&lt;/sup&gt;&lt;/strong&gt;" xml:space="preserve">
+    <value>360度预览</value>
+    <comment>2021-03-17 01:06:31.967</comment>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>价格</value>
+    <comment>2021-03-17 01:06:32.013</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>打印</value>
+    <comment>2021-03-17 01:06:32.040</comment>
+  </data>
+  <data name="Property Area" xml:space="preserve">
+    <value>财产的平方米</value>
+    <comment>2021-03-17 01:06:32.063</comment>
+  </data>
+  <data name="Property Category" xml:space="preserve">
+    <value>财产的类别</value>
+    <comment>2021-03-17 01:06:32.087</comment>
+  </data>
+  <data name="Property Features" xml:space="preserve">
+    <value>财产的特性</value>
+    <comment>2021-03-17 01:06:32.110</comment>
+  </data>
+  <data name="Property Price" xml:space="preserve">
+    <value>财产的价格</value>
+    <comment>2021-03-17 01:06:32.133</comment>
+  </data>
+  <data name="Property Type" xml:space="preserve">
+    <value>财产的类型</value>
+    <comment>2021-03-17 01:06:32.160</comment>
+  </data>
+  <data name="Public" xml:space="preserve">
+    <value>公开</value>
+    <comment>2021-03-17 01:06:32.180</comment>
+  </data>
+  <data name="Publish" xml:space="preserve">
+    <value>出版</value>
+    <comment>2021-03-17 01:06:32.210</comment>
+  </data>
+  <data name="Publish Ad" xml:space="preserve">
+    <value>出版广告</value>
+    <comment>2021-03-17 01:06:32.230</comment>
+  </data>
+  <data name="Publish/Save" xml:space="preserve">
+    <value>出版/保存</value>
+    <comment>2021-03-17 01:06:32.257</comment>
+  </data>
+  <data name="Range Price" xml:space="preserve">
+    <value>价格范围</value>
+    <comment>2021-03-17 01:06:32.280</comment>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>分级</value>
+    <comment>2021-03-17 01:06:32.303</comment>
+  </data>
+  <data name="Recent Posts" xml:space="preserve">
+    <value>最近的帖子</value>
+    <comment>2021-03-17 01:06:32.327</comment>
+  </data>
+  <data name="Recent Searches" xml:space="preserve">
+    <value>最近的搜索</value>
+    <comment>2021-03-17 01:06:32.350</comment>
+  </data>
+  <data name="Refill Balance" xml:space="preserve">
+    <value>补充货币余额</value>
+    <comment>2021-03-17 01:06:32.373</comment>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>登记</value>
+    <comment>2021-03-17 01:06:32.400</comment>
+  </data>
+  <data name="Register from the applications" xml:space="preserve">
+    <value>从应用程序注册</value>
+    <comment>2021-03-17 01:06:32.420</comment>
+  </data>
+  <data name="Rent" xml:space="preserve">
+    <value>租房子</value>
+    <comment>2021-03-17 01:06:32.447</comment>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>再发送</value>
+    <comment>2021-03-17 01:06:32.470</comment>
+  </data>
+  <data name="Residential" xml:space="preserve">
+    <value>住宅</value>
+    <comment>2021-03-17 01:06:32.493</comment>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>再试</value>
+    <comment>2021-03-17 01:06:32.517</comment>
+  </data>
+  <data name="Safety door" xml:space="preserve">
+    <value>安全门</value>
+    <comment>2021-03-17 01:06:32.540</comment>
+  </data>
+  <data name="Safety Frames" xml:space="preserve">
+    <value>安全框架</value>
+    <comment>2021-03-17 01:06:32.563</comment>
+  </data>
+  <data name="Sale" xml:space="preserve">
+    <value>卖</value>
+    <comment>2021-03-17 01:06:32.587</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+    <comment>2021-03-17 01:06:32.613</comment>
+  </data>
+  <data name="Save Search" xml:space="preserve">
+    <value>保存搜索</value>
+    <comment>2021-03-17 01:06:32.637</comment>
+  </data>
+  <data name="Saved Searches" xml:space="preserve">
+    <value>保存的搜索</value>
+    <comment>2021-03-17 01:06:32.660</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+    <comment>2021-03-17 01:06:32.680</comment>
+  </data>
+  <data name="Search Filters" xml:space="preserve">
+    <value>搜索筛选器</value>
+    <comment>2021-03-17 01:06:32.707</comment>
+  </data>
+  <data name="Security Alarm" xml:space="preserve">
+    <value>安全警报</value>
+    <comment>2021-03-17 01:06:32.730</comment>
+  </data>
+  <data name="See Other Seller Ads" xml:space="preserve">
+    <value>查卖家其他的广告</value>
+    <comment>2021-03-17 01:06:32.753</comment>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>选择</value>
+    <comment>2021-03-17 01:06:32.777</comment>
+  </data>
+  <data name="Select the energy rate of the Property (if available)" xml:space="preserve">
+    <value>先择财产的能量率（如果可用） </value>
+    <comment>2021-03-17 01:06:32.803</comment>
+  </data>
+  <data name="Semi-outdoors" xml:space="preserve">
+    <value>半户外</value>
+    <comment>2021-03-17 01:06:32.827</comment>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>发送</value>
+    <comment>2021-03-17 01:06:32.850</comment>
+  </data>
+  <data name="Send verification email" xml:space="preserve">
+    <value>返送验证电子邮件</value>
+    <comment>2021-03-17 01:06:32.873</comment>
+  </data>
+  <data name="Send your comments &lt;strong&gt;here&lt;/strong&gt;." xml:space="preserve">
+    <value>把您的评论发送到此处</value>
+    <comment>2021-03-17 01:06:32.900</comment>
+  </data>
+  <data name="Send your message" xml:space="preserve">
+    <value>发送你的消息</value>
+    <comment>2021-03-17 01:06:32.923</comment>
+  </data>
+  <data name="Shall we check ?" xml:space="preserve">
+    <value>我们查一下，好吗？</value>
+    <comment>2021-03-17 01:06:32.950</comment>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>分享</value>
+    <comment>2021-03-17 01:06:32.970</comment>
+  </data>
+  <data name="Share on Facebook" xml:space="preserve">
+    <value>在Facebook上分享</value>
+    <comment>2021-03-17 01:06:32.997</comment>
+  </data>
+  <data name="Shop" xml:space="preserve">
+    <value>商店</value>
+    <comment>2021-03-17 01:06:33.020</comment>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>外观</value>
+    <comment>2021-03-17 01:06:33.043</comment>
+  </data>
+  <data name="Specifications of image" xml:space="preserve">
+    <value>照片规格</value>
+    <comment>2021-03-17 01:06:33.067</comment>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>平方米</value>
+    <comment>2021-03-17 01:06:33.090</comment>
+  </data>
+  <data name="Status Ad" xml:space="preserve">
+    <value>广告状态</value>
+    <comment>2021-03-17 01:06:33.113</comment>
+  </data>
+  <data name="Storage" xml:space="preserve">
+    <value>存储</value>
+    <comment>2021-03-17 01:06:33.137</comment>
+  </data>
+  <data name="Studio" xml:space="preserve">
+    <value>工作室</value>
+    <comment>2021-03-17 01:06:33.160</comment>
+  </data>
+  <data name="Subcategory" xml:space="preserve">
+    <value>子类别</value>
+    <comment>2021-03-17 01:06:33.180</comment>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>主题</value>
+    <comment>2021-03-17 01:06:33.207</comment>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提交</value>
+    <comment>2021-03-17 01:06:33.230</comment>
+  </data>
+  <data name="Submit Post" xml:space="preserve">
+    <value>提交帖子</value>
+    <comment>2021-03-17 01:06:33.253</comment>
+  </data>
+  <data name="Subscribe to our newsletter" xml:space="preserve">
+    <value>订阅在我们的时事通讯</value>
+    <comment>2021-03-17 01:06:33.280</comment>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>副标题</value>
+    <comment>2021-03-17 01:06:33.303</comment>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>姓</value>
+    <comment>2021-03-17 01:06:33.327</comment>
+  </data>
+  <data name="Terms of use" xml:space="preserve">
+    <value>使用条款</value>
+    <comment>2021-03-17 01:06:33.350</comment>
+  </data>
+  <data name="Thank you" xml:space="preserve">
+    <value>谢谢您</value>
+    <comment>2021-03-17 01:06:33.373</comment>
+  </data>
+  <data name="The Welcome Voucher has just been activated" xml:space="preserve">
+    <value>欢迎券刚刚激活了</value>
+    <comment>2021-03-17 01:06:33.397</comment>
+  </data>
+  <data name="Title/Name" xml:space="preserve">
+    <value>标题/名字</value>
+    <comment>2021-03-17 01:06:33.423</comment>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>到</value>
+    <comment>2021-03-17 01:06:33.447</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>类型</value>
+    <comment>2021-03-17 01:06:33.470</comment>
+  </data>
+  <data name="Type your message here" xml:space="preserve">
+    <value>在此处键入您的消息</value>
+    <comment>2021-03-17 01:06:33.493</comment>
+  </data>
+  <data name="Unlocked" xml:space="preserve">
+    <value>未锁定</value>
+    <comment>2021-03-17 01:06:33.520</comment>
+  </data>
+  <data name="Uploading photos started" xml:space="preserve">
+    <value>照片上传已经开始了</value>
+    <comment>2021-03-17 01:06:33.543</comment>
+  </data>
+  <data name="Usage For The Current Month" xml:space="preserve">
+    <value>当月使用情况</value>
+    <comment>2021-03-17 01:06:33.567</comment>
+  </data>
+  <data name="valid City" xml:space="preserve">
+    <value>有效的城市</value>
+    <comment>2021-03-17 01:06:33.593</comment>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>风景</value>
+    <comment>2021-03-17 01:06:33.617</comment>
+  </data>
+  <data name="views" xml:space="preserve">
+    <value>观点</value>
+    <comment>2021-03-17 01:06:33.640</comment>
+  </data>
+  <data name="Wallet" xml:space="preserve">
+    <value>钱包</value>
+    <comment>2021-03-17 01:06:33.663</comment>
+  </data>
+  <data name="WC" xml:space="preserve">
+    <value>卫生间</value>
+    <comment>2021-03-17 01:06:33.683</comment>
+  </data>
+  <data name="WebSite" xml:space="preserve">
+    <value>网站</value>
+    <comment>2021-03-17 01:06:33.710</comment>
+  </data>
+  <data name="Welcome to Eron.gr" xml:space="preserve">
+    <value>Eron.gr欢迎您！</value>
+    <comment>2021-03-17 01:06:33.733</comment>
+  </data>
+  <data name="WishList" xml:space="preserve">
+    <value>愿望清单</value>
+    <comment>2021-03-17 01:06:33.757</comment>
+  </data>
+  <data name="Write a short description" xml:space="preserve">
+    <value>写一个简短的描述</value>
+    <comment>2021-03-17 01:06:33.780</comment>
+  </data>
+  <data name="Write To Us" xml:space="preserve">
+    <value>给我们写信</value>
+    <comment>2021-03-17 01:06:33.803</comment>
+  </data>
+  <data name="Year of Renovation" xml:space="preserve">
+    <value>整修年份</value>
+    <comment>2021-03-17 01:06:33.827</comment>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
+    <comment>2021-03-17 01:06:33.850</comment>
+  </data>
+  <data name="You can also connect from the applications" xml:space="preserve">
+    <value>您也可以用您的信息从应用程序进行连接</value>
+    <comment>2021-03-17 01:06:33.873</comment>
+  </data>
+  <data name="You can choose what amenities are available for the property" xml:space="preserve">
+    <value>您可以选择财产有哪些舒适设施</value>
+    <comment>2021-03-17 01:06:33.897</comment>
+  </data>
+  <data name="You can create your own Preview 360 video &lt;sup&gt;o&lt;/sup&gt; with Matterport Capture" xml:space="preserve">
+    <value>您可以用Matterport Capture创建您自己的360度预览视频</value>
+    <comment>2021-03-17 01:06:33.923</comment>
+  </data>
+  <data name="You can reset your password now." xml:space="preserve">
+    <value>现在您可以重设密码</value>
+    <comment>2021-03-17 01:06:33.950</comment>
+  </data>
+  <data name="You do not have access to this resource." xml:space="preserve">
+    <value>您无权访问此资源</value>
+    <comment>2021-03-17 01:06:33.973</comment>
+  </data>
+  <data name="You have successfully logged out of the application." xml:space="preserve">
+    <value>您已成功注销应用程序</value>
+    <comment>2021-03-17 01:06:33.997</comment>
+  </data>
+  <data name="You upload the presentation to your account" xml:space="preserve">
+    <value>将演示文稿上载到您的账户</value>
+    <comment>2021-03-17 01:06:34.023</comment>
+  </data>
+  <data name="You've successfully authenticated with" xml:space="preserve">
+    <value>您已成功通过身份验证用</value>
+    <comment>2021-03-17 01:06:34.047</comment>
+  </data>
+</root>

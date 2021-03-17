@@ -48,3 +48,11 @@
         { displayName: "Hindi(INDIA)" });
 
 }(jQuery));
+
+(function ($) {
+    'use strict';
+
+    $.i18n.languages.zh = $.extend({}, $.i18n.languages['default'],
+        { displayName: "Chinese" });
+
+}(jQuery));

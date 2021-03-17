@@ -366,6 +366,7 @@
         background-image: url(../flags/1x1/ch.svg);
     }
 
+
 .flag-icon-ci {
     background-image: url(../flags/4x3/ci.svg);
 }
@@ -403,6 +404,14 @@
 }
 
     .flag-icon-cn.flag-icon-squared {
+        background-image: url(../flags/1x1/cn.svg);
+    }
+
+.flag-icon-zh {
+    background-image: url(../flags/4x3/cn.svg);
+}
+
+    .flag-icon-zh.flag-icon-squared {
         background-image: url(../flags/1x1/cn.svg);
     }
 

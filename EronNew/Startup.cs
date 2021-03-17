@@ -156,12 +156,14 @@ namespace EronNew
             CultureInfo ciDE = new CultureInfo("de");
             ciDE.NumberFormat.CurrencySymbol = "€";
             CultureInfo ciHi = new CultureInfo("hi-IN");
-            ciDE.NumberFormat.CurrencySymbol = "€";
+            ciHi.NumberFormat.CurrencySymbol = "€";
+            CultureInfo ciCHS = new CultureInfo("zh");
+            ciCHS.NumberFormat.CurrencySymbol = "€";
 
             services.Configure<RequestLocalizationOptions>(
                 options =>
                 {
-                    var supportedCultures = new List<CultureInfo> { ci, ciEN, ciFR, ciES, ciTR, ciDE, ciHi };
+                    var supportedCultures = new List<CultureInfo> { ci, ciEN, ciFR, ciES, ciTR, ciDE, ciHi, ciCHS };
                     options.DefaultRequestCulture = new RequestCulture(culture: "el-GR", uiCulture: "el-GR");
                     options.SupportedCultures = supportedCultures;
                     options.SupportedUICultures = supportedCultures;
