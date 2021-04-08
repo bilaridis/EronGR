@@ -21,8 +21,15 @@
     };
 
     $(function () {
-
-
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach((dropdown) => {
+            dropdown.addEventListener('show.bs.dropdown', (e) => {
+                e.target.closest('td').classList.add('my-custom-class');
+            });
+            dropdown.addEventListener('hidden.bs.dropdown', (e) => {
+                e.target.closest('td').classList.remove('my-custom-class');
+            });
+        });
         setMode();
 
         // Event listeners

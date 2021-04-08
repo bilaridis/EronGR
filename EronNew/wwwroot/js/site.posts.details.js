@@ -181,7 +181,8 @@
                 dataType: 'text'
             })
                 .done(function (msg) {
-                    $("#ContactInfo").empty();
+                    //$("#ContactInfo").empty();
+                    $("#getContactInfo").attr('disabled', 'disabled');
                     $("#ContactInfo").append(createPhoneTemplate(postTile, PostObject));
                 })
                 .fail(function (jqXHR, textStatus) {
@@ -250,13 +251,13 @@
 
     function createPhoneTemplate(title, phone) {
         return `
-<td><button type="button" class="btn btn-info" data-mdb-toggle="modal" data-mdb-target="#modalContact">
-<i class="fas fa-phone ms-2 fa-1x">   <strong>${phone}</strong>  </i></button></td> 
-<td>
-<button type="button" class="btn btn-info" data-mdb-toggle="modal" data-mdb-target="#modalContact">
-    Email<i class="fas fa-paper-plane ms-2 fa-1x"></i>
+<button type="button" class="btn btn-info mt-1" data-mdb-toggle="modal" data-mdb-target="#modalContact">
+   <i class="fas fa-phone ms-2 fa-1x">  <strong>${phone}</strong>  </i>
 </button>
-</td>`;
+<button type="button" class="btn btn-info mt-1" data-mdb-toggle="modal" data-mdb-target="#modalContact">
+    <i class="fas fa-paper-plane ms-2 fa-1x"></i> <strong>Email</strong>
+</button>
+`;
 
     }
 

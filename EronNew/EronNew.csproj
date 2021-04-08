@@ -661,6 +661,7 @@
     <None Include="wwwroot\mdb5\js\mdb.min.js" />
     <None Include="wwwroot\mdb5\js\mdb.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\css\calendar.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\captcha.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\color-picker.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\cookie.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\countdown.min.css.map" />
@@ -679,12 +680,15 @@
     <None Include="wwwroot\mdb5\plugins\css\storage.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\table-editor.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\transfer.min.css.map" />
+    <None Include="wwwroot\mdb5\plugins\css\treetable.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\treeview.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\vector-maps.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\css\wysiwyg.min.css.map" />
     <None Include="wwwroot\mdb5\plugins\js\all.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\calendar.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\calendar.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\captcha.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\captcha.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\color-picker.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\color-picker.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\cookie.min.js" />
@@ -723,6 +727,8 @@
     <None Include="wwwroot\mdb5\plugins\js\table-editor.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\transfer.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\transfer.min.js.map" />
+    <None Include="wwwroot\mdb5\plugins\js\treetable.min.js" />
+    <None Include="wwwroot\mdb5\plugins\js\treetable.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\treeview.min.js" />
     <None Include="wwwroot\mdb5\plugins\js\treeview.min.js.map" />
     <None Include="wwwroot\mdb5\plugins\js\vector-maps.min.js" />

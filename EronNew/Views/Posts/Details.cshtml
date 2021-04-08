@@ -140,18 +140,18 @@
                                         </a>
                                     </div>
                                 </li>
-                                <li class="list-group-item d-inline-flex"">
+                                <li class="list-group-item d-inline-flex" ">
                                     <div class="text-right col-4 text-dark" data-i18n="Year of Renovation"></div>
                                     <div class="text-left col-8">@Html.Raw(Model.Post.RenovationYear) </div>
                                 </li>
-                                <li class="list-group-item d-inline-flex"">
+                                <li class="list-group-item d-inline-flex" ">
                                     <div class="text-right col-4 text-dark" data-i18n="floor"></div>
                                     <div class="text-left col-8">
                                         @(Model.Post.Floor == 0 ? " Ισόγειο" : Model.Post.Floor.ToString()) @if (Model.Post.Floor > 0)
                                         {<sup>ος</sup>}
                                     </div>
                                 </li>
-                                <li class="list-group-item d-inline-flex"">
+                                <li class="list-group-item d-inline-flex" ">
                                     <div class="text-right col-4 text-dark" data-i18n="Home Energy Rate"></div>
                                     <div class="text-left col-8 ">
                                         @if (Model.Post.EnergyEfficiency == "A+")
@@ -178,111 +178,110 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-6">
-                        <div id="ContactInfo" class="d-grid">
-                            <button id="getContactInfo" data-postid="@Model.Post.id" type="button" class="btn btn-info w-100" data-i18n="Contact Info"></button>
+                        <div id="ContactInfo" class="h-100 d-flex flex-column justify-content-start align-items-stretch mt-3">
+                            <button id="getContactInfo" data-postid="@Model.Post.id" type="button" class="btn btn-primary w-100" data-i18n="Contact Info"></button>
+                        </div>
+                        <div class="col-12 text-smaller p-0 d-none">
+                            <div class="text-left col-12 p-1 mb-1 text-dark flex-row">
+                                @if (Model.ExtraInformation.Investment)
+                                {
+                                    <div class="chip chip-sm white-text px-2 shadow-1-strong">
+                                        <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Investment))
+                                    </div>
+                                }
+                                @if (Model.ExtraInformation.Offer)
+                                {
+                                    <div class="chip chip-sm white-text px-2 shadow-1-strong">
+                                        <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Offer))
+                                    </div>
+                                }
+                                @if (Model.ExtraInformation.NewConstruction)
+                                {
+                                    <div class="chip chip-sm white-text px-2 shadow-1-strong">
+                                        <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.NewConstruction))
+                                    </div>
+                                }
+                                @if (Model.ExtraInformation.BrokerFee)
+                                {
+                                    <div class="chip chip-sm white-text px-2 shadow-1-strong">
+                                        <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i> @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="chip chip-sm white-text px-2 shadow-1-strong">
+                                        <i class="fas fa-times-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
+                                    </div>
+                                }
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 text-smaller p-0 d-none">
-                        <div class="text-left col-12 p-1 mb-1 text-dark flex-row">
-                            @if (Model.ExtraInformation.Investment)
+                    <div class="card-footer d-md-flex flex-sm-row justify-content-md-between">
+                        <div class="d-flex align-items-start">
+                            <div class="p-2 wish-container">
+                                @if (Model.Post.WishLists.Any(x => x.AspNetUserId == user && x.Active == true))
+                                {
+                                    <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-unwish card-link" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
+                                        <i class="fas fa-heart fa-1x text-danger"></i>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-wish card-link" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
+                                        <i class="far fa-heart fa-1x text-danger"></i>
+                                    </a>
+                                }
+                            </div>
+
+                            <div class="p-2 note-container">
+                                <a class="card-link" data-mdb-toggle="modal" data-mdb-target="#centralModalNotes" data-userid="@Model.CardProfile.AspNetUserId">
+                                    <i class="fas fa-pencil-alt fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyNotes))"></i>
+                                </a>
+                            </div>
+                            <div class="p-2">
+                                <a class="card-link" id="printClick">
+                                    <i class="fas fa-print fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Print))"></i>
+                                </a>
+                            </div>
+                            <div class="p-2 view-container">
+                                <a class="card-link">
+                                    <i class="fas fa-eye fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.views))"></i> <label class=" text-smaller text-dark"> @Model.CounterOfView <label data-i18n="views"></label> </label>  |
+                                </a>
+                            </div>
+
+                            <div class="p-2">
+                                <a class="card-link fb-xfbml-parse-ignore"
+                                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FPosts%2FDetails%2F@(Model.Post.id)"
+                                   target="popup"
+                                   onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FPosts%2FDetails%2F@(Model.Post.id)','popup','width=400,height=500'); return false;"
+                                   data-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Share))">
+                                    <i class="fab fa-facebook-square blue-text darken-4"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="p-2">
+                            <a href="~/Card/Index/@Model.Post.OwnerId" class="card-link pr-1">@Html.Raw(Model.CardProfile.Title) <i class="fas fa-external-link-alt fa-1x"></i></a>
+                            @if (Model.Post.Reserved)
                             {
-                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
-                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Investment))
-                                </div>
+                                <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-warning" data-i18n="Locked"></span></small>
                             }
-                            @if (Model.ExtraInformation.Offer)
+                            else if (Model.Post.Deleted)
                             {
-                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
-                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.Offer))
-                                </div>
+                                <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-danger" data-i18n="Inactive"></span></small>
                             }
-                            @if (Model.ExtraInformation.NewConstruction)
+                            else if (Model.Post.Sold)
                             {
-                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
-                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.NewConstruction))
-                                </div>
-                            }
-                            @if (Model.ExtraInformation.BrokerFee)
-                            {
-                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
-                                    <i class="fas fa-check-circle mr-2 mt-1 pt-0"></i> @SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
-                                </div>
+                                <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-secondary" data-i18n="Completed"></span></small>
                             }
                             else
                             {
-                                <div class="chip chip-sm white-text px-2 shadow-1-strong">
-                                    <i class="fas fa-times-circle mr-2 mt-1 pt-0"></i>@SharedLocalizer.GetLocalizedHtml(StaticHelpers.GetDescription(LocalizedPhrases.BrokerFee))
-                                </div>
+                                <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-primary" data-i18n="Active"></span></small>
                             }
                         </div>
-                    </div>
-                </div>
-                <div class="card-footer d-md-flex flex-sm-row justify-content-md-between">
-                    <div class="d-flex align-items-start">
-                        <div class="p-2 wish-container">
-                            @if (Model.Post.WishLists.Any(x => x.AspNetUserId == user && x.Active == true))
-                            {
-                                <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-unwish card-link" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
-                                    <i class="fas fa-heart fa-1x text-danger"></i>
-                                </a>
-                            }
-                            else
-                            {
-                                <a data-postid="@Model.Post.id" href="#!" id="addToWhishList" class="details-heart details-wish card-link" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.WishList))">
-                                    <i class="far fa-heart fa-1x text-danger"></i>
-                                </a>
-                            }
-                        </div>
-
-                        <div class="p-2 note-container">
-                            <a class="card-link" data-mdb-toggle="modal" data-mdb-target="#centralModalNotes" data-userid="@Model.CardProfile.AspNetUserId">
-                                <i class="fas fa-pencil-alt fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MyNotes))"></i>
-                            </a>
-                        </div>
-                        <div class="p-2">
-                            <a class="card-link" id="printClick">
-                                <i class="fas fa-print fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Print))"></i>
-                            </a>
-                        </div>
-                        <div class="p-2 view-container">
-                            <a class="card-link">
-                                <i class="fas fa-eye fa-1x prefix text-dark" data-mdb-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.views))"></i> <label class=" text-smaller text-dark"> @Model.CounterOfView <label data-i18n="views"></label> </label>  |
-                            </a>
-                        </div>
-
-                        <div class="p-2">
-                            <a class="card-link fb-xfbml-parse-ignore"
-                               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FPosts%2FDetails%2F@(Model.Post.id)"
-                               target="popup"
-                               onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.eron.gr%2FPosts%2FDetails%2F@(Model.Post.id)','popup','width=400,height=500'); return false;"
-                               data-toggle="tooltip" title="@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Share))">
-                                <i class="fab fa-facebook-square blue-text darken-4"></i>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="p-2">
-                        <a href="~/Card/Index/@Model.Post.OwnerId" class="card-link pr-1">@Html.Raw(Model.CardProfile.Title) <i class="fas fa-external-link-alt fa-1x"></i></a>
-                        @if (Model.Post.Reserved)
-                        {
-                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-warning" data-i18n="Locked"></span></small>
-                        }
-                        else if (Model.Post.Deleted)
-                        {
-                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-danger" data-i18n="Inactive"></span></small>
-                        }
-                        else if (Model.Post.Sold)
-                        {
-                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-secondary" data-i18n="Completed"></span></small>
-                        }
-                        else
-                        {
-                            <small class="text-muted"> | @Html.Raw(Model.Post.CreatedDate.Value.ToString("dd/MM/yyyy")) | <span class="badge bg-primary" data-i18n="Active"></span></small>
-                        }
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- Section: Main panel -->
 
