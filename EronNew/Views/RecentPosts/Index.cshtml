@@ -17,87 +17,97 @@
                 </section>
             </form>
         </section>
-        <div class="col-12 flex-row">
-            <section class="d-flex flex-row justify-content-between align-items-center rounded mt-3 d-none">
-                <div>
-                    <select id="sort" class="select mt-2">
-                        <option value="-Premium">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MostPopular))</option>
-                        <option value="PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.LowestToHighest))</option>
-                        <option value="-PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HighestLowestPrice))</option>
-                    </select>
-                    <label class="form-label select-label">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rating))</label>
-                </div>
-                <div class="custom-buttons me-2">
-                </div>
-            </section>
-            <section id="infinite-list" class="d-md-flex flex-md-row scrollbar-4 scrollbar-navy-blue-skin overflow-scroll">
-                <div id="loader" class="loader-overlay" style="display: none;">
-                    <div class="preloader-wrapper active">
-                        <div class="spinner-layer spinner-blue-only">
-                            <div class="circle-clipper left">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="gap-patch">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="circle-clipper right">
-                                <div class="circle"></div>
+        <div class="card mt-2">
+            <!-- Card image -->
+            <div class="card-header gradient text-light text-center ">
+                <span>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.RecentPosts))</span>
+            </div>
+            <!-- /Card image -->
+
+            <div class="card-body">
+                <div class="col-12 flex-row">
+                    <section class="d-flex flex-row justify-content-between align-items-center rounded mt-3 d-none">
+                        <div>
+                            <select id="sort" class="select mt-2">
+                                <option value="-Premium">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MostPopular))</option>
+                                <option value="PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.LowestToHighest))</option>
+                                <option value="-PriceTotal">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.HighestLowestPrice))</option>
+                            </select>
+                            <label class="form-label select-label">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Rating))</label>
+                        </div>
+                        <div class="custom-buttons me-2">
+                        </div>
+                    </section>
+                    <section id="infinite-list" class="d-md-flex flex-md-row scrollbar-3 scrollbar-navy-blue-skin overflow-scroll mt-1 shadow-1-strong">
+                        <div id="loader" class="loader-overlay" style="display: none;">
+                            <div class="preloader-wrapper active">
+                                <div class="spinner-layer spinner-blue-only">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="d-flex flex-wrap pb-3 col-12" id="products">
+                        </div>
+                    </section>
                 </div>
-                <div class="d-flex flex-wrap pb-3 col-12" id="products">
-                </div>
-            </section>
+            </div>
         </div>
     </div>
 </div>
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
-@section Scripts{
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script src="~/src/CLDRPluralRuleParser.js"></script>
-    <script src="~/src/jquery.i18n.js"></script>
-    <script src="~/src/jquery.i18n.emitter.js"></script>
-    <script src="~/src/jquery.i18n.emitter.bidi.js"></script>
-    <script src="~/src/jquery.i18n.fallbacks.js"></script>
-    <script src="~/src/jquery.i18n.language.js"></script>
-    <script src="~/src/jquery.i18n.messagestore.js"></script>
-    <script src="~/src/jquery.i18n.parser.js"></script>
-    <script src="~/src/languages/premium.js"></script>
-    <script>
-        $(function () {
-            var activeLang = decodeURIComponent(getCookie(".AspNetCore.Culture")).split('|')[0].split('=')[1];
-            $.i18n().locale = activeLang;
-            $.i18n().load({
-                'el-GR': `/i18n/el-GR.json`,
-                'en-US': '/i18n/en-US.json',
-                'es': '/i18n/es.json',
-                'fr': '/i18n/fr.json',
-                'tr': '/i18n/tr.json',
-                'de': '/i18n/de.json',
-                'hi-IN': '/i18n/hi-IN.json',
-                'zh': '/i18n/zh.json'
-            }).done(function () {
-                $('.switch-locale').on('click', 'a', function (e) {
-                    e.preventDefault();
-                    $.i18n().locale = $(this).data('locale');
-                    console.log("Locale language: " + $.i18n().locale);
+    @section Scripts{
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        <script src="~/src/CLDRPluralRuleParser.js"></script>
+        <script src="~/src/jquery.i18n.js"></script>
+        <script src="~/src/jquery.i18n.emitter.js"></script>
+        <script src="~/src/jquery.i18n.emitter.bidi.js"></script>
+        <script src="~/src/jquery.i18n.fallbacks.js"></script>
+        <script src="~/src/jquery.i18n.language.js"></script>
+        <script src="~/src/jquery.i18n.messagestore.js"></script>
+        <script src="~/src/jquery.i18n.parser.js"></script>
+        <script src="~/src/languages/premium.js"></script>
+        <script>
+            $(function () {
+                var activeLang = decodeURIComponent(getCookie(".AspNetCore.Culture")).split('|')[0].split('=')[1];
+                $.i18n().locale = activeLang;
+                $.i18n().load({
+                    'el-GR': `/i18n/el-GR.json`,
+                    'en-US': '/i18n/en-US.json',
+                    'es': '/i18n/es.json',
+                    'fr': '/i18n/fr.json',
+                    'tr': '/i18n/tr.json',
+                    'de': '/i18n/de.json',
+                    'hi-IN': '/i18n/hi-IN.json',
+                    'zh': '/i18n/zh.json'
+                }).done(function () {
+                    $('.switch-locale').on('click', 'a', function (e) {
+                        e.preventDefault();
+                        $.i18n().locale = $(this).data('locale');
+                        console.log("Locale language: " + $.i18n().locale);
+                        $(`[data-i18n]`).each(function (index, elem) {
+                            $(elem).html($.i18n($(elem).data('i18n')));
+                        });
+                    });
                     $(`[data-i18n]`).each(function (index, elem) {
                         $(elem).html($.i18n($(elem).data('i18n')));
                     });
                 });
-                $(`[data-i18n]`).each(function (index, elem) {
-                    $(elem).html($.i18n($(elem).data('i18n')));
-                });
             });
-        });
-    </script>
-    @if (hostingEnv.EnvironmentName == "Development")
-    {
-        <script src="~/js/site.recentposts.js"></script>
+        </script>
+        @if (hostingEnv.EnvironmentName == "Development")
+        {
+            <script src="~/js/site.recentposts.js"></script>
+        }
+        else
+        {
+            <script src="~/js/site.recentposts.min.js"></script>
+        }
     }
-    else
-    {
-        <script src="~/js/site.recentposts.min.js"></script>
-    }
-}

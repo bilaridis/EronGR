@@ -68,6 +68,9 @@
                             <section filter="SubType">
                                 <select id="selectSubType" class="select filter-option" multiple name="SubType" SubType>
                                 </select>
+                                <label class="form-label select-label" for="selectType">
+                                    @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Subcategory))
+                                </label>
                             </section>
                         </div>
                     </div>
@@ -85,6 +88,9 @@
                             <section filter="SubArea">
                                 <select id="selectArea" class="select filter-option" name="SubArea" multiple SubArea>
                                 </select>
+                                <label class="form-label select-label" for="selectType">
+                                    @SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.MunicipalityDistrict))
+                                </label>
                             </section>
                         </div>
                     </div>

@@ -71,6 +71,10 @@
             })
                 .done(function (t) {
                     $(`#noteGroup_${noteGroupId}`).remove();
+                    $("#previewTile").empty();
+                    $(".chatList").find('div').each(function () {
+                        $(this).remove();
+                    });
                 })
                 .fail(function (jqXHR, textStatus) {
                     //alert("Request failed: " + textStatus);
@@ -98,8 +102,5 @@
                 });
             $(`textarea[name="note"]`).val("");
         });
-
-        setMode1();
-
     });
 })();

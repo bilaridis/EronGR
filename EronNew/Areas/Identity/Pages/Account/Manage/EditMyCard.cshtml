@@ -29,7 +29,7 @@
                             <input type="file"
                                    id="input-file-now"
                                    class="file-upload-input"
-                                   data-mdb-default-file="https://www.eron.gr/@viewModel.PhotoImage"
+                                   data-mdb-default-file="@Model.Domain@viewModel.PhotoImage"
                                    data-mdb-file-upload="file-upload"
                                    asp-for="Input.Image" />
                         </div>
@@ -95,7 +95,7 @@
             <div class="card-body">
                 <section class="card profile-card mb-4 text-center">
                     <div class="avatar shadow-1">
-                        <img src="https://www.eron.gr/@viewModel.PhotoImage" class="img-fluid">
+                        <img src="@Model.Domain@viewModel.PhotoImage" class="img-fluid">
                     </div>
                     <!-- Card content -->
                     <div class="card-body">

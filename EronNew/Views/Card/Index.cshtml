@@ -5,6 +5,7 @@
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
 @{
     Layout = "~/Views/Shared/_Layout-fluid.cshtml";
+    var Domain = $"{this.Context.Request.Scheme}://{this.Context.Request.Host}{this.Context.Request.PathBase}//";
 }
 @section metatags
 {
@@ -20,7 +21,7 @@
         <!-- Section: Basic Info -->
         <section class="card profile-card mb-2 text-center">
             <div class="avatar z-depth-1-half">
-                <img src="https://www.eron.gr/@Model.CardProfile.PhotoImage" alt="" class="img-fluid">
+                <img src="@Domain@Model.CardProfile.PhotoImage" alt="" class="img-fluid">
             </div>
             <!-- Card content -->
             <div class="card-body">

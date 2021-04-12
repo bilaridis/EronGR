@@ -40,6 +40,8 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
         [BindProperty]
         public AspNetUserProfile Input { get; set; }
 
+        public string Domain { get; set; }
+
 
         private async Task LoadAsync(ExtendedIdentityUser user)
         {
@@ -57,6 +59,7 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
                 Input = dbModel;
                 //Input.SetDescription();
             }
+            Domain = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}//";
 
         }
 
@@ -101,7 +104,7 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
                 {
                     uploadPath = "\\\\Bilaridis2020\\BetaSite\\";
                 }
-                string uploads = Path.Combine(uploadPath, "uploads\\" + user.Id + "\\");
+                string uploads = Path.Combine(uploadPath, "" + user.Id + "\\");
                 string filePath = Path.Combine(uploads, Input.Image.FileName);
                 bool exists = Directory.Exists(uploads);
 
@@ -118,7 +121,7 @@ namespace EronNew.Areas.Identity.Pages.Account.Manage
             {
                 Input.PhotoImage = null;
             }
-
+            Domain = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}//";
             await _model.SaveMyCard(Input);
 
             await _signInManager.RefreshSignInAsync(user);

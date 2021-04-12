@@ -7,136 +7,140 @@
     Layout = "~/Views/Shared/_Layout-SideNav.cshtml";
 }
 
-<!-- Section: Block Content -->
-<section class="">
-
-    <!--Grid row-->
-    <div class="row">
-
-        <div class="col-xl-4 col-sm-6 col-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between px-md-1">
-                        <div>
-                            <h3 class="text-info">@Model.Wallet.Tokens.Value.ToString("C")</h3>
-                            <p class="mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CurrentBalance))</p>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-money-bill text-info fa-3x"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-4 col-sm-6 col-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between px-md-1">
-                        <div>
-                            <h3 class="text-info">@Model.GetUsageOfCurrentMonth().ToString("C")</h3>
-                            <p class="mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.UsageForTheCurrentMonth))</p>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-money-bill text-info fa-3x"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-4 col-sm-6 col-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between px-md-1">
-                        <div>
-                            <h3 class="text-info">@Model.GetPrepaidBalanceForAds().ToString("C")</h3>
-                            <p class="mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PrepaidBalanceforAds))</p>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-money-bill text-info fa-3x"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="input-group mb-4">
-            <input type="text"
-                   class="form-control"
-                   id="advanced-search-input"
-                   placeholder="phrase in:column1,column2" />
-            <button class="btn btn-primary" id="advanced-search-button" type="button" id="button-addon1">
-                <i class="fa fa-search"></i>
-            </button>
-        </div>
-        <div id="datatable" class="datatable" data-mdb-fixed-header="true" data-mdb-color="grey" data-mdb-striped="true" data-mdb-full-pagination="true" data-mdb-sm="true" data-mdb-hover="true">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th data-mdb-fixed="true" data-mdb-width="100" data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Id).ToLower()">
-                            Order Code
-                        </th>
-
-                        <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Product).ToLower()">
-                            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Product)
-                        </th>
-                        <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Summary).ToLower()">
-                            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Summary)
-                        </th>
-                        <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().StartDate).ToLower()">
-                            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().StartDate)
-                        </th>
-                        <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().EndDate).ToLower()">
-                            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().EndDate)
-                        </th>
-                        <th>
-
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Orders)
-                    {
-                        <tr class="@(item.Product.TypeOfPayment == "Credit" ? "table-danger" : "table-success")">
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Id)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Product.Description)
-                            </td>
-                            <td>
-                                @item.Summary.Value.ToString("C")
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.StartDate)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.EndDate)
-                            </td>
-                            <td>
-                                @if (item.Product.TypeOfPayment == "Debit")
-                                {
-                                    <button type="button" class="btn btn-light btn-block btn-sm cancel-order @(item.IsActive.Value ? "" : "disabled")" data-mdb-ripple-color="#7e0101" data-order="@item.Id"> Cancel Order </button>
-                                }
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+<div class="card mt-2">
+    <!-- Card image -->
+    <div class="card-header gradient text-light text-center ">
+        <span>@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.Wallet))</span>
     </div>
-    <!--Grid row-->
+    <!-- /Card image -->
 
-</section>
-<!--Section: Content-->
+    <div class="card-body">
+        <!--Grid row-->
+        <div class="row">
+
+            <div class="col-xl-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between px-md-1">
+                            <div>
+                                <h3 class="text-info">@Model.Wallet.Tokens.Value.ToString("C")</h3>
+                                <p class="mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.CurrentBalance))</p>
+                            </div>
+                            <div class="align-self-center">
+                                <i class="fas fa-money-bill text-info fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between px-md-1">
+                            <div>
+                                <h3 class="text-info">@Model.GetUsageOfCurrentMonth().ToString("C")</h3>
+                                <p class="mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.UsageForTheCurrentMonth))</p>
+                            </div>
+                            <div class="align-self-center">
+                                <i class="fas fa-money-bill text-info fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between px-md-1">
+                            <div>
+                                <h3 class="text-info">@Model.GetPrepaidBalanceForAds().ToString("C")</h3>
+                                <p class="mb-0">@SharedLocalizer.GetLocalized(StaticHelpers.GetDescription(LocalizedPhrases.PrepaidBalanceforAds))</p>
+                            </div>
+                            <div class="align-self-center">
+                                <i class="fas fa-money-bill text-info fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-4">
+                <input type="text"
+                       class="form-control"
+                       id="advanced-search-input"
+                       placeholder="phrase in:column1,column2" />
+                <button class="btn btn-primary" id="advanced-search-button" type="button" id="button-addon1">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div id="datatable" class="datatable" data-mdb-fixed-header="true" data-mdb-color="grey" data-mdb-striped="true" data-mdb-full-pagination="true" data-mdb-sm="true" data-mdb-hover="true">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th data-mdb-fixed="true" data-mdb-width="100" data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Id).ToLower()">
+                                Order Code
+                            </th>
+
+                            <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Product).ToLower()">
+                                @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Product)
+                            </th>
+                            <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Summary).ToLower()">
+                                @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Summary)
+                            </th>
+                            <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().StartDate).ToLower()">
+                                @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().StartDate)
+                            </th>
+                            <th data-mdb-field="@Html.DisplayNameFor(model => model.Orders.FirstOrDefault().EndDate).ToLower()">
+                                @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().EndDate)
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Orders)
+                        {
+                            <tr class="@(item.Product.TypeOfPayment == "Credit" ? "table-danger" : "table-success")">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Product.Description)
+                                </td>
+                                <td>
+                                    @item.Summary.Value.ToString("C")
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.StartDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.EndDate)
+                                </td>
+                                <td>
+                                    @if (item.Product.TypeOfPayment == "Debit")
+                                    {
+                                        <button type="button" class="btn btn-light btn-block btn-sm cancel-order @(item.IsActive.Value ? "" : "disabled")" data-mdb-ripple-color="#7e0101" data-order="@item.Id"> Cancel Order </button>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Grid row-->
+    </div>
+</div>
 @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv
-@section Scripts{
-    @if (hostingEnv.EnvironmentName == "Development")
-    {
-        <script src="~/js/site.wallet.js"></script>
+    @section Scripts{
+        @if (hostingEnv.EnvironmentName == "Development")
+        {
+            <script src="~/js/site.wallet.js"></script>
+        }
+        else
+        {
+            <script src="~/js/site.wallet.min.js"></script>
+        }
     }
-    else
-    {
-        <script src="~/js/site.wallet.min.js"></script>
-    }
-}
